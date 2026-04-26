@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
@@ -34,26 +35,43 @@ const stories = [
 export default function AboutPage() {
   return (
     <>
-      <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
-        <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto max-w-[900px] px-5 pb-20 pt-32 md:px-8 md:pb-28 md:pt-40">
-          <Reveal>
-            <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
-              About
-            </div>
-          </Reveal>
-          <Reveal delay={1}>
-            <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 84px)", lineHeight: 1.0, letterSpacing: "-0.03em" }}>
-              I see, hear, feel,
-              <br />
-              <span style={{ color: "var(--brand-lime)" }}>and KNOW.</span>
-            </h1>
-          </Reveal>
+      <section className="relative overflow-hidden" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+        <div className="absolute inset-x-0 top-0 z-10 h-1" style={{ background: "var(--brand-lime)" }} />
+        <div className="relative z-10 mx-auto grid max-w-[1300px] gap-12 px-5 pb-20 pt-32 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:px-10 md:pb-28 md:pt-40">
+          <div>
+            <Reveal>
+              <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
+                About
+              </div>
+            </Reveal>
+            <Reveal delay={1}>
+              <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 96px)", lineHeight: 0.95, letterSpacing: "-0.03em" }}>
+                I see, hear, feel,
+                <br />
+                <span style={{ color: "var(--brand-lime)" }}>and KNOW.</span>
+              </h1>
+            </Reveal>
+            <Reveal delay={2}>
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
+                The Scholarly Warrior is the operating identity. Discipline plus learning as an integrated philosophy.
+                Care. Discipline. Grit.
+              </p>
+            </Reveal>
+          </div>
           <Reveal delay={2}>
-            <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
-              The Scholarly Warrior is the operating identity. Discipline plus learning as an integrated philosophy.
-              Care. Discipline. Grit.
-            </p>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
+              <Image
+                src="/images/dru-portrait-laughing.jpg"
+                alt="Dru Nguyen portrait"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover"
+              />
+              <div className="absolute right-5 bottom-5 rounded-full px-3 py-1 text-xs font-extrabold uppercase" style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.12em" }}>
+                Care · Discipline · Grit
+              </div>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -104,11 +122,31 @@ export default function AboutPage() {
             {stories.map((s, i) => (
               <Reveal key={s.title} delay={(i % 3) as 0 | 1 | 2}>
                 <article
-                  className="rounded-xl p-7 md:p-8"
+                  className="overflow-hidden rounded-xl"
                   style={{ background: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)" }}
                 >
-                  <h3 className="text-xl font-extrabold md:text-2xl" style={{ color: "var(--brand-jungle)" }}>{s.title}</h3>
-                  <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-body)" }}>{s.body}</p>
+                  {s.title === "The Fight" ? (
+                    <div className="grid gap-0 md:grid-cols-[1fr_1.4fr]">
+                      <div className="relative aspect-[4/3] md:aspect-auto">
+                        <Image
+                          src="/images/dru-muay-thai-2019.jpg"
+                          alt="Dru wins by TKO at the Da Nang Muay Thai exhibition fight, 2019"
+                          fill
+                          sizes="(max-width: 768px) 100vw, 40vw"
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="p-7 md:p-8">
+                        <h3 className="text-xl font-extrabold md:text-2xl" style={{ color: "var(--brand-jungle)" }}>{s.title}</h3>
+                        <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-body)" }}>{s.body}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="p-7 md:p-8">
+                      <h3 className="text-xl font-extrabold md:text-2xl" style={{ color: "var(--brand-jungle)" }}>{s.title}</h3>
+                      <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-body)" }}>{s.body}</p>
+                    </div>
+                  )}
                 </article>
               </Reveal>
             ))}
