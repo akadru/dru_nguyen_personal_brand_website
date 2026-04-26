@@ -2,42 +2,18 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { POSTS, postHref } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Blog — Dru Nguyen",
   description: "Operator essays, AI workflow teardowns, and lived-experience stories from running businesses across three industries.",
 };
 
-type Post = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  category: string;
-  pillar: "Thinker" | "Builder" | "Human";
-  topic: string;
-  read: string;
-  date: string;
-  image: string;
-};
-
-// Maintained by web-developer agent — newest first.
-const POSTS: Post[] = [
-  {
-    slug: "claude-runs-xood-commercial",
-    title: "How I run Xood's commercial team in 30 min/day with Claude",
-    excerpt:
-      "A real morning at Xood, a four-step batch, and the prompt I copy-paste. Three hours of work in 30 minutes — no AI hype, no fluff.",
-    category: "Advice",
-    pillar: "Thinker",
-    topic: "AI Operator",
-    read: "4 MIN READ",
-    date: "26 APR 2026",
-    image: "/images/blog/claude-runs-xood-commercial.webp",
-  },
-];
-
 export default function BlogPage() {
-  const [hero, ...rest] = POSTS;
+  const published = POSTS.filter((p) => p.published);
+  const upcoming = POSTS.filter((p) => !p.published);
+  const [hero, ...rest] = published;
+
   return (
     <>
       <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
@@ -69,12 +45,12 @@ export default function BlogPage() {
           {hero && (
             <Reveal>
               <Link
-                href={`/blog/${hero.slug}`}
+                href={postHref(hero)}
                 className="group grid gap-0 overflow-hidden rounded-2xl border transition-shadow hover:shadow-2xl md:grid-cols-[1.4fr_1fr]"
                 style={{ borderColor: "var(--brand-pastel)", background: "#fff" }}
               >
                 <div className="relative aspect-[16/10] md:aspect-auto">
-                  <Image src={hero.image} alt={hero.title} fill priority sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />
+                  {hero.image && <Image src={hero.image} alt={hero.title} fill priority sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />}
                   <div className="absolute left-5 top-5 rounded-full px-3 py-1 text-[10px] font-extrabold uppercase" style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
                     Latest
                   </div>
@@ -85,7 +61,8 @@ export default function BlogPage() {
                     <span>·</span>
                     <span>{hero.topic}</span>
                     <span>·</span>
-                    <span>{hero.read}</span>
+                    <span>{hero.read} READ</span>
+                    {hero.date && (<><span>·</span><span>{hero.date}</span></>)}
                   </div>
                   <h2 className="mt-4 text-2xl font-extrabold leading-tight md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}>
                     {hero.title}
@@ -103,9 +80,9 @@ export default function BlogPage() {
             <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {rest.map((p, i) => (
                 <Reveal key={p.slug} delay={(i % 3) as 0 | 1 | 2}>
-                  <Link href={`/blog/${p.slug}`} className="group block h-full overflow-hidden rounded-xl border transition-shadow hover:shadow-xl" style={{ borderColor: "var(--brand-pastel)", background: "#fff" }}>
+                  <Link href={postHref(p)} className="group block h-full overflow-hidden rounded-xl border transition-shadow hover:shadow-xl" style={{ borderColor: "var(--brand-pastel)", background: "#fff" }}>
                     <div className="relative aspect-[16/10] w-full">
-                      <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                      {p.image && <Image src={p.image} alt={p.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />}
                     </div>
                     <div className="p-6">
                       <div className="text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.12em" }}>
@@ -118,6 +95,39 @@ export default function BlogPage() {
                   </Link>
                 </Reveal>
               ))}
+            </div>
+          )}
+
+          {/* UPCOMING — clearly badged so it never reads as published */}
+          {upcoming.length > 0 && (
+            <div className="mt-20">
+              <Reveal>
+                <div className="flex items-center gap-3">
+                  <div className="section-label">In the pipeline</div>
+                  <span className="text-xs font-bold uppercase" style={{ color: "var(--brand-pastel)", letterSpacing: "0.12em" }}>
+                    {upcoming.length} drafting · ready next
+                  </span>
+                </div>
+              </Reveal>
+              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {upcoming.map((p, i) => (
+                  <Reveal key={p.slug} delay={(i % 3) as 0 | 1 | 2}>
+                    <article className="h-full rounded-xl border p-6" style={{ borderColor: "var(--brand-pastel)", background: "var(--brand-tea)", opacity: 0.95 }}>
+                      <div className="flex items-center justify-between">
+                        <span className="rounded-full px-2 py-1 text-[10px] font-extrabold uppercase" style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.18em" }}>
+                          Coming soon
+                        </span>
+                        <span className="text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.12em" }}>{p.channel} · {p.read}</span>
+                      </div>
+                      <h3 className="mt-4 text-lg font-extrabold leading-snug" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.01em" }}>
+                        {p.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--brand-body)" }}>{p.excerpt}</p>
+                      <div className="mt-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.12em" }}>The {p.pillar} · {p.topic}</div>
+                    </article>
+                  </Reveal>
+                ))}
+              </div>
             </div>
           )}
         </div>

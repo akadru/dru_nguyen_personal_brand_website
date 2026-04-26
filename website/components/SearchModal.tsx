@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { POSTS } from "@/lib/posts";
+import { POSTS, postHref } from "@/lib/posts";
 
 const OPEN_EVENT = "dn:search-open";
 
@@ -65,7 +65,7 @@ export default function SearchModal() {
     const term = q.trim().toLowerCase();
     if (!term) return POSTS.slice(0, 6);
     return POSTS.filter((p) =>
-      [p.title, p.kind, p.pillar, p.topic].some((s) => s.toLowerCase().includes(term))
+      [p.title, p.channel, p.pillar, p.topic].some((s) => s.toLowerCase().includes(term))
     );
   }, [q]);
 
@@ -110,10 +110,10 @@ export default function SearchModal() {
             </div>
           ) : (
             <ul>
-              {results.map((p, i) => (
-                <li key={p.title + i} className="border-b" style={{ borderColor: "rgba(176,190,197,0.25)" }}>
+              {results.map((p) => (
+                <li key={p.slug} className="border-b" style={{ borderColor: "rgba(176,190,197,0.25)" }}>
                   <Link
-                    href={p.href}
+                    href={postHref(p)}
                     onClick={() => setOpen(false)}
                     className="flex items-start gap-4 px-5 py-4 transition-colors hover:bg-[var(--brand-tea)]"
                   >
@@ -121,7 +121,7 @@ export default function SearchModal() {
                       className="mt-1 inline-flex h-6 shrink-0 items-center rounded px-2 text-[10px] font-extrabold uppercase"
                       style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.12em" }}
                     >
-                      {p.kind}
+                      {p.published ? p.channel : "Soon"}
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="text-base font-extrabold leading-snug" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.01em" }}>
