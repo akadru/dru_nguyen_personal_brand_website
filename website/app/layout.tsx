@@ -3,6 +3,7 @@ import "./globals.css";
 import TopBar from "@/components/TopBar";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import SearchModal from "@/components/SearchModal";
 
 export const metadata: Metadata = {
   title: "Dru Nguyen — Operator. AI Educator.",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
+        <SearchModal />
       </body>
     </html>
   );

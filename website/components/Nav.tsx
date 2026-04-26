@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import SearchModal from "./SearchModal";
+import { SearchTrigger } from "./SearchModal";
 
 type Sub = { href: string; label: string };
 type Pillar = { id: string; label: string; tagline: string; sub: Sub[] };
@@ -112,7 +112,7 @@ export default function Nav() {
             Contact
           </Link>
           <div className="ml-3">
-            <SearchModal />
+            <SearchTrigger />
           </div>
           <Link
             href="/newsletter"
@@ -123,16 +123,21 @@ export default function Nav() {
           </Link>
         </nav>
 
-        <button
-          aria-label="Open menu"
-          className="lg:hidden p-2"
-          onClick={() => setOpenMobile((o) => !o)}
-          style={{ color: "var(--brand-white)" }}
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {openMobile ? <path d="M6 6l12 12M6 18L18 6" /> : <><path d="M3 6h18M3 12h18M3 18h18" /></>}
-          </svg>
-        </button>
+        <div className="flex items-center gap-1 lg:hidden">
+          <div className="lg:hidden">
+            <SearchTrigger compact />
+          </div>
+          <button
+            aria-label="Open menu"
+            className="p-2"
+            onClick={() => setOpenMobile((o) => !o)}
+            style={{ color: "var(--brand-white)" }}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              {openMobile ? <path d="M6 6l12 12M6 18L18 6" /> : <><path d="M3 6h18M3 12h18M3 18h18" /></>}
+            </svg>
+          </button>
+        </div>
       </div>
 
       {/* Desktop dropdown panel */}
