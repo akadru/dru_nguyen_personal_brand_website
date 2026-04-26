@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
@@ -48,9 +49,36 @@ export default function Home() {
         className="relative overflow-hidden"
         style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}
       >
+        {/* photo background */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/dru-hero.jpg"
+            alt="Dru Nguyen speaking at Zero Project Conference 2026"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          {/* dark gradient for legibility */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(10,27,36,0.55) 0%, rgba(10,27,36,0.75) 55%, rgba(10,27,36,0.95) 100%)",
+            }}
+          />
+          <div
+            className="absolute inset-0 hidden md:block"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(10,27,36,0.92) 0%, rgba(10,27,36,0.65) 45%, rgba(10,27,36,0.25) 75%, rgba(10,27,36,0.05) 100%)",
+            }}
+          />
+        </div>
         {/* lime accent bar */}
-        <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto max-w-[1200px] px-5 pt-32 pb-24 md:px-8 md:pt-40 md:pb-28">
+        <div className="absolute inset-x-0 top-0 z-10 h-1" style={{ background: "var(--brand-lime)" }} />
+
+        <div className="relative z-10 mx-auto max-w-[1200px] px-5 pt-32 pb-24 md:px-8 md:pt-44 md:pb-32 lg:min-h-[88vh] lg:flex lg:flex-col lg:justify-center">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
               Operator · AI Realist · Scholarly Warrior
@@ -58,8 +86,13 @@ export default function Home() {
           </Reveal>
           <Reveal delay={1}>
             <h1
-              className="mt-6 font-extrabold tracking-tight"
-              style={{ fontSize: "clamp(48px, 9vw, 120px)", lineHeight: 0.95, letterSpacing: "-0.03em" }}
+              className="mt-6 font-extrabold tracking-tight max-w-4xl"
+              style={{
+                fontSize: "clamp(48px, 9vw, 120px)",
+                lineHeight: 0.95,
+                letterSpacing: "-0.03em",
+                textShadow: "0 2px 30px rgba(10,27,36,0.6)",
+              }}
             >
               I&apos;m Dru.
               <br />
@@ -89,11 +122,20 @@ export default function Home() {
               </Link>
               <Link
                 href="/content"
-                className="inline-flex items-center justify-center rounded-full border-2 px-7 py-4 text-sm font-bold uppercase tracking-wider"
+                className="inline-flex items-center justify-center rounded-full border-2 px-7 py-4 text-sm font-bold uppercase tracking-wider backdrop-blur-sm"
                 style={{ borderColor: "var(--brand-pastel)", color: "var(--brand-white)", letterSpacing: "0.05em" }}
               >
                 Read the Content
               </Link>
+            </div>
+          </Reveal>
+          <Reveal delay={3}>
+            <div
+              className="mt-16 inline-flex items-center gap-3 rounded-full border px-4 py-2 text-xs font-bold uppercase backdrop-blur-sm self-start"
+              style={{ borderColor: "rgba(173,251,73,0.45)", color: "var(--brand-lime)", letterSpacing: "0.18em" }}
+            >
+              <span className="h-1.5 w-1.5 rounded-full" style={{ background: "var(--brand-lime)" }} />
+              Speaking · Zero Project Conference · 2026
             </div>
           </Reveal>
         </div>
