@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap');
+@import "tailwindcss";
+
+/* Brand — Dru Nguyen Personal Brand (Scholarly Warrior) */
+:root {
+  --brand-lime:    #ADFB49; /* French Lime — accent only on dark */
+  --brand-jungle:  #0A1B24; /* Dark Jungle Green — dominant dark */
+  --brand-myrtle:  #347474; /* Myrtle Green — section labels, links */
+  --brand-tea:     #D3EDC5; /* Tea Green — light fills */
+  --brand-pastel:  #B0BEC5; /* Pastel Blue — captions, metadata */
+  --brand-white:   #F2F2F2; /* Anti-Flash White */
+  --brand-body:    #333333; /* body text */
+
+  --brand-primary: var(--brand-jungle);
+  --brand-accent:  var(--brand-lime);
+  --brand-surface: var(--brand-white);
+  --brand-text:    var(--brand-jungle);
+
+  --background: var(--brand-white);
+  --foreground: var(--brand-jungle);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-lime:    var(--brand-lime);
+  --color-jungle:  var(--brand-jungle);
+  --color-myrtle:  var(--brand-myrtle);
+  --color-tea:     var(--brand-tea);
+  --color-pastel:  var(--brand-pastel);
+  --color-paper:   var(--brand-white);
+  --font-sans: 'Outfit', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-prose: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+
+html, body {
+  background: var(--brand-white);
+  color: var(--brand-jungle);
+  font-family: 'Outfit', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Reveal animation (Web Style Guide §6) ---- */
+.reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+
+/* ---- Section label utility ---- */
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-myrtle);
+}
+
+/* ---- Marquee for ventures strip ---- */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track { animation: marquee 30s linear infinite; }
+
+/* ---- Selection color ---- */
+::selection { background: var(--brand-lime); color: var(--brand-jungle); }

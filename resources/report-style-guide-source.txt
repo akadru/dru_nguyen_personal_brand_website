@@ -1,0 +1,317 @@
+DRU NGUYEN
+Report Style Guide
+Brand standards, typography, layout, and component library for producing consistent, professional reports under the Scholarly Warrior brand
+SECTION 1
+Brand Color Palette
+The foundation of all Dru Nguyen report visual identity. Every report uses this exact palette. No new colors are introduced.
+French Lime
+#ADFB49
+Primary / Hero
+Section accent lines, header borders, callout borders, key emphasis. Use generously - this is the brand signature.
+Dark Jungle Green
+#0A1B24
+Primary Text
+Report titles, H1 headings, table headers. Never for backgrounds.
+Myrtle Green
+#347474
+Secondary
+H2 subheadings, links, chart fills, callout accents, section labels.
+Tea Green
+#D3EDC5
+Light Fill
+Summary boxes, neutral highlights, alternating table rows.
+Pastel Blue
+#B0BEC5
+Captions / Meta
+Footnotes, page numbers, section taglines, source notes.
+Anti-Flash White
+#F2F2F2
+Light Alt
+Alternating table rows, light card backgrounds.
+Body Text
+#333333
+Body
+All running text. Never pure black (#000000).
+Color Usage Rules
+Dark Jungle Green for all H1 headings and report titles. Never for backgrounds.
+Myrtle Green is the only color used for H2 subheadings. H1 always Dark Jungle Green.
+French Lime appears as accent lines, header borders, and callout borders. Use it generously - it is the brand signature in reports.
+Body text defaults to #333333. Never pure black.
+Table header rows use Dark Jungle Green background with French Lime or Anti-Flash White text.
+Alternating rows use Anti-Flash White and Tea Green.
+SECTION 2
+Typography
+All report text uses Outfit. It is clean, readable, and carries authority without stiffness. This is the only typeface used across all report elements.
+Element
+Size (pt)
+Weight
+Color
+Usage
+Cover Title
+28pt
+Bold
+Dark Jungle Green
+Report name on cover page
+Heading 1
+18pt
+Bold
+Dark Jungle Green
+Section titles, page openers
+Heading 2
+14pt
+Bold
+Myrtle Green
+Subsection headers
+Heading 3
+12pt
+Bold
+Dark Jungle Green
+Tertiary headers, key concepts
+Subtitle
+11pt
+Italic
+Pastel Blue
+Section taglines under H1
+Body
+10.5pt
+Regular
+#333333
+All running text
+Implication
+10.5pt
+Bold Italic
+Myrtle Green
+Insight labels - "Key Takeaway:"
+Caption / Meta
+9pt
+Regular
+Pastel Blue
+Footnotes, sources, headers, footers
+Table Header
+10pt
+Bold
+French Lime
+Column headers on Dark Jungle Green background
+Table Body
+10pt
+Regular
+#333333
+Data cells
+Spacing Rules
+Line Spacing
+1.15x - slight breathing room on all body text
+Body Paragraph
+60 DXA before and after
+H1 Spacing
+0 before, 120 after (tight to subtitle)
+H2 Spacing
+240 before, 80 after
+Bullet Items
+40 before, 40 after (compact grouping)
+SECTION 3
+Page Layout
+Page Setup
+Paper Size
+US Letter - 8.5 x 11 inches
+Margins
+1 inch all sides (1440 DXA)
+Content Width
+6.5 inches (9360 DXA)
+Orientation
+Portrait (all pages)
+DXA Reference
+1440 DXA = 1 inch
+Cover Page Pattern
+Large top spacer (approx. 1.5 inches of white space).
+French Lime accent line (8pt bottom border).
+Two-line title: Line 1 in Dark Jungle Green 28pt bold, Line 2 in Myrtle Green 28pt bold.
+Subtitle in Pastel Blue 12pt regular.
+Second French Lime accent line (4pt, thinner).
+Meta info: "Prepared by" in Pastel Blue, name in Dark Jungle Green bold.
+Classification label ("Confidential" / "Internal") in Pastel Blue.
+Header
+Every content page includes a running header: "DRU NGUYEN" in Dark Jungle Green 8pt bold, followed by " | Report Title" in Pastel Blue 8pt. Bottom border: 2pt French Lime line with 4pt spacing below.
+Footer
+Every content page includes a running footer. Left: classification label in Pastel Blue 8pt. Right: page number in Pastel Blue 8pt. Top border: 1pt Tea Green line with 4pt spacing above.
+Section Opener Pattern
+Each major section follows this sequence: Heading 1 (Dark Jungle Green, 18pt bold), subtitle (Pastel Blue, 11pt italic), French Lime accent line (4pt bottom border, 4pt space), then content begins.
+SECTION 4
+Component Library
+4.1 Callout Box (French Lime Left Border)
+Used for key insights and thesis statements that deserve visual emphasis. Dark Jungle Green text, 22pt bold, with a 12pt French Lime left border and 360 DXA left indent. One per section maximum. Reserve for the single most important takeaway.
+4.2 Highlight Box (Full-Width Background)
+Type
+Background
+Usage
+Neutral Highlight
+Tea Green
+Summaries, bottom-line statements, key findings
+Risk / Warning
+#FDF2F7 (light pink)
+Risk statements, warnings, urgent flags - label in Myrtle Green bold
+Opportunity
+#E8FBF3 (light green)
+Positive outcomes, opportunities, recommendations
+4.3 Data Tables
+All tables use Dark Jungle Green headers with French Lime or Anti-Flash White text. Alternating Anti-Flash White and Tea Green rows. No visible cell borders except a thin Tea Green bottom rule between rows.
+Header Background
+Dark Jungle Green (#0A1B24)
+Header Text
+French Lime or Anti-Flash White, 10pt bold
+Row Alternation
+Anti-Flash White then Tea Green
+Row Border
+1pt bottom, Tea Green only
+Cell Padding
+60 DXA top/bottom, 120 DXA left/right
+Width Type
+Always DXA - never percentage (breaks in Google Docs)
+4.4 Key Takeaway Pattern
+Used after findings or analysis blocks. Bold label in Myrtle Green followed by regular Dark Jungle Green insight. Format: "Key Takeaway: [one to two sentence consequence or meaning of the finding]."
+4.5 Arrow Insight Pattern
+Used for takeaway statements beneath data points. Myrtle Green arrow followed by italic body text interpretation. One sentence is ideal; two is the maximum.
+4.6 Lists
+Bullet lists use the standard bullet character via numbering config - never unicode bullets inserted manually.
+Numbered lists use decimal format. Both indent 720 DXA with 360 DXA hanging.
+Each new numbered list needs a unique reference to restart at 1.
+SECTION 5
+Chart and Graphic Standards
+General Chart Rules
+All charts use the brand color palette. Primary fills use Myrtle Green. Risk/contrast uses French Lime. Positive/growth uses Tea Green.
+White background on all charts (#FFFFFF). Never colored chart backgrounds.
+Axis labels in Pastel Blue. Data labels in Dark Jungle Green bold.
+Grid lines: Tea Green, thin (0.5 to 0.8pt).
+Export at 200 DPI as PNG. Embed at widths between 320 and 520px.
+Remove all chart borders and unnecessary axis spines.
+Chart Type Usage
+Chart Type
+Use For
+Key Settings
+Horizontal Bar
+Category comparison
+Myrtle Green default, French Lime for key items
+Donut / Ring
+Percentage breakdowns
+35% ring width, Dark Jungle Green center text
+Timeline
+Phased roadmaps
+Myrtle Green Phase 1, Dark Jungle Green Phase 2+, French Lime arrow
+Radar / Spider
+Multi-dimension comparison
+Tea Green fill 15% opacity, Myrtle Green line 2.5pt
+Gap / Paired Bar
+Confidence vs reality gaps
+Myrtle Green reported, French Lime observed
+SECTION 6
+Voice and Writing Style
+How Dru Nguyen reports sound. Every report Claude produces must pass these filters.
+Tone Principles
+Direct, not diplomatic. 
+State findings plainly. "Revenue is the highest-risk area" not "there may be opportunity to improve revenue processes."
+Precise, not academic. 
+Use specific language. "Level 2 - Assisted" not "a moderate level of maturity."
+Honest about risk. 
+Name what is at stake. Use Tea Green or light pink callouts for genuine warnings.
+Action-oriented. 
+Every section should imply or state what needs to change. No section ends without a direction.
+Concise. 
+Body text paragraphs rarely exceed 3 sentences. If it is longer, break it up.
+Hard Rules
+Never use em dashes. Use a colon or rewrite the sentence.
+Never use corporate jargon. No "synergy," "leverage," "circle back," or "deep dive."
+Never be overly formal or stiff. Scholarly Warrior is confident, not cold.
+Never lose the identity. Every report should sound unmistakably like Dru Nguyen.
+Use smart quotes. Never straight quotes.
+Use arrows for flow sequences: Research > Synthesis > Decision.
+Abbreviations: define on first use, then use freely. Common exceptions: AI, ROI, KPI.
+Structural Patterns
+Finding > Evidence > Implication. State the finding, support it briefly, then give the so-what.
+Bold lead-in + regular detail. Start paragraphs with a bold phrase that summarizes, then explain.
+Callout the thesis. Each section's most important sentence belongs in a callout or highlight box.
+End with a "Bottom Line" box when a section covers complex ground.
+SECTION 7
+Report Structure Template
+Standard section order for all Dru Nguyen reports. Sections can be added but the core sequence remains consistent.
+Section
+Name
+Purpose
+Cover
+Cover Page
+Title, subtitle, classification, prepared-by line
+1
+Executive Overview
+Overall finding, context, 3 key shifts needed
+2
+Current State Snapshot
+People / Process / Systems breakdown
+3
+Deep Dive
+Detailed findings with evidence and implications
+4
+Breakdown by Unit
+Per-team or per-area assessment with risk flags
+5
+Roadmap / Recommendations
+Phased plan with timelines and next steps
+6
+Leadership Implications
+What changes for decision-makers
+Appendix
+Appendix
+Methodology, frameworks, definitions
+SECTION 8
+Technical Reference
+DXA Conversions
+1 inch
+1440 DXA
+0.5 inch
+720 DXA
+Page width (US Letter)
+12240 DXA
+Page height (US Letter)
+15840 DXA
+Content width (1 inch margins)
+9360 DXA
+Standard cell padding
+60 DXA top/bottom, 120 DXA left/right
+Hex Color Quick Reference
+Name
+Hex
+RGB
+French Lime (Primary)
+#ADFB49
+173, 251, 73
+Dark Jungle Green
+#0A1B24
+10, 27, 36
+Myrtle Green
+#347474
+52, 116, 116
+Tea Green
+#D3EDC5
+211, 237, 197
+Pastel Blue
+#B0BEC5
+176, 190, 197
+Anti-Flash White
+#F2F2F2
+242, 242, 242
+Body Text
+#333333
+51, 51, 51
+Risk Background
+#FDF2F7
+253, 242, 247
+Opportunity Background
+#E8FBF3
+232, 251, 243
+Implementation Notes
+Use docx-js (npm install -g docx) for programmatic generation. Never manually insert unicode bullets.
+Table widths must always use WidthType.DXA - never percentage (breaks in Google Docs).
+Set both columnWidths on the table AND width on each cell - they must match.
+Use ShadingType.CLEAR for all table shading - never SOLID (creates black backgrounds).
+Charts: generate with matplotlib at 200 DPI, white background, brand colors. Embed as PNG.
+Each numbered list needs its own unique reference to restart numbering independently.
+PageBreak must always be inside a Paragraph element.
+Never use tables as horizontal rules - use Paragraph border bottom instead.
+Dru Nguyen Personal Brand  -  Report Style Guide  -  Version 1.0
