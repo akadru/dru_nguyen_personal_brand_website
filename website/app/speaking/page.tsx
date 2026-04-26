@@ -11,7 +11,7 @@ const topics = [
   { label: "AI for Operators", body: "How to use AI as a workflow, not a tool. Real prompts, real templates, real outcomes from Xood." },
   { label: "EOS in Practice", body: "What it actually takes to implement EOS — including pre-revenue startups. The 9-month buy-in story." },
   { label: "Building in Vietnam", body: "Cross-industry pattern recognition from running businesses across F&B, AI, and entertainment." },
-  { label: "The Scholarly Warrior", body: "Discipline + learning as an integrated philosophy. Identity work for hard conversations and decisions." },
+  { label: "Care. Discipline. Grit.", body: "Discipline + learning as an integrated philosophy. Identity work for hard conversations and decisions." },
 ];
 
 export default function SpeakingPage() {

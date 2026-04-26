@@ -46,15 +46,14 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={1}>
               <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 96px)", lineHeight: 0.95, letterSpacing: "-0.03em" }}>
-                I see, hear, feel,
+                Operator first.
                 <br />
-                <span style={{ color: "var(--brand-lime)" }}>and KNOW.</span>
+                <span style={{ color: "var(--brand-lime)" }}>Educator second.</span>
               </h1>
             </Reveal>
             <Reveal delay={2}>
               <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
-                The Scholarly Warrior is the operating identity. Discipline plus learning as an integrated philosophy.
-                Care. Discipline. Grit.
+                Discipline plus learning as an integrated philosophy. Care. Discipline. Grit.
               </p>
             </Reveal>
           </div>

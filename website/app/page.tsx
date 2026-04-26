@@ -73,7 +73,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-[1300px] px-5 pt-32 pb-24 md:px-10 md:pt-44 md:pb-36 lg:min-h-[92vh] lg:flex lg:flex-col lg:justify-center">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
-              The Scholarly Warrior
+              Operator · AI Realist · Educator
             </div>
           </Reveal>
           <Reveal delay={1}>
@@ -142,7 +142,7 @@ export default function Home() {
         <div className="marquee-track flex gap-12 whitespace-nowrap">
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex shrink-0 gap-12 pr-12">
-              {["Care.", "Discipline.", "Grit.", "I see.", "I hear.", "I feel.", "I KNOW.", "Care.", "Discipline.", "Grit.", "Knowledge with application is wisdom."].map((w, i) => (
+              {["Care.", "Discipline.", "Grit.", "Operator.", "Founder.", "Educator.", "Care.", "Discipline.", "Grit.", "Knowledge with application is wisdom."].map((w, i) => (
                 <span key={i} className="text-2xl font-extrabold uppercase md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.01em" }}>
                   {w} <span style={{ color: "var(--brand-myrtle)" }}>★</span>
                 </span>
@@ -151,6 +151,80 @@ export default function Home() {
           ))}
         </div>
       </div>
+
+      {/* THREE BRAND-PILLAR CARDS (Gary Vee pattern) */}
+      <section className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
+        <div className="mx-auto max-w-[1300px] px-5 md:px-10">
+          <div className="grid gap-5 md:grid-cols-3">
+            <Reveal delay={0}>
+              <Link
+                href="/about"
+                className="group flex h-full flex-col justify-between rounded-2xl p-8 transition-shadow hover:shadow-xl md:p-10"
+                style={{ background: "var(--brand-jungle)", color: "var(--brand-white)", borderTop: "3px solid var(--brand-lime)" }}
+              >
+                <div>
+                  <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
+                    Dru Nguyen
+                  </div>
+                  <h3 className="mt-5 text-3xl font-extrabold leading-tight md:text-4xl" style={{ letterSpacing: "-0.02em" }}>
+                    Operates <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>businesses.</em>
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
+                    Skylight, Xood, Tictag — plus advisory across East West Brewery, Nuen Motor, GAM. Ten years of real ops, real teams, real P&amp;Ls.
+                  </p>
+                </div>
+                <span className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>
+                  My Story →
+                </span>
+              </Link>
+            </Reveal>
+            <Reveal delay={1}>
+              <Link
+                href="/content"
+                className="group flex h-full flex-col justify-between rounded-2xl p-8 transition-shadow hover:shadow-xl md:p-10"
+                style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", borderTop: "3px solid var(--brand-jungle)" }}
+              >
+                <div>
+                  <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.22em" }}>
+                    AI Operator
+                  </div>
+                  <h3 className="mt-5 text-3xl font-extrabold leading-tight md:text-4xl" style={{ letterSpacing: "-0.02em" }}>
+                    Teaches <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>what works.</em>
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed" style={{ color: "var(--brand-jungle)" }}>
+                    AI workflows, frameworks, and operator essays — three pillars (Thinker, Builder, Human) across LinkedIn, Substack, and Facebook.
+                  </p>
+                </div>
+                <span className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
+                  Read the Content →
+                </span>
+              </Link>
+            </Reveal>
+            <Reveal delay={2}>
+              <Link
+                href="/ventures"
+                className="group flex h-full flex-col justify-between rounded-2xl p-8 transition-shadow hover:shadow-xl md:p-10"
+                style={{ background: "var(--brand-tea)", color: "var(--brand-jungle)", borderTop: "3px solid var(--brand-myrtle)" }}
+              >
+                <div>
+                  <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>
+                    Ventures
+                  </div>
+                  <h3 className="mt-5 text-3xl font-extrabold leading-tight md:text-4xl" style={{ letterSpacing: "-0.02em" }}>
+                    Six businesses. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Three industries.</em>
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed" style={{ color: "var(--brand-body)" }}>
+                    Hospitality, AI data, entertainment. Founding, advising, investing — the lived material the content comes from.
+                  </p>
+                </div>
+                <span className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
+                  See the Portfolio →
+                </span>
+              </Link>
+            </Reveal>
+          </div>
+        </div>
+      </section>
 
       {/* ABOUT TEASER — portrait + bio block (Gary Vee pattern) */}
       <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>

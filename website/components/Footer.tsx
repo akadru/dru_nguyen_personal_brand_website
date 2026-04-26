@@ -46,12 +46,11 @@ export default function Footer() {
               </span>
               <div>
                 <div className="text-xl font-extrabold tracking-tight">Dru Nguyen</div>
-                <div className="text-xs" style={{ color: "var(--brand-pastel)" }}>The Scholarly Warrior</div>
+                <div className="text-xs" style={{ color: "var(--brand-pastel)" }}>Operator · AI Educator</div>
               </div>
             </div>
             <p className="mt-6 max-w-xs text-sm leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
-              Operator. Co-founder. Investor. AI-using operator becoming an educator.
-              Care. Discipline. Grit.
+              Operator. Co-founder. Investor. AI-using operator becoming an educator across Skylight, Xood, and a six-business advisory portfolio.
             </p>
           </div>
           {cols.map((col) => (
