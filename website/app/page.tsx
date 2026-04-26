@@ -73,7 +73,7 @@ export default function Home() {
         <div className="relative z-10 mx-auto max-w-[1300px] px-5 pt-32 pb-24 md:px-10 md:pt-44 md:pb-36 lg:min-h-[92vh] lg:flex lg:flex-col lg:justify-center">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
-              Operator · AI Realist · Educator
+              Dru Nguyen · Scholarly Warrior · Xood
             </div>
           </Reveal>
           <Reveal delay={1}>
@@ -93,15 +93,16 @@ export default function Home() {
               className="mt-10 max-w-3xl text-base leading-relaxed md:text-xl"
               style={{ color: "var(--brand-pastel)" }}
             >
-              <strong style={{ color: "var(--brand-white)" }}>Operator. Co-Founder &amp; MD of Xood. Founder of Skylight.</strong> Advisor to Tictag Singapore, East West Brewery, Nuen Motor &amp; GAM Entertainment. AI-using operator becoming an educator.
+              <strong style={{ color: "var(--brand-white)" }}>Co-Founder &amp; MD of Xood. Founder of Skylight.</strong> Advisor to Tictag Singapore, East West Brewery, Nuen Motor &amp; GAM Entertainment.{" "}
+              <em>Operator becoming educator.</em>
             </p>
           </Reveal>
           <Reveal delay={3}>
             <p
-              className="mt-8 max-w-3xl text-lg italic md:text-2xl"
+              className="mt-8 max-w-3xl text-xl italic md:text-3xl"
               style={{ color: "var(--brand-white)", fontFamily: "'Plus Jakarta Sans', serif" }}
             >
-              &ldquo;Knowledge with application is wisdom.&rdquo;
+              &ldquo;I see, hear, feel, <span style={{ color: "var(--brand-lime)" }}>and KNOW.</span>&rdquo;
             </p>
           </Reveal>
           <Reveal delay={3}>
@@ -142,7 +143,7 @@ export default function Home() {
         <div className="marquee-track flex gap-12 whitespace-nowrap">
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex shrink-0 gap-12 pr-12">
-              {["Care.", "Discipline.", "Grit.", "Operator.", "Founder.", "Educator.", "Care.", "Discipline.", "Grit.", "Knowledge with application is wisdom."].map((w, i) => (
+              {["Care.", "Discipline.", "Grit.", "I see.", "I hear.", "I feel.", "I KNOW.", "Doing good with data.", "Care.", "Discipline.", "Grit."].map((w, i) => (
                 <span key={i} className="text-2xl font-extrabold uppercase md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.01em" }}>
                   {w} <span style={{ color: "var(--brand-myrtle)" }}>★</span>
                 </span>
@@ -152,10 +153,15 @@ export default function Home() {
         </div>
       </div>
 
-      {/* THREE BRAND-PILLAR CARDS (Gary Vee pattern) */}
+      {/* IDENTITY STRIP — three identity layers (Gary Vee pattern) */}
       <section className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
-          <div className="grid gap-5 md:grid-cols-3">
+          <Reveal>
+            <div className="text-center">
+              <div className="section-label">Three Identities · One Person</div>
+            </div>
+          </Reveal>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
             <Reveal delay={0}>
               <Link
                 href="/about"
@@ -167,7 +173,7 @@ export default function Home() {
                     Dru Nguyen
                   </div>
                   <h3 className="mt-5 text-3xl font-extrabold leading-tight md:text-4xl" style={{ letterSpacing: "-0.02em" }}>
-                    Operates <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>businesses.</em>
+                    <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>builds</em> businesses.
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
                     Skylight, Xood, Tictag — plus advisory across East West Brewery, Nuen Motor, GAM. Ten years of real ops, real teams, real P&amp;Ls.
@@ -180,49 +186,126 @@ export default function Home() {
             </Reveal>
             <Reveal delay={1}>
               <Link
-                href="/content"
+                href="/scholarly-warrior"
                 className="group flex h-full flex-col justify-between rounded-2xl p-8 transition-shadow hover:shadow-xl md:p-10"
                 style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", borderTop: "3px solid var(--brand-jungle)" }}
               >
                 <div>
                   <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.22em" }}>
-                    AI Operator
+                    Scholarly Warrior
                   </div>
                   <h3 className="mt-5 text-3xl font-extrabold leading-tight md:text-4xl" style={{ letterSpacing: "-0.02em" }}>
-                    Teaches <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>what works.</em>
+                    <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>teaches</em> what works.
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed" style={{ color: "var(--brand-jungle)" }}>
-                    AI workflows, frameworks, and operator essays — three pillars (Thinker, Builder, Human) across LinkedIn, Substack, and Facebook.
+                    Care · Discipline · Grit. The POV, the frameworks, and the operator essays. Discipline plus learning as an integrated philosophy.
                   </p>
                 </div>
                 <span className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
-                  Read the Content →
+                  Enter the dojo →
                 </span>
               </Link>
             </Reveal>
             <Reveal delay={2}>
               <Link
-                href="/ventures"
+                href="/xood"
                 className="group flex h-full flex-col justify-between rounded-2xl p-8 transition-shadow hover:shadow-xl md:p-10"
                 style={{ background: "var(--brand-tea)", color: "var(--brand-jungle)", borderTop: "3px solid var(--brand-myrtle)" }}
               >
                 <div>
                   <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>
-                    Ventures
+                    Xood
                   </div>
                   <h3 className="mt-5 text-3xl font-extrabold leading-tight md:text-4xl" style={{ letterSpacing: "-0.02em" }}>
-                    Six businesses. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Three industries.</em>
+                    <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>applies</em> AI to real operations.
                   </h3>
                   <p className="mt-4 text-sm leading-relaxed" style={{ color: "var(--brand-body)" }}>
-                    Hospitality, AI data, entertainment. Founding, advising, investing — the lived material the content comes from.
+                    Doing Good With Data. AI data services for Vietnam — built on the Tictag DNA, sharpened by ten years of operating businesses across three industries.
                   </p>
                 </div>
                 <span className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
-                  See the Portfolio →
+                  See the work →
                 </span>
               </Link>
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* HERO QUOTE MODULE — manifesto */}
+      <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+        <div className="mx-auto max-w-[900px] px-5 text-center md:px-10">
+          <Reveal>
+            <div className="section-label">The Manifesto</div>
+          </Reveal>
+          <Reveal delay={1}>
+            <p
+              className="mt-8 italic"
+              style={{
+                fontFamily: "'Plus Jakarta Sans', serif",
+                fontSize: "clamp(36px, 6vw, 80px)",
+                lineHeight: 1.05,
+                letterSpacing: "-0.02em",
+                color: "var(--brand-jungle)",
+              }}
+            >
+              I see, hear, feel,
+              <br />
+              <span style={{ color: "var(--brand-myrtle)" }}>and KNOW.</span>
+            </p>
+          </Reveal>
+          <Reveal delay={2}>
+            <p className="mt-8 text-sm font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>
+              — Dru Nguyen · The Scholarly Warrior
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* WHAT'S NEW SPOTLIGHT — single featured piece */}
+      <section className="py-20 md:py-28" style={{ background: "var(--brand-tea)" }}>
+        <div className="mx-auto max-w-[1300px] px-5 md:px-10">
+          <Reveal>
+            <div className="section-label">What&apos;s New</div>
+          </Reveal>
+          <Reveal delay={1}>
+            <div className="mt-6 grid gap-10 overflow-hidden rounded-2xl md:grid-cols-[1.4fr_1fr] md:items-center" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+              <div className="relative aspect-[16/10] md:aspect-auto md:h-full">
+                <Image src="/images/dru-hero.jpg" alt="Dru on stage at Zero Project Conference 2026" fill sizes="(max-width: 768px) 100vw, 60vw" className="object-cover" />
+                <div className="absolute left-5 top-5 rounded-full px-3 py-1 text-[10px] font-extrabold uppercase" style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
+                  Spotlight · 2026
+                </div>
+              </div>
+              <div className="p-8 md:p-12">
+                <div className="text-xs font-bold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>
+                  Keynote · Zero Project Conference
+                </div>
+                <h3 className="mt-4 text-3xl font-extrabold leading-tight md:text-5xl" style={{ letterSpacing: "-0.02em" }}>
+                  Everyone can <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>benefit</em> from working with data.
+                </h3>
+                <p className="mt-5 leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
+                  On stage with Tictag at the Zero Project Conference 2026 — on inclusive AI, the long-tail data
+                  problem, and why underserved communities are the ones who&apos;ll be left behind without intentional design.
+                </p>
+                <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                  <Link
+                    href="/press"
+                    className="inline-flex items-center justify-center rounded-full px-6 py-3 text-xs font-bold uppercase tracking-wider"
+                    style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.12em" }}
+                  >
+                    Watch / read more
+                  </Link>
+                  <Link
+                    href="/speaking"
+                    className="inline-flex items-center justify-center rounded-full border-2 px-6 py-3 text-xs font-bold uppercase tracking-wider"
+                    style={{ borderColor: "var(--brand-pastel)", color: "var(--brand-white)", letterSpacing: "0.12em" }}
+                  >
+                    Book Dru to speak
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 

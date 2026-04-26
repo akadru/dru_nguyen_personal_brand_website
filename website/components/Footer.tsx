@@ -46,7 +46,7 @@ export default function Footer() {
               </span>
               <div>
                 <div className="text-xl font-extrabold tracking-tight">Dru Nguyen</div>
-                <div className="text-xs" style={{ color: "var(--brand-pastel)" }}>Operator · AI Educator</div>
+                <div className="text-xs" style={{ color: "var(--brand-pastel)" }}>The Scholarly Warrior</div>
               </div>
             </div>
             <p className="mt-6 max-w-xs text-sm leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
