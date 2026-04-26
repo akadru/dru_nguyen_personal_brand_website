@@ -352,6 +352,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FRAMEWORKS SHELF — operator playbooks (Gary Vee books pattern) */}
+      <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+        <div className="mx-auto max-w-[1300px] px-5 md:px-10">
+          <Reveal>
+            <div className="section-label" style={{ color: "var(--brand-lime)" }}>The Frameworks</div>
+          </Reveal>
+          <Reveal delay={1}>
+            <div className="mt-3 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+              <h2 className="font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
+                Playbooks <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>I actually use.</em>
+              </h2>
+              <Link href="/blog" className="text-sm font-bold uppercase tracking-wider" style={{ color: "var(--brand-lime)", letterSpacing: "0.12em" }}>
+                Read deeper →
+              </Link>
+            </div>
+          </Reveal>
+          <div className="mt-14 grid gap-5 md:grid-cols-3 lg:grid-cols-4">
+            {[
+              { title: "S.I.F.P.", subtitle: "Situation · Insight · Framework · Provocation", body: "The writing framework behind every long-form post." },
+              { title: "EOS for Pre-Revenue", subtitle: "Operating System · 7 Components", body: "EOS adapted for startups before product-market fit." },
+              { title: "Four-Layer Review", subtitle: "Meaning · Relationship · Identity · Action", body: "How to draft a hard message that lands without breaking trust." },
+              { title: "AI Operator Stack", subtitle: "Claude · Workflows · Templates", body: "The exact prompts running Xood's commercial team in 30 min/day." },
+            ].map((f, i) => (
+              <Reveal key={f.title} delay={(i % 3) as 0 | 1 | 2}>
+                <article
+                  className="group flex h-full flex-col rounded-xl p-7 transition-transform hover:-translate-y-1"
+                  style={{ background: "rgba(242,242,242,0.04)", border: "1px solid rgba(176,190,197,0.2)" }}
+                >
+                  <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>Framework</div>
+                  <h3 className="mt-4 text-2xl font-extrabold leading-tight" style={{ letterSpacing: "-0.01em" }}>{f.title}</h3>
+                  <p className="mt-2 text-xs font-bold uppercase" style={{ color: "var(--brand-pastel)", letterSpacing: "0.12em" }}>{f.subtitle}</p>
+                  <p className="mt-4 text-sm leading-relaxed" style={{ color: "rgba(242,242,242,0.78)" }}>{f.body}</p>
+                  <span className="mt-6 inline-flex items-center gap-2 text-xs font-bold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>
+                    Coming soon →
+                  </span>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PRESS / FEATURED MEDIA — Gary Vee pattern */}
       <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">

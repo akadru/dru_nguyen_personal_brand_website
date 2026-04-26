@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import SearchModal from "./SearchModal";
 
 type Sub = { href: string; label: string };
 type Pillar = { id: string; label: string; tagline: string; sub: Sub[] };
@@ -110,6 +111,9 @@ export default function Nav() {
           >
             Contact
           </Link>
+          <div className="ml-3">
+            <SearchModal />
+          </div>
           <Link
             href="/newsletter"
             className="ml-3 rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider"
