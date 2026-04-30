@@ -17,6 +17,19 @@ export type Post = {
 
 export const POSTS: Post[] = [
   {
+    slug: "every-olympian-has-a-coach-yours-is-a-prompt-away",
+    title: "Every Olympian has a coach. Yours is a prompt away.",
+    excerpt:
+      "Every Olympian has a coach. So do every CEO and operator playing for real. Five copy-paste prompts that turn your LLM into yours.",
+    channel: "LinkedIn",
+    pillar: "Thinker",
+    topic: "Coaching",
+    read: "6 MIN",
+    date: "30 APR 2026",
+    image: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp",
+    published: true,
+  },
+  {
     slug: "never-enter-a-meeting-blind-claude-design-prep",
     title: "Never enter a meeting blind. My 30-min Claude prep.",
     excerpt:

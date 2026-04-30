@@ -1,0 +1,24 @@
+{
+  "topic": "Every Olympian has a coach. Yours is a prompt away. Five copy-paste prompts that turn an LLM into your operator's coach.",
+  "week_of": "2026-04-27",
+  "phrases": [
+    "GET A COACH.",
+    "AWARENESS, NOT ADVICE.",
+    "Every Olympian has a coach.",
+    "Knowledge with application is wisdom."
+  ],
+  "images": [
+    {
+      "file": "blog.md",
+      "slug": "every-olympian-has-a-coach-yours-is-a-prompt-away",
+      "image_class": "TEXT",
+      "style": "STREET_ART",
+      "sub_mode": "stencil",
+      "concept": "Banksy stencil mural on a Saigon brick wall: 'GET A COACH.' in lime spray paint, large, sharp, slight drip. Sets the tactical, coaching-led tone of the post. Same approved style as the validated Banksy stencil sample.",
+      "text": "GET A COACH.",
+      "aspect_ratio": "16:9",
+      "dimensions": "1200x630",
+      "prompt": "A 16:9 image, 1200x630. Subject: A weathered brick wall in a Saigon back-alley with a Banksy-style stencil sprayed across the central two-thirds. The phrase 'GET A COACH.' rendered in lime green spray paint, large sharp stencil letterforms, the period included, slight fresh drip. Late afternoon side-light from the right. Motorbikes blurred in the lower-left background, paper-lantern warmth from a shophouse to the right. Style: hand-painted Banksy stencil work, high-contrast monochrome with single lime accent. Visible imperfect edges, hand-made feel. Mood: bold, observant, coaching, hand-painted. Colors: dominant jungle-dark and weathered brick, with lime as the spray-paint stencil text. Render the word 'GET A COACH.' stenciled in lime green spray paint, sharp letterforms, Banksy stencil style. Spell every letter correctly. Include the period at the end. Avoid: people, faces, AI iconography, robots, glowing circuits, neon, cyberpunk, Blade Runner palette, purple, orange, red dominant, neural-net brain visuals, clip-art, clean vector style, vector-perfect AI street art look. No watermarks, no Western corporate stock aesthetic, no glowing circuits or robot imagery anywhere in the image."
+    }
+  ]
+}
