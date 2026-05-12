@@ -121,7 +121,7 @@ export default function SearchModal() {
                       className="mt-1 inline-flex h-6 shrink-0 items-center rounded px-2 text-[10px] font-extrabold uppercase"
                       style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.12em" }}
                     >
-                      {p.published ? p.channel : "Soon"}
+                      {p.channel}
                     </span>
                     <div className="min-w-0 flex-1">
                       <div className="text-base font-extrabold leading-snug" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.01em" }}>
