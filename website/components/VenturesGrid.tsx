@@ -1,0 +1,71 @@
+import Image from "next/image";
+import Link from "next/link";
+import { VENTURES } from "@/lib/ventures";
+
+/**
+ * Bartlett-style 3-up flush grid.
+ * Borderless cards · image-top · clean type · arrow CTA on hover.
+ * 3 columns desktop / 2 tablet / 1 mobile.
+ */
+export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
+  const grid = columns === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
+  return (
+    <div className={`grid grid-cols-1 gap-x-8 gap-y-14 ${grid}`}>
+      {VENTURES.map((v) => {
+        const linkProps = v.external
+          ? { target: "_blank", rel: "noopener noreferrer" }
+          : {};
+        return (
+          <Link
+            key={v.slug}
+            href={v.href}
+            {...linkProps}
+            className="group flex flex-col"
+          >
+            <div className="relative aspect-[16/10] w-full overflow-hidden">
+              <Image
+                src={v.image}
+                alt={`${v.name} — ${v.tagline}`}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+              />
+            </div>
+            <div className="mt-6 flex items-start justify-between gap-4">
+              <div>
+                <div
+                  className="text-[10px] font-extrabold uppercase"
+                  style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}
+                >
+                  {v.context}
+                </div>
+                <h3
+                  className="mt-2 text-2xl font-extrabold leading-tight md:text-3xl"
+                  style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}
+                >
+                  {v.name}
+                </h3>
+                <p
+                  className="mt-2 text-base italic"
+                  style={{ color: "var(--brand-myrtle)" }}
+                >
+                  {v.tagline}
+                </p>
+              </div>
+              <span
+                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors group-hover:bg-[var(--brand-jungle)] group-hover:border-[var(--brand-jungle)] group-hover:text-[var(--brand-lime)]"
+                style={{ borderColor: "var(--brand-jungle)", color: "var(--brand-jungle)" }}
+                aria-hidden
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M7 17 17 7" />
+                  <path d="M8 7h9v9" />
+                </svg>
+              </span>
+            </div>
+          </Link>
+        );
+      })}
+    </div>
+  );
+}

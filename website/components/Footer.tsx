@@ -1,22 +1,14 @@
 import Link from "next/link";
+import SocialIcons from "./SocialIcons";
 
 const cols = [
-  {
-    title: "Connect",
-    items: [
-      { label: "LinkedIn", href: "https://linkedin.com/in/dru-nguyen" },
-      { label: "Substack", href: "#" },
-      { label: "Facebook", href: "#" },
-      { label: "YouTube", href: "#" },
-    ],
-  },
   {
     title: "Explore",
     items: [
       { label: "About", href: "/about" },
-      { label: "Content", href: "/content" },
-      { label: "Speaking", href: "/speaking" },
       { label: "Ventures", href: "/ventures" },
+      { label: "Speaking", href: "/speaking" },
+      { label: "Press", href: "/press" },
     ],
   },
   {
@@ -24,8 +16,17 @@ const cols = [
     items: [
       { label: "Blog", href: "/blog" },
       { label: "Newsletter", href: "/newsletter" },
-      { label: "Press", href: "/press" },
-      { label: "Contact", href: "/contact" },
+      { label: "Scholarly Warrior", href: "/scholarly-warrior" },
+      { label: "Xood", href: "/xood" },
+    ],
+  },
+  {
+    title: "Get in touch",
+    items: [
+      { label: "Speaking enquiries", href: "/contact?intent=speaking" },
+      { label: "Press requests", href: "/contact?intent=press" },
+      { label: "Partnerships", href: "/contact?intent=partnership" },
+      { label: "Just say hello", href: "/contact" },
     ],
   },
 ];
@@ -34,7 +35,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
-      <div className="mx-auto max-w-[1200px] px-5 py-16 md:px-8">
+      <div className="mx-auto max-w-[1300px] px-5 py-20 md:px-10">
         <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div>
             <div className="flex items-center gap-3">
@@ -52,6 +53,9 @@ export default function Footer() {
             <p className="mt-6 max-w-xs text-sm leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
               Operator. Co-founder. Investor. AI-using operator becoming an educator across Skylight, Xood, and a six-business advisory portfolio.
             </p>
+            <div className="mt-8">
+              <SocialIcons variant="footer" />
+            </div>
           </div>
           {cols.map((col) => (
             <div key={col.title}>
@@ -59,7 +63,11 @@ export default function Footer() {
               <ul className="mt-4 space-y-3">
                 {col.items.map((it) => (
                   <li key={it.label}>
-                    <Link href={it.href} className="text-sm font-semibold hover:opacity-70" style={{ color: "var(--brand-white)" }}>
+                    <Link
+                      href={it.href}
+                      className="text-sm font-semibold transition-colors hover:text-[var(--brand-lime)]"
+                      style={{ color: "var(--brand-white)" }}
+                    >
                       {it.label}
                     </Link>
                   </li>
@@ -69,7 +77,7 @@ export default function Footer() {
           ))}
         </div>
         <div
-          className="mt-14 flex flex-col gap-2 border-t pt-6 text-xs md:flex-row md:items-center md:justify-between"
+          className="mt-16 flex flex-col gap-2 border-t pt-6 text-xs md:flex-row md:items-center md:justify-between"
           style={{ borderColor: "rgba(176,190,197,0.2)", color: "var(--brand-pastel)" }}
         >
           <div>© {year} Dru Nguyen. All rights reserved.</div>

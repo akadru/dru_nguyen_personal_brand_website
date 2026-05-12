@@ -1,50 +1,68 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import VenturesGrid from "@/components/VenturesGrid";
 
 export const metadata: Metadata = {
   title: "Ventures — Dru Nguyen",
-  description: "Six ventures across hospitality, AI data services, and entertainment. Xood, Skylight, Tictag, EWB, Nuen Motor, GAM Entertainment.",
+  description:
+    "Six ventures across hospitality, AI data services, and entertainment. Xood, Skylight, Tictag, GAM Entertainment, East West Brewing, Nuen Motor.",
 };
-
-const ventures = [
-  { name: "Xood", role: "Co-Founder & MD — Commercial & Community", note: "AI data services · Vietnam · Pre-revenue", body: "Founded with Michael as CEO. Xood is the commercial + community engine for AI data services in Vietnam, drawing on the Tictag Singapore DNA." },
-  { name: "Skylight", role: "Founder", note: "Rooftop hospitality · Nha Trang · 10+ years", body: "Built from the ground up after the move from SF/LA. Runs on EOS — structure as freedom. Where many of the operator lessons start." },
-  { name: "Tictag Singapore", role: "Advisor", note: "AI data services · Singapore", body: "DNA source for Xood. Where the playbook for AI data services was sharpened before bringing it to Vietnam." },
-  { name: "East West Brewery", role: "Investor / Advisor", note: "F&B", body: "Investment + advisory in F&B." },
-  { name: "Nuen Motor", role: "Investor / Advisor", note: "Electric motorbikes", body: "Investment + advisory in EV mobility." },
-  { name: "GAM Entertainment", role: "Investor / Advisor", note: "Entertainment · TK Nguyen, CEO", body: "Investment + advisory. Brother TK as CEO." },
-];
 
 export default function VenturesPage() {
   return (
     <>
+      {/* HERO — dark, clean, no decorative bar */}
       <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto max-w-[1200px] px-5 pt-32 pb-16 md:px-8 md:pt-40 md:pb-20">
+        <div className="mx-auto max-w-[1400px] px-5 pt-28 pb-20 md:px-10 md:pt-40 md:pb-28">
           <Reveal>
-            <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>The Ventures</div>
+            <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
+              The Ventures
+            </div>
           </Reveal>
           <Reveal delay={1}>
-            <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em" }}>
+            <h1
+              className="mt-6 font-extrabold tracking-tight"
+              style={{ fontSize: "clamp(48px, 8vw, 112px)", lineHeight: 0.95, letterSpacing: "-0.035em" }}
+            >
               Six businesses.
               <br />
               <span style={{ color: "var(--brand-lime)" }}>Three industries.</span>
             </h1>
           </Reveal>
+          <Reveal delay={2}>
+            <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
+              Operating, founding, and advising across hospitality, AI data services, and entertainment.
+              Ten years of real ops — the lived material the content engine runs on.
+            </p>
+          </Reveal>
         </div>
       </section>
-      <section className="py-20" style={{ background: "var(--brand-white)" }}>
-        <div className="mx-auto max-w-[1200px] px-5 md:px-8 grid gap-5 md:grid-cols-2">
-          {ventures.map((v, i) => (
-            <Reveal key={v.name} delay={(i % 3) as 0 | 1 | 2}>
-              <article className="h-full rounded-xl p-7" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)", borderTop: "3px solid var(--brand-lime)" }}>
-                <div className="text-xs font-bold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>{v.note}</div>
-                <h3 className="mt-3 text-3xl font-extrabold tracking-tight">{v.name}</h3>
-                <p className="mt-1 text-sm" style={{ color: "var(--brand-pastel)" }}>{v.role}</p>
-                <p className="mt-4 text-base leading-relaxed" style={{ color: "rgba(242,242,242,0.85)" }}>{v.body}</p>
-              </article>
-            </Reveal>
-          ))}
+
+      {/* BARTLETT-STYLE FLUSH GRID */}
+      <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <VenturesGrid />
+        </div>
+      </section>
+
+      {/* CTA STRIP */}
+      <section className="py-20 md:py-24" style={{ background: "var(--brand-tea)" }}>
+        <div className="mx-auto flex max-w-[1100px] flex-col items-start gap-6 px-5 md:px-10 md:flex-row md:items-end md:justify-between">
+          <h2
+            className="font-extrabold tracking-tight"
+            style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-jungle)" }}
+          >
+            Want to talk <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>partnership, investment, or advisory?</em>
+          </h2>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-bold uppercase tracking-wider"
+            style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.05em" }}
+          >
+            Start a conversation
+          </Link>
         </div>
       </section>
     </>

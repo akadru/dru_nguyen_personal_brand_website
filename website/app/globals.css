@@ -66,3 +66,59 @@ html, body {
 
 /* ---- Selection color ---- */
 ::selection { background: var(--brand-lime); color: var(--brand-jungle); }
+
+/* ---- Lime-on-hover utility for any link / button that opts in ---- */
+a.lime-on-hover, button.lime-on-hover { transition: color 0.2s ease; }
+a.lime-on-hover:hover, button.lime-on-hover:hover { color: var(--brand-lime); }
+
+/* ---- Magnetic cursor (custom dot follower) ---- */
+@media (hover: hover) and (pointer: fine) {
+  .magnetic-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    width: 14px; height: 14px;
+    border-radius: 9999px;
+    background: var(--brand-lime);
+    pointer-events: none;
+    transform: translate3d(-100px, -100px, 0);
+    transition: width 0.22s ease, height 0.22s ease, opacity 0.22s ease, background 0.22s ease, border-radius 0.22s ease, mix-blend-mode 0.22s ease;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    will-change: transform, width, height;
+  }
+  .magnetic-cursor.is-hovering {
+    width: 56px;
+    height: 56px;
+    background: transparent;
+    border: 2px solid var(--brand-lime);
+    mix-blend-mode: normal;
+  }
+  .magnetic-cursor.is-pressed {
+    width: 36px;
+    height: 36px;
+    background: var(--brand-lime);
+    border: 2px solid var(--brand-lime);
+    mix-blend-mode: normal;
+  }
+  /* Hint state: when hovering a section that's interactive, slight lime ring */
+  body:has(a:hover, button:hover, [data-magnetic]:hover) .magnetic-cursor:not(.is-hovering) {
+    /* fallback for browsers without :has — handled by JS */
+  }
+}
+
+/* ---- Smooth scroll across the site ---- */
+html { scroll-behavior: smooth; }
+
+/* ---- Underline animation on hover for editorial links ---- */
+.editorial-link { position: relative; }
+.editorial-link::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -4px;
+  height: 2px;
+  background: var(--brand-lime);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.editorial-link:hover::after { transform: scaleX(1); }
