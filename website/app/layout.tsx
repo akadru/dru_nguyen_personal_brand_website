@@ -3,7 +3,6 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SearchModal from "@/components/SearchModal";
-import MagneticCursor from "@/components/MagneticCursor";
 
 export const metadata: Metadata = {
   title: "Dru Nguyen — Operator. AI Educator.",
@@ -21,7 +20,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
-        <MagneticCursor />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />
