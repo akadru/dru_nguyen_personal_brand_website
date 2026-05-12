@@ -85,92 +85,99 @@ export default function Nav() {
         </div>
       </header>
 
-      {/* FULL-SCREEN OVERLAY MENU — Bartlett pattern */}
-      {open && (
-        <div
-          className="fixed inset-0 z-[80] overflow-y-auto"
-          style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)" }}
-          role="dialog"
-          aria-modal
-        >
-          <div className="mx-auto flex min-h-screen max-w-[1400px] flex-col px-5 py-6 md:px-10 md:py-8">
-            {/* Top row: wordmark + close */}
-            <div className="flex items-center justify-between">
-              <Link
-                href="/"
-                onClick={() => setOpen(false)}
-                className="text-base font-extrabold uppercase tracking-tight"
-                style={{ color: "var(--brand-jungle)", letterSpacing: "0.04em" }}
-              >
-                Dru Nguyen
-              </Link>
-              <button
-                aria-label="Close menu"
-                onClick={() => setOpen(false)}
-                className="inline-flex h-12 w-12 items-center justify-center transition-transform hover:rotate-90"
-                style={{ color: "var(--brand-jungle)" }}
-              >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M6 6l12 12M6 18L18 6" />
-                </svg>
-              </button>
+      {/* SLIDE-IN PANEL MENU — right-anchored, ~40% width on desktop */}
+      {/* Backdrop scrim — clickable to close */}
+      <div
+        onClick={() => setOpen(false)}
+        className={`fixed inset-0 z-[70] transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
+        style={{ background: "rgba(10,27,36,0.55)", backdropFilter: open ? "blur(2px)" : "none" }}
+        aria-hidden
+      />
+      {/* Panel */}
+      <aside
+        role="dialog"
+        aria-modal
+        aria-hidden={!open}
+        className={`fixed top-0 right-0 z-[80] h-full w-full overflow-y-auto transition-transform duration-[450ms] ease-out md:w-[42vw] md:min-w-[440px] md:max-w-[600px] ${open ? "translate-x-0" : "translate-x-full"}`}
+        style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)" }}
+      >
+        <div className="flex min-h-full flex-col px-6 py-6 md:px-10 md:py-8">
+          {/* Top row: wordmark + close */}
+          <div className="flex items-center justify-between">
+            <Link
+              href="/"
+              onClick={() => setOpen(false)}
+              className="text-base font-extrabold uppercase tracking-tight"
+              style={{ color: "var(--brand-jungle)", letterSpacing: "0.04em" }}
+            >
+              Dru Nguyen
+            </Link>
+            <button
+              aria-label="Close menu"
+              onClick={() => setOpen(false)}
+              className="inline-flex h-10 w-10 items-center justify-center transition-transform hover:rotate-90"
+              style={{ color: "var(--brand-jungle)" }}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M6 6l12 12M6 18L18 6" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Primary menu */}
+          <nav className="mt-10 flex flex-1 flex-col justify-center md:mt-14">
+            <ul className="flex flex-col gap-1">
+              {PRIMARY.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="group block py-1 font-extrabold uppercase leading-[0.95] tracking-tight transition-transform hover:translate-x-2"
+                    style={{
+                      fontSize: "clamp(34px, 4.8vw, 64px)",
+                      letterSpacing: "-0.025em",
+                      color: "var(--brand-jungle)",
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            <div className="my-8 h-px md:my-10" style={{ background: "rgba(10,27,36,0.4)" }} />
+
+            <ul className="flex flex-col gap-1">
+              {SECONDARY.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className="block py-1 font-extrabold uppercase leading-[0.95] tracking-tight transition-transform hover:translate-x-2"
+                    style={{
+                      fontSize: "clamp(28px, 3.8vw, 44px)",
+                      letterSpacing: "-0.02em",
+                      color: "var(--brand-jungle)",
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
+          {/* Bottom row: socials */}
+          <div className="mt-12 flex flex-col gap-3 border-t pt-6" style={{ borderColor: "rgba(10,27,36,0.4)" }}>
+            <div className="text-[10px] font-bold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
+              Asia/Ho_Chi_Minh · #DoingGoodWithData
             </div>
-
-            {/* Big primary menu */}
-            <nav className="mt-16 flex flex-1 flex-col justify-center md:mt-24">
-              <ul className="flex flex-col gap-1">
-                {PRIMARY.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      className="group relative block py-1 font-extrabold uppercase leading-[0.95] tracking-tight transition-transform hover:translate-x-2"
-                      style={{
-                        fontSize: "clamp(40px, 7.5vw, 92px)",
-                        letterSpacing: "-0.025em",
-                        color: "var(--brand-jungle)",
-                      }}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="my-10 h-px md:my-14" style={{ background: "rgba(10,27,36,0.4)" }} />
-
-              <ul className="flex flex-col gap-1">
-                {SECONDARY.map((item) => (
-                  <li key={item.href}>
-                    <Link
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      className="block py-1 font-extrabold uppercase leading-[0.95] tracking-tight transition-transform hover:translate-x-2"
-                      style={{
-                        fontSize: "clamp(32px, 6vw, 64px)",
-                        letterSpacing: "-0.02em",
-                        color: "var(--brand-jungle)",
-                      }}
-                    >
-                      {item.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            {/* Bottom row: socials */}
-            <div className="mt-16 flex items-center justify-between border-t pt-6" style={{ borderColor: "rgba(10,27,36,0.4)" }}>
-              <div className="text-xs font-bold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
-                Asia/Ho_Chi_Minh · #DoingGoodWithData
-              </div>
-              <div onClick={() => setOpen(false)}>
-                <SocialIcons variant="topbar" />
-              </div>
+            <div onClick={() => setOpen(false)}>
+              <SocialIcons variant="topbar" />
             </div>
           </div>
         </div>
-      )}
+      </aside>
     </>
   );
 }
