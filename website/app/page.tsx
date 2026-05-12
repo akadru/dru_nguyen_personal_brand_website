@@ -6,12 +6,6 @@ import StoriesGrid from "@/components/StoriesGrid";
 import NewsGrid from "@/components/NewsGrid";
 import NewsletterShowcase from "@/components/NewsletterShowcase";
 
-const stats = [
-  { n: "10+", label: "Years operating Skylight" },
-  { n: "6", label: "Active ventures" },
-  { n: "3", label: "Industries — F&B · AI · Entertainment" },
-];
-
 export default function Home() {
   return (
     <>
@@ -102,42 +96,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. STAT STRIP — thin band */}
-      <section style={{ background: "var(--brand-white)" }}>
-        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <div className="grid grid-cols-1 gap-6 border-b py-10 sm:grid-cols-3 sm:gap-12 sm:py-14" style={{ borderColor: "rgba(176,190,197,0.4)" }}>
-            {stats.map((s, i) => (
-              <Reveal key={s.label} delay={(i % 3) as 0 | 1 | 2} className="text-center">
-                <div
-                  className="text-5xl font-extrabold md:text-6xl"
-                  style={{ color: "var(--brand-jungle)", letterSpacing: "-0.04em" }}
-                >
-                  {s.n}
-                </div>
-                <div className="mt-2 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}>
-                  {s.label}
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 3. VENTURES — Bartlett 4-up flush grid */}
-      <section id="ventures" className="py-28 md:py-40" style={{ background: "var(--brand-white)" }}>
+      {/* 2. VENTURES — Bartlett 4-up flush grid */}
+      <section id="ventures" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Companies &amp; Investments</div>
           </Reveal>
           <Reveal delay={1}>
             <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <h2 className="font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 6vw, 88px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--brand-jungle)" }}>
-                Six businesses. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Three industries.</em>
+              <h2 className="font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 6vw, 88px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--brand-white)" }}>
+                Six businesses. <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>Three industries.</em>
               </h2>
               <Link
                 href="/ventures"
                 className="self-start text-sm font-bold uppercase tracking-wider editorial-link md:self-end"
-                style={{ color: "var(--brand-jungle)", letterSpacing: "0.12em" }}
+                style={{ color: "var(--brand-lime)", letterSpacing: "0.12em" }}
               >
                 See full portfolio →
               </Link>
@@ -151,21 +124,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. KEY STORIES — replaces Bartlett's Timeline */}
-      <section id="stories" className="py-28 md:py-40" style={{ background: "var(--brand-tea)" }}>
+      {/* 3. KEY STORIES — replaces Bartlett's Timeline */}
+      <section id="stories" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
-            <div className="section-label">Key Stories</div>
+            <div className="section-label" style={{ color: "var(--brand-lime)" }}>Key Stories</div>
           </Reveal>
           <Reveal delay={1}>
             <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <h2 className="font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 6vw, 88px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--brand-jungle)" }}>
-                Five lived <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>moments.</em>
+              <h2 className="font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 6vw, 88px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--brand-white)" }}>
+                Five lived <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>moments.</em>
               </h2>
               <Link
                 href="/scholarly-warrior#stories"
                 className="self-start text-sm font-bold uppercase tracking-wider editorial-link md:self-end"
-                style={{ color: "var(--brand-jungle)", letterSpacing: "0.12em" }}
+                style={{ color: "var(--brand-lime)", letterSpacing: "0.12em" }}
               >
                 Read all stories →
               </Link>
@@ -179,21 +152,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. NEWS & STORIES — Bartlett 3-up grid */}
-      <section id="news" className="py-28 md:py-40" style={{ background: "var(--brand-white)" }}>
+      {/* 4. NEWS & STORIES — Bartlett 3-up grid */}
+      <section id="news" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
-            <div className="section-label">News &amp; Stories</div>
+            <div className="section-label" style={{ color: "var(--brand-lime)" }}>News &amp; Stories</div>
           </Reveal>
           <Reveal delay={1}>
             <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-              <h2 className="font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 6vw, 88px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--brand-jungle)" }}>
-                What I&apos;m thinking <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>this week.</em>
+              <h2 className="font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 6vw, 88px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--brand-white)" }}>
+                What I&apos;m thinking <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>this week.</em>
               </h2>
               <Link
                 href="/blog"
                 className="self-start text-sm font-bold uppercase tracking-wider editorial-link md:self-end"
-                style={{ color: "var(--brand-jungle)", letterSpacing: "0.12em" }}
+                style={{ color: "var(--brand-lime)", letterSpacing: "0.12em" }}
               >
                 Read the blog →
               </Link>
@@ -210,8 +183,8 @@ export default function Home() {
       {/* 6. NEWSLETTER SHOWCASE — full-bleed */}
       <NewsletterShowcase />
 
-      {/* 7. SPEAKING ENGAGEMENTS — Bartlett 2-col (image left / copy right) */}
-      <section id="speaking" className="py-28 md:py-40" style={{ background: "var(--brand-white)" }}>
+      {/* 6. SPEAKING ENGAGEMENTS — Bartlett 2-col (image left / copy right) */}
+      <section id="speaking" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <div className="grid gap-12 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-20">
             <Reveal>
@@ -227,14 +200,14 @@ export default function Home() {
             </Reveal>
             <Reveal delay={1}>
               <div>
-                <div className="section-label">Speaking Engagements</div>
+                <div className="section-label" style={{ color: "var(--brand-lime)" }}>Speaking Engagements</div>
                 <h2
                   className="mt-4 font-extrabold tracking-tight"
-                  style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--brand-jungle)" }}
+                  style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1.0, letterSpacing: "-0.03em", color: "var(--brand-white)" }}
                 >
-                  Bring Dru to <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>your team.</em>
+                  Bring Dru to <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>your team.</em>
                 </h2>
-                <p className="mt-8 max-w-xl text-lg leading-relaxed" style={{ color: "var(--brand-body)" }}>
+                <p className="mt-8 max-w-xl text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
                   EO forum sessions, founder offsites, AI workshops, EOS implementation coaching.
                   Ten years of real operations across three industries. Operator-to-operator only — no
                   theory, no hype.
@@ -242,7 +215,7 @@ export default function Home() {
                 <Link
                   href="/contact?intent=speaking"
                   className="mt-10 inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wider transition-transform hover:scale-[1.02]"
-                  style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.05em" }}
+                  style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
                 >
                   Speaking enquiries
                 </Link>

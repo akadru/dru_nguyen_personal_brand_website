@@ -3,9 +3,8 @@ import Link from "next/link";
 import { VENTURES } from "@/lib/ventures";
 
 /**
- * Bartlett-style 3-up flush grid.
- * Borderless cards · image-top · clean type · arrow CTA on hover.
- * 3 columns desktop / 2 tablet / 1 mobile.
+ * Bartlett-style flush grid · dark theme.
+ * Borderless cards · image-top · light text · lime hover accents.
  */
 export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
   const grid = columns === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
@@ -35,26 +34,26 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
               <div>
                 <div
                   className="text-[10px] font-extrabold uppercase"
-                  style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}
+                  style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}
                 >
                   {v.context}
                 </div>
                 <h3
-                  className="mt-2 text-2xl font-extrabold leading-tight md:text-3xl"
-                  style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}
+                  className="mt-2 text-2xl font-extrabold leading-tight md:text-3xl transition-colors group-hover:text-[var(--brand-lime)]"
+                  style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
                 >
                   {v.name}
                 </h3>
                 <p
                   className="mt-2 text-base italic"
-                  style={{ color: "var(--brand-myrtle)" }}
+                  style={{ color: "var(--brand-pastel)" }}
                 >
                   {v.tagline}
                 </p>
               </div>
               <span
-                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors group-hover:bg-[var(--brand-jungle)] group-hover:border-[var(--brand-jungle)] group-hover:text-[var(--brand-lime)]"
-                style={{ borderColor: "var(--brand-jungle)", color: "var(--brand-jungle)" }}
+                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors group-hover:bg-[var(--brand-lime)] group-hover:border-[var(--brand-lime)] group-hover:text-[var(--brand-jungle)]"
+                style={{ borderColor: "var(--brand-lime)", color: "var(--brand-lime)" }}
                 aria-hidden
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

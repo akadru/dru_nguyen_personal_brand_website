@@ -3,8 +3,8 @@ import Link from "next/link";
 import { STORIES } from "@/lib/stories";
 
 /**
- * Bartlett-style "Key Stories" grid (replaces Timeline pattern).
- * Image-led cards · clean type · lime accent on hover.
+ * Key Stories grid · dark theme.
+ * Image-led tall cards · gradient overlay · light text below.
  */
 export default function StoriesGrid() {
   return (
@@ -25,7 +25,7 @@ export default function StoriesGrid() {
             />
             <div
               className="pointer-events-none absolute inset-0"
-              style={{ background: "linear-gradient(180deg, rgba(10,27,36,0) 30%, rgba(10,27,36,0.85) 100%)" }}
+              style={{ background: "linear-gradient(180deg, rgba(10,27,36,0) 30%, rgba(10,27,36,0.92) 100%)" }}
             />
             <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
               <div
@@ -44,19 +44,19 @@ export default function StoriesGrid() {
           </div>
           <div className="mt-5 flex items-start justify-between gap-4">
             <div>
-              <p className="text-base leading-relaxed" style={{ color: "var(--brand-body)" }}>
+              <p className="text-base leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
                 {s.hook}
               </p>
               <p
-                className="mt-3 text-sm italic transition-colors group-hover:text-[var(--brand-myrtle)]"
-                style={{ color: "var(--brand-myrtle)" }}
+                className="mt-3 text-sm italic transition-colors group-hover:text-[var(--brand-lime)]"
+                style={{ color: "var(--brand-lime)" }}
               >
                 — {s.lesson}
               </p>
             </div>
             <span
-              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-colors group-hover:bg-[var(--brand-jungle)] group-hover:border-[var(--brand-jungle)] group-hover:text-[var(--brand-lime)]"
-              style={{ borderColor: "var(--brand-jungle)", color: "var(--brand-jungle)" }}
+              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-colors group-hover:bg-[var(--brand-lime)] group-hover:border-[var(--brand-lime)] group-hover:text-[var(--brand-jungle)]"
+              style={{ borderColor: "var(--brand-lime)", color: "var(--brand-lime)" }}
               aria-hidden
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

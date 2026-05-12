@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import TopBar from "@/components/TopBar";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SearchModal from "@/components/SearchModal";
@@ -23,7 +22,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">
         <MagneticCursor />
-        <TopBar />
         <Nav />
         <main className="flex-1">{children}</main>
         <Footer />

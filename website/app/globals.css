@@ -16,8 +16,8 @@
   --brand-surface: var(--brand-white);
   --brand-text:    var(--brand-jungle);
 
-  --background: var(--brand-white);
-  --foreground: var(--brand-jungle);
+  --background: var(--brand-jungle);
+  --foreground: var(--brand-white);
 }
 
 @theme inline {
@@ -35,8 +35,8 @@
 }
 
 html, body {
-  background: var(--brand-white);
-  color: var(--brand-jungle);
+  background: var(--brand-jungle);
+  color: var(--brand-white);
   font-family: 'Outfit', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
