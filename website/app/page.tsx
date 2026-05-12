@@ -55,18 +55,6 @@ export default function Home() {
               Educator.
             </h1>
           </Reveal>
-          <Reveal delay={2}>
-            <p
-              className="mt-10 max-w-3xl text-base leading-relaxed md:text-xl"
-              style={{ color: "var(--brand-pastel)" }}
-            >
-              <strong style={{ color: "var(--brand-white)" }}>
-                Co-Founder &amp; MD of Xood. Founder of Skylight.
-              </strong>{" "}
-              Advisor to Tictag, East West Brewing, Nuen Motor &amp; GAM Entertainment.
-              Ten years of real operations across three industries — teaching what actually works.
-            </p>
-          </Reveal>
           <Reveal delay={3}>
             <p
               className="mt-8 max-w-3xl text-xl italic md:text-3xl"
@@ -96,7 +84,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. VENTURES — Bartlett 4-up flush grid */}
+      {/* 2. INTRO — Bartlett-style description block (text-left + portrait-right) */}
+      <section className="py-24 md:py-36" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <div className="grid items-center gap-12 md:grid-cols-[1.4fr_1fr] md:gap-20">
+            <Reveal>
+              <p
+                className="font-extrabold uppercase tracking-tight"
+                style={{
+                  fontSize: "clamp(28px, 3.4vw, 56px)",
+                  lineHeight: 1.1,
+                  letterSpacing: "-0.02em",
+                  color: "var(--brand-white)",
+                }}
+              >
+                Dru Nguyen;{" "}
+                <span style={{ color: "var(--brand-lime)" }}>operator</span>,{" "}
+                <span style={{ color: "var(--brand-lime)" }}>co-founder</span>,{" "}
+                <span style={{ color: "var(--brand-lime)" }}>investor</span> and the{" "}
+                <span style={{ color: "var(--brand-lime)" }}>founder of Skylight</span> — a ten-year rooftop hospitality flagship in Nha Trang — and{" "}
+                <span style={{ color: "var(--brand-lime)" }}>co-founder &amp; MD of Xood</span>, an AI data services company building accurate, unbiased training data for Southeast Asia. Advisor to Tictag Singapore, East West Brewing, Nuen Motor and GAM Entertainment. Ten years of real operations across three industries — teaching what actually works.
+              </p>
+              <Link
+                href="/about"
+                className="mt-10 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-wider transition-transform hover:translate-x-1"
+                style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}
+              >
+                About Dru
+                <span
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors hover:bg-[var(--brand-lime)] hover:text-[var(--brand-jungle)]"
+                  style={{ borderColor: "var(--brand-lime)" }}
+                  aria-hidden
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M5 12h14" /><path d="m13 5 7 7-7 7" />
+                  </svg>
+                </span>
+              </Link>
+            </Reveal>
+            <Reveal delay={1}>
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
+                <Image
+                  src="/images/dru-portrait-laughing.jpg"
+                  alt="Dru Nguyen portrait"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
+                  style={{
+                    WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0))",
+                    maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 70%, rgba(0,0,0,0))",
+                  }}
+                />
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. VENTURES — Bartlett 4-up flush grid */}
       <section id="ventures" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
