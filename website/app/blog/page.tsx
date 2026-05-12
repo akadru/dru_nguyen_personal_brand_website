@@ -11,9 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function BlogPage() {
-  const published = POSTS.filter((p) => p.published);
-  const upcoming = POSTS.filter((p) => !p.published);
-  const [hero, ...rest] = published;
+  const [hero, ...rest] = POSTS;
 
   return (
     <>
@@ -122,112 +120,76 @@ export default function BlogPage() {
         </section>
       )}
 
-      {/* NEWS & STORIES — 3-col cascading editorial grid */}
-      <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
-        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <Reveal>
-            <div className="section-label">News &amp; Stories</div>
-          </Reveal>
-          <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-jungle)" }}>
-              Recent <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>essays &amp; teardowns.</em>
-            </h2>
-          </Reveal>
-          <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-            {rest.map((p) => (
-              <Reveal key={p.slug}>
-                <Link href={postHref(p)} className="group flex flex-col">
-                  <div className="relative aspect-[4/3] w-full overflow-hidden" style={{ background: "var(--brand-jungle)" }}>
-                    {p.image && (
-                      <Image
-                        src={p.image}
-                        alt={p.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                      />
-                    )}
-                  </div>
-                  <div className="mt-5">
-                    <div
-                      className="text-[10px] font-extrabold uppercase"
-                      style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}
-                    >
-                      The {p.pillar} · {p.topic}
-                    </div>
-                    <h3
-                      className="mt-3 text-xl font-extrabold leading-snug md:text-2xl transition-colors group-hover:text-[var(--brand-myrtle)]"
-                      style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}
-                    >
-                      {p.title}
-                    </h3>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-
-          {rest.length === 0 && (
-            <p className="mt-10 text-base" style={{ color: "var(--brand-myrtle)" }}>
-              More essays drop weekly. Get the next one Tuesday 8am Vietnam time —{" "}
-              <Link href="/newsletter" className="editorial-link font-bold" style={{ color: "var(--brand-jungle)" }}>
-                subscribe to the Tuesday Brief
-              </Link>
-              .
-            </p>
-          )}
-        </div>
-      </section>
-
-      {/* IN THE PIPELINE — clearly badged, not pretending to be published */}
-      {upcoming.length > 0 && (
-        <section className="py-24 md:py-32" style={{ background: "var(--brand-tea)" }}>
+      {/* NEWS & STORIES — only when there's more than the featured post */}
+      {rest.length > 0 && (
+        <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
             <Reveal>
-              <div className="flex items-center gap-3">
-                <div className="section-label">In the pipeline</div>
-                <span className="text-[10px] font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}>
-                  {upcoming.length} drafting · ready next
-                </span>
-              </div>
+              <div className="section-label">News &amp; Stories</div>
             </Reveal>
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {upcoming.map((p) => (
+            <Reveal delay={1}>
+              <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-jungle)" }}>
+                Recent <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>essays &amp; teardowns.</em>
+              </h2>
+            </Reveal>
+            <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+              {rest.map((p) => (
                 <Reveal key={p.slug}>
-                  <article className="flex h-full flex-col border-t pt-6" style={{ borderColor: "var(--brand-jungle)" }}>
-                    <div className="flex items-center justify-between">
-                      <span
-                        className="rounded-full px-2 py-1 text-[10px] font-extrabold uppercase"
-                        style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.22em" }}
-                      >
-                        Coming soon
-                      </span>
-                      <span
-                        className="text-[10px] font-bold uppercase"
-                        style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}
-                      >
-                        {p.channel} · {p.read}
-                      </span>
+                  <Link href={postHref(p)} className="group flex flex-col">
+                    <div className="relative aspect-[4/3] w-full overflow-hidden" style={{ background: "var(--brand-jungle)" }}>
+                      {p.image && (
+                        <Image
+                          src={p.image}
+                          alt={p.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                        />
+                      )}
                     </div>
-                    <h3
-                      className="mt-4 text-xl font-extrabold leading-snug"
-                      style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}
-                    >
-                      {p.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--brand-body)" }}>
-                      {p.excerpt}
-                    </p>
-                    <div className="mt-3 text-[10px] font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>
-                      The {p.pillar} · {p.topic}
+                    <div className="mt-5">
+                      <div
+                        className="text-[10px] font-extrabold uppercase"
+                        style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}
+                      >
+                        The {p.pillar} · {p.topic}
+                      </div>
+                      <h3
+                        className="mt-3 text-xl font-extrabold leading-snug md:text-2xl transition-colors group-hover:text-[var(--brand-myrtle)]"
+                        style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}
+                      >
+                        {p.title}
+                      </h3>
                     </div>
-                  </article>
+                  </Link>
                 </Reveal>
               ))}
             </div>
           </div>
         </section>
       )}
+
+      {/* SUBSCRIBE PROMPT — when only one post is live */}
+      {rest.length === 0 && (
+        <section className="py-20 md:py-28" style={{ background: "var(--brand-tea)" }}>
+          <div className="mx-auto max-w-[1100px] px-5 text-center md:px-10">
+            <p
+              className="font-extrabold tracking-tight"
+              style={{ fontSize: "clamp(28px, 3.5vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-jungle)" }}
+            >
+              The next essay drops <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Tuesday 8am Vietnam time.</em>
+            </p>
+            <Link
+              href="/newsletter"
+              className="mt-8 inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wider"
+              style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.05em" }}
+            >
+              Subscribe to the Tuesday Brief
+            </Link>
+          </div>
+        </section>
+      )}
+
     </>
   );
 }
