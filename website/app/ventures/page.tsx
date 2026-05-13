@@ -41,18 +41,18 @@ export default function VenturesPage() {
       </section>
 
       {/* BARTLETT-STYLE FLUSH GRID */}
-      <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+      <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <VenturesGrid />
         </div>
       </section>
 
       {/* CTA STRIP */}
-      <section className="py-20 md:py-24" style={{ background: "var(--brand-tea)" }}>
+      <section className="py-20 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto flex max-w-[1100px] flex-col items-start gap-6 px-5 md:px-10 md:flex-row md:items-end md:justify-between">
           <h2
             className="font-extrabold tracking-tight"
-            style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-jungle)" }}
+            style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-white)" }}
           >
             Want to talk <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>partnership, investment, or advisory?</em>
           </h2>

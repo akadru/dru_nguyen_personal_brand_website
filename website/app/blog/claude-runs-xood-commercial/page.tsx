@@ -22,7 +22,7 @@ const HASHTAGS = ["#DoingGoodWithData", "#AIOperator", "#FutureOfWork", "#Buildi
 
 export default function PostPage() {
   return (
-    <article style={{ background: "var(--brand-white)" }}>
+    <article style={{ background: "var(--brand-jungle)" }}>
       {/* HERO */}
       <header style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 z-10 h-1" style={{ background: "var(--brand-lime)" }} />
@@ -74,7 +74,7 @@ export default function PostPage() {
       </header>
 
       {/* BODY */}
-      <section className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
+      <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div
           className="mx-auto max-w-[760px] px-5 md:px-10"
           style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
@@ -96,7 +96,7 @@ export default function PostPage() {
             <p>
               Most operators hear &ldquo;AI&rdquo; and think &ldquo;junior intern I have to micromanage.&rdquo;
               That&apos;s the trap. The senior ones I respect don&apos;t treat Claude as a person.{" "}
-              <strong style={{ color: "var(--brand-jungle)" }}>They treat it as a workflow.</strong>
+              <strong style={{ color: "var(--brand-white)" }}>They treat it as a workflow.</strong>
             </p>
             <p>
               Here&apos;s the difference. An intern needs to be onboarded, given context, corrected when wrong, and re-onboarded next week when they forget. Claude needs none of that — if you give it a versioned prompt and a tight input, it returns the same shape of output every time. That&apos;s not assistance. That&apos;s infrastructure.
@@ -104,27 +104,27 @@ export default function PostPage() {
           </div>
 
           <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Framework</div>
-          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}>
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
             The 30-minute <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>morning batch.</em>
           </h2>
 
           <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
             <p>
-              <strong style={{ color: "var(--brand-jungle)" }}>1. Prospect digest (8 min).</strong> I paste yesterday&apos;s CRM export + LinkedIn signal scrape into one prompt. Claude returns a digest grouped by intent tier (warm / observed / cold), with a one-line &ldquo;why-now&rdquo; beside each name. I don&apos;t read the raw data anymore.
+              <strong style={{ color: "var(--brand-white)" }}>1. Prospect digest (8 min).</strong> I paste yesterday&apos;s CRM export + LinkedIn signal scrape into one prompt. Claude returns a digest grouped by intent tier (warm / observed / cold), with a one-line &ldquo;why-now&rdquo; beside each name. I don&apos;t read the raw data anymore.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-jungle)" }}>2. First-draft outreach (12 min).</strong> For each warm prospect, I give Claude their company&apos;s published page (about, blog, last announcement) and Xood&apos;s offer. Output: a 3-paragraph email that earns a reply by sounding like I read their stuff — because Claude actually did. I rewrite the first sentence and the CTA. That&apos;s it.
+              <strong style={{ color: "var(--brand-white)" }}>2. First-draft outreach (12 min).</strong> For each warm prospect, I give Claude their company&apos;s published page (about, blog, last announcement) and Xood&apos;s offer. Output: a 3-paragraph email that earns a reply by sounding like I read their stuff — because Claude actually did. I rewrite the first sentence and the CTA. That&apos;s it.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-jungle)" }}>3. Partner-map refresh (5 min).</strong> Same prompt every Monday. Claude re-runs against last week&apos;s partner-map and highlights deltas: new players, dead ones, gaps. I make the call on which gaps to chase.
+              <strong style={{ color: "var(--brand-white)" }}>3. Partner-map refresh (5 min).</strong> Same prompt every Monday. Claude re-runs against last week&apos;s partner-map and highlights deltas: new players, dead ones, gaps. I make the call on which gaps to chase.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-jungle)" }}>4. CRM hygiene (5 min).</strong> Stale leads (&gt;14 days no touch) get a Claude-suggested next action — &ldquo;DM their founder on LinkedIn referencing X,&rdquo; &ldquo;wait until their Series A closes,&rdquo; &ldquo;kill it.&rdquo; I approve or override.
+              <strong style={{ color: "var(--brand-white)" }}>4. CRM hygiene (5 min).</strong> Stale leads (&gt;14 days no touch) get a Claude-suggested next action — &ldquo;DM their founder on LinkedIn referencing X,&rdquo; &ldquo;wait until their Series A closes,&rdquo; &ldquo;kill it.&rdquo; I approve or override.
             </p>
           </div>
 
           <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Prompt</div>
-          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}>
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
             One template. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Tweaked monthly.</em>
           </h2>
           <pre
@@ -144,7 +144,7 @@ If signal is weak, say so.
           </pre>
 
           <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Three Rules</div>
-          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}>
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
             From theatre to <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>infrastructure.</em>
           </h2>
           <div className="mt-8 grid gap-4">
@@ -153,8 +153,8 @@ If signal is weak, say so.
               { h: "Inputs are real.", b: "CRM exports, the prospect's actual blog, my notes — not vibes." },
               { h: "I review the first paragraph and the ask.", b: "Everything else stays." },
             ].map((r) => (
-              <div key={r.h} className="rounded-xl p-6" style={{ background: "var(--brand-tea)", borderLeft: "4px solid var(--brand-myrtle)" }}>
-                <div className="text-base font-extrabold" style={{ color: "var(--brand-jungle)" }}>{r.h}</div>
+              <div key={r.h} className="rounded-xl p-6" style={{ background: "var(--brand-jungle)", borderLeft: "4px solid var(--brand-myrtle)" }}>
+                <div className="text-base font-extrabold" style={{ color: "var(--brand-white)" }}>{r.h}</div>
                 <div className="mt-2 text-base" style={{ color: "#333" }}>{r.b}</div>
               </div>
             ))}
@@ -178,8 +178,8 @@ If signal is weak, say so.
           </div>
 
           {/* CTA */}
-          <div className="mt-12 rounded-2xl border-2 p-8 text-center md:p-10" style={{ borderColor: "var(--brand-jungle)" }}>
-            <p className="text-2xl font-extrabold leading-snug md:text-3xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.01em" }}>
+          <div className="mt-12 rounded-2xl border-2 p-8 text-center md:p-10" style={{ borderColor: "rgba(176,190,197,0.25)" }}>
+            <p className="text-2xl font-extrabold leading-snug md:text-3xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.01em" }}>
               Get one operator essay every Tuesday at 8am Vietnam time.
             </p>
             <Link

@@ -69,7 +69,7 @@ export default function NewsletterPage() {
               required
               placeholder="you@operator.email"
               className="flex-1 rounded-full px-6 py-4 text-base outline-none"
-              style={{ background: "var(--brand-white)", color: "var(--brand-jungle)" }}
+              style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}
             />
             <button
               type="submit"
@@ -86,7 +86,7 @@ export default function NewsletterPage() {
             </p>
           )}
           {status === "err" && errMsg && (
-            <p className="mt-6 max-w-2xl rounded-lg p-4 text-sm font-semibold" style={{ background: "#FDF2F7", color: "var(--brand-jungle)" }}>
+            <p className="mt-6 max-w-2xl rounded-lg p-4 text-sm font-semibold" style={{ background: "#FDF2F7", color: "var(--brand-white)" }}>
               {errMsg}
             </p>
           )}

@@ -71,7 +71,7 @@ export default function XoodPage() {
       </section>
 
       {/* MANIFESTO */}
-      <section id="manifesto" className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+      <section id="manifesto" className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[900px] px-5 text-center md:px-10">
           <Reveal>
             <div className="section-label">The Manifesto</div>
@@ -84,7 +84,7 @@ export default function XoodPage() {
                 fontSize: "clamp(36px, 6vw, 80px)",
                 lineHeight: 1.05,
                 letterSpacing: "-0.02em",
-                color: "var(--brand-jungle)",
+                color: "var(--brand-white)",
               }}
             >
               Doing <span style={{ color: "var(--brand-lime)" }}>good</span>
@@ -93,7 +93,7 @@ export default function XoodPage() {
             </p>
           </Reveal>
           <Reveal delay={2}>
-            <p className="mt-8 max-w-2xl mx-auto text-lg leading-relaxed" style={{ color: "var(--brand-body)" }}>
+            <p className="mt-8 max-w-2xl mx-auto text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
               In the AI world, companies lack data to train accurate, unbiased models — especially for long-tail
               problems. AI is advancing at breathtaking speed, and underserved communities are at risk of being
               left behind. Xood exists to close that gap.
@@ -103,7 +103,7 @@ export default function XoodPage() {
       </section>
 
       {/* THREE BELIEFS */}
-      <section className="py-24 md:py-28" style={{ background: "var(--brand-tea)" }}>
+      <section className="py-24 md:py-28" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">What We Believe</div>
@@ -111,10 +111,10 @@ export default function XoodPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {beliefs.map((b, i) => (
               <Reveal key={b.title} delay={(i % 3) as 0 | 1 | 2}>
-                <article className="h-full rounded-2xl p-7" style={{ background: "var(--brand-white)", borderTop: "3px solid var(--brand-myrtle)" }}>
+                <article className="h-full rounded-2xl p-7" style={{ background: "var(--brand-jungle)", borderTop: "3px solid var(--brand-myrtle)" }}>
                   <div className="text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}>Belief</div>
-                  <h3 className="mt-3 text-xl font-extrabold leading-snug" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.01em" }}>{b.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--brand-body)" }}>{b.body}</p>
+                  <h3 className="mt-3 text-xl font-extrabold leading-snug" style={{ color: "var(--brand-white)", letterSpacing: "-0.01em" }}>{b.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed" style={{ color: "var(--brand-pastel)" }}>{b.body}</p>
                 </article>
               </Reveal>
             ))}
@@ -123,13 +123,13 @@ export default function XoodPage() {
       </section>
 
       {/* OFFERINGS */}
-      <section id="offerings" className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+      <section id="offerings" className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Offerings</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-jungle)" }}>
+            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
               How Xood <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>shows up.</em>
             </h2>
           </Reveal>

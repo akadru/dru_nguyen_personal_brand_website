@@ -42,7 +42,7 @@ export default function SpeakingPage() {
   return (
     <>
       {/* HERO — 2-col Bartlett style: image left, copy right */}
-      <section style={{ background: "var(--brand-white)" }}>
+      <section style={{ background: "var(--brand-jungle)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
         <div className="mx-auto grid max-w-[1400px] gap-12 px-5 pt-28 pb-20 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-20 md:px-10 md:pt-40 md:pb-28">
           <Reveal>
@@ -71,7 +71,7 @@ export default function SpeakingPage() {
                   fontSize: "clamp(48px, 7vw, 96px)",
                   lineHeight: 0.95,
                   letterSpacing: "-0.035em",
-                  color: "var(--brand-jungle)",
+                  color: "var(--brand-white)",
                 }}
               >
                 Bring Dru to
@@ -80,7 +80,7 @@ export default function SpeakingPage() {
               </h1>
               <p
                 className="mt-8 max-w-xl text-lg leading-relaxed md:text-xl"
-                style={{ color: "var(--brand-body)" }}
+                style={{ color: "var(--brand-pastel)" }}
               >
                 Operator-to-operator only. Ten years of real ops across hospitality, AI data services, and
                 entertainment. No theory, no hype, no &ldquo;leverage your synergies.&rdquo;
@@ -96,7 +96,7 @@ export default function SpeakingPage() {
                 <Link
                   href="/press"
                   className="inline-flex items-center justify-center rounded-full border-2 px-8 py-4 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-[var(--brand-jungle)] hover:text-[var(--brand-lime)] hover:border-[var(--brand-jungle)]"
-                  style={{ borderColor: "var(--brand-jungle)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
+                  style={{ borderColor: "rgba(176,190,197,0.25)", color: "var(--brand-white)", letterSpacing: "0.05em" }}
                 >
                   Press kit
                 </Link>
@@ -107,7 +107,7 @@ export default function SpeakingPage() {
       </section>
 
       {/* AS FEATURED AT — outlet logo row */}
-      <section className="border-y py-12" style={{ background: "var(--brand-white)", borderColor: "rgba(176,190,197,0.4)" }}>
+      <section className="border-y py-12" style={{ background: "var(--brand-jungle)", borderColor: "rgba(176,190,197,0.4)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <div className="text-center">
             <div className="section-label">As featured at</div>
@@ -127,7 +127,7 @@ export default function SpeakingPage() {
       </section>
 
       {/* TOPICS — 2-col grid, image-led if you have venue shots later */}
-      <section className="py-28 md:py-40" style={{ background: "var(--brand-white)" }}>
+      <section className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Topics</div>
@@ -135,7 +135,7 @@ export default function SpeakingPage() {
           <Reveal delay={1}>
             <h2
               className="mt-3 font-extrabold tracking-tight"
-              style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-jungle)" }}
+              style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-white)" }}
             >
               Four <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>signature talks.</em>
             </h2>
@@ -143,17 +143,17 @@ export default function SpeakingPage() {
           <div className="mt-16 grid gap-x-8 gap-y-12 md:grid-cols-2">
             {topics.map((t, i) => (
               <Reveal key={t.label} delay={(i % 2) as 0 | 1}>
-                <article className="flex flex-col border-t pt-8" style={{ borderColor: "var(--brand-jungle)" }}>
+                <article className="flex flex-col border-t pt-8" style={{ borderColor: "rgba(176,190,197,0.25)" }}>
                   <div className="text-[10px] font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.32em" }}>
                     Talk · 0{i + 1}
                   </div>
                   <h3
                     className="mt-4 text-3xl font-extrabold leading-tight md:text-4xl"
-                    style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}
+                    style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
                   >
                     {t.label}
                   </h3>
-                  <p className="mt-4 text-base leading-relaxed" style={{ color: "var(--brand-body)" }}>
+                  <p className="mt-4 text-base leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
                     {t.body}
                   </p>
                 </article>
@@ -164,7 +164,7 @@ export default function SpeakingPage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-28 md:py-40" style={{ background: "var(--brand-tea)" }}>
+      <section className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">What past audiences say</div>
@@ -178,7 +178,7 @@ export default function SpeakingPage() {
                 >
                   <p
                     className="leading-relaxed"
-                    style={{ fontSize: "clamp(20px, 2.2vw, 28px)", color: "var(--brand-jungle)" }}
+                    style={{ fontSize: "clamp(20px, 2.2vw, 28px)", color: "var(--brand-white)" }}
                   >
                     &ldquo;{t.quote}&rdquo;
                   </p>

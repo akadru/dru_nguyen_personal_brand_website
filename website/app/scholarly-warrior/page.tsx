@@ -33,7 +33,7 @@ export default function ScholarlyWarriorPage() {
         <div className="relative z-10 mx-auto grid max-w-[1300px] gap-10 px-5 pb-20 pt-28 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:px-10 md:pb-28 md:pt-36">
           <div>
             <Reveal>
-              <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.22em" }}>
+              <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-white)", letterSpacing: "0.22em" }}>
                 Identity Layer · 02
               </div>
             </Reveal>
@@ -45,7 +45,7 @@ export default function ScholarlyWarriorPage() {
               </h1>
             </Reveal>
             <Reveal delay={2}>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-jungle)" }}>
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-white)" }}>
                 <strong>Care. Discipline. Grit.</strong> The operating identity. Discipline plus learning as an
                 integrated philosophy. The POV, the frameworks, and the operator essays.
               </p>
@@ -62,7 +62,7 @@ export default function ScholarlyWarriorPage() {
                 <Link
                   href="/blog"
                   className="inline-flex items-center justify-center rounded-full border-2 px-7 py-4 text-sm font-bold uppercase tracking-wider"
-                  style={{ borderColor: "var(--brand-jungle)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
+                  style={{ borderColor: "rgba(176,190,197,0.25)", color: "var(--brand-white)", letterSpacing: "0.05em" }}
                 >
                   Read the essays
                 </Link>
@@ -88,13 +88,13 @@ export default function ScholarlyWarriorPage() {
       </section>
 
       {/* THREE WORDS */}
-      <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+      <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 text-center md:px-10">
           <Reveal>
             <div className="section-label">The Three Words</div>
           </Reveal>
           <Reveal delay={1}>
-            <p className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 8vw, 112px)", letterSpacing: "-0.03em", lineHeight: 1.0, color: "var(--brand-jungle)" }}>
+            <p className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 8vw, 112px)", letterSpacing: "-0.03em", lineHeight: 1.0, color: "var(--brand-white)" }}>
               Care. <span style={{ color: "var(--brand-lime)" }}>Discipline.</span> Grit.
             </p>
           </Reveal>
@@ -105,10 +105,10 @@ export default function ScholarlyWarriorPage() {
               { word: "Grit", body: "The fight, the move to Vietnam, the factory conversation. Never give up. Always find a way." },
             ].map((w, i) => (
               <Reveal key={w.word} delay={(i % 3) as 0 | 1 | 2}>
-                <article className="h-full rounded-2xl p-8 text-left" style={{ background: "var(--brand-tea)", borderTop: "3px solid var(--brand-myrtle)" }}>
+                <article className="h-full rounded-2xl p-8 text-left" style={{ background: "var(--brand-jungle)", borderTop: "3px solid var(--brand-myrtle)" }}>
                   <div className="text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}>The Word</div>
-                  <h3 className="mt-3 text-3xl font-extrabold tracking-tight" style={{ color: "var(--brand-jungle)" }}>{w.word}</h3>
-                  <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-body)" }}>{w.body}</p>
+                  <h3 className="mt-3 text-3xl font-extrabold tracking-tight" style={{ color: "var(--brand-white)" }}>{w.word}</h3>
+                  <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-pastel)" }}>{w.body}</p>
                 </article>
               </Reveal>
             ))}
@@ -143,13 +143,13 @@ export default function ScholarlyWarriorPage() {
       </section>
 
       {/* SIGNATURE STORIES */}
-      <section id="stories" className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+      <section id="stories" className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Signature Stories</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-jungle)" }}>
+            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
               Five lived <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>moments.</em>
             </h2>
           </Reveal>
@@ -158,7 +158,7 @@ export default function ScholarlyWarriorPage() {
               <Reveal key={s.title} delay={(i % 3) as 0 | 1 | 2}>
                 <article
                   className="overflow-hidden rounded-xl"
-                  style={{ background: "var(--brand-tea)", borderLeft: "4px solid var(--brand-lime)" }}
+                  style={{ background: "var(--brand-jungle)", borderLeft: "4px solid var(--brand-lime)" }}
                 >
                   {s.img ? (
                     <div className="grid gap-0 md:grid-cols-[1fr_1.4fr]">
@@ -166,14 +166,14 @@ export default function ScholarlyWarriorPage() {
                         <Image src={s.img} alt={s.title} fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover" />
                       </div>
                       <div className="p-7 md:p-9">
-                        <h3 className="text-2xl font-extrabold" style={{ color: "var(--brand-jungle)" }}>{s.title}</h3>
-                        <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-body)" }}>{s.body}</p>
+                        <h3 className="text-2xl font-extrabold" style={{ color: "var(--brand-white)" }}>{s.title}</h3>
+                        <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-pastel)" }}>{s.body}</p>
                       </div>
                     </div>
                   ) : (
                     <div className="p-7 md:p-9">
-                      <h3 className="text-2xl font-extrabold" style={{ color: "var(--brand-jungle)" }}>{s.title}</h3>
-                      <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-body)" }}>{s.body}</p>
+                      <h3 className="text-2xl font-extrabold" style={{ color: "var(--brand-white)" }}>{s.title}</h3>
+                      <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-pastel)" }}>{s.body}</p>
                     </div>
                   )}
                 </article>

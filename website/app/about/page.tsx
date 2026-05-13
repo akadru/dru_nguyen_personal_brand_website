@@ -75,18 +75,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24" style={{ background: "var(--brand-white)" }}>
+      <section className="py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[900px] px-5 md:px-8">
           <Reveal>
             <div className="section-label">The Bio</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-jungle)" }}>
+            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
               Operator first. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Educator second.</em>
             </h2>
           </Reveal>
           <Reveal delay={2}>
-            <div className="mt-6 space-y-5 text-lg leading-relaxed" style={{ color: "var(--brand-body)" }}>
+            <div className="mt-6 space-y-5 text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
               <p>
                 I&apos;m Dru Nguyen — co-founder of <strong>Xood</strong> (AI data services in Vietnam), founder of{" "}
                 <strong>Skylight</strong> (rooftop hospitality, Nha Trang, 10+ years), and advisor to{" "}
@@ -107,13 +107,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24" style={{ background: "var(--brand-tea)" }}>
+      <section className="py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[900px] px-5 md:px-8">
           <Reveal>
             <div className="section-label">Five Stories</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-jungle)" }}>
+            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
               The lived material <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>behind the work.</em>
             </h2>
           </Reveal>
@@ -122,7 +122,7 @@ export default function AboutPage() {
               <Reveal key={s.title} delay={(i % 3) as 0 | 1 | 2}>
                 <article
                   className="overflow-hidden rounded-xl"
-                  style={{ background: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)" }}
+                  style={{ background: "var(--brand-jungle)", borderLeft: "4px solid var(--brand-lime)" }}
                 >
                   {s.title === "The Fight" ? (
                     <div className="grid gap-0 md:grid-cols-[1fr_1.4fr]">
@@ -136,14 +136,14 @@ export default function AboutPage() {
                         />
                       </div>
                       <div className="p-7 md:p-8">
-                        <h3 className="text-xl font-extrabold md:text-2xl" style={{ color: "var(--brand-jungle)" }}>{s.title}</h3>
-                        <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-body)" }}>{s.body}</p>
+                        <h3 className="text-xl font-extrabold md:text-2xl" style={{ color: "var(--brand-white)" }}>{s.title}</h3>
+                        <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-pastel)" }}>{s.body}</p>
                       </div>
                     </div>
                   ) : (
                     <div className="p-7 md:p-8">
-                      <h3 className="text-xl font-extrabold md:text-2xl" style={{ color: "var(--brand-jungle)" }}>{s.title}</h3>
-                      <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-body)" }}>{s.body}</p>
+                      <h3 className="text-xl font-extrabold md:text-2xl" style={{ color: "var(--brand-white)" }}>{s.title}</h3>
+                      <p className="mt-3 leading-relaxed" style={{ color: "var(--brand-pastel)" }}>{s.body}</p>
                     </div>
                   )}
                 </article>

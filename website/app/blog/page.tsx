@@ -51,7 +51,7 @@ export default function BlogPage() {
 
       {/* FEATURED — Bartlett-style large image-left + copy-right */}
       {hero && (
-        <section className="py-20 md:py-28" style={{ background: "var(--brand-white)" }}>
+        <section className="py-20 md:py-28" style={{ background: "var(--brand-jungle)" }}>
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
             <Reveal>
               <Link
@@ -95,16 +95,16 @@ export default function BlogPage() {
                   </div>
                   <h2
                     className="mt-4 text-3xl font-extrabold leading-tight md:text-5xl"
-                    style={{ color: "var(--brand-jungle)", letterSpacing: "-0.03em" }}
+                    style={{ color: "var(--brand-white)", letterSpacing: "-0.03em" }}
                   >
                     {hero.title}
                   </h2>
-                  <p className="mt-6 text-lg leading-relaxed" style={{ color: "var(--brand-body)" }}>
+                  <p className="mt-6 text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
                     {hero.excerpt}
                   </p>
                   <span
                     className="mt-8 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider transition-colors group-hover:text-[var(--brand-lime)]"
-                    style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}
+                    style={{ color: "var(--brand-white)", letterSpacing: "0.18em" }}
                   >
                     Read the post
                     <span className="inline-flex h-10 w-10 items-center justify-center rounded-full border transition-colors group-hover:bg-[var(--brand-jungle)] group-hover:border-[var(--brand-jungle)] group-hover:text-[var(--brand-lime)]" style={{ borderColor: "var(--brand-jungle)" }}>
@@ -122,13 +122,13 @@ export default function BlogPage() {
 
       {/* NEWS & STORIES — only when there's more than the featured post */}
       {rest.length > 0 && (
-        <section className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+        <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
             <Reveal>
               <div className="section-label">News &amp; Stories</div>
             </Reveal>
             <Reveal delay={1}>
-              <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-jungle)" }}>
+              <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-white)" }}>
                 Recent <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>essays &amp; teardowns.</em>
               </h2>
             </Reveal>
@@ -156,7 +156,7 @@ export default function BlogPage() {
                       </div>
                       <h3
                         className="mt-3 text-xl font-extrabold leading-snug md:text-2xl transition-colors group-hover:text-[var(--brand-myrtle)]"
-                        style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}
+                        style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
                       >
                         {p.title}
                       </h3>
@@ -171,11 +171,11 @@ export default function BlogPage() {
 
       {/* SUBSCRIBE PROMPT — when only one post is live */}
       {rest.length === 0 && (
-        <section className="py-20 md:py-28" style={{ background: "var(--brand-tea)" }}>
+        <section className="py-20 md:py-28" style={{ background: "var(--brand-jungle)" }}>
           <div className="mx-auto max-w-[1100px] px-5 text-center md:px-10">
             <p
               className="font-extrabold tracking-tight"
-              style={{ fontSize: "clamp(28px, 3.5vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-jungle)" }}
+              style={{ fontSize: "clamp(28px, 3.5vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-white)" }}
             >
               The next essay drops <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Tuesday 8am Vietnam time.</em>
             </p>

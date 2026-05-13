@@ -63,7 +63,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20" style={{ background: "var(--brand-white)" }}>
+      <section className="py-20" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[760px] px-5 md:px-8">
           <Reveal>
             <form onSubmit={onSubmit} className="grid gap-5">
@@ -75,7 +75,7 @@ export default function ContactPage() {
                   type="text"
                   required
                   className="mt-2 w-full rounded-lg border-2 px-4 py-3 text-base outline-none focus:border-[var(--brand-lime)]"
-                  style={{ borderColor: "var(--brand-pastel)", background: "#fff", color: "var(--brand-jungle)" }}
+                  style={{ borderColor: "var(--brand-pastel)", background: "#fff", color: "var(--brand-white)" }}
                 />
               </div>
               <div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                   type="email"
                   required
                   className="mt-2 w-full rounded-lg border-2 px-4 py-3 text-base outline-none focus:border-[var(--brand-lime)]"
-                  style={{ borderColor: "var(--brand-pastel)", background: "#fff", color: "var(--brand-jungle)" }}
+                  style={{ borderColor: "var(--brand-pastel)", background: "#fff", color: "var(--brand-white)" }}
                 />
               </div>
               <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                   rows={6}
                   required
                   className="mt-2 w-full rounded-lg border-2 px-4 py-3 text-base outline-none focus:border-[var(--brand-lime)]"
-                  style={{ borderColor: "var(--brand-pastel)", background: "#fff", color: "var(--brand-jungle)" }}
+                  style={{ borderColor: "var(--brand-pastel)", background: "#fff", color: "var(--brand-white)" }}
                 />
               </div>
               <button
@@ -109,12 +109,12 @@ export default function ContactPage() {
                 {status === "sending" ? "Sending…" : "Send"}
               </button>
               {status === "ok" && (
-                <p className="rounded-lg p-4 text-sm font-semibold" style={{ background: "var(--brand-tea)", color: "var(--brand-jungle)" }}>
+                <p className="rounded-lg p-4 text-sm font-semibold" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
                   Got it. I&apos;ll be in touch.
                 </p>
               )}
               {status === "err" && errMsg && (
-                <p className="rounded-lg p-4 text-sm font-semibold" style={{ background: "#FDF2F7", color: "var(--brand-jungle)" }}>
+                <p className="rounded-lg p-4 text-sm font-semibold" style={{ background: "#FDF2F7", color: "var(--brand-white)" }}>
                   {errMsg}
                 </p>
               )}

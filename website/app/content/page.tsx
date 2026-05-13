@@ -33,14 +33,14 @@ export default function ContentHub() {
           </Reveal>
         </div>
       </section>
-      <section className="py-20" style={{ background: "var(--brand-white)" }}>
+      <section className="py-20" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1200px] px-5 md:px-8 grid gap-6 md:grid-cols-3">
           {channels.map((c, i) => (
             <Reveal key={c.label} delay={(i % 3) as 0 | 1 | 2}>
-              <Link href={c.href} className="block h-full rounded-xl p-7 transition-shadow hover:shadow-lg" style={{ background: "var(--brand-tea)", borderTop: "2px solid var(--brand-myrtle)" }}>
+              <Link href={c.href} className="block h-full rounded-xl p-7 transition-shadow hover:shadow-lg" style={{ background: "var(--brand-jungle)", borderTop: "2px solid var(--brand-myrtle)" }}>
                 <div className="section-label">Channel</div>
-                <h3 className="mt-3 text-2xl font-extrabold" style={{ color: "var(--brand-jungle)" }}>{c.label}</h3>
-                <p className="mt-3 text-base leading-relaxed" style={{ color: "var(--brand-body)" }}>{c.desc}</p>
+                <h3 className="mt-3 text-2xl font-extrabold" style={{ color: "var(--brand-white)" }}>{c.label}</h3>
+                <p className="mt-3 text-base leading-relaxed" style={{ color: "var(--brand-pastel)" }}>{c.desc}</p>
               </Link>
             </Reveal>
           ))}
