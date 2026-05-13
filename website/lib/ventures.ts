@@ -74,9 +74,9 @@ export const VENTURES: Venture[] = [
   {
     slug: "eo",
     name: "Entrepreneurs' Organization",
-    tagline: "Where I think with my peers",
-    role: "EO Vietnam member",
-    context: "Global peer network · Vietnam chapter",
+    tagline: "EO Vietnam · Member",
+    role: "Member — EO Vietnam chapter",
+    context: "Global peer network · EO Vietnam",
     image: "/images/ventures/eo.jpg",
     href: "/ventures/eo",
     external: false,
@@ -205,14 +205,14 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
   eo: {
     slug: "eo",
     name: "Entrepreneurs' Organization",
-    intro: "The forum where I think with my peers — eight founders, one room, every month.",
+    intro: "EO Vietnam member. The forum where I think with my peers — eight founders, one room, every month.",
     story: [
-      "EO is the operator network I trust most. It's a global peer organisation for founders running businesses of meaningful scale, and the part I show up for is the forum — a confidential monthly meeting with seven other Vietnamese founders who've signed up to be brutally honest with each other.",
-      "Half the decisions I've made about Xood, Skylight, and the advisory portfolio were workshopped in that room first. If you're an operator running a real business in Vietnam, joining EO was the highest-leverage move I ever made for my own thinking.",
+      "EO is the operator network I trust most. It's a global peer organisation for founders running businesses of meaningful scale, and I'm a member of the EO Vietnam chapter. The part I show up for is the forum — a confidential monthly meeting with seven other Vietnamese founders who've signed up to be brutally honest with each other.",
+      "Half the decisions I've made about Xood, Skylight, and the advisory portfolio were workshopped in that room first. If you're an operator running a real business in Vietnam, joining EO Vietnam was the highest-leverage move I ever made for my own thinking.",
     ],
     facts: [
-      { label: "Role", value: "Member · EO Vietnam" },
-      { label: "Format", value: "Monthly forum · 8 founders" },
+      { label: "Membership", value: "EO Vietnam · Member" },
+      { label: "Format", value: "Monthly forum · 8 founders, confidential" },
       { label: "Global org", value: "Entrepreneurs' Organization (EO)" },
       { label: "Why it matters", value: "Best decision lab I'm in" },
     ],

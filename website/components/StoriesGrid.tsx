@@ -13,7 +13,7 @@ export default function StoriesGrid() {
         <Link
           key={s.slug}
           href={`/scholarly-warrior#${s.slug}`}
-          className="group flex flex-col"
+          className="group card-hover-accent flex flex-col pt-2"
         >
           <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image

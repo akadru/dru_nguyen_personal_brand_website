@@ -19,7 +19,7 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
             key={v.slug}
             href={v.href}
             {...linkProps}
-            className="group flex flex-col"
+            className="group card-hover-accent flex flex-col pt-2"
           >
             <div className="relative aspect-[16/10] w-full overflow-hidden">
               <Image

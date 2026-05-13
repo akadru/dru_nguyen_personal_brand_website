@@ -70,7 +70,7 @@ export default function NewsGrid({ count = 3 }: { count?: number }) {
   return (
     <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
       {items.map((p) => (
-        <Link key={p.slug} href={postHref(p)} className="group flex flex-col">
+        <Link key={p.slug} href={postHref(p)} className="group card-hover-accent flex flex-col pt-2">
           <div className="relative aspect-[4/3] w-full overflow-hidden" style={{ background: "rgba(255,255,255,0.04)" }}>
             {p.image && (
               <Image

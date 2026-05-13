@@ -140,7 +140,7 @@ export default function Nav() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="group block py-1 font-extrabold uppercase leading-[1.0] tracking-tight transition-transform hover:translate-x-2"
+                    className="menu-item-line group inline-block py-1 font-extrabold uppercase leading-[1.0] tracking-tight transition-transform hover:translate-x-2"
                     style={{
                       fontSize: "clamp(24px, 3.4vw, 44px)",
                       letterSpacing: "-0.02em",
@@ -161,7 +161,7 @@ export default function Nav() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block py-1 font-extrabold uppercase leading-[1.0] tracking-tight transition-transform hover:translate-x-2"
+                    className="menu-item-line inline-block py-1 font-extrabold uppercase leading-[1.0] tracking-tight transition-transform hover:translate-x-2"
                     style={{
                       fontSize: "clamp(20px, 2.6vw, 32px)",
                       letterSpacing: "-0.015em",
