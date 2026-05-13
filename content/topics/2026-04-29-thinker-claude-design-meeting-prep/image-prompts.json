@@ -1,0 +1,23 @@
+{
+  "topic": "How Dru uses Anthropic's Claude Design (launched April 17, 2026) to prepare every team meeting in 30 minutes.",
+  "week_of": "2026-04-27",
+  "phrases": [
+    "DO THE WORK.",
+    "DRIVE THE ARTIFACT.",
+    "Knowledge with application is wisdom.",
+    "Walking in unprepared isn't humble. It's costing your team energy."
+  ],
+  "images": [
+    {
+      "file": "blog.md",
+      "slug": "never-enter-a-meeting-blind-claude-design-prep",
+      "image_class": "HUMAN",
+      "style": "EDITORIAL_PHOTO",
+      "sub_mode": "apple_keynote",
+      "concept": "Operator's MacBook on a worn wooden Saigon home-office desk pre-dawn. Claude Design draft slide deck on screen with one highlighted line. Single dramatic morning light. Lime accent only on the screen highlight. No face, no people. Sets the tactical, calm-discipline tone of the post.",
+      "aspect_ratio": "16:9",
+      "dimensions": "1200x630",
+      "prompt": "A 16:9 image, 1200x630. Subject: An operator's MacBook on a worn wooden desk in a Saigon home-office, pre-dawn. The screen shows a clean Claude Design draft slide deck with one highlighted line of text. A small notebook with handwritten arrows beside the laptop, a glass of Vietnamese phin coffee dripping into ice. Soft window light from upper-right, faintly visible silhouette of motorbikes through the window blinds. Style: matte editorial photography in the style of an Apple keynote still, single dramatic light source, hero subject center-frame, restrained and cinematic. Mood is focused, calm, premium, considered. Visual references: Apple keynote stills, pre-dawn editorial photography. Mood: focused, calm, pre-meeting discipline. Colors: dominant jungle, with lime used as a subtle highlight on one screen line, sticky note, or object. Composition: Desk in the foreground, MacBook centered slightly left. Single dramatic morning light source from upper-right window. No human, no face. Avoid: people, faces, hands, stock-photo team meetings or boardrooms, neon, cyberpunk, futuristic sci-fi tones, purple, orange, red dominant, AI iconography, robots, glowing circuits, neural-net brain visuals, chatbot UI screenshots, emoji, clip-art. No text, letters, numbers, or symbols anywhere in the image. No watermarks, no Western corporate stock aesthetic, no glowing circuits or robot imagery anywhere in the image."
+    }
+  ]
+}

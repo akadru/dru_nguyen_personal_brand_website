@@ -40,6 +40,30 @@ export const POSTS: Post[] = [
     image: "/images/blog/eos-at-skylight.webp",
   },
   {
+    slug: "every-olympian-has-a-coach-yours-is-a-prompt-away",
+    title: "Every Olympian has a coach. Yours is a prompt away.",
+    excerpt:
+      "Every Olympian has a coach. So do every CEO and operator playing for real. Five copy-paste prompts that turn your LLM into yours.",
+    channel: "LinkedIn",
+    pillar: "Thinker",
+    topic: "Coaching",
+    read: "6 MIN",
+    date: "30 APR 2026",
+    image: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp",
+  },
+  {
+    slug: "never-enter-a-meeting-blind-claude-design-prep",
+    title: "Never enter a meeting blind. My 30-min Claude prep.",
+    excerpt:
+      "Anthropic shipped Claude Design on April 17. Here is the 30-minute prep I now run before every team meeting at Xood and Skylight, end to end.",
+    channel: "LinkedIn",
+    pillar: "Thinker",
+    topic: "AI Operator",
+    read: "5 MIN",
+    date: "29 APR 2026",
+    image: "/images/blog/never-enter-a-meeting-blind-claude-design-prep.webp",
+  },
+  {
     slug: "claude-runs-xood-commercial",
     title: "How I run Xood's commercial team in 30 min/day with Claude",
     excerpt:
