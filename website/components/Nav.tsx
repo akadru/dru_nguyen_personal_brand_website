@@ -6,13 +6,16 @@ import { SearchTrigger } from "./SearchModal";
 
 const PRIMARY = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/ventures", label: "Ventures" },
-  { href: "/scholarly-warrior#stories", label: "Key Stories" },
-  { href: "/xood", label: "Xood" },
-  { href: "/blog", label: "Blog" },
+  { href: "/about", label: "Dru's Story" },
+  { href: "/ventures/xood", label: "Xood" },
+  { href: "/ventures/skylight", label: "Skylight" },
+  { href: "/ventures/gam", label: "GAM Esports" },
+  { href: "/ventures/tictag", label: "Tictag" },
+  { href: "/ventures/eastwest", label: "East West" },
+  { href: "/ventures/nuen", label: "Nuen Moto" },
+  { href: "/ventures/eo", label: "Entrepreneurs' Org" },
+  { href: "/blog", label: "News & Stories" },
   { href: "/speaking", label: "Speaking" },
-  { href: "/press", label: "Press" },
 ];
 
 const SECONDARY = [

@@ -98,12 +98,12 @@ export default function Home() {
                   color: "var(--brand-white)",
                 }}
               >
-                Dru Nguyen;{" "}
+                Dru Nguyen:{" "}
                 <span style={{ color: "var(--brand-lime)" }}>operator</span>,{" "}
-                <span style={{ color: "var(--brand-lime)" }}>co-founder</span>,{" "}
-                <span style={{ color: "var(--brand-lime)" }}>investor</span> and the{" "}
-                <span style={{ color: "var(--brand-lime)" }}>founder of Skylight</span> — a ten-year rooftop hospitality flagship in Nha Trang — and{" "}
-                <span style={{ color: "var(--brand-lime)" }}>co-founder &amp; MD of Xood</span>, an AI data services company building accurate, unbiased training data for Southeast Asia. Advisor to Tictag Singapore, East West Brewing, Nuen Motor and GAM Entertainment. Ten years of real operations across three industries — teaching what actually works.
+                <span style={{ color: "var(--brand-lime)" }}>investor</span>,{" "}
+                <span style={{ color: "var(--brand-lime)" }}>builder</span>,{" "}
+                <span style={{ color: "var(--brand-lime)" }}>lifelong learner</span>. The founder building{" "}
+                <span style={{ color: "var(--brand-lime)" }}>Vietnam&apos;s next generation</span> of businesses and leaders across hospitality, AI, and entertainment.
               </p>
               <Link
                 href="/about"
