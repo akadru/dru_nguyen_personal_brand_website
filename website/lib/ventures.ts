@@ -33,10 +33,10 @@ export const VENTURES: Venture[] = [
   },
   {
     slug: "gam",
-    name: "GAM Entertainment",
+    name: "GAM Esports & Entertainment",
     tagline: "Investing in the show",
     role: "Investor / Advisor",
-    context: "Entertainment",
+    context: "Esports · Entertainment",
     image: "/images/ventures/gam.jpg",
     href: "https://gam.gg/",
     external: true,
