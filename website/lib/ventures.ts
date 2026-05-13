@@ -14,7 +14,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "xood",
     name: "Xood",
-    tagline: "Doing good with data",
+    tagline: "Operator-grade AI data",
     role: "Co-Founder & MD — Commercial & Community",
     context: "AI data services · Vietnam",
     image: "/images/ventures/xood.jpg",

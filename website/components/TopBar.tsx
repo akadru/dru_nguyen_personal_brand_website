@@ -14,7 +14,7 @@ export default function TopBar() {
         >
           <span>Asia/Ho_Chi_Minh</span>
           <span style={{ color: "var(--brand-lime)" }}>·</span>
-          <span>#DoingGoodWithData</span>
+          <span></span>
         </div>
       </div>
     </div>

@@ -82,7 +82,7 @@ export default function Footer() {
         >
           <div>© {year} Dru Nguyen. All rights reserved.</div>
           <div className="font-semibold uppercase tracking-wider" style={{ color: "var(--brand-lime)", letterSpacing: "0.12em" }}>
-            #DoingGoodWithData · #FutureOfWork
+            #FutureOfWork
           </div>
         </div>
       </div>

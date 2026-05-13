@@ -16,7 +16,7 @@ const PRIMARY = [
 ];
 
 const SECONDARY = [
-  { href: "/newsletter", label: "Tuesday Brief" },
+  { href: "/newsletter", label: "Newsletter" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -137,10 +137,10 @@ export default function Nav() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="group block py-1 font-extrabold uppercase leading-[0.95] tracking-tight transition-transform hover:translate-x-2"
+                    className="group block py-1 font-extrabold uppercase leading-[1.0] tracking-tight transition-transform hover:translate-x-2"
                     style={{
-                      fontSize: "clamp(34px, 4.8vw, 64px)",
-                      letterSpacing: "-0.025em",
+                      fontSize: "clamp(24px, 3.4vw, 44px)",
+                      letterSpacing: "-0.02em",
                       color: "var(--brand-jungle)",
                     }}
                   >
@@ -150,7 +150,7 @@ export default function Nav() {
               ))}
             </ul>
 
-            <div className="my-8 h-px md:my-10" style={{ background: "rgba(10,27,36,0.4)" }} />
+            <div className="my-6 h-px md:my-8" style={{ background: "rgba(10,27,36,0.4)" }} />
 
             <ul className="flex flex-col gap-1">
               {SECONDARY.map((item) => (
@@ -158,10 +158,10 @@ export default function Nav() {
                   <Link
                     href={item.href}
                     onClick={() => setOpen(false)}
-                    className="block py-1 font-extrabold uppercase leading-[0.95] tracking-tight transition-transform hover:translate-x-2"
+                    className="block py-1 font-extrabold uppercase leading-[1.0] tracking-tight transition-transform hover:translate-x-2"
                     style={{
-                      fontSize: "clamp(28px, 3.8vw, 44px)",
-                      letterSpacing: "-0.02em",
+                      fontSize: "clamp(20px, 2.6vw, 32px)",
+                      letterSpacing: "-0.015em",
                       color: "var(--brand-jungle)",
                     }}
                   >
@@ -172,10 +172,10 @@ export default function Nav() {
             </ul>
           </nav>
 
-          {/* Bottom row: socials */}
-          <div className="mt-12 flex flex-col gap-3 border-t pt-6" style={{ borderColor: "rgba(10,27,36,0.4)" }}>
+          {/* Bottom row: socials only */}
+          <div className="mt-10 flex items-center justify-between border-t pt-6" style={{ borderColor: "rgba(10,27,36,0.4)" }}>
             <div className="text-[10px] font-bold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
-              Asia/Ho_Chi_Minh · #DoingGoodWithData
+              © Dru Nguyen
             </div>
             <div onClick={() => setOpen(false)}>
               <SocialIcons variant="topbar" />

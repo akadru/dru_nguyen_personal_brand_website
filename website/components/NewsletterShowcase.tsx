@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * Bartlett "DOAC showcase" equivalent — full-bleed feature for The Tuesday Brief.
+ * Bartlett "DOAC showcase" equivalent — full-bleed feature for The Newsletter.
  * Logo / wordmark · long-form headline · CTA.
  */
 export default function NewsletterShowcase() {
@@ -22,7 +22,7 @@ export default function NewsletterShowcase() {
           style={{ borderColor: "rgba(173,251,73,0.4)", color: "var(--brand-lime)", letterSpacing: "0.22em" }}
         >
           <span className="h-1.5 w-1.5 rounded-full" style={{ background: "var(--brand-lime)" }} />
-          The Tuesday Brief
+          The Newsletter
         </div>
 
         <h2

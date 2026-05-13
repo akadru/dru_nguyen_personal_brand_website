@@ -1,6 +1,6 @@
 // Source of truth for blog/post listings.
 // Only PUBLISHED, live posts are listed here — never "Coming soon" placeholders.
-// When a new post goes live, the web-developer agent appends it to the top of POSTS.
+// When a new post goes live, append it to the top of POSTS.
 
 export type Post = {
   slug: string;
@@ -15,6 +15,30 @@ export type Post = {
 };
 
 export const POSTS: Post[] = [
+  {
+    slug: "nightclub-and-ai-adoption",
+    title: "What running a nightclub taught me about AI adoption",
+    excerpt:
+      "Every AI rollout has the same room: 70% locked in, 20% pretending, 10% gone. The mistake operators make is trying to convert the 20%.",
+    channel: "LinkedIn",
+    pillar: "Builder",
+    topic: "Hospitality",
+    read: "4 MIN",
+    date: "13 MAY 2026",
+    image: "/images/blog/nightclub-and-ai-adoption.webp",
+  },
+  {
+    slug: "eos-at-skylight",
+    title: "Why I implemented EOS at Skylight (and what I'd do differently)",
+    excerpt:
+      "Nine months to buy-in. Six numbers on a wall. What I kept, what I'd cut today, and the single tweak that made EOS click in hospitality.",
+    channel: "LinkedIn",
+    pillar: "Builder",
+    topic: "EOS",
+    read: "5 MIN",
+    date: "13 MAY 2026",
+    image: "/images/blog/eos-at-skylight.webp",
+  },
   {
     slug: "claude-runs-xood-commercial",
     title: "How I run Xood's commercial team in 30 min/day with Claude",

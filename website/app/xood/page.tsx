@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Xood — Applied AI for Real Operations",
   description:
-    "Doing good with data. Xood is an AI data services company built on Tictag DNA — sharpened by ten years of operating businesses across three industries.",
+    "Operator-grade AI data. Xood is an AI data services company built on Tictag DNA — sharpened by ten years of operating businesses across three industries.",
 };
 
 const offerings = [
@@ -44,7 +44,7 @@ export default function XoodPage() {
           </Reveal>
           <Reveal delay={3}>
             <p className="mt-10 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
-              <strong style={{ color: "var(--brand-white)" }}>Doing good with data.</strong> Xood is an AI data services company building accurate,
+              <strong style={{ color: "var(--brand-white)" }}>Operator-grade AI data.</strong> Xood is an AI data services company building accurate,
               unbiased training data — especially for the long-tail problems most labs ignore. Built on the
               Tictag Singapore DNA. Sharpened by ten years of operating across hospitality, AI, and entertainment.
             </p>
