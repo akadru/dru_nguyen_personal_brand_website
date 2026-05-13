@@ -27,7 +27,7 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
                 alt={`${v.name} — ${v.tagline}`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                className="object-cover transition-[transform,filter] duration-500 group-hover:scale-[1.03] group-hover:grayscale"
               />
             </div>
             <div className="mt-6 flex items-start justify-between gap-4">
