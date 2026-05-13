@@ -7,6 +7,7 @@ export type Venture = {
   image: string;       // /images/ventures/{slug}.jpg
   href: string;        // external site or anchor
   external: boolean;   // open in new tab if true
+  wide?: boolean;      // span full row in VenturesGrid (used for EO at the bottom)
 };
 
 // Order specified by Dru: Xood → Skylight → GAM → Tictag → East West → Nuen → EO
@@ -80,6 +81,7 @@ export const VENTURES: Venture[] = [
     image: "/images/ventures/eo.jpg",
     href: "/ventures/eo",
     external: false,
+    wide: true,
   },
 ];
 
