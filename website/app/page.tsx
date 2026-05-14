@@ -57,11 +57,16 @@ export default function Home() {
           </Reveal>
           <Reveal delay={3}>
             <p
-              className="mt-8 max-w-3xl text-xl md:text-2xl"
-              style={{ color: "var(--brand-pastel)" }}
+              className="mt-8 max-w-3xl italic"
+              style={{
+                fontFamily: "'Plus Jakarta Sans', serif",
+                fontSize: "clamp(22px, 3vw, 40px)",
+                lineHeight: 1.25,
+                color: "var(--brand-white)",
+              }}
             >
-              <span style={{ color: "var(--brand-white)", fontWeight: 700 }}>Real operations. Real outcomes.</span>{" "}
-              <span style={{ color: "var(--brand-lime)" }}>USA &amp; Vietnam.</span>
+              &ldquo;Knowledge with application{" "}
+              <span style={{ color: "var(--brand-lime)" }}>is wisdom.</span>&rdquo;
             </p>
           </Reveal>
           <Reveal delay={3}>
