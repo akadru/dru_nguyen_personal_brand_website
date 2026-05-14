@@ -4,7 +4,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "About — Dru Nguyen",
+  title: "About | Dru Nguyen",
   description:
     "Operator, co-founder, and investor across hospitality, AI data services, and entertainment. The Scholarly Warrior identity in practice.",
 };
@@ -88,7 +88,7 @@ export default function AboutPage() {
           <Reveal delay={2}>
             <div className="mt-6 space-y-5 text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
               <p>
-                I&apos;m Dru Nguyen — co-founder of <strong>Xood</strong> (AI data services in Vietnam), founder of{" "}
+                I&apos;m Dru Nguyen, co-founder of <strong>Xood</strong> (AI data services in Vietnam), founder of{" "}
                 <strong>Skylight</strong> (rooftop hospitality, Nha Trang, 10+ years), and advisor to{" "}
                 <strong>Tictag Singapore</strong>. I invest in and advise <strong>East West Brewery</strong>,{" "}
                 <strong>Nuen Motor</strong>, and <strong>GAM Entertainment</strong>.

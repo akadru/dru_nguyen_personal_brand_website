@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Why I implemented EOS at Skylight (and what I'd do differently)",
   description:
-    "Nine months to buy-in. Six numbers on a wall. What I kept, what I'd cut if I started today — and the single hospitality tweak that made EOS click.",
+    "Nine months to buy-in. Six numbers on a wall. What I kept, what I'd cut if I started today, and the single hospitality tweak that made EOS click.",
   alternates: { canonical: "/blog/eos-at-skylight" },
   openGraph: {
     title: "Why I implemented EOS at Skylight (and what I'd do differently)",
@@ -49,7 +49,7 @@ export default function PostPage() {
         <div className="mx-auto max-w-[1300px] px-5 pb-12 md:px-10 md:pb-20">
           <Reveal delay={3}>
             <div className="relative aspect-[1200/630] w-full overflow-hidden rounded-2xl">
-              <Image src="/images/blog/eos-at-skylight.webp" alt="A Skylight operator's wall — handwritten weekly scoreboard in soft tungsten light" fill priority sizes="(max-width: 1300px) 100vw, 1300px" className="object-cover" />
+              <Image src="/images/blog/eos-at-skylight.webp" alt="A Skylight operator's wall, handwritten weekly scoreboard in soft tungsten light" fill priority sizes="(max-width: 1300px) 100vw, 1300px" className="object-cover" />
             </div>
           </Reveal>
         </div>
@@ -64,14 +64,14 @@ export default function PostPage() {
           <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>For two years I blamed the team. Then I read <em>Traction</em> with my brother TK over a weekend.</p>
             <p>The problem wasn&apos;t the team. It was that the team had no system to hold the standard. <strong style={{ color: "var(--brand-white)" }}>I was the system. And I was the bottleneck.</strong></p>
-            <p>We implemented EOS over the next nine months. The team — the same team — started running plays I&apos;d been holding in my head. Nine months in, we hit a Friday night where every section ran clean and I didn&apos;t get a single message until close. That night I realized what &ldquo;the system holds the standard&rdquo; actually means.</p>
+            <p>We implemented EOS over the next nine months. The team, the same team, started running plays I&apos;d been holding in my head. Nine months in, we hit a Friday night where every section ran clean and I didn&apos;t get a single message until close. That night I realized what &ldquo;the system holds the standard&rdquo; actually means.</p>
           </div>
 
           <h2 className="mt-14 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>What I <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>kept.</em></h2>
           <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p><strong style={{ color: "var(--brand-white)" }}>Scorecard.</strong> Six numbers, updated weekly, every Monday at L10. F&amp;B revenue, cover count, average ticket, theft variance, complaint count, staff retention. If a number&apos;s red two weeks running, it goes to IDS.</p>
-            <p><strong style={{ color: "var(--brand-white)" }}>Quarterly Rocks.</strong> Each section lead picks one to three Rocks. They own them. If they miss, the Rock comes back to L10. No &ldquo;stretch&rdquo; Rocks — only what they can actually finish.</p>
-            <p><strong style={{ color: "var(--brand-white)" }}>Issues list.</strong> Everything that isn&apos;t an emergency goes here. We work it bottom-up at L10. The discipline isn&apos;t writing issues — it&apos;s letting them sit and discussing them in the right context.</p>
+            <p><strong style={{ color: "var(--brand-white)" }}>Quarterly Rocks.</strong> Each section lead picks one to three Rocks. They own them. If they miss, the Rock comes back to L10. No &ldquo;stretch&rdquo; Rocks, only what they can actually finish.</p>
+            <p><strong style={{ color: "var(--brand-white)" }}>Issues list.</strong> Everything that isn&apos;t an emergency goes here. We work it bottom-up at L10. The discipline isn&apos;t writing issues, it&apos;s letting them sit and discussing them in the right context.</p>
           </div>
 
           <h2 className="mt-14 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>What I&apos;d <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>cut today.</em></h2>
@@ -83,7 +83,7 @@ export default function PostPage() {
           <div className="mt-16 rounded-2xl p-8 md:p-10" style={{ background: "rgba(173,251,73,0.06)", border: "1px solid rgba(173,251,73,0.25)" }}>
             <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>The one thing I wish I&apos;d done from week one</div>
             <p className="mt-5 text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
-              We implemented EOS in the office before we implemented it on the floor. Three months wasted. The day we put a Skylight scorecard on the wall behind the bar — sales target, last week&apos;s actual, today&apos;s pace — was the day staff started owning the number. Not because we asked them to. Because the number was visible.
+              We implemented EOS in the office before we implemented it on the floor. Three months wasted. The day we put a Skylight scorecard on the wall behind the bar, sales target, last week&apos;s actual, today&apos;s pace, was the day staff started owning the number. Not because we asked them to. Because the number was visible.
             </p>
             <p className="mt-5 text-lg italic" style={{ color: "var(--brand-white)", fontFamily: "'Plus Jakarta Sans', serif", fontSize: "clamp(20px, 2.4vw, 28px)" }}>
               Structure is freedom. But only when the structure is <span style={{ color: "var(--brand-lime)" }}>visible</span> to the people doing the work.

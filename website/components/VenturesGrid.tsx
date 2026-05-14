@@ -30,7 +30,7 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
                 <div className="relative aspect-[32/12] w-full overflow-hidden md:aspect-[21/9]">
                   <Image
                     src={v.image}
-                    alt={`${v.name} — ${v.tagline}`}
+                    alt={`${v.name}, ${v.tagline}`}
                     fill
                     sizes="(max-width: 768px) 100vw, 66vw"
                     className="object-cover transition-[transform,filter] duration-500 group-hover:scale-[1.02] group-hover:grayscale"
@@ -84,7 +84,7 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
             <div className="relative aspect-[16/10] w-full overflow-hidden">
               <Image
                 src={v.image}
-                alt={`${v.name} — ${v.tagline}`}
+                alt={`${v.name}, ${v.tagline}`}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                 className="object-cover transition-[transform,filter] duration-500 group-hover:scale-[1.03] group-hover:grayscale"

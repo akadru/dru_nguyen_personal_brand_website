@@ -20,11 +20,11 @@ export async function generateMetadata({
   const detail = VENTURE_DETAILS[slug];
   if (!detail) return {};
   return {
-    title: `${detail.name} — Dru Nguyen`,
+    title: `${detail.name} | Dru Nguyen`,
     description: detail.intro,
     alternates: { canonical: `/ventures/${detail.slug}` },
     openGraph: {
-      title: `${detail.name} — Dru Nguyen`,
+      title: `${detail.name} | Dru Nguyen`,
       description: detail.intro,
       type: "article",
       url: `/ventures/${detail.slug}`,
@@ -55,7 +55,7 @@ export default async function VentureDetailPage({
         <div className="absolute inset-0">
           <Image
             src={detail.heroImage}
-            alt={`${detail.name} — hero`}
+            alt={`${detail.name}, hero`}
             fill
             priority
             sizes="100vw"
@@ -92,7 +92,7 @@ export default async function VentureDetailPage({
         </div>
       </section>
 
-      {/* DRU'S POV — long-form story */}
+      {/* DRU'S POV, long-form story */}
       <section className="py-24 md:py-36" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[900px] px-5 md:px-10">
           <Reveal>

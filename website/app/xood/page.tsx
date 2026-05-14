@@ -3,19 +3,19 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Xood — Applied AI for Real Operations",
+  title: "Xood, Applied AI for Real Operations",
   description:
-    "Operator-grade AI data. Xood is an AI data services company built on Tictag DNA — sharpened by ten years of operating businesses across three industries.",
+    "Operator-grade AI data. Xood is an AI data services company built on Tictag DNA, sharpened by ten years of operating businesses across three industries.",
 };
 
 const offerings = [
-  { title: "Data Labelling for Long-Tail AI", body: "Building accurate, unbiased training data — especially for problems most AI labs ignore." },
+  { title: "Data Labelling for Long-Tail AI", body: "Building accurate, unbiased training data, especially for problems most AI labs ignore." },
   { title: "Operator-Grade AI Workflows", body: "AI deployments that survive contact with real teams, real ops, and real P&Ls." },
   { title: "Inclusive Data, by Design", body: "Working with underserved communities to make sure the future of AI doesn't leave them behind." },
 ];
 
 const beliefs = [
-  { title: "Data, not models, is the bottleneck.", body: "Most companies don't lack AI — they lack the labelled, structured, real-world data to make AI useful in their context." },
+  { title: "Data, not models, is the bottleneck.", body: "Most companies don't lack AI, they lack the labelled, structured, real-world data to make AI useful in their context." },
   { title: "Operators see what creators miss.", body: "Ten years of running real businesses tells you which AI use cases actually work and which are theatre." },
   { title: "Vietnam is the right launchpad.", body: "Long-tail problems, underserved communities, fast deployment, and a Tictag-Singapore data DNA." },
 ];
@@ -29,7 +29,7 @@ export default function XoodPage() {
         <div className="relative z-10 mx-auto max-w-[1300px] px-5 pb-20 pt-28 md:px-10 md:pb-28 md:pt-36">
           <Reveal>
             <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
-              Identity Layer · 03 — The IP
+              Identity Layer · 03, The IP
             </div>
           </Reveal>
           <Reveal delay={1}>
@@ -45,7 +45,7 @@ export default function XoodPage() {
           <Reveal delay={3}>
             <p className="mt-10 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
               <strong style={{ color: "var(--brand-white)" }}>Operator-grade AI data.</strong> Xood is an AI data services company building accurate,
-              unbiased training data — especially for the long-tail problems most labs ignore. Built on the
+              unbiased training data, especially for the long-tail problems most labs ignore. Built on the
               Tictag Singapore DNA. Sharpened by ten years of operating across hospitality, AI, and entertainment.
             </p>
           </Reveal>
@@ -94,7 +94,7 @@ export default function XoodPage() {
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-8 max-w-2xl mx-auto text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
-              In the AI world, companies lack data to train accurate, unbiased models — especially for long-tail
+              In the AI world, companies lack data to train accurate, unbiased models, especially for long-tail
               problems. AI is advancing at breathtaking speed, and underserved communities are at risk of being
               left behind. Xood exists to close that gap.
             </p>

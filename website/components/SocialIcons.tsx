@@ -6,7 +6,7 @@ export type SocialLink = {
   svg: React.ReactNode;
 };
 
-// Personal handles — Dru's three live channels.
+// Personal handles, Dru's three live channels.
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: "LinkedIn",

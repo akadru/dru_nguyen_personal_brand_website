@@ -9,7 +9,7 @@ import NewsletterShowcase from "@/components/NewsletterShowcase";
 export default function Home() {
   return (
     <>
-      {/* 1. HERO — full-bleed photo · roles stack · manifesto italic · single CTA */}
+      {/* 1. HERO, full-bleed photo · roles stack · manifesto italic · single CTA */}
       <section
         className="relative overflow-hidden"
         style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}
@@ -105,7 +105,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 2. INTRO — Bartlett-style description block (text-left + portrait-right) */}
+      {/* 2. INTRO, Bartlett-style description block (text-left + portrait-right) */}
       <section className="py-24 md:py-36" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <div className="grid items-center gap-12 md:grid-cols-[1.4fr_1fr] md:gap-20">
@@ -162,7 +162,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. VENTURES — Bartlett 4-up flush grid */}
+      {/* 3. VENTURES, Bartlett 4-up flush grid */}
       <section id="ventures" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
@@ -190,7 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. KEY STORIES — replaces Bartlett's Timeline */}
+      {/* 3. KEY STORIES, replaces Bartlett's Timeline */}
       <section id="stories" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
@@ -218,7 +218,7 @@ export default function Home() {
           <Reveal delay={3}>
             <div className="mt-16 flex flex-col items-start gap-6 border-t pt-10 md:flex-row md:items-center md:justify-between" style={{ borderColor: "rgba(176,190,197,0.2)" }}>
               <p className="max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
-                Want one of these stories — with the operator lesson behind it — at your event?
+                Want one of these stories, with the operator lesson behind it, at your event?
               </p>
               <Link
                 href="/contact?intent=speaking"
@@ -232,7 +232,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. NEWS & STORIES — Bartlett 3-up grid */}
+      {/* 4. NEWS & STORIES, Bartlett 3-up grid */}
       <section id="news" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
@@ -260,10 +260,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. NEWSLETTER SHOWCASE — full-bleed */}
+      {/* 6. NEWSLETTER SHOWCASE, full-bleed */}
       <NewsletterShowcase />
 
-      {/* 6. SPEAKING ENGAGEMENTS — Bartlett 2-col (image left / copy right) */}
+      {/* 6. SPEAKING ENGAGEMENTS, Bartlett 2-col (image left / copy right) */}
       <section id="speaking" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <div className="grid gap-12 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-20">
@@ -271,7 +271,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] overflow-hidden">
                 <Image
                   src="/images/dru-portrait-laughing.jpg"
-                  alt="Dru Nguyen — speaking portrait"
+                  alt="Dru Nguyen, speaking portrait"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
@@ -289,7 +289,7 @@ export default function Home() {
                 </h2>
                 <p className="mt-8 max-w-xl text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
                   EO forum sessions, founder offsites, AI workshops, EOS implementation coaching.
-                  Ten years of real operations across three industries. Operator-to-operator only — no
+                  Ten years of real operations across three industries. Operator-to-operator only, no
                   theory, no hype.
                 </p>
                 <Link

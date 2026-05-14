@@ -3,7 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Content — Dru Nguyen",
+  title: "Content | Dru Nguyen",
   description: "Three pillars: The Thinker, The Builder, The Human. Where to find Dru's content across LinkedIn, Substack, and Facebook.",
 };
 

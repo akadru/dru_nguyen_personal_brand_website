@@ -4,16 +4,16 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Speaking — Dru Nguyen",
+  title: "Speaking | Dru Nguyen",
   description:
     "Speaking engagements, founder offsites, AI workshops, and EOS coaching. Bring Dru to your team. Vietnam, SEA, international.",
 };
 
 const topics = [
   { label: "AI for Operators", body: "How to use AI as a workflow, not a tool. Real prompts, real templates, real outcomes from Xood." },
-  { label: "EOS in Practice", body: "What it actually takes to implement EOS — including pre-revenue startups. The 9-month buy-in story." },
+  { label: "EOS in Practice", body: "What it actually takes to implement EOS, including pre-revenue startups. The 9-month buy-in story." },
   { label: "Building in Vietnam", body: "Cross-industry pattern recognition from operating across F&B, AI services, and entertainment." },
-  { label: "Care · Discipline · Grit", body: "The Scholarly Warrior identity — discipline plus learning as an integrated philosophy. For founder offsites and leadership cohorts." },
+  { label: "Care · Discipline · Grit", body: "The Scholarly Warrior identity, discipline plus learning as an integrated philosophy. For founder offsites and leadership cohorts." },
 ];
 
 const venues = [
@@ -28,7 +28,7 @@ const venues = [
 const testimonials = [
   {
     quote:
-      "Dru speaks like he's already done what he's teaching — because he has. Our EO forum walked away with a workflow, not a buzzword.",
+      "Dru speaks like he's already done what he's teaching, because he has. Our EO forum walked away with a workflow, not a buzzword.",
     name: "EO Vietnam · Forum lead",
   },
   {
@@ -57,7 +57,7 @@ const quickFacts = [
 export default function SpeakingPage() {
   return (
     <>
-      {/* HERO — 2-col Bartlett style: image left, copy right */}
+      {/* HERO, 2-col Bartlett style: image left, copy right */}
       <section style={{ background: "var(--brand-jungle)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
         <div className="mx-auto grid max-w-[1400px] gap-12 px-5 pt-28 pb-20 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-20 md:px-10 md:pt-40 md:pb-28">
@@ -125,7 +125,7 @@ export default function SpeakingPage() {
         </div>
       </section>
 
-      {/* AS FEATURED AT — outlet logo row */}
+      {/* AS FEATURED AT, outlet logo row */}
       <section className="border-y py-12" style={{ background: "var(--brand-jungle)", borderColor: "rgba(176,190,197,0.4)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <div className="text-center">
@@ -145,7 +145,7 @@ export default function SpeakingPage() {
         </div>
       </section>
 
-      {/* TOPICS — 2-col grid, image-led if you have venue shots later */}
+      {/* TOPICS, 2-col grid, image-led if you have venue shots later */}
       <section className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
@@ -182,7 +182,7 @@ export default function SpeakingPage() {
         </div>
       </section>
 
-      {/* FORMATS — booker self-qualification table */}
+      {/* FORMATS, booker self-qualification table */}
       <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
@@ -235,7 +235,7 @@ export default function SpeakingPage() {
         </div>
       </section>
 
-      {/* QUICK FACTS — for organizers */}
+      {/* QUICK FACTS, for organizers */}
       <section className="py-20 md:py-24" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
@@ -282,7 +282,7 @@ export default function SpeakingPage() {
                     className="mt-6 not-italic text-xs font-bold uppercase"
                     style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}
                   >
-                    — {t.name}
+                   , {t.name}
                   </footer>
                 </blockquote>
               </Reveal>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "The Scholarly Warrior — Dru Nguyen",
+  title: "The Scholarly Warrior | Dru Nguyen",
   description:
     "Care · Discipline · Grit. The POV, the frameworks, and the operator essays. Discipline plus learning as an integrated philosophy.",
 };
@@ -73,7 +73,7 @@ export default function ScholarlyWarriorPage() {
             <div className="relative aspect-[3/4] overflow-hidden rounded-2xl">
               <Image
                 src="/images/dru-portrait-laughing.jpg"
-                alt="Dru Nguyen — the Scholarly Warrior"
+                alt="Dru Nguyen, the Scholarly Warrior"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 40vw"

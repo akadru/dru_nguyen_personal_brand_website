@@ -4,7 +4,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Press — Dru Nguyen",
+  title: "Press | Dru Nguyen",
   description: "Speaking appearances, interviews, media features, and a downloadable press kit for Dru Nguyen.",
 };
 
@@ -19,7 +19,7 @@ const features = [
   {
     outlet: "Tictag · Singapore",
     year: "2026",
-    title: "\"Everyone can benefit from working with data\" — keynote excerpt.",
+    title: "\"Everyone can benefit from working with data\", keynote excerpt.",
     img: "/images/dru-hero.jpg",
     href: "#",
   },
@@ -78,7 +78,7 @@ export default function PressPage() {
         </div>
       </section>
 
-      {/* AS SEEN IN — outlet logo strip (Gary Vee press cred pattern) */}
+      {/* AS SEEN IN, outlet logo strip (Gary Vee press cred pattern) */}
       <section className="border-y py-10" style={{ background: "var(--brand-jungle)", borderColor: "var(--brand-pastel)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <div className="text-center">
@@ -132,7 +132,7 @@ export default function PressPage() {
         </div>
       </section>
 
-      {/* QUICK FACTS — for journalists */}
+      {/* QUICK FACTS, for journalists */}
       <section className="py-20" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>

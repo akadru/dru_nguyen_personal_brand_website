@@ -16,7 +16,7 @@ export const VENTURES: Venture[] = [
     slug: "xood",
     name: "Xood",
     tagline: "Training data for the problems AI labs ignore",
-    role: "Co-Founder & MD — Commercial & Community",
+    role: "Co-Founder & MD, Commercial & Community",
     context: "AI data services · Vietnam",
     image: "/images/ventures/xood.jpg",
     href: "/ventures/xood",
@@ -76,7 +76,7 @@ export const VENTURES: Venture[] = [
     slug: "eo",
     name: "Entrepreneurs' Organization",
     tagline: "EO Vietnam · Member",
-    role: "Member — EO Vietnam chapter",
+    role: "Member, EO Vietnam chapter",
     context: "Global peer network · EO Vietnam",
     image: "/images/ventures/eo.jpg",
     href: "/ventures/eo",
@@ -104,10 +104,10 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
     intro: "Building accurate, unbiased training data for the long-tail problems most AI labs ignore.",
     story: [
       "Xood is what happens when an operator and a data scientist start a company together. Michael is the CEO; I run commercial and community out of Vietnam. We took the playbook Tictag sharpened in Singapore and adapted it for the markets and use cases the big labs don't bother with.",
-      "Most companies don't lack AI. They lack the labelled, structured, real-world data to make AI useful in their context. That's the gap Xood works in — and that's where I spend most of my AI-using-operator energy.",
+      "Most companies don't lack AI. They lack the labelled, structured, real-world data to make AI useful in their context. That's the gap Xood works in, and that's where I spend most of my AI-using-operator energy.",
     ],
     facts: [
-      { label: "Role", value: "Co-Founder · Managing Director — Commercial & Community" },
+      { label: "Role", value: "Co-Founder · Managing Director, Commercial & Community" },
       { label: "Stage", value: "Live · Vietnam" },
       { label: "Industry", value: "AI data services" },
       { label: "Founded with", value: "Michael (CEO)" },
@@ -135,10 +135,10 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
   gam: {
     slug: "gam",
     name: "GAM Esports & Entertainment",
-    intro: "Investing in the show — esports, live entertainment, and the next generation of Vietnamese fan culture.",
+    intro: "Investing in the show, esports, live entertainment, and the next generation of Vietnamese fan culture.",
     story: [
       "GAM is led by my brother TK. When he asked me to come in as an investor and advisor, the answer was easy: I know the operator, and I know the seriousness with which he runs a team. GAM is one of the top esports organisations in Vietnam, with a championship trophy cabinet most operators would kill for.",
-      "What I bring is the operator lens — scorecards, accountability charts, the parts of the business that don't make highlight reels. What I take away is a constant reminder that great teams beat clever strategy, every time.",
+      "What I bring is the operator lens, scorecards, accountability charts, the parts of the business that don't make highlight reels. What I take away is a constant reminder that great teams beat clever strategy, every time.",
     ],
     facts: [
       { label: "Role", value: "Investor / Advisor" },
@@ -173,8 +173,8 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
     name: "East West Brewing",
     intro: "Craft brewery, made in Vietnam. Beer that survives the Vietnam heat and the Vietnam consumer.",
     story: [
-      "East West is one of Vietnam's most recognisable craft breweries — kitchen, taproom, and brewery in Saigon, with a national distribution footprint that's hard to build in F&B here. I came in as an investor because the bar I run on F&B is the one East West built.",
-      "I'm not a brewer. What I bring is the operator lens — sales discipline, distribution rhythms, and the financial structure that lets a hospitality business survive its first eight years. What I take is a masterclass in product-led F&B, and beer for the Skylight team.",
+      "East West is one of Vietnam's most recognisable craft breweries, kitchen, taproom, and brewery in Saigon, with a national distribution footprint that's hard to build in F&B here. I came in as an investor because the bar I run on F&B is the one East West built.",
+      "I'm not a brewer. What I bring is the operator lens, sales discipline, distribution rhythms, and the financial structure that lets a hospitality business survive its first eight years. What I take is a masterclass in product-led F&B, and beer for the Skylight team.",
     ],
     facts: [
       { label: "Role", value: "Investor / Advisor" },
@@ -191,8 +191,8 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
     name: "Nuen Motor",
     intro: "Vietnam's first premium electric motorbike. Designed for the country that lives on two wheels.",
     story: [
-      "Nuen Motor is the bet that Vietnam can build a premium hardware brand — not just license one. The NI-5 isn't an e-bike or a scooter. It's a real motorbike, designed and engineered for the streets it'll ride on.",
-      "I'm in as an investor because the team is what makes hardware companies work — designers and engineers who've shipped, and operators who understand that the hardest part isn't building the first bike, it's building the hundredth one identically.",
+      "Nuen Motor is the bet that Vietnam can build a premium hardware brand, not just license one. The NI-5 isn't an e-bike or a scooter. It's a real motorbike, designed and engineered for the streets it'll ride on.",
+      "I'm in as an investor because the team is what makes hardware companies work, designers and engineers who've shipped, and operators who understand that the hardest part isn't building the first bike, it's building the hundredth one identically.",
     ],
     facts: [
       { label: "Role", value: "Investor / Advisor" },
@@ -207,9 +207,9 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
   eo: {
     slug: "eo",
     name: "Entrepreneurs' Organization",
-    intro: "EO Vietnam member. The forum where I think with my peers — eight founders, one room, every month.",
+    intro: "EO Vietnam member. The forum where I think with my peers, eight founders, one room, every month.",
     story: [
-      "EO is the operator network I trust most. It's a global peer organisation for founders running businesses of meaningful scale, and I'm a member of the EO Vietnam chapter. The part I show up for is the forum — a confidential monthly meeting with seven other Vietnamese founders who've signed up to be brutally honest with each other.",
+      "EO is the operator network I trust most. It's a global peer organisation for founders running businesses of meaningful scale, and I'm a member of the EO Vietnam chapter. The part I show up for is the forum, a confidential monthly meeting with seven other Vietnamese founders who've signed up to be brutally honest with each other.",
       "Half the decisions I've made about Xood, Skylight, and the advisory portfolio were workshopped in that room first. If you're an operator running a real business in Vietnam, joining EO Vietnam was the highest-leverage move I ever made for my own thinking.",
     ],
     facts: [

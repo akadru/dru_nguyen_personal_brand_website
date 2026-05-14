@@ -1,5 +1,5 @@
 // Source of truth for blog/post listings.
-// Only PUBLISHED, live posts are listed here — never "Coming soon" placeholders.
+// Only PUBLISHED, live posts are listed here, never "Coming soon" placeholders.
 // When a new post goes live, append it to the top of POSTS.
 
 export type Post = {
@@ -41,13 +41,13 @@ export const POSTS: Post[] = [
   },
   {
     slug: "every-olympian-has-a-coach-yours-is-a-prompt-away",
-    title: "Every Olympian has a coach. Here's why — and how to build yours from a laptop.",
+    title: "Every Olympian has a coach. Here is why, and how to build yours from a laptop.",
     excerpt:
-      "Why elite performers always have a coach, and how five LLM prompts give operators most of the same advantage in 20 minutes a week.",
+      "Why elite performers always have a coach, and how five production-grade LLM prompts give operators most of the same advantage in 20 minutes a week.",
     channel: "LinkedIn",
     pillar: "Thinker",
     topic: "Coaching",
-    read: "4 MIN",
+    read: "7 MIN",
     date: "30 APR 2026",
     image: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp",
   },
@@ -67,7 +67,7 @@ export const POSTS: Post[] = [
     slug: "claude-runs-xood-commercial",
     title: "How I run Xood's commercial team in 30 min/day with Claude",
     excerpt:
-      "A real morning at Xood, a four-step batch, and the prompt I copy-paste. Three hours of work in 30 minutes — no AI hype, no fluff.",
+      "A real morning at Xood, a four-step batch, and the prompt I copy-paste. Three hours of work in 30 minutes, no AI hype, no fluff.",
     channel: "LinkedIn",
     pillar: "Thinker",
     topic: "AI Operator",

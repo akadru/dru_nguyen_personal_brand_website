@@ -6,7 +6,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "How I run Xood's commercial team in 30 min/day with Claude",
   description:
-    "A real morning at Xood, a four-step batch, and the prompt I copy-paste. Three hours of work in 30 minutes — no AI hype, no fluff.",
+    "A real morning at Xood, a four-step batch, and the prompt I copy-paste. Three hours of work in 30 minutes, no AI hype, no fluff.",
   alternates: { canonical: "/blog/claude-runs-xood-commercial" },
   openGraph: {
     title: "How I run Xood's commercial team in 30 min/day with Claude",
@@ -81,7 +81,7 @@ export default function PostPage() {
         >
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
             It&apos;s 7:14 AM. I&apos;m in the kitchen at Xood&apos;s office in District 1. Vietnamese coffee dripping.
-            A list of <strong>47 prospects</strong> on my screen — names I scraped from yesterday&apos;s Tictag partner event.
+            A list of <strong>47 prospects</strong> on my screen, names I scraped from yesterday&apos;s Tictag partner event.
           </p>
 
           <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
@@ -99,7 +99,7 @@ export default function PostPage() {
               <strong style={{ color: "var(--brand-white)" }}>They treat it as a workflow.</strong>
             </p>
             <p>
-              Here&apos;s the difference. An intern needs to be onboarded, given context, corrected when wrong, and re-onboarded next week when they forget. Claude needs none of that — if you give it a versioned prompt and a tight input, it returns the same shape of output every time. That&apos;s not assistance. That&apos;s infrastructure.
+              Here&apos;s the difference. An intern needs to be onboarded, given context, corrected when wrong, and re-onboarded next week when they forget. Claude needs none of that, if you give it a versioned prompt and a tight input, it returns the same shape of output every time. That&apos;s not assistance. That&apos;s infrastructure.
             </p>
           </div>
 
@@ -113,13 +113,13 @@ export default function PostPage() {
               <strong style={{ color: "var(--brand-white)" }}>1. Prospect digest (8 min).</strong> I paste yesterday&apos;s CRM export + LinkedIn signal scrape into one prompt. Claude returns a digest grouped by intent tier (warm / observed / cold), with a one-line &ldquo;why-now&rdquo; beside each name. I don&apos;t read the raw data anymore.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-white)" }}>2. First-draft outreach (12 min).</strong> For each warm prospect, I give Claude their company&apos;s published page (about, blog, last announcement) and Xood&apos;s offer. Output: a 3-paragraph email that earns a reply by sounding like I read their stuff — because Claude actually did. I rewrite the first sentence and the CTA. That&apos;s it.
+              <strong style={{ color: "var(--brand-white)" }}>2. First-draft outreach (12 min).</strong> For each warm prospect, I give Claude their company&apos;s published page (about, blog, last announcement) and Xood&apos;s offer. Output: a 3-paragraph email that earns a reply by sounding like I read their stuff, because Claude actually did. I rewrite the first sentence and the CTA. That&apos;s it.
             </p>
             <p>
               <strong style={{ color: "var(--brand-white)" }}>3. Partner-map refresh (5 min).</strong> Same prompt every Monday. Claude re-runs against last week&apos;s partner-map and highlights deltas: new players, dead ones, gaps. I make the call on which gaps to chase.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-white)" }}>4. CRM hygiene (5 min).</strong> Stale leads (&gt;14 days no touch) get a Claude-suggested next action — &ldquo;DM their founder on LinkedIn referencing X,&rdquo; &ldquo;wait until their Series A closes,&rdquo; &ldquo;kill it.&rdquo; I approve or override.
+              <strong style={{ color: "var(--brand-white)" }}>4. CRM hygiene (5 min).</strong> Stale leads (&gt;14 days no touch) get a Claude-suggested next action, &ldquo;DM their founder on LinkedIn referencing X,&rdquo; &ldquo;wait until their Series A closes,&rdquo; &ldquo;kill it.&rdquo; I approve or override.
             </p>
           </div>
 
@@ -132,14 +132,14 @@ export default function PostPage() {
             style={{ background: "var(--brand-jungle)", color: "var(--brand-white)", fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace" }}
           >
             <code>
-{`You are an SDR-and-RevOps analyst for Xood — AI data services in Vietnam.
+{`You are an SDR-and-RevOps analyst for Xood, AI data services in Vietnam.
 Read the input below. Return [SPEC]. Use Xood's voice: direct, operator-to-
 operator, no jargon. Cite the prospect's own words when claiming relevance.
 If signal is weak, say so.
 
-[CONTEXT — paste your offer + 1-line ICP]
-[INPUT — paste data]
-[SPEC — what shape of output you want]`}
+[CONTEXT, paste your offer + 1-line ICP]
+[INPUT, paste data]
+[SPEC, what shape of output you want]`}
             </code>
           </pre>
 
@@ -150,7 +150,7 @@ If signal is weak, say so.
           <div className="mt-8 grid gap-4">
             {[
               { h: "One prompt, versioned.", b: "Same shape every day. I edit the prompt, not the daily output." },
-              { h: "Inputs are real.", b: "CRM exports, the prospect's actual blog, my notes — not vibes." },
+              { h: "Inputs are real.", b: "CRM exports, the prospect's actual blog, my notes, not vibes." },
               { h: "I review the first paragraph and the ask.", b: "Everything else stays." },
             ].map((r) => (
               <div key={r.h} className="rounded-xl p-6" style={{ background: "var(--brand-jungle)", borderLeft: "4px solid var(--brand-myrtle)" }}>
@@ -167,7 +167,7 @@ If signal is weak, say so.
             </div>
             <p className="mt-5 text-lg leading-relaxed md:text-xl" style={{ color: "rgba(242,242,242,0.92)" }}>
               Take the one task you do every weekday morning that should take 30 minutes and somehow takes two hours.
-              Write it as a prompt with three blocks — <strong style={{ color: "var(--brand-lime)" }}>context, input, spec</strong>. Run it once.
+              Write it as a prompt with three blocks, <strong style={{ color: "var(--brand-lime)" }}>context, input, spec</strong>. Run it once.
             </p>
             <p className="mt-5 text-lg leading-relaxed md:text-xl" style={{ color: "rgba(242,242,242,0.92)" }}>
               If the output is 70% there, you&apos;ve found a workflow. If it&apos;s at 40%, your input or your spec is wrong, not the model.

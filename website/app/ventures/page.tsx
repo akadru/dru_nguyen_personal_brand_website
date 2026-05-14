@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 import VenturesGrid from "@/components/VenturesGrid";
 
 export const metadata: Metadata = {
-  title: "Ventures — Dru Nguyen",
+  title: "Ventures | Dru Nguyen",
   description:
     "Six ventures across hospitality, AI data services, and entertainment. Xood, Skylight, Tictag, GAM Entertainment, East West Brewing, Nuen Motor.",
 };
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function VenturesPage() {
   return (
     <>
-      {/* HERO — dark, clean, no decorative bar */}
+      {/* HERO, dark, clean, no decorative bar */}
       <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
         <div className="mx-auto max-w-[1400px] px-5 pt-28 pb-20 md:px-10 md:pt-40 md:pb-28">
@@ -34,7 +34,7 @@ export default function VenturesPage() {
           <Reveal delay={2}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
               Operating, founding, and advising across hospitality, AI data services, and entertainment.
-              Ten years of real ops — the lived material the content engine runs on.
+              Ten years of real ops, the lived material the content engine runs on.
             </p>
           </Reveal>
         </div>

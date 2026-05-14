@@ -56,7 +56,7 @@ export default function ContactPage() {
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
-              Speaking, coaching, advisory, media, partnerships — or just to say hello. Tell me what you&apos;re
+              Speaking, coaching, advisory, media, partnerships, or just to say hello. Tell me what you&apos;re
               working on. I read every message.
             </p>
           </Reveal>

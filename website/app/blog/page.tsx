@@ -5,7 +5,7 @@ import Reveal from "@/components/Reveal";
 import { POSTS, postHref } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: "Blog — Dru Nguyen",
+  title: "Blog | Dru Nguyen",
   description:
     "Operator essays, AI workflow teardowns, and lived-experience stories from running businesses across three industries.",
 };
@@ -49,7 +49,7 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* FEATURED — Bartlett-style large image-left + copy-right */}
+      {/* FEATURED, Bartlett-style large image-left + copy-right */}
       {hero && (
         <section className="py-20 md:py-28" style={{ background: "var(--brand-jungle)" }}>
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
@@ -120,7 +120,7 @@ export default function BlogPage() {
         </section>
       )}
 
-      {/* NEWS & STORIES — only when there's more than the featured post */}
+      {/* NEWS & STORIES, only when there's more than the featured post */}
       {rest.length > 0 && (
         <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
           <div className="mx-auto max-w-[1400px] px-5 md:px-10">
@@ -169,7 +169,7 @@ export default function BlogPage() {
         </section>
       )}
 
-      {/* SUBSCRIBE PROMPT — when only one post is live */}
+      {/* SUBSCRIBE PROMPT, when only one post is live */}
       {rest.length === 0 && (
         <section className="py-20 md:py-28" style={{ background: "var(--brand-jungle)" }}>
           <div className="mx-auto max-w-[1100px] px-5 text-center md:px-10">

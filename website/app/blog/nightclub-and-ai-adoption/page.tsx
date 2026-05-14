@@ -68,7 +68,7 @@ export default function PostPage() {
 
           <h2 className="mt-14 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>The night I <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>learned this.</em></h2>
           <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
-            <p>October 2023. Friday at Skylight. The DJ before our headliner had cleared the floor — the wrong way. Crowd was milling toward the exit. Our headliner had been in the wings for ten minutes refusing to come on until the room reset.</p>
+            <p>October 2023. Friday at Skylight. The DJ before our headliner had cleared the floor, the wrong way. Crowd was milling toward the exit. Our headliner had been in the wings for ten minutes refusing to come on until the room reset.</p>
             <p>The floor manager wanted to call last-track on the warm-up DJ. I told him to do the opposite: <strong style={{ color: "var(--brand-white)" }}>cut the music for 90 seconds, drop the lights, let the headliner walk out into silence and start cold.</strong></p>
             <p>We lost the 20% who&apos;d already mentally checked out. The 70% who&apos;d been waiting locked in harder. Best second set we did that quarter.</p>
           </div>
@@ -76,7 +76,7 @@ export default function PostPage() {
           <h2 className="mt-14 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>How this maps <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>to AI rollouts.</em></h2>
           <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>Every AI adoption I&apos;ve watched go well at Xood, Skylight, and three advisory portfolio companies followed the same pattern:</p>
-            <p><strong style={{ color: "var(--brand-white)" }}>Stop selling the platform to the skeptics.</strong> Find your 70% — the ops people who already feel the work is broken and are looking for a way to fix it. Build the workflow with them. Let them ship something useful in week one.</p>
+            <p><strong style={{ color: "var(--brand-white)" }}>Stop selling the platform to the skeptics.</strong> Find your 70%, the ops people who already feel the work is broken and are looking for a way to fix it. Build the workflow with them. Let them ship something useful in week one.</p>
             <p><strong style={{ color: "var(--brand-white)" }}>Make the win visible.</strong> The skeptics don&apos;t change their mind from a Slack post. They change their mind when they see Anh from finance close her month-end three days early because she used Claude to reconcile the bank export.</p>
             <p><strong style={{ color: "var(--brand-white)" }}>Don&apos;t promote the AI. Promote the operator.</strong> Anh got the credit. Claude was a tool, not a brand. The next week three other people on her team asked her how she did it.</p>
           </div>
@@ -84,7 +84,7 @@ export default function PostPage() {
           <div className="mt-16 rounded-2xl p-8 md:p-10" style={{ background: "rgba(173,251,73,0.06)", border: "1px solid rgba(173,251,73,0.25)" }}>
             <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>The trap</div>
             <p className="mt-5 text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
-              Treating AI adoption like a top-down rollout — pick a vendor, push a license to everyone, run a training. You&apos;ll get 70% locked in, 20% pretending, 10% gone. Same as the dancefloor. But you&apos;ll have spent your CFO&apos;s budget on the 30% who weren&apos;t going to convert.
+              Treating AI adoption like a top-down rollout, pick a vendor, push a license to everyone, run a training. You&apos;ll get 70% locked in, 20% pretending, 10% gone. Same as the dancefloor. But you&apos;ll have spent your CFO&apos;s budget on the 30% who weren&apos;t going to convert.
             </p>
             <p className="mt-5 text-lg italic" style={{ color: "var(--brand-white)", fontFamily: "'Plus Jakarta Sans', serif", fontSize: "clamp(20px, 2.4vw, 28px)" }}>
               The crowd doesn&apos;t change because you turn the music up. It changes because <span style={{ color: "var(--brand-lime)" }}>the people in the front row are dancing.</span>

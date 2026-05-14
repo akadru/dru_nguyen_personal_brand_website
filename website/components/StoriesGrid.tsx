@@ -18,7 +18,7 @@ export default function StoriesGrid() {
           <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image
               src={s.image}
-              alt={`${s.title} — ${s.lesson}`}
+              alt={`${s.title}, ${s.lesson}`}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
               className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
@@ -51,7 +51,7 @@ export default function StoriesGrid() {
                 className="mt-3 text-sm italic transition-colors group-hover:text-[var(--brand-lime)]"
                 style={{ color: "var(--brand-lime)" }}
               >
-                — {s.lesson}
+                {s.lesson}
               </p>
             </div>
             <span

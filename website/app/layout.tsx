@@ -5,11 +5,11 @@ import Footer from "@/components/Footer";
 import SearchModal from "@/components/SearchModal";
 
 export const metadata: Metadata = {
-  title: "Dru Nguyen — Operator. AI Educator.",
+  title: "Dru Nguyen, Operator. AI Educator.",
   description:
     "Operator. Co-founder. Investor. AI-using operator becoming an educator. Skylight, Xood, Tictag, East West Brewery, Nuen Motor, GAM. Care. Discipline. Grit.",
   openGraph: {
-    title: "Dru Nguyen — Operator. AI Educator.",
+    title: "Dru Nguyen, Operator. AI Educator.",
     description:
       "Operator. Co-founder. Investor. AI-using operator becoming an educator. Care. Discipline. Grit.",
     type: "website",

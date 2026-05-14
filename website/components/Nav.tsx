@@ -93,8 +93,8 @@ export default function Nav() {
         </div>
       </header>
 
-      {/* SLIDE-IN PANEL MENU — right-anchored, ~40% width on desktop */}
-      {/* Backdrop scrim — clickable to close */}
+      {/* SLIDE-IN PANEL MENU, right-anchored, ~40% width on desktop */}
+      {/* Backdrop scrim, clickable to close */}
       <div
         onClick={() => setOpen(false)}
         className={`fixed inset-0 z-[70] transition-opacity duration-300 ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
