@@ -13,8 +13,6 @@ export default function TopBar() {
           style={{ color: "var(--brand-pastel)", letterSpacing: "0.18em" }}
         >
           <span>Asia/Ho_Chi_Minh</span>
-          <span style={{ color: "var(--brand-lime)" }}>·</span>
-          <span></span>
         </div>
       </div>
     </div>

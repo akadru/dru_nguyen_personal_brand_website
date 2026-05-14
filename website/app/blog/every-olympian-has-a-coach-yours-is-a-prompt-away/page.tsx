@@ -198,7 +198,7 @@ export default function PostPage() {
             <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>You have your laptop.</em>
           </h2>
 
-          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
               Phelps had Bowman. Bolt had Glen Mills. Simone Biles has Aimee Boorman. Every single Olympic medalist you can name has a person, often the same one for a decade, who sees what they cannot see.
             </p>
@@ -230,7 +230,7 @@ export default function PostPage() {
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}>
             Three things <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>the LLM coach</em> gets right.
           </h2>
-          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
               <strong style={{ color: "var(--brand-jungle)" }}>1. No social cost.</strong> You can ask it the dumb question, the embarrassing question, the third-time question. It does not roll its eyes. It does not remember that you asked the same thing six weeks ago.
             </p>
@@ -250,10 +250,10 @@ export default function PostPage() {
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}>
             Five coaches in <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>five prompts.</em>
           </h2>
-          <p className="mt-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <p className="mt-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             Each prompt below is copy-paste ready. Drop it into Claude, ChatGPT, or Gemini. Fill in the bracketed parts. Iterate. The best operator coaching session of your week takes 20 minutes.
           </p>
-          <p className="mt-4 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <p className="mt-4 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             I built each of these for myself across Xood and Skylight over the last eight months. I run them weekly.{" "}
             <Link href="/blog/every-olympian-has-a-coach-yours-is-a-prompt-away/prompt-pack" style={{ color: "var(--brand-jungle)", borderBottom: "2px solid var(--brand-lime)", fontWeight: 700 }}>
               Grab the full prompt pack here
@@ -293,7 +293,7 @@ export default function PostPage() {
             ].map((r) => (
               <div key={r.h} className="rounded-xl p-6" style={{ background: "var(--brand-tea)", borderLeft: "4px solid var(--brand-myrtle)" }}>
                 <div className="text-base font-extrabold" style={{ color: "var(--brand-jungle)" }}>{r.h}</div>
-                <div className="mt-2 text-base" style={{ color: "#333" }}>{r.b}</div>
+                <div className="mt-2 text-base" style={{ color: "var(--brand-pastel)" }}>{r.b}</div>
               </div>
             ))}
           </div>
@@ -314,7 +314,7 @@ export default function PostPage() {
 
           {/* THE CLOSE */}
           <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Close</div>
-          <div className="mt-4 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <div className="mt-4 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
               Phelps&apos; coach Bob Bowman was once asked what he actually did differently from other coaches. He said, <em>&ldquo;I just made him aware of the gap between what he was doing and what he thought he was doing.&rdquo;</em>
             </p>

@@ -79,12 +79,12 @@ export default function PostPage() {
           className="mx-auto max-w-[760px] px-5 md:px-10"
           style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
         >
-          <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-jungle)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
+          <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
             It&apos;s 7:14 AM. I&apos;m in the kitchen at Xood&apos;s office in District 1. Vietnamese coffee dripping.
             A list of <strong>47 prospects</strong> on my screen — names I scraped from yesterday&apos;s Tictag partner event.
           </p>
 
-          <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>By 7:45 AM I have:</p>
             <ul className="ml-5 list-disc space-y-2">
               <li>A clean prospect digest with intent signals</li>
@@ -108,7 +108,7 @@ export default function PostPage() {
             The 30-minute <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>morning batch.</em>
           </h2>
 
-          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
               <strong style={{ color: "var(--brand-white)" }}>1. Prospect digest (8 min).</strong> I paste yesterday&apos;s CRM export + LinkedIn signal scrape into one prompt. Claude returns a digest grouped by intent tier (warm / observed / cold), with a one-line &ldquo;why-now&rdquo; beside each name. I don&apos;t read the raw data anymore.
             </p>
@@ -155,7 +155,7 @@ If signal is weak, say so.
             ].map((r) => (
               <div key={r.h} className="rounded-xl p-6" style={{ background: "var(--brand-jungle)", borderLeft: "4px solid var(--brand-myrtle)" }}>
                 <div className="text-base font-extrabold" style={{ color: "var(--brand-white)" }}>{r.h}</div>
-                <div className="mt-2 text-base" style={{ color: "#333" }}>{r.b}</div>
+                <div className="mt-2 text-base" style={{ color: "var(--brand-pastel)" }}>{r.b}</div>
               </div>
             ))}
           </div>

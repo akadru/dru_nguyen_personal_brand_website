@@ -89,7 +89,7 @@ export default function PostPage() {
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}>
             8:42 AM. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>No deck. No agenda. No mercy.</em>
           </h2>
-          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
               Skylight&apos;s monthly review starts in 18 minutes. I had nothing on screen. No deck. No one-pager. No agenda doc. Just me, a vague memory of last quarter&apos;s numbers, and seven people about to dial in.
             </p>
@@ -124,7 +124,7 @@ export default function PostPage() {
             Five steps in <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>thirty minutes.</em>
           </h2>
 
-          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <div className="mt-8 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
               <strong style={{ color: "var(--brand-jungle)" }}>1. Define the meeting in 10 words. (3 min)</strong>{" "}
               Open a fresh chat. Type one sentence. <em>&ldquo;Skylight monthly review, April numbers, decide whether to hold or push the rebrand to Q3.&rdquo;</em> That sentence is the brief. Everything else flows from it.
@@ -160,7 +160,7 @@ export default function PostPage() {
                   <th className="px-5 py-4 text-left text-xs font-extrabold uppercase" style={{ letterSpacing: "0.18em" }}>After</th>
                 </tr>
               </thead>
-              <tbody style={{ color: "#333" }}>
+              <tbody style={{ color: "var(--brand-pastel)" }}>
                 {[
                   ["90 minutes building decks in Keynote", "22 minutes in Claude Design"],
                   ["Half-baked agendas typed in Slack", "Decision briefs auto-generated from L10 notes"],
@@ -176,7 +176,7 @@ export default function PostPage() {
             </table>
           </div>
 
-          <p className="mt-8 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <p className="mt-8 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             The 30-minute prep saves me an average of <strong style={{ color: "var(--brand-jungle)" }}>70 minutes per meeting.</strong> Across 6 to 8 team meetings a week, that is the leverage{" "}
             <a href="https://www.danmartell.com/buy-back-your-time-boost-profits/" target="_blank" rel="noopener" style={{ color: "var(--brand-jungle)", borderBottom: "2px solid var(--brand-lime)", fontWeight: 700 }}>Dan Martell talks about in his Buyback Loop</a>, except I don&apos;t need to hire someone to claim it. The tool runs once and the time is mine.
           </p>
@@ -197,7 +197,7 @@ export default function PostPage() {
 
           {/* THE CLOSE */}
           <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Close</div>
-          <div className="mt-4 space-y-6 text-lg leading-[1.8]" style={{ color: "#333" }}>
+          <div className="mt-4 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
               The meeting that used to take 47 minutes now takes 18. The other 29 minutes I spent on something my team actually needed me to do.
             </p>
