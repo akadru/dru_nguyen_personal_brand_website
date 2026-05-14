@@ -4,14 +4,14 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Five prompts that turn your LLM into a coach",
+  title: "Every Olympian has a coach. Here's why — and how to build yours from a laptop.",
   description:
-    "Five copy-paste prompts I run weekly across my own businesses. Board of advisors, fractional CFO, planning facilitator, accountability check-in, devil's advocate. 20 minutes a week.",
+    "Why elite performers always have a coach, what a coach actually does, and how five LLM prompts give operators most of the same advantage in 20 minutes a week.",
   alternates: { canonical: "/blog/every-olympian-has-a-coach-yours-is-a-prompt-away" },
   openGraph: {
-    title: "Five prompts that turn your LLM into a coach",
+    title: "Every Olympian has a coach. Here's why — and how to build yours from a laptop.",
     description:
-      "Five copy-paste prompts: board of advisors, fractional CFO, planning facilitator, accountability check-in, devil's advocate. 20 minutes a week.",
+      "Why elite performers always have a coach, and how five LLM prompts give operators most of the same advantage in 20 minutes a week.",
     type: "article",
     url: "/blog/every-olympian-has-a-coach-yours-is-a-prompt-away",
     images: [{ url: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp", width: 1200, height: 630 }],
@@ -139,7 +139,7 @@ export default function PostPage() {
               <span style={{ color: "var(--brand-pastel)" }}>·</span>
               <span>Coaching</span>
               <span style={{ color: "var(--brand-pastel)" }}>·</span>
-              <span style={{ color: "var(--brand-pastel)" }}>3 MIN READ</span>
+              <span style={{ color: "var(--brand-pastel)" }}>4 MIN READ</span>
               <span style={{ color: "var(--brand-pastel)" }}>·</span>
               <span style={{ color: "var(--brand-pastel)" }}>30 APR 2026</span>
             </div>
@@ -149,8 +149,8 @@ export default function PostPage() {
               className="mt-6 font-extrabold tracking-tight"
               style={{ fontSize: "clamp(40px, 7vw, 84px)", lineHeight: 0.98, letterSpacing: "-0.03em" }}
             >
-              Five prompts that turn your LLM into{" "}
-              <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>a coach.</em>
+              Every Olympian has a coach.{" "}
+              <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>Here&apos;s why — and how to build yours from a laptop.</em>
             </h1>
           </Reveal>
         </div>
@@ -176,15 +176,26 @@ export default function PostPage() {
 
           {/* OPENING */}
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
-            Most operators don&apos;t have a coach. What we do have is a laptop. Used right, the LLM you already pay for is the most patient board of advisors you&apos;ll ever have.
+            Every Olympian has a coach. Not because the athlete isn&apos;t great. Because greatness has a blind spot the athlete can&apos;t see from inside themselves.
           </p>
 
           <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
-              The job of a coach isn&apos;t to give you the answer. It&apos;s to ask the question that makes you see what you were already missing.
+              You can&apos;t see your own swing in real time. You can&apos;t hear how you sound when you&apos;re mid-decision. You can&apos;t tell when your stride drops by one degree or your jaw clenches before you commit. The coach exists for one job:{" "}
+              <strong style={{ color: "var(--brand-white)" }}>to make the gap visible.</strong> The gap between what you&apos;re doing and what you think you&apos;re doing.
             </p>
             <p>
-              That&apos;s a job a well-prompted LLM does well. No social cost. Infinite patience for context. No incentive to keep you as a client. You can ask the dumb question, the embarrassing one, the same one for the third time, and it will answer like it&apos;s the first.
+              That gap is what costs Olympians a medal. It&apos;s what costs operators a quarter. Bad strategy isn&apos;t usually what kills a business — repeated execution of a decision the founder didn&apos;t realise was off by a few degrees, six weeks at a time, is.
+            </p>
+
+            <p>
+              The problem: most operators don&apos;t have a coach for it. We have peer groups that meet monthly. We have a therapist who doesn&apos;t know our P&amp;L. We have one or two friends who hold up a mirror once a quarter. The gap stays open for years.
+            </p>
+            <p>
+              <strong style={{ color: "var(--brand-white)" }}>What changes the math in 2026 is the LLM.</strong> Not as a magic answer machine. As the closest thing most of us will ever have to a coach who is available every morning, has infinite patience for context, has no incentive to keep us as a client, and will tell us the embarrassing thing without rolling its eyes.
+            </p>
+            <p>
+              A coach&apos;s job isn&apos;t to give you the answer. It&apos;s to ask the question that makes you see what you were already missing. That is exactly what a well-prompted LLM does — when you build the prompt like a coach would build a question.
             </p>
             <p>
               <strong style={{ color: "var(--brand-white)" }}>Below are five prompts I run weekly across my own businesses.</strong> Copy any of them. Paste your real numbers and your real situation. Iterate until the answer is useful. The whole exercise takes 20 minutes.
@@ -234,10 +245,10 @@ export default function PostPage() {
           {/* CLOSE */}
           <div className="mt-14 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
-              The gap between what you think you&apos;re doing and what you&apos;re actually doing is what costs operators the most. Closing it doesn&apos;t take a $400/hour coach. It takes 20 minutes a week and a few prompts that ask the right question.
+              An Olympian doesn&apos;t train without a coach because nobody is good enough to see their own gap. Operators aren&apos;t different. The medal-level performers I know have a coach. Most operators won&apos;t hire one this year.
             </p>
             <p>
-              Keep the cadence. Keep the inputs real.
+              <strong style={{ color: "var(--brand-white)" }}>Twenty minutes a week with the prompts above is the closest thing to having one — and a 90% solution beats a 0% solution every time.</strong> Keep the cadence. Keep the inputs real. The gap closes.
             </p>
           </div>
 

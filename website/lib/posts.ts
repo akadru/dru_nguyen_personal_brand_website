@@ -41,13 +41,13 @@ export const POSTS: Post[] = [
   },
   {
     slug: "every-olympian-has-a-coach-yours-is-a-prompt-away",
-    title: "Five prompts that turn your LLM into a coach",
+    title: "Every Olympian has a coach. Here's why — and how to build yours from a laptop.",
     excerpt:
-      "Five copy-paste prompts I run weekly: board of advisors, fractional CFO, planning facilitator, accountability check-in, devil's advocate. 20 minutes a week.",
+      "Why elite performers always have a coach, and how five LLM prompts give operators most of the same advantage in 20 minutes a week.",
     channel: "LinkedIn",
     pillar: "Thinker",
     topic: "Coaching",
-    read: "3 MIN",
+    read: "4 MIN",
     date: "30 APR 2026",
     image: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp",
   },
