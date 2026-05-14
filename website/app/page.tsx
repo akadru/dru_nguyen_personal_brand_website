@@ -57,20 +57,21 @@ export default function Home() {
           </Reveal>
           <Reveal delay={3}>
             <p
-              className="mt-8 max-w-3xl text-xl italic md:text-3xl"
-              style={{ color: "var(--brand-white)", fontFamily: "'Plus Jakarta Sans', serif" }}
+              className="mt-8 max-w-3xl text-xl md:text-2xl"
+              style={{ color: "var(--brand-pastel)" }}
             >
-              &ldquo;Knowledge with application <span style={{ color: "var(--brand-lime)" }}>is wisdom.</span>&rdquo;
+              <span style={{ color: "var(--brand-white)", fontWeight: 700 }}>Real operations. Real outcomes.</span>{" "}
+              <span style={{ color: "var(--brand-lime)" }}>USA &amp; Vietnam.</span>
             </p>
           </Reveal>
           <Reveal delay={3}>
-            <div className="mt-12 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
-                href="/newsletter"
+                href="/contact?intent=speaking"
                 className="inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wider transition-transform hover:scale-[1.02]"
                 style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
               >
-                Subscribe to the newsletter
+                Book Dru to Speak
               </Link>
               <Link
                 href="/about"
@@ -78,6 +79,13 @@ export default function Home() {
                 style={{ borderColor: "var(--brand-pastel)", color: "var(--brand-white)", letterSpacing: "0.05em" }}
               >
                 About Dru
+              </Link>
+              <Link
+                href="/newsletter"
+                className="inline-flex items-center text-sm font-bold uppercase tracking-wider transition-colors hover:text-[var(--brand-lime)] sm:ml-4"
+                style={{ color: "var(--brand-pastel)", letterSpacing: "0.12em", borderBottom: "1px solid rgba(176,190,197,0.4)" }}
+              >
+                Get the newsletter →
               </Link>
             </div>
           </Reveal>
@@ -192,6 +200,20 @@ export default function Home() {
           <Reveal delay={2}>
             <div className="mt-16">
               <StoriesGrid />
+            </div>
+          </Reveal>
+          <Reveal delay={3}>
+            <div className="mt-16 flex flex-col items-start gap-6 border-t pt-10 md:flex-row md:items-center md:justify-between" style={{ borderColor: "rgba(176,190,197,0.2)" }}>
+              <p className="max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
+                Want one of these stories — with the operator lesson behind it — at your event?
+              </p>
+              <Link
+                href="/contact?intent=speaking"
+                className="inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-bold uppercase tracking-wider transition-transform hover:scale-[1.02]"
+                style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
+              >
+                Book Dru to Speak
+              </Link>
             </div>
           </Reveal>
         </div>

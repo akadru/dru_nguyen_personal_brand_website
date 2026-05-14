@@ -38,6 +38,22 @@ const testimonials = [
   },
 ];
 
+const formats = [
+  { label: "Keynote", audience: "200 – 1,000+", length: "30 – 60 min", best: "Conferences, summits, founder events" },
+  { label: "Founder Offsite", audience: "20 – 60", length: "60 – 120 min", best: "Leadership cohorts, exec teams" },
+  { label: "EO / YPO Forum", audience: "8 – 12", length: "60 – 90 min", best: "Confidential peer rooms" },
+  { label: "AI Workshop", audience: "10 – 30", length: "Half-day or full-day", best: "Ops teams, hands-on training" },
+];
+
+const quickFacts = [
+  { label: "Languages", value: "English · Vietnamese" },
+  { label: "Based in", value: "Ho Chi Minh City, Vietnam" },
+  { label: "Travels for", value: "Vietnam · SEA · International" },
+  { label: "Booking lead time", value: "4 – 8 weeks ideal" },
+  { label: "Response time", value: "Within 48 hours" },
+  { label: "Press kit", value: "Available on /press" },
+];
+
 export default function SpeakingPage() {
   return (
     <>
@@ -89,18 +105,21 @@ export default function SpeakingPage() {
                 <Link
                   href="/contact?intent=speaking"
                   className="inline-flex items-center justify-center rounded-full px-8 py-4 text-sm font-bold uppercase tracking-wider transition-transform hover:scale-[1.02]"
-                  style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.05em" }}
+                  style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
                 >
-                  Speaking enquiries
+                  Request a quote
                 </Link>
                 <Link
                   href="/press"
-                  className="inline-flex items-center justify-center rounded-full border-2 px-8 py-4 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-[var(--brand-jungle)] hover:text-[var(--brand-lime)] hover:border-[var(--brand-jungle)]"
-                  style={{ borderColor: "rgba(176,190,197,0.25)", color: "var(--brand-white)", letterSpacing: "0.05em" }}
+                  className="inline-flex items-center justify-center rounded-full border-2 px-8 py-4 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-[var(--brand-lime)] hover:text-[var(--brand-jungle)] hover:border-[var(--brand-lime)]"
+                  style={{ borderColor: "rgba(176,190,197,0.4)", color: "var(--brand-white)", letterSpacing: "0.05em" }}
                 >
                   Press kit
                 </Link>
               </div>
+              <p className="mt-6 text-xs font-bold uppercase" style={{ color: "var(--brand-pastel)", letterSpacing: "0.18em" }}>
+                Response within 48 hours · Vietnam · SEA · International
+              </p>
             </div>
           </Reveal>
         </div>
@@ -157,6 +176,83 @@ export default function SpeakingPage() {
                     {t.body}
                   </p>
                 </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FORMATS — booker self-qualification table */}
+      <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+        <div className="mx-auto max-w-[1300px] px-5 md:px-10">
+          <Reveal>
+            <div className="section-label">Formats</div>
+          </Reveal>
+          <Reveal delay={1}>
+            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-white)" }}>
+              Pick the format <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>that fits.</em>
+            </h2>
+          </Reveal>
+          <Reveal delay={2}>
+            <div className="mt-12 overflow-hidden rounded-2xl border" style={{ borderColor: "rgba(176,190,197,0.2)" }}>
+              <div className="hidden grid-cols-[1.2fr_1fr_1fr_2fr] gap-px text-[10px] font-extrabold uppercase md:grid" style={{ background: "rgba(176,190,197,0.15)" }}>
+                <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Format</div>
+                <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Audience</div>
+                <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Length</div>
+                <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Best for</div>
+              </div>
+              <div className="grid gap-px md:hidden" style={{ background: "rgba(176,190,197,0.15)" }}>
+                {formats.map((f) => (
+                  <div key={f.label} className="p-6" style={{ background: "var(--brand-jungle)" }}>
+                    <div className="text-base font-extrabold" style={{ color: "var(--brand-white)" }}>{f.label}</div>
+                    <div className="mt-2 text-sm" style={{ color: "var(--brand-pastel)" }}>
+                      <span style={{ color: "var(--brand-lime)" }}>{f.audience}</span> · {f.length}
+                    </div>
+                    <div className="mt-1 text-sm" style={{ color: "var(--brand-pastel)" }}>{f.best}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="hidden md:block" style={{ background: "rgba(176,190,197,0.15)" }}>
+                {formats.map((f) => (
+                  <div key={f.label} className="grid grid-cols-[1.2fr_1fr_1fr_2fr] gap-px">
+                    <div className="px-6 py-5" style={{ background: "var(--brand-jungle)" }}>
+                      <span className="text-lg font-extrabold" style={{ color: "var(--brand-white)" }}>{f.label}</span>
+                    </div>
+                    <div className="px-6 py-5" style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)" }}>
+                      {f.audience}
+                    </div>
+                    <div className="px-6 py-5" style={{ background: "var(--brand-jungle)", color: "var(--brand-pastel)" }}>
+                      {f.length}
+                    </div>
+                    <div className="px-6 py-5" style={{ background: "var(--brand-jungle)", color: "var(--brand-pastel)" }}>
+                      {f.best}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* QUICK FACTS — for organizers */}
+      <section className="py-20 md:py-24" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+        <div className="mx-auto max-w-[1300px] px-5 md:px-10">
+          <Reveal>
+            <div className="section-label">For organisers</div>
+          </Reveal>
+          <Reveal delay={1}>
+            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(28px, 3.5vw, 44px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
+              The logistics, <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>upfront.</em>
+            </h2>
+          </Reveal>
+          <div className="mt-10 grid gap-px overflow-hidden rounded-2xl md:grid-cols-3" style={{ background: "rgba(176,190,197,0.2)" }}>
+            {quickFacts.map((f) => (
+              <Reveal key={f.label}>
+                <div className="p-6" style={{ background: "var(--brand-jungle)" }}>
+                  <div className="text-[10px] font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>{f.label}</div>
+                  <div className="mt-2 text-base font-semibold" style={{ color: "var(--brand-white)" }}>{f.value}</div>
+                </div>
               </Reveal>
             ))}
           </div>

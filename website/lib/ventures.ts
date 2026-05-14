@@ -15,7 +15,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "xood",
     name: "Xood",
-    tagline: "Operator-grade AI data",
+    tagline: "Training data for the problems AI labs ignore",
     role: "Co-Founder & MD — Commercial & Community",
     context: "AI data services · Vietnam",
     image: "/images/ventures/xood.jpg",
@@ -35,7 +35,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "gam",
     name: "GAM Esports & Entertainment",
-    tagline: "Investing in the show",
+    tagline: "Esports champions. Real revenue.",
     role: "Investor / Advisor",
     context: "Esports · Entertainment",
     image: "/images/ventures/gam.jpg",
@@ -45,7 +45,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "tictag",
     name: "Tictag",
-    tagline: "Southeast Asia's data backbone",
+    tagline: "Enterprise AI · Singapore HQ",
     role: "Advisor",
     context: "AI data services · Singapore",
     image: "/images/ventures/tictag.jpg",

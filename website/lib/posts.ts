@@ -41,9 +41,9 @@ export const POSTS: Post[] = [
   },
   {
     slug: "every-olympian-has-a-coach-yours-is-a-prompt-away",
-    title: "Every Olympian has a coach. Yours is a prompt away.",
+    title: "Every Olympian has a coach. So does every operator playing for real.",
     excerpt:
-      "Every Olympian has a coach. So do every CEO and operator playing for real. Five copy-paste prompts that turn your LLM into yours.",
+      "Every Olympian has a coach. So does every CEO and operator playing for real. Five copy-paste prompts that turn your LLM into yours.",
     channel: "LinkedIn",
     pillar: "Thinker",
     topic: "Coaching",
