@@ -41,13 +41,13 @@ export const POSTS: Post[] = [
   },
   {
     slug: "every-olympian-has-a-coach-yours-is-a-prompt-away",
-    title: "Every Olympian has a coach. So does every operator playing for real.",
+    title: "Five prompts that turn your LLM into a coach",
     excerpt:
-      "Every Olympian has a coach. So does every CEO and operator playing for real. Five copy-paste prompts that turn your LLM into yours.",
+      "Five copy-paste prompts I run weekly: board of advisors, fractional CFO, planning facilitator, accountability check-in, devil's advocate. 20 minutes a week.",
     channel: "LinkedIn",
     pillar: "Thinker",
     topic: "Coaching",
-    read: "6 MIN",
+    read: "3 MIN",
     date: "30 APR 2026",
     image: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp",
   },
