@@ -57,16 +57,24 @@ export default function Home() {
           </Reveal>
           <Reveal delay={3}>
             <p
-              className="mt-8 max-w-3xl italic"
+              className="mt-8 max-w-3xl"
               style={{
-                fontFamily: "'Plus Jakarta Sans', serif",
                 fontSize: "clamp(22px, 3vw, 40px)",
                 lineHeight: 1.25,
                 color: "var(--brand-white)",
               }}
             >
-              &ldquo;Knowledge with application{" "}
-              <span style={{ color: "var(--brand-lime)" }}>is wisdom.</span>&rdquo;
+              &ldquo;Knowledge with application is{" "}
+              <em
+                style={{
+                  fontFamily: "'Plus Jakarta Sans', serif",
+                  fontStyle: "italic",
+                  color: "var(--brand-lime)",
+                }}
+              >
+                wisdom.
+              </em>
+              &rdquo;
             </p>
           </Reveal>
           <Reveal delay={3}>
