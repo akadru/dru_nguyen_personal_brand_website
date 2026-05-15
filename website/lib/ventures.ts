@@ -14,8 +14,8 @@ export type Venture = {
 export const VENTURES: Venture[] = [
   {
     slug: "xood",
-    name: "Xood",
-    tagline: "Training data for the problems AI labs ignore",
+    name: "Xood.",
+    tagline: "Adopting AI into business and personal life",
     role: "Co-Founder & MD, Commercial & Community",
     context: "AI data services · Vietnam",
     image: "/images/ventures/xood.jpg",
@@ -35,7 +35,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "gam",
     name: "GAM Esports & Entertainment",
-    tagline: "Esports champions. Real revenue.",
+    tagline: "Vietnam's #1 Esports Organization",
     role: "Investor / Advisor",
     context: "Esports · Entertainment",
     image: "/images/ventures/gam.jpg",
@@ -45,7 +45,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "tictag",
     name: "Tictag",
-    tagline: "Enterprise AI · Singapore HQ",
+    tagline: "Data & AI Solutions",
     role: "Advisor",
     context: "AI data services · Singapore",
     image: "/images/ventures/tictag.jpg",
@@ -55,7 +55,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "eastwest",
     name: "East West Brewing",
-    tagline: "Craft brewery, made in Vietnam",
+    tagline: "Craft Beer, Made in Vietnam 🇻🇳",
     role: "Investor / Advisor",
     context: "F&B · Vietnam",
     image: "/images/ventures/eastwest.jpg",
@@ -100,7 +100,7 @@ export type VentureDetail = {
 export const VENTURE_DETAILS: Record<string, VentureDetail> = {
   xood: {
     slug: "xood",
-    name: "Xood",
+    name: "Xood.",
     intro: "Building accurate, unbiased training data for the long-tail problems most AI labs ignore.",
     story: [
       "Xood is what happens when an operator and a data scientist start a company together. Michael is the CEO; I run commercial and community out of Vietnam. We took the playbook Tictag sharpened in Singapore and adapted it for the markets and use cases the big labs don't bother with.",

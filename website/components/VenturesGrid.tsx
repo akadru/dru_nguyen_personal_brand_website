@@ -36,37 +36,25 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
                     className="object-cover transition-[transform,filter] duration-500 group-hover:scale-[1.02] group-hover:grayscale"
                   />
                 </div>
-                <div className="flex items-start justify-between gap-4 md:flex-col md:items-stretch md:gap-6">
-                  <div>
-                    <div
-                      className="text-[10px] font-extrabold uppercase"
-                      style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}
-                    >
-                      {v.context}
-                    </div>
-                    <h3
-                      className="mt-2 text-3xl font-extrabold leading-tight md:text-4xl transition-colors group-hover:text-[var(--brand-lime)]"
-                      style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
-                    >
-                      {v.name}
-                    </h3>
-                    <p
-                      className="mt-2 text-base italic md:text-lg"
-                      style={{ color: "var(--brand-pastel)" }}
-                    >
-                      {v.tagline}
-                    </p>
-                  </div>
-                  <span
-                    className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors group-hover:bg-[var(--brand-lime)] group-hover:border-[var(--brand-lime)] group-hover:text-[var(--brand-jungle)]"
-                    style={{ borderColor: "var(--brand-lime)", color: "var(--brand-lime)" }}
-                    aria-hidden
+                <div>
+                  <div
+                    className="text-[10px] font-extrabold uppercase"
+                    style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}
                   >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M7 17 17 7" />
-                      <path d="M8 7h9v9" />
-                    </svg>
-                  </span>
+                    {v.context}
+                  </div>
+                  <h3
+                    className="mt-2 text-3xl font-extrabold leading-tight md:text-4xl transition-colors group-hover:text-[var(--brand-lime)]"
+                    style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
+                  >
+                    {v.name}
+                  </h3>
+                  <p
+                    className="mt-2 text-base italic md:text-lg"
+                    style={{ color: "var(--brand-pastel)" }}
+                  >
+                    {v.tagline}
+                  </p>
                 </div>
               </div>
             </Link>
@@ -90,37 +78,25 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
                 className="object-cover transition-[transform,filter] duration-500 group-hover:scale-[1.03] group-hover:grayscale"
               />
             </div>
-            <div className="mt-6 flex items-start justify-between gap-4">
-              <div>
-                <div
-                  className="text-[10px] font-extrabold uppercase"
-                  style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}
-                >
-                  {v.context}
-                </div>
-                <h3
-                  className="mt-2 text-2xl font-extrabold leading-tight md:text-3xl transition-colors group-hover:text-[var(--brand-lime)]"
-                  style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
-                >
-                  {v.name}
-                </h3>
-                <p
-                  className="mt-2 text-base italic"
-                  style={{ color: "var(--brand-pastel)" }}
-                >
-                  {v.tagline}
-                </p>
-              </div>
-              <span
-                className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-colors group-hover:bg-[var(--brand-lime)] group-hover:border-[var(--brand-lime)] group-hover:text-[var(--brand-jungle)]"
-                style={{ borderColor: "var(--brand-lime)", color: "var(--brand-lime)" }}
-                aria-hidden
+            <div className="mt-6">
+              <div
+                className="text-[10px] font-extrabold uppercase"
+                style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M7 17 17 7" />
-                  <path d="M8 7h9v9" />
-                </svg>
-              </span>
+                {v.context}
+              </div>
+              <h3
+                className="mt-2 text-2xl font-extrabold leading-tight md:text-3xl transition-colors group-hover:text-[var(--brand-lime)]"
+                style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
+              >
+                {v.name}
+              </h3>
+              <p
+                className="mt-2 text-base italic"
+                style={{ color: "var(--brand-pastel)" }}
+              >
+                {v.tagline}
+              </p>
             </div>
           </Link>
         );
