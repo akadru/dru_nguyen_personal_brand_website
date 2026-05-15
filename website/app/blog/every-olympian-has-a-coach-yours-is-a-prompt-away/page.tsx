@@ -4,12 +4,12 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Every Olympian has a coach. Here is why, and how to build yours from a laptop.",
+  title: "Every Olympian has a coach. Here is why, and how to build yours.",
   description:
     "Why elite performers always have a coach, and how five production-grade LLM prompts give operators most of the same advantage in 20 minutes a week.",
   alternates: { canonical: "/blog/every-olympian-has-a-coach-yours-is-a-prompt-away" },
   openGraph: {
-    title: "Every Olympian has a coach. Here is why, and how to build yours from a laptop.",
+    title: "Every Olympian has a coach. Here is why, and how to build yours.",
     description:
       "Why elite performers always have a coach, and how five production-grade LLM prompts give operators most of the same advantage in 20 minutes a week.",
     type: "article",
@@ -325,7 +325,7 @@ export default function PostPage() {
               style={{ fontSize: "clamp(40px, 7vw, 84px)", lineHeight: 0.98, letterSpacing: "-0.03em" }}
             >
               Every Olympian has a coach.{" "}
-              <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>Here is why, and how to build yours from a laptop.</em>
+              <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>Here is why, and how to build yours.</em>
             </h1>
           </Reveal>
         </div>

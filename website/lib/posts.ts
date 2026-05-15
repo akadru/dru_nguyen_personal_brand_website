@@ -41,7 +41,7 @@ export const POSTS: Post[] = [
   },
   {
     slug: "every-olympian-has-a-coach-yours-is-a-prompt-away",
-    title: "Every Olympian has a coach. Here is why, and how to build yours from a laptop.",
+    title: "Every Olympian has a coach. Here is why, and how to build yours.",
     excerpt:
       "Why elite performers always have a coach, and how five production-grade LLM prompts give operators most of the same advantage in 20 minutes a week.",
     channel: "LinkedIn",
