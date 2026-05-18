@@ -17,7 +17,7 @@ export type Post = {
 export const POSTS: Post[] = [
   {
     slug: "six-businesses-claude-quarterly-rocks",
-    title: "How I run 6 businesses with Claude to achieve our quarterly rocks",
+    title: "How I run 6 businesses with Claude to achieve our quarterly rocks.",
     excerpt:
       "Six businesses. Eighteen rocks. Ninety days. The operating loop I built around Claude to actually move EOS rocks, with the two prompts I run every Sunday and every morning.",
     channel: "LinkedIn",

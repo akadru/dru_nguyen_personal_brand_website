@@ -4,12 +4,12 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "How I run 6 businesses with Claude to achieve our quarterly rocks | Dru Nguyen",
+  title: "How I run 6 businesses with Claude to achieve our quarterly rocks. | Dru Nguyen",
   description:
     "Six businesses. Eighteen rocks. Ninety days. The operating loop I built around Claude to actually move EOS rocks across Xood, Skylight, GAM, Tictag, East West, and Nuen.",
   alternates: { canonical: "/blog/six-businesses-claude-quarterly-rocks" },
   openGraph: {
-    title: "How I run 6 businesses with Claude to achieve our quarterly rocks",
+    title: "How I run 6 businesses with Claude to achieve our quarterly rocks.",
     description:
       "The operating loop that turns six EOS rock lists into one prioritized week. Two production prompts inside.",
     type: "article",
@@ -134,7 +134,7 @@ export default function Page() {
                   textShadow: "0 1px 0 rgba(173,251,73,0.4), 0 6px 18px rgba(173,251,73,0.18)",
                 }}
               >
-                to achieve our quarterly rocks
+                to achieve our quarterly rocks.
               </em>
             </h1>
           </Reveal>
@@ -146,26 +146,12 @@ export default function Page() {
             <div className="relative aspect-[1200/630] w-full overflow-hidden rounded-2xl">
               <Image
                 src="/images/blog/six-businesses-claude-quarterly-rocks.webp"
-                alt="A Saigon concrete wall with a lime spray-paint stencil reading SIX ROCKS, black and white base."
+                alt="A Saigon concrete wall in full color with a lime spray-paint stencil reading 6 BUSINESSES, ROCKS DONE!"
                 fill
                 priority
                 sizes="(max-width: 1300px) 100vw, 1300px"
                 className="object-cover"
-                style={{ filter: "grayscale(0.85) contrast(1.05)" }}
               />
-              {/* Lime stencil tag overlay, bottom-left */}
-              <div
-                className="absolute bottom-6 left-6 px-4 py-2 text-[11px] font-extrabold uppercase"
-                style={{
-                  background: "var(--brand-lime)",
-                  color: "var(--brand-jungle)",
-                  letterSpacing: "0.28em",
-                  transform: "rotate(-1.5deg)",
-                  boxShadow: "0 6px 18px rgba(0,0,0,0.35)",
-                }}
-              >
-                § 18 ROCKS · 90 DAYS
-              </div>
             </div>
           </Reveal>
         </div>
