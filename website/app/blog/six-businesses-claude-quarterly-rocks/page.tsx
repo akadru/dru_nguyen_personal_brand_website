@@ -134,7 +134,7 @@ export default function Page() {
                   textShadow: "0 1px 0 rgba(173,251,73,0.4), 0 6px 18px rgba(173,251,73,0.18)",
                 }}
               >
-                to achieve our quarterly rocks.
+                to achieve our quarterly rocks
               </em>
             </h1>
           </Reveal>

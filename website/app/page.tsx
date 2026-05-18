@@ -48,11 +48,11 @@ export default function Home() {
               className="mt-6 font-extrabold tracking-tight max-w-5xl"
               style={{ fontSize: "clamp(56px, 11vw, 168px)", lineHeight: 0.88, letterSpacing: "-0.04em", textShadow: "0 2px 30px rgba(10,27,36,0.6)" }}
             >
-              Operator.
+              Operator
               <br />
-              <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>Builder.</em>
+              <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>Builder</em>
               <br />
-              Educator.
+              Experimenter
             </h1>
           </Reveal>
           <Reveal delay={3}>

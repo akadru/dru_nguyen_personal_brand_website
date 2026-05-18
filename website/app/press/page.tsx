@@ -32,7 +32,7 @@ const quickFacts = [
   { label: "Roles", value: "Co-Founder & MD of Xood · Founder of Skylight · Advisor: Tictag, EWB, Nuen, GAM" },
   { label: "Industries", value: "Hospitality · AI Data Services · Entertainment" },
   { label: "Based in", value: "Ho Chi Minh City, Vietnam (UTC+7)" },
-  { label: "Tagline", value: "Operator. AI Educator. Care. Discipline. Grit." },
+  { label: "Tagline", value: "Operator. AI Experimenter. Care. Discipline. Grit." },
   { label: "Speaking topics", value: "AI for Operators · EOS in Practice · Building in Vietnam" },
 ];
 

@@ -48,7 +48,7 @@ export default function AboutPage() {
               <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 96px)", lineHeight: 0.95, letterSpacing: "-0.03em" }}>
                 Operator first.
                 <br />
-                <span style={{ color: "var(--brand-lime)" }}>Educator second.</span>
+                <span style={{ color: "var(--brand-lime)" }}>Experimenter second.</span>
               </h1>
             </Reveal>
             <Reveal delay={2}>
@@ -82,7 +82,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={1}>
             <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
-              Operator first. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Educator second.</em>
+              Operator first. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Experimenter second.</em>
             </h2>
           </Reveal>
           <Reveal delay={2}>
