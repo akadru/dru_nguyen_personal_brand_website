@@ -16,6 +16,18 @@ export type Post = {
 
 export const POSTS: Post[] = [
   {
+    slug: "six-businesses-claude-quarterly-rocks",
+    title: "How I run 6 businesses with Claude to achieve our quarterly rocks",
+    excerpt:
+      "Six businesses. Eighteen rocks. Ninety days. The operating loop I built around Claude to actually move EOS rocks, with the two prompts I run every Sunday and every morning.",
+    channel: "LinkedIn",
+    pillar: "Thinker",
+    topic: "AI Operator",
+    read: "6 MIN",
+    date: "18 MAY 2026",
+    image: "/images/blog/six-businesses-claude-quarterly-rocks.webp",
+  },
+  {
     slug: "nightclub-and-ai-adoption",
     title: "What running a nightclub taught me about AI adoption",
     excerpt:
