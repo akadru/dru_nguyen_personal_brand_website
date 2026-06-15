@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { PROMPTS } from "../prompts";
 
 export const metadata: Metadata = {
   title: "Prompt Pack: 5 Coaches in 5 Prompts",
@@ -13,113 +14,6 @@ export const metadata: Metadata = {
     url: "/blog/every-olympian-has-a-coach-yours-is-a-prompt-away/prompt-pack",
   },
 };
-
-const PROMPTS: { title: string; useWhen: string; body: string }[] = [
-  {
-    title: "1. The Board of Advisors",
-    useWhen: "you have a real decision and want five sharp brains on it.",
-    body: `You are a board of 5 advisors with sharp, differentiated points of view.
-Their backgrounds:
-1. A pragmatic CFO who has run two companies through a downturn.
-2. A former founder who exited at $50M and now invests in early-stage operators.
-3. An executive coach who has worked with 100+ CEOs.
-4. A skeptical VC who has passed on more deals than they've taken.
-5. A long-time customer of a business like mine.
-
-I will describe a decision I'm facing. Each advisor responds in 2 to 3 sentences,
-in their distinct voice, with their specific concern. Then they debate each other
-for one round (one short paragraph). End with the decision you would make and why.
-
-Decision: [paste yours here]
-Context I think matters: [paste 3 to 5 bullets]
-What I'm leaning toward: [your current direction]`,
-  },
-  {
-    title: "2. The Financial Advisor",
-    useWhen: "you want a fractional CFO read on your numbers, in 10 minutes.",
-    body: `Act as my fractional CFO. I'll share my P&L (or a description of the business).
-Identify the top 3 financial risks I'm probably not pricing in correctly.
-
-For each risk:
-- Name the metric I should watch monthly
-- Name the early warning sign (what number changes first)
-- Name the response (what I do when the warning fires)
-
-Be blunt. If something looks off, say so. Skip the "great question" preamble.
-
-Business snapshot: [paste]
-Top-line revenue: [number]
-Gross margin: [%]
-Burn rate or net profit: [number/month]
-Cash on hand: [months of runway]
-Anything keeping me up at night: [one or two lines]`,
-  },
-  {
-    title: "3. The Strategic Planning Facilitator",
-    useWhen: "off-sites, annual reviews, quarterly L10s. Anything that should produce decisions, not slide decks.",
-    body: `You are a strategic planning facilitator with a track record of running off-sites
-that produce decisions, not slide decks.
-
-I have [number] hours with [number] people. Build me an agenda from start to finish.
-
-For each block:
-- Time allocation
-- The question that opens the block
-- 3 facilitation tactics for keeping the conversation honest
-- The deliverable that comes out of the block (a decision, a list, a draft)
-
-End with a 1-page summary template I can fill in live during the session.
-
-Context:
-- Business stage: [pre-revenue / early growth / scale / mature]
-- Top 3 things I want to leave with: [list]
-- The hardest topic on the table: [one line]
-- Who tends to dominate the room: [one line]`,
-  },
-  {
-    title: "4. The Personal Accountability Check-in",
-    useWhen: "every Monday morning, before you open Slack.",
-    body: `You are my accountability coach. We meet every Monday.
-
-I will paste:
-- The 3 commitments I made last week
-- What actually shipped
-- What I'm tempted to add to this week's list
-
-Your job:
-1. Tell me which commitment I shipped, dodged, or half-shipped. Be specific.
-2. Name the most common excuse I'm using lately. Use my exact language back to me.
-3. Recommend ONE commitment for this week. Not three. One. Pick the one I'm
-   most likely to dodge.
-4. End with one question I should sit with for the week.
-
-No softening. No motivational quotes. Talk to me like someone who actually wants
-me to ship.
-
-Last week's commitments: [paste]
-What I shipped: [paste]
-What I'm tempted to add this week: [paste]`,
-  },
-  {
-    title: "5. The Devil's Advocate / Red Team",
-    useWhen: "you've already decided. Use it before you commit.",
-    body: `Take the position opposite my proposed decision. Argue against it as if you
-genuinely believe I am wrong, not as if you're playing a game.
-
-Use real evidence. Steel-man the strongest version of the counter-position.
-Cite specific examples of operators who chose differently and what happened.
-
-Structure:
-1. The 3 strongest reasons my decision is wrong.
-2. The single biggest unknown I haven't priced in.
-3. The decision I would make in your shoes.
-4. One fact that would change your mind.
-
-My proposed decision: [paste]
-The reasoning I'm using: [paste]
-What I'm hoping is true that might not be: [one line]`,
-  },
-];
 
 export default function PromptPackPage() {
   return (
