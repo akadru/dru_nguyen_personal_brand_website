@@ -899,12 +899,6 @@ If the failure story still feels plausible and you have not run the
   },
 ];
 
-const RULES: { h: string; b: string }[] = [
-  { h: "Paste real context.", b: "Fake numbers, fake answers." },
-  { h: "Run them on a cadence.", b: "Monday for accountability. Monthly close for the CFO. Before any real decision for the Board. Cadence beats inspiration." },
-  { h: "Iterate, don't accept.", b: "Push back on the first answer. The conversation is the value." },
-];
-
 export default function PostPage() {
   return (
     <article style={{ background: "var(--brand-jungle)" }}>
@@ -958,24 +952,41 @@ export default function PostPage() {
       <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[760px] px-5 md:px-10" style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
 
-          {/* OPENING */}
+          {/* OPENING: 7-Beat Story Arc */}
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
-            <strong>Every Olympian has a coach.</strong> Not because the athlete isn&apos;t great. Because nobody can see their own swing in real time.
+            Name one decision you made last year that you would unmake if you could rewind. Now name the person who could have stopped you. If that second name was &ldquo;nobody,&rdquo; you and I are reading the same post.
           </p>
 
           <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
-              The coach exists for one job:{" "}
-              <strong style={{ color: "var(--brand-white)" }}>to make the gap visible.</strong>{" "}
-              The gap between what you&apos;re doing and what you think you&apos;re doing.
+              In 1996, a 14-year-old Michael Phelps walked into the North Baltimore Aquatic Club and met a 24-year-old assistant coach named Bob Bowman. Bowman saw something other coaches had missed. Phelps&apos;s stroke was technically sound but his stride was off by a few degrees on the pull. Phelps could not feel it. Nobody in his life had told him.
             </p>
             <p>
-              That gap kills more businesses than bad strategy. The cost compounds for months before anyone names it. By then it shows up as a customer leaving, a co-founder breaking, or a quarter you can&apos;t explain.
+              They worked together for the next twenty years. By 2008, Phelps had won eight gold medals in a single Olympics, more than any athlete in history. By 2016, he held 23 Olympic golds in total.
             </p>
             <p>
-              The new math in 2026: a well-built prompt does most of the coach&apos;s job in 20 minutes a week. No calendar conflicts. Infinite patience for context. No incentive to keep you as a client.{" "}
-              <strong style={{ color: "var(--brand-white)" }}>Below are five prompts I run weekly across my own businesses.</strong>{" "}
-              Each one is a coaching session, not a one-shot. Paste it into Claude, ChatGPT, or Gemini. Answer the questions. Let the model push back when your framing gets sloppy. Each session takes about 20 minutes.
+              What Bowman did was not make Phelps faster. He made Phelps see the gap between what he was doing and what he thought he was doing. Asked years later what he actually did differently from other coaches, Bowman put it plainly: <em>&ldquo;I just made him aware of the gap.&rdquo;</em>
+            </p>
+            <p>
+              That gap is what kills Olympic medals. It is also what kills quarters in a business.
+            </p>
+            <p>
+              <strong style={{ color: "var(--brand-white)" }}>A coach&apos;s job is not to give you the answer. It is to make you aware of the question you are not asking.</strong>
+            </p>
+            <p style={{ color: "var(--brand-lime)", fontWeight: 700, fontSize: "1.25rem", marginTop: "2rem" }}>
+              Takeaway this week.
+            </p>
+            <p>
+              You probably do not have a Bob Bowman. Most operators do not. You have peer groups that meet once a month, a therapist who has never seen your numbers, a friend or two who can hold up a mirror once a quarter. The gap stays open for years.
+            </p>
+            <p>
+              The new math in 2026 is that a well-built prompt does most of what Bowman did for Phelps in 20 minutes a week. The prompt asks the question. You answer. The prompt makes you aware of the gap between what you are doing and what you think you are doing. The gap closes.
+            </p>
+            <p>
+              How I do this is by running 5 prompts every week that act as a coaching panel: a Board of Advisors before any real decision, a Fractional CFO at monthly close, a Planning Facilitator for any off-site, a Monday Accountability check-in, and a Pre-Mortem before I commit publicly to anything I might be wrong about.
+            </p>
+            <p>
+              <strong style={{ color: "var(--brand-white)" }}>Here are the five prompts I run every week.</strong>
             </p>
           </div>
 
@@ -1020,20 +1031,21 @@ export default function PostPage() {
             })}
           </div>
 
-          {/* THREE RULES */}
-          <div className="mt-16 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Three rules</div>
+          {/* WHAT DOES NOT WORK */}
+          <div className="mt-16 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>What does not work</div>
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
-            What separates <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>useful from useless.</em>
+            Three things I tried <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>that flopped.</em>
           </h2>
-          <div className="mt-8 grid gap-4">
-            {RULES.map((r) => (
-              <div key={r.h} className="rounded-xl p-6" style={{ background: "rgba(173,251,73,0.06)", borderLeft: "4px solid var(--brand-lime)" }}>
-                <div className="text-base font-extrabold" style={{ color: "var(--brand-white)" }}>
-                  <span style={{ color: "var(--brand-lime)", marginRight: 8 }}>→</span>{r.h}
-                </div>
-                <div className="mt-2 text-base" style={{ color: "var(--brand-pastel)" }}>{r.b}</div>
-              </div>
-            ))}
+          <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
+            <p>
+              <strong style={{ color: "var(--brand-white)" }}>1. Hiring a human executive coach.</strong> I tried twice. Both coaches were experienced. Both charged $400 an hour. Both met once a week. The cost was not the problem. The cadence was. By the time we met on Thursday, the decision I needed to make had already passed me by Tuesday morning.
+            </p>
+            <p>
+              <strong style={{ color: "var(--brand-white)" }}>2. Reading every operator book ever written.</strong> Drucker, Collins, Goggins, Robbins, the entire Traction shelf. I learned a lot. None of those books knew my numbers, my team, or the decision in front of me on Tuesday morning. A book doesn&apos;t push back. It doesn&apos;t ask the follow-up. It can&apos;t tell me what I&apos;m missing about myself this week.
+            </p>
+            <p>
+              <strong style={{ color: "var(--brand-white)" }}>3. AI as a casual chat.</strong> I started by typing my decision into ChatGPT the way I would text a friend: a paragraph, no structure, hope it said something useful. The answers were polite. They never pushed back. They never asked the follow-up. They told me what I already knew, in better grammar.
+            </p>
           </div>
 
           {/* CLOSE */}
@@ -1073,7 +1085,7 @@ export default function PostPage() {
             ))}
           </div>
 
-          {/* DRU. SIGNATURE — official end-of-post logo */}
+          {/* DRU. SIGNATURE: official end-of-post logo */}
           <div className="mt-20 flex justify-end">
             <div
               className="px-5 py-2 text-xl font-extrabold"

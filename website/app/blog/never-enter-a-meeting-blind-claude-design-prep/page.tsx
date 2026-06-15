@@ -6,12 +6,12 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Never enter a meeting blind. My 30-min Claude prep.",
   description:
-    "Anthropic shipped Claude Design on April 17. Here is the 30-minute prep I now run before every team meeting at Xood and Skylight, end to end.",
+    "Anthropic shipped Claude Design on April 17. Here is the 30-minute prep I now run before every team meeting at Skylight and across my businesses, end to end.",
   alternates: { canonical: "/blog/never-enter-a-meeting-blind-claude-design-prep" },
   openGraph: {
     title: "Never enter a meeting blind. My 30-min Claude prep.",
     description:
-      "Anthropic shipped Claude Design on April 17. Here is the 30-minute prep I now run before every team meeting at Xood and Skylight.",
+      "Anthropic shipped Claude Design on April 17. Here is the 30-minute prep I now run before every team meeting at Skylight and across my businesses.",
     type: "article",
     url: "/blog/never-enter-a-meeting-blind-claude-design-prep",
     images: [{ url: "/images/blog/never-enter-a-meeting-blind-claude-design-prep.webp", width: 1200, height: 630 }],
@@ -100,7 +100,7 @@ export default function PostPage() {
               I do not enter meetings that way anymore. I enter every meeting with an artifact people can look at, point to, and disagree with. The artifact does the work the meeting used to do.
             </p>
             <p>
-              Anthropic shipped <strong style={{ color: "var(--brand-jungle)" }}><a href="https://www.anthropic.com/news" target="_blank" rel="noopener" style={{ borderBottom: "2px solid var(--brand-lime)" }}>Claude Design</a></strong> on April 17, 2026. It is built for exactly this. Prototypes, slides, one-pagers, briefs. I&apos;ve now run it for ten days across Xood, Skylight, and two advisory calls.
+              Anthropic shipped <strong style={{ color: "var(--brand-jungle)" }}><a href="https://www.anthropic.com/news" target="_blank" rel="noopener" style={{ borderBottom: "2px solid var(--brand-lime)" }}>Claude Design</a></strong> on April 17, 2026. It is built for exactly this. Prototypes, slides, one-pagers, briefs. I&apos;ve now run it for ten days across Skylight and two advisory calls.
             </p>
             <p>
               Here is the 30-minute prep I run before any team meeting.

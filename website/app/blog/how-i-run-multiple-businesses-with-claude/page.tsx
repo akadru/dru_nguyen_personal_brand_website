@@ -4,17 +4,17 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "How I run Xood's commercial team in 30 min/day with Claude",
+  title: "How I run multiple businesses in 30 min/day with Claude",
   description:
-    "A real morning at Xood, a four-step batch, and the prompt I copy-paste. Three hours of work in 30 minutes, no AI hype, no fluff.",
-  alternates: { canonical: "/blog/claude-runs-xood-commercial" },
+    "A real morning batch, four steps, and the prompt I copy-paste. Three hours of commercial work in 30 minutes, no AI hype, no fluff.",
+  alternates: { canonical: "/blog/how-i-run-multiple-businesses-with-claude" },
   openGraph: {
-    title: "How I run Xood's commercial team in 30 min/day with Claude",
+    title: "How I run multiple businesses in 30 min/day with Claude",
     description:
-      "A real morning at Xood, a four-step batch, and the prompt I copy-paste. Three hours of work in 30 minutes.",
+      "A real morning batch, four steps, and the prompt I copy-paste. Three hours of commercial work in 30 minutes.",
     type: "article",
-    url: "/blog/claude-runs-xood-commercial",
-    images: [{ url: "/images/blog/claude-runs-xood-commercial.webp", width: 1200, height: 630 }],
+    url: "/blog/how-i-run-multiple-businesses-with-claude",
+    images: [{ url: "/images/blog/how-i-run-multiple-businesses-with-claude.webp", width: 1200, height: 630 }],
   },
 };
 
@@ -52,7 +52,7 @@ export default function PostPage() {
               className="mt-6 font-extrabold tracking-tight"
               style={{ fontSize: "clamp(40px, 7vw, 84px)", lineHeight: 0.98, letterSpacing: "-0.03em" }}
             >
-              How I run Xood&apos;s commercial team in 30 min/day{" "}
+              How I run multiple businesses in 30 min/day{" "}
               <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>with Claude.</em>
             </h1>
           </Reveal>
@@ -61,7 +61,7 @@ export default function PostPage() {
           <Reveal delay={3}>
             <div className="relative aspect-[1200/630] w-full overflow-hidden rounded-2xl">
               <Image
-                src="/images/blog/claude-runs-xood-commercial.webp"
+                src="/images/blog/how-i-run-multiple-businesses-with-claude.webp"
                 alt="A laptop on a wooden desk before sunrise in Ho Chi Minh City, Vietnamese phin coffee dripping beside it"
                 fill
                 priority
@@ -80,8 +80,8 @@ export default function PostPage() {
           style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
         >
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
-            It&apos;s 7:14 AM. I&apos;m in the kitchen at Xood&apos;s office in District 1. Vietnamese coffee dripping.
-            A list of <strong>47 prospects</strong> on my screen, names I scraped from yesterday&apos;s Tictag partner event.
+            It&apos;s 7:14 AM in my kitchen, coffee still dripping.
+            On my screen: <strong>47 prospects</strong>, scraped from yesterday&apos;s Tictag partner event.
           </p>
 
           <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
@@ -93,13 +93,14 @@ export default function PostPage() {
               <li>Six CRM rows flagged for follow-up with suggested next actions</li>
             </ul>
             <p>That&apos;s roughly three hours of SDR-and-RevOps work. I do it in 30 minutes with Claude.</p>
+            <p>This is one of the morning batches I run this way — one per business. Below is the commercial one, start to finish. The shape is the same for every other batch I run.</p>
             <p>
-              Most operators hear &ldquo;AI&rdquo; and think &ldquo;junior intern I have to micromanage.&rdquo;
-              That&apos;s the trap. The senior ones I respect don&apos;t treat Claude as a person.{" "}
-              <strong style={{ color: "var(--brand-white)" }}>They treat it as a workflow.</strong>
+              Most operators hear &ldquo;AI&rdquo; and picture a junior intern they have to micromanage.
+              That&apos;s the trap. The best operators I know don&apos;t treat Claude as a person at all &mdash;{" "}
+              <strong style={{ color: "var(--brand-white)" }}>they treat it as a workflow.</strong>
             </p>
             <p>
-              Here&apos;s the difference. An intern needs to be onboarded, given context, corrected when wrong, and re-onboarded next week when they forget. Claude needs none of that, if you give it a versioned prompt and a tight input, it returns the same shape of output every time. That&apos;s not assistance. That&apos;s infrastructure.
+              Here&apos;s the difference. An intern needs onboarding, context, correction, and re-onboarding next week when they forget. Claude needs none of that. Give it a versioned prompt and a tight input, and it returns the same output every time. That&apos;s not assistance &mdash; that&apos;s infrastructure.
             </p>
           </div>
 
@@ -113,7 +114,7 @@ export default function PostPage() {
               <strong style={{ color: "var(--brand-white)" }}>1. Prospect digest (8 min).</strong> I paste yesterday&apos;s CRM export + LinkedIn signal scrape into one prompt. Claude returns a digest grouped by intent tier (warm / observed / cold), with a one-line &ldquo;why-now&rdquo; beside each name. I don&apos;t read the raw data anymore.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-white)" }}>2. First-draft outreach (12 min).</strong> For each warm prospect, I give Claude their company&apos;s published page (about, blog, last announcement) and Xood&apos;s offer. Output: a 3-paragraph email that earns a reply by sounding like I read their stuff, because Claude actually did. I rewrite the first sentence and the CTA. That&apos;s it.
+              <strong style={{ color: "var(--brand-white)" }}>2. First-draft outreach (12 min).</strong> For each warm prospect, I give Claude their company&apos;s published page (about, blog, last announcement) and the business&apos;s offer. Output: a 3-paragraph email that earns a reply by sounding like I read their stuff, because Claude actually did. I rewrite the first sentence and the CTA. That&apos;s it.
             </p>
             <p>
               <strong style={{ color: "var(--brand-white)" }}>3. Partner-map refresh (5 min).</strong> Same prompt every Monday. Claude re-runs against last week&apos;s partner-map and highlights deltas: new players, dead ones, gaps. I make the call on which gaps to chase.
@@ -132,8 +133,8 @@ export default function PostPage() {
             style={{ background: "var(--brand-jungle)", color: "var(--brand-white)", fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace" }}
           >
             <code>
-{`You are an SDR-and-RevOps analyst for Xood, AI data services in Vietnam.
-Read the input below. Return [SPEC]. Use Xood's voice: direct, operator-to-
+{`You are an SDR-and-RevOps analyst for our AI data services business in Vietnam.
+Read the input below. Return [SPEC]. Use our voice: direct, operator-to-
 operator, no jargon. Cite the prospect's own words when claiming relevance.
 If signal is weak, say so.
 

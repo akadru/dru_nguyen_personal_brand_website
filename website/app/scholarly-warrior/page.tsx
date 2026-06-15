@@ -13,7 +13,7 @@ const frameworks = [
   { title: "S.I.F.P.", subtitle: "Situation · Insight · Framework · Provocation", body: "The writing framework behind every long-form post." },
   { title: "EOS for Pre-Revenue", subtitle: "Operating System · 7 Components", body: "EOS adapted for startups before product-market fit." },
   { title: "Four-Layer Review", subtitle: "Meaning · Relationship · Identity · Action", body: "How to draft a hard message that lands without breaking trust." },
-  { title: "AI Operator Stack", subtitle: "Claude · Workflows · Templates", body: "The exact prompts running Xood's commercial team in 30 min/day." },
+  { title: "AI Operator Stack", subtitle: "Claude · Workflows · Templates", body: "The exact prompts running my commercial teams in 30 min/day." },
 ];
 
 const stories = [

@@ -131,6 +131,29 @@ Every blog post on drunguyen.me ends with the DRU. signature block. This is the 
 
 This block goes after the CTA and hashtags, before the closing `</section>` or `</article>` tag. The reference implementation lives in `website/app/blog/six-businesses-claude-quarterly-rocks/page.tsx`. Match it exactly.
 
+### Opening felt-questions for prompt-led posts: HBR-style provocation, not soft rhetorical
+The Beat #1 felt question must put a real stake in the ground. The reader should feel called out by sentence two. Acceptable shapes:
+- **Hormozi-style provocation:** "Name one [X]. Now name [Y]. If [Z], you and I are reading the same post."
+  - Example: "Name one decision you made last year that you would unmake if you could rewind. Now name the person who could have stopped you. If that second name was 'nobody,' you and I are reading the same post."
+- **HBR thesis statement:** "The most expensive [thing] in your [domain] is [unexpected]."
+- **HBR authority hook:** "When [authority] was asked [X], they said [unexpected]. [Years] later, the data still agrees."
+
+**Unacceptable:** "Ever sit down on Sunday and realize…?" / "Have you ever thought…?" — too soft, sounds like a coaching-template opener. The first sentence must make the reader do work or feel exposed.
+
+**The pattern that works:** directive verb in sentence 1, expansion in sentence 2, complicit "you and I" close in sentence 3. The reader feels seen instead of lectured.
+
+### Never frame EO Forum, YPO, peer forums, or Mastermind groups as failure modes
+EO Forum, YPO chapters, Mastermind groups, founder Slack channels, and peer-forum communities are Dru's community. They are protected ground in the brand. Never the target of a "what didn't work" or "what flopped" framing.
+
+If a "what didn't work" section needs an example of a peer-group or community-based attempt at the problem, use one of these structural-gap alternatives instead:
+- "Reading every operator book ever written" — books don't push back, don't know my numbers
+- "Asking my team for honest feedback" — incentive mismatch (they work for me)
+- "Talking it out with my therapist" — doesn't know the P&L
+- "Daily journaling alone" — no pushback, only what I can already see
+- "Hiring a topic-specific consultant" — narrow lens, doesn't see the whole
+
+Tone toward peer groups elsewhere in the post: respectful, complementary, never the target. If Dru's experience with EO is being referenced positively, name it directly. If a failure is being named, find something else to name.
+
 ### The 7-Beat Story Arc, for every long-form post with a copy-paste prompt
 The intro must hook the reader with a universal story before introducing the prompt. The reader feels the pain through someone else's life first, then sees themselves in it, then sees Dru as a fellow practitioner.
 
