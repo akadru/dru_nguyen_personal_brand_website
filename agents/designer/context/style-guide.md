@@ -12,6 +12,32 @@ The visuals carry that energy: real, urban, hand-made, coaching-inspired, never 
 
 ---
 
+## Official logo: the DRU. signature (locked 2026-06-15)
+
+The brand's official logo across all drunguyen.me content is the **DRU. signature block** — a rotated lime-bordered rectangle with the text "DRU." in extra-bold lime letterforms on transparent background.
+
+**Visual spec:**
+- Text: literal "DRU." (capital D-R-U + period)
+- Font: Outfit, weight 900 (extra-bold)
+- Letter-spacing: 0.28em
+- Size: 1.25rem (text-xl) for body context; scale proportionally for headers, favicons, social cards
+- Color: lime `#ADFB49` only — never reversed, never on white
+- Border: 2px solid lime, sharp corners (no border-radius)
+- Background: transparent
+- Rotation: `rotate(-2deg)` (slight left tilt — gives the hand-applied stencil energy)
+- Shadow / glow: subtle lime drop-glow `0 8px 14px rgba(173,251,73,0.18)`
+
+**Where it appears:**
+- **End of every blog post** — right-aligned, after CTA and hashtags (writer's job, see `agents/writer/context/persona.md`)
+- **Email signatures, social bios, video bumpers** — same proportions
+- **Favicon variant** is the existing `website/app/icon.svg` (lime D on jungle ground) — works as the compact form
+
+**Image generation:** when a generated image needs to incorporate the logo (e.g. a social card, a hero piece), match the spec above exactly. Do NOT redraw, restyle, or "modernize" it. The slight tilt and the period are part of the mark.
+
+**Reference implementation in code:** `website/app/blog/six-businesses-claude-quarterly-rocks/page.tsx` — the DRU. block at the bottom of the page.
+
+---
+
 ## Brand palette (locked)
 
 | Name (use in prompts) | Hex | Use |
