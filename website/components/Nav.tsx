@@ -64,12 +64,22 @@ export default function Nav() {
         <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:px-10">
           {/* Left cluster: wordmark + socials */}
           <div className="flex items-center gap-6 md:gap-8">
-            <Link
-              href="/"
-              className="text-base font-extrabold uppercase tracking-tight transition-colors hover:text-[var(--brand-lime)]"
-              style={{ color: "var(--brand-white)", letterSpacing: "0.04em" }}
-            >
-              Dru Nguyen
+            <Link href="/" className="inline-flex" aria-label="Dru Nguyen, home">
+              <span
+                className="px-3 py-1 text-base font-extrabold"
+                style={{
+                  background: "transparent",
+                  color: "var(--brand-lime)",
+                  border: "2px solid var(--brand-lime)",
+                  letterSpacing: "0.28em",
+                  transform: "rotate(-2deg)",
+                  fontFamily: "'Outfit', system-ui, sans-serif",
+                  textShadow: "0 8px 14px rgba(173,251,73,0.18)",
+                  display: "inline-block",
+                }}
+              >
+                DRU.
+              </span>
             </Link>
             <div className="hidden sm:block">
               <SocialIcons variant="topbar" />
@@ -115,10 +125,23 @@ export default function Nav() {
             <Link
               href="/"
               onClick={() => setOpen(false)}
-              className="text-base font-extrabold uppercase tracking-tight"
-              style={{ color: "var(--brand-jungle)", letterSpacing: "0.04em" }}
+              className="inline-flex"
+              aria-label="Dru Nguyen, home"
             >
-              Dru Nguyen
+              <span
+                className="px-3 py-1 text-base font-extrabold"
+                style={{
+                  background: "transparent",
+                  color: "var(--brand-jungle)",
+                  border: "2px solid var(--brand-jungle)",
+                  letterSpacing: "0.28em",
+                  transform: "rotate(-2deg)",
+                  fontFamily: "'Outfit', system-ui, sans-serif",
+                  display: "inline-block",
+                }}
+              >
+                DRU.
+              </span>
             </Link>
             <button
               aria-label="Close menu"

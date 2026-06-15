@@ -1072,6 +1072,24 @@ export default function PostPage() {
               </span>
             ))}
           </div>
+
+          {/* DRU. SIGNATURE — official end-of-post logo */}
+          <div className="mt-20 flex justify-end">
+            <div
+              className="px-5 py-2 text-xl font-extrabold"
+              style={{
+                background: "transparent",
+                color: "var(--brand-lime)",
+                border: "2px solid var(--brand-lime)",
+                letterSpacing: "0.28em",
+                transform: "rotate(-2deg)",
+                fontFamily: "'Outfit', system-ui, sans-serif",
+                textShadow: "0 8px 14px rgba(173,251,73,0.18)",
+              }}
+            >
+              DRU.
+            </div>
+          </div>
         </div>
       </section>
     </article>
