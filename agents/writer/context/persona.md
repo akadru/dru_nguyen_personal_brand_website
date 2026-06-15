@@ -83,6 +83,10 @@ Every prompt block in a long-form post follows the v3 Holtom structure. No excep
 
 **On the page:** every prompt block is wrapped in a `<details>` accordion that is **collapsed by default**, with a `<summary>` showing "Show full prompt · N lines · click to expand". The accordion uses the brand lime border and translucent lime background per the Rocks/Olympian implementation.
 
+**Single source of truth — prompts NEVER duplicate between the blog post and the prompt-pack page.** When a post has both a body page (`page.tsx`) and a copy-paste companion (`prompt-pack/page.tsx`), the prompts MUST live in a single shared module (`prompts.ts` in the post's directory) that both pages import. If you ever find yourself writing two versions of the same prompt — a "short" one for the body and a "long" one for the pack — stop. There is one canonical v3 Holtom version. Both pages render it from the same import. Reference implementation: `website/app/blog/every-olympian-has-a-coach-yours-is-a-prompt-away/prompts.ts` exports `PROMPTS`, imported by both `page.tsx` and `prompt-pack/page.tsx`.
+
+**Why this matters:** prompt drift between the body and the pack is a credibility leak. The reader trusts that what they copy is what they read. A shortened pack version is a different product, and it tells the reader the pack is the lesser one. Always one canonical version.
+
 **Generic-template rule (already locked):** ROLE / GROUNDING / INPUTS / OUTPUT use descriptive placeholders. Grounding asks the reader for THEIR specifics. Bad/good examples in BEHAVIOR CONTRACT can keep Dru-named as illustrative. OUTPUT field labels are always generic.
 
 ### Prompts included in posts must be generic copy-paste templates
