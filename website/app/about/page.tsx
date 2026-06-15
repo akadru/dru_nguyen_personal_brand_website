@@ -13,6 +13,8 @@ const stories = [
   {
     title: "The DJ Origin",
     body: "At 17, dad caught me ditching school. First time I ever saw him cry. His punishment? He bought me a DJ setup. I learned community-building by sharing knowledge openly when DJ culture hoarded it.",
+    img: "/images/stories/dj-origin.jpg",
+    imgAlt: "Dru behind the DJ decks, headphones around his neck, white shirt with suspenders, Saigon nightclub, 2007",
   },
   {
     title: "The Factory",
@@ -124,12 +126,12 @@ export default function AboutPage() {
                   className="overflow-hidden rounded-xl"
                   style={{ background: "var(--brand-jungle)", borderLeft: "4px solid var(--brand-lime)" }}
                 >
-                  {s.title === "The Fight" ? (
+                  {(s.img || s.title === "The Fight") ? (
                     <div className="grid gap-0 md:grid-cols-[1fr_1.4fr]">
                       <div className="relative aspect-[4/3] md:aspect-auto">
                         <Image
-                          src="/images/dru-muay-thai-2019.jpg"
-                          alt="Dru wins by TKO at the Da Nang Muay Thai exhibition fight, 2019"
+                          src={s.img || "/images/dru-muay-thai-2019.jpg"}
+                          alt={s.imgAlt || (s.title === "The Fight" ? "Dru wins by TKO at the Da Nang Muay Thai exhibition fight, 2019" : s.title)}
                           fill
                           sizes="(max-width: 768px) 100vw, 40vw"
                           className="object-cover"

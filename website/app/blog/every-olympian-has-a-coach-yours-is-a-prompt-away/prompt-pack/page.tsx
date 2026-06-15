@@ -191,7 +191,7 @@ export default function PromptPackPage() {
               <a href="https://www.theinnergame.com" target="_blank" rel="noopener" style={{ color: "var(--brand-jungle)", borderBottom: "1px dashed var(--brand-myrtle)" }}>Tim Gallwey, <em>The Inner Game of Tennis</em></a> (1974). The &ldquo;awareness, not advice&rdquo; framing comes from him.
             </p>
             <p className="mt-3">
-              Olympic coach pairings: public record (Bowman/Phelps, Glen Mills/Bolt, Aimee Boorman/Biles). Prompts and operator framing original to Dru Nguyen, refined across Xood and Skylight, 2026.
+              Olympic coach pairings: public record (Bowman/Phelps, Glen Mills/Bolt, Aimee Boorman/Biles). Prompts and operator framing original to Dru Nguyen, refined across Skylight and my businesses, 2026.
             </p>
             <p className="mt-6 italic" style={{ color: "var(--brand-jungle)" }}>
               Knowledge with application is wisdom.

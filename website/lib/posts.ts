@@ -67,7 +67,7 @@ export const POSTS: Post[] = [
     slug: "never-enter-a-meeting-blind-claude-design-prep",
     title: "Never enter a meeting blind. My 30-min Claude prep.",
     excerpt:
-      "Anthropic shipped Claude Design on April 17. Here is the 30-minute prep I now run before every team meeting at Xood and Skylight, end to end.",
+      "Anthropic shipped Claude Design on April 17. Here is the 30-minute prep I now run before every team meeting at Skylight and across my businesses, end to end.",
     channel: "LinkedIn",
     pillar: "Thinker",
     topic: "AI Operator",
@@ -76,16 +76,16 @@ export const POSTS: Post[] = [
     image: "/images/blog/never-enter-a-meeting-blind-claude-design-prep.webp",
   },
   {
-    slug: "claude-runs-xood-commercial",
-    title: "How I run Xood's commercial team in 30 min/day with Claude",
+    slug: "how-i-run-multiple-businesses-with-claude",
+    title: "How I run multiple businesses in 30 min/day with Claude",
     excerpt:
-      "A real morning at Xood, a four-step batch, and the prompt I copy-paste. Three hours of work in 30 minutes, no AI hype, no fluff.",
+      "A real morning batch, four steps, and the prompt I copy-paste. Three hours of commercial work in 30 minutes, no AI hype, no fluff.",
     channel: "LinkedIn",
     pillar: "Thinker",
     topic: "AI Operator",
     read: "4 MIN",
     date: "26 APR 2026",
-    image: "/images/blog/claude-runs-xood-commercial.webp",
+    image: "/images/blog/how-i-run-multiple-businesses-with-claude.webp",
   },
 ];
 
