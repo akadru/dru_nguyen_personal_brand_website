@@ -62,9 +62,13 @@ export default function PostPage() {
           </p>
 
           <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
-            <p>For two years I blamed the team. Then I read <em>Traction</em> with my brother TK over a weekend.</p>
+            <p>For two years I blamed the team. Then I read{" "}
+              <a href="https://www.eosworldwide.com/traction-book" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}><em>Traction</em></a>{" "}
+              by Gino Wickman with my brother TK over a weekend.</p>
             <p>The problem wasn&apos;t the team. It was that the team had no system to hold the standard. <strong style={{ color: "var(--brand-white)" }}>I was the system. And I was the bottleneck.</strong></p>
-            <p>We implemented EOS over the next nine months. The team, the same team, started running plays I&apos;d been holding in my head. Nine months in, we hit a Friday night where every section ran clean and I didn&apos;t get a single message until close. That night I realized what &ldquo;the system holds the standard&rdquo; actually means.</p>
+            <p>We implemented{" "}
+              <a href="https://www.eosworldwide.com/" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>EOS (the Entrepreneurial Operating System)</a>{" "}
+              over the next nine months. The team, the same team, started running plays I&apos;d been holding in my head. Nine months in, we hit a Friday night where every section ran clean and I didn&apos;t get a single message until close. That night I realized what &ldquo;the system holds the standard&rdquo; actually means.</p>
           </div>
 
           <h2 className="mt-14 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>What I <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>kept.</em></h2>

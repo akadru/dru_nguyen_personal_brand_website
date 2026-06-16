@@ -502,6 +502,11 @@ export default function Page() {
             Rocks are easy to set. They are <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>brutal</em> to keep.
           </h2>
           <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
+            <p style={{ background: "rgba(173,251,73,0.06)", borderLeft: "3px solid var(--brand-lime)", padding: "14px 18px", fontSize: "0.95em" }}>
+              <strong style={{ color: "var(--brand-white)" }}>Quick context.</strong> A <em>rock</em> is{" "}
+              <a href="https://www.eosworldwide.com/" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>EOS</a>{" "}
+              (Entrepreneurial Operating System) shorthand for a top-3 priority for the quarter. Owner named, deadline set, binary done or not done. Ninety-day chunks. If your team runs OKRs, sub in &ldquo;key result.&rdquo; If you run no framework yet, read it as &ldquo;the 3 things that have to be true by end of quarter or this quarter failed.&rdquo;
+            </p>
             <p>
               Ever sit down on Sunday night with a list of rocks you committed to this quarter, and realize you cannot remember the last time you touched half of them?
             </p>
