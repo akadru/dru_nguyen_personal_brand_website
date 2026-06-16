@@ -89,6 +89,49 @@ Every prompt block in a long-form post follows the v3 Holtom structure. No excep
 
 **Generic-template rule (already locked):** ROLE / GROUNDING / INPUTS / OUTPUT use descriptive placeholders. Grounding asks the reader for THEIR specifics. Bad/good examples in BEHAVIOR CONTRACT can keep Dru-named as illustrative. OUTPUT field labels are always generic.
 
+### Credit everything you reference. Always. With a hyperlink.
+
+Dru's brand is built on the operator who teaches frameworks better than other people pretend to invent them. The non-negotiable outcome is: **give credit to others.** Every time a post references a person, a company, a book, a podcast, a framework, a term, or a piece of in-group vocabulary that did not originate with Dru, that reference must include a hyperlink to the canonical source on first mention.
+
+This is not a stylistic preference. It is the brand. A post that names someone without linking them reads as a guru borrowing without crediting, which is the exact thing Dru is positioning against.
+
+**What counts as "must be credited":**
+
+| Reference type | Link target |
+|---|---|
+| **People** (Bob Bowman, Michael Phelps, Jeff Su, Dan Martell, Hormozi, Jocko, Tony Robbins, Jeff Bezos, Drucker, Goggins, Christensen, Andy Grove, Sakichi Toyoda, Kiichiro Toyoda, etc.) | Their primary site, Wikipedia, the org they're known for, or the book they wrote |
+| **Companies and brands** mentioned in the body (Toyota, YC, Sequoia, Anthropic, Apple, Amazon, etc.) | Their official site |
+| **Books cited** (*Traction*, *Atomic Habits*, *The Inner Game of Tennis*, *Extreme Ownership*, etc.) | The author's or publisher's book page |
+| **Frameworks and systems** (EOS, OKRs, JTBD, Lean, TPS, Jidoka, Working Backwards, Volume × Leverage, CORE Workflow, Buyback Loop, Extreme Ownership) | The originator's canonical source |
+| **Specific terms and acronyms** from those frameworks (Rock, L10, IDS, Scorecard, Andon Cord, North Star Metric, RICE, KR) | Same canonical source as the parent framework |
+| **Podcasts, shows, talks** (Lenny's Podcast, Diary of a CEO, All-In, Acquired) | The show's official URL; for episodes, link the specific episode |
+| **Public events / venues** (HBR articles, TED talks, conferences) | Direct link to the article or talk |
+| **Vietnamese or non-English terms** used in Western-facing posts | A plain-English gloss on first use (no link required, but a Wikipedia link is welcome) |
+
+**What does NOT need a link:**
+- Dru's own businesses (Xood, Skylight, GAM Esports, East West Brewery, Nuen Motor) — these are linked elsewhere on the site, but inside an editorial post they're already-Dru's-context
+- Common knowledge proper nouns with no canonical source ("Saigon," "Vietnam," "the 1890s")
+- People mentioned by first name only as informal characters in a story ("my brother TK," "Joy," "Chi") — these are internal references, not credits
+
+**Format:**
+
+> [Name or term](URL)
+
+Use the same style as existing links — lime color with dashed underline on dark grounds, jungle color with dashed underline on light grounds. Open external links with `target="_blank" rel="noopener"`. First mention only — repeat references don't need to re-link.
+
+**Calibration question to ask before publishing:**
+
+> "If [every person, company, framework, book, term] named in this post saw it tomorrow, would they feel credited or borrowed-from?"
+
+If any of them would feel borrowed-from, fail the post and rewrite.
+
+**Reference implementations:**
+- The Rocks post links EOS on first mention of "rock"
+- The EOS-at-Skylight post links *Traction* and *EOS* on their first body mentions
+- The Olympian post should link Bob Bowman, Michael Phelps, Glen Mills, Usain Bolt, Aimee Boorman, and Simone Biles on their first mentions (this was missing and is being fixed)
+
+This rule extends and supersedes [[attribution-rule]] and the borrowed-jargon rule below. **The principle is one sentence: if someone else made it, link to them.**
+
 ### Borrowed jargon must be defined on first use, with a link to the source
 
 Any framework, system, or piece of in-group vocabulary that did not originate with Dru must be (a) defined in plain English on its first appearance in the body and (b) hyperlinked to its canonical source. This is non-negotiable. The reader is not always inside your operating-system world. Assume they are not.

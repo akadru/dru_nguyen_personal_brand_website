@@ -511,16 +511,23 @@ export default function Page() {
               Ever sit down on Sunday night with a list of rocks you committed to this quarter, and realize you cannot remember the last time you touched half of them?
             </p>
             <p>
-              In the 1890s, Sakichi Toyoda was watching his mother weave cloth in the Japanese countryside. She had to watch every thread. If a thread broke, she had to stop, find the break, fix it, and restart. Her attention was the bottleneck. Her productivity was capped by what she could hold in her head.
+              In the 1890s,{" "}
+              <a href="https://en.wikipedia.org/wiki/Sakichi_Toyoda" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Sakichi Toyoda</a>{" "}
+              was watching his mother weave cloth in the Japanese countryside. She had to watch every thread. If a thread broke, she had to stop, find the break, fix it, and restart. Her attention was the bottleneck. Her productivity was capped by what she could hold in her head.
             </p>
             <p>
               He could not make her smarter. So he built her a different machine.
             </p>
             <p>
-              The loom Sakichi invented automatically stopped when a thread broke. He called the principle <em>Jidoka</em>, &ldquo;automation with a human touch.&rdquo; The machine watched the threads. The weaver only intervened when the machine surfaced the problem. By 1924, the Toyoda automatic loom let one worker run dozens of machines at the same time.
+              The loom Sakichi invented automatically stopped when a thread broke. He called the principle{" "}
+              <a href="https://global.toyota/en/company/vision-and-philosophy/production-system/" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}><em>Jidoka</em></a>, &ldquo;automation with a human touch.&rdquo; The machine watched the threads. The weaver only intervened when the machine surfaced the problem. By 1924, the Toyoda automatic loom let one worker run dozens of machines at the same time.
             </p>
             <p>
-              Decades later, his son Kiichiro applied the same principle at a different scale. He started Toyota Motor Corporation in 1937. On the assembly line, any worker who saw a defect could pull a cord, the Andon Cord, and stop the entire line. The system surfaced the problem. The team decided. The line restarted.
+              Decades later, his son{" "}
+              <a href="https://en.wikipedia.org/wiki/Kiichiro_Toyoda" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Kiichiro</a>{" "}
+              applied the same principle at a different scale. He started{" "}
+              <a href="https://global.toyota/en/" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Toyota Motor Corporation</a>{" "}
+              in 1937. On the assembly line, any worker who saw a defect could pull a cord, the Andon Cord, and stop the entire line. The system surfaced the problem. The team decided. The line restarted.
             </p>
             <p>
               The Andon Cord became one of the most copied operational ideas of the 20th century. Not because it stopped defects. Because it externalized attention.
