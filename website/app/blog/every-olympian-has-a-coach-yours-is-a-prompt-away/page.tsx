@@ -81,7 +81,12 @@ export default function PostPage() {
 
           <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
-              In 1996, a 14-year-old Michael Phelps walked into the North Baltimore Aquatic Club and met a 24-year-old assistant coach named Bob Bowman. Bowman saw something other coaches had missed. Phelps&apos;s stroke was technically sound but his stride was off by a few degrees on the pull. Phelps could not feel it. Nobody in his life had told him.
+              In 1996, a 14-year-old{" "}
+              <a href="https://en.wikipedia.org/wiki/Michael_Phelps" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Michael Phelps</a>{" "}
+              walked into the{" "}
+              <a href="https://www.nbac.net/" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>North Baltimore Aquatic Club</a>{" "}
+              and met a 24-year-old assistant coach named{" "}
+              <a href="https://en.wikipedia.org/wiki/Bob_Bowman_(swim_coach)" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Bob Bowman</a>. Bowman saw something other coaches had missed. Phelps&apos;s stroke was technically sound but his stride was off by a few degrees on the pull. Phelps could not feel it. Nobody in his life had told him.
             </p>
             <p>
               They worked together for the next twenty years. By 2008, Phelps had won eight gold medals in a single Olympics, more than any athlete in history. By 2016, he held 23 Olympic golds in total.
