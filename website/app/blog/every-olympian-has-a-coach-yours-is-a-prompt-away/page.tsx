@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import CopyPromptButton from "@/components/CopyPromptButton";
 import { PROMPTS } from "./prompts";
 
 export const metadata: Metadata = {
@@ -146,9 +147,12 @@ export default function PostPage() {
                         {lineCount} lines · click to expand
                       </span>
                     </summary>
+                    <div className="flex justify-end px-4 pt-3" style={{ borderTop: "1px solid rgba(173,251,73,0.2)" }}>
+                      <CopyPromptButton text={p.body} label={`Copy prompt ${p.title.split(".")[0]}`} variant="dark" />
+                    </div>
                     <pre
-                      className="mt-0 overflow-x-auto p-6 text-sm leading-relaxed whitespace-pre-wrap"
-                      style={{ color: "var(--brand-white)", fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace", borderTop: "1px solid rgba(173,251,73,0.2)" }}
+                      className="mt-0 overflow-x-auto p-6 pt-3 text-sm leading-relaxed whitespace-pre-wrap"
+                      style={{ color: "var(--brand-white)", fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace" }}
                     >
                       <code>{p.body}</code>
                     </pre>

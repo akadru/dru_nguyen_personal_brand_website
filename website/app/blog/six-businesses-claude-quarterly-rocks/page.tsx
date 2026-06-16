@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import CopyPromptButton from "@/components/CopyPromptButton";
 
 export const metadata: Metadata = {
   title: "How I run 3 companies and 2 boards with Claude to hit our quarterly rocks. | Dru Nguyen",
@@ -598,12 +599,14 @@ export default function Page() {
                   {SUNDAY_PROMPT.split("\n").length} lines · click to expand
                 </span>
               </summary>
+              <div className="flex justify-end px-4 pt-3" style={{ borderTop: "1px solid rgba(173,251,73,0.25)" }}>
+                <CopyPromptButton text={SUNDAY_PROMPT} label="Copy Sunday prompt" variant="dark" />
+              </div>
               <pre
-                className="overflow-x-auto p-6 text-sm leading-relaxed whitespace-pre-wrap"
+                className="overflow-x-auto p-6 pt-3 text-sm leading-relaxed whitespace-pre-wrap"
                 style={{
                   color: "var(--brand-white)",
                   fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
-                  borderTop: "1px solid rgba(173,251,73,0.25)",
                 }}
               >
                 <code>{SUNDAY_PROMPT}</code>
@@ -664,12 +667,14 @@ export default function Page() {
                   {DAILY_PROMPT.split("\n").length} lines · click to expand
                 </span>
               </summary>
+              <div className="flex justify-end px-4 pt-3" style={{ borderTop: "1px solid rgba(173,251,73,0.25)" }}>
+                <CopyPromptButton text={DAILY_PROMPT} label="Copy Daily prompt" variant="dark" />
+              </div>
               <pre
-                className="overflow-x-auto p-6 text-sm leading-relaxed whitespace-pre-wrap"
+                className="overflow-x-auto p-6 pt-3 text-sm leading-relaxed whitespace-pre-wrap"
                 style={{
                   color: "var(--brand-white)",
                   fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace",
-                  borderTop: "1px solid rgba(173,251,73,0.25)",
                 }}
               >
                 <code>{DAILY_PROMPT}</code>
@@ -808,16 +813,19 @@ function StencilDivider({ label }: { label: string }) {
 function PromptBlock({ title, body }: { title: string; body: string }) {
   return (
     <div className="mt-6">
-      <div
-        className="mb-2 inline-block px-3 py-1 text-[10px] font-extrabold uppercase"
-        style={{
-          background: "var(--brand-lime)",
-          color: "var(--brand-jungle)",
-          letterSpacing: "0.22em",
-          transform: "rotate(-1deg)",
-        }}
-      >
-        Prompt · {title}
+      <div className="mb-2 flex items-center justify-between gap-3 flex-wrap">
+        <div
+          className="inline-block px-3 py-1 text-[10px] font-extrabold uppercase"
+          style={{
+            background: "var(--brand-lime)",
+            color: "var(--brand-jungle)",
+            letterSpacing: "0.22em",
+            transform: "rotate(-1deg)",
+          }}
+        >
+          Prompt · {title}
+        </div>
+        <CopyPromptButton text={body} label={`Copy ${title}`} variant="dark" />
       </div>
       <pre
         className="overflow-x-auto rounded-xl p-6 text-sm leading-relaxed whitespace-pre-wrap"

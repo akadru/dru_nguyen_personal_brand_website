@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CopyPromptButton from "@/components/CopyPromptButton";
 import { PROMPTS } from "../prompts";
 
 export const metadata: Metadata = {
@@ -55,9 +56,12 @@ export default function PromptPackPage() {
                 <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl" style={{ color: "var(--brand-jungle)", letterSpacing: "-0.02em" }}>
                   {p.title}
                 </h2>
-                <p className="mt-3 text-base leading-relaxed" style={{ color: "var(--brand-myrtle)" }}>
-                  <strong>Use when:</strong> {p.useWhen}
-                </p>
+                <div className="mt-3 flex flex-wrap items-center justify-between gap-3">
+                  <p className="text-base leading-relaxed" style={{ color: "var(--brand-myrtle)" }}>
+                    <strong>Use when:</strong> {p.useWhen}
+                  </p>
+                  <CopyPromptButton text={p.body} label={`Copy ${p.title.split(".")[0]}`} variant="light" />
+                </div>
                 <pre
                   className="mt-4 overflow-x-auto rounded-xl p-6 text-sm leading-relaxed"
                   style={{ background: "var(--brand-jungle)", color: "var(--brand-white)", fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace" }}
