@@ -165,7 +165,7 @@ export default function Nav() {
                     onClick={() => setOpen(false)}
                     className="menu-item-line group inline-block py-1 font-extrabold uppercase leading-[1.0] tracking-tight transition-transform hover:translate-x-2"
                     style={{
-                      fontSize: "clamp(24px, 3.4vw, 44px)",
+                      fontSize: "clamp(18px, 2vw, 26px)",
                       letterSpacing: "-0.02em",
                       color: "var(--brand-jungle)",
                     }}
@@ -186,7 +186,7 @@ export default function Nav() {
                     onClick={() => setOpen(false)}
                     className="menu-item-line inline-block py-1 font-extrabold uppercase leading-[1.0] tracking-tight transition-transform hover:translate-x-2"
                     style={{
-                      fontSize: "clamp(20px, 2.6vw, 32px)",
+                      fontSize: "clamp(15px, 1.5vw, 20px)",
                       letterSpacing: "-0.015em",
                       color: "var(--brand-jungle)",
                     }}
