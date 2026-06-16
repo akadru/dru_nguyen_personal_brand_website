@@ -123,3 +123,37 @@ Acceptable alternatives that show structural gaps without attacking communities:
 - Talking it out with my therapist (doesn't know the P&L)
 - Daily journaling alone (no pushback)
 - Hiring a topic-specific consultant (narrow lens)
+
+---
+
+## Borrowed jargon: define on first use, link the source
+
+Any in-group vocabulary that did not originate with Dru gets a plain-English definition on first use AND a hyperlink to the canonical source. The reader doesn't necessarily run EOS, OKRs, JTBD, or any other system you've internalized.
+
+### ❌ Drops the reader into jargon without a definition
+
+> Quarterly rocks are easy to set. They are brutal to keep.
+>
+> Ever sit down on Sunday night with a list of rocks you committed to this quarter, and realize you cannot remember the last time you touched half of them?
+
+**Why it fails:** the non-EOS reader hits the word "rocks" twice in three sentences without ever being told what one is. They leave by paragraph two. The metaphor that's load-bearing for the rest of the post never lands because the term was never defined.
+
+### ✅ One sentence of context + a link, then back to the punch
+
+> **Rocks are easy to set. They are brutal to keep.**
+>
+> > **Quick context.** A *rock* is [EOS](https://www.eosworldwide.com/) (Entrepreneurial Operating System) shorthand for a top-3 priority for the quarter. Owner named, deadline set, binary done or not done. Ninety-day chunks. If your team runs OKRs, sub in "key result." If you run no framework yet, read it as "the 3 things that have to be true by end of quarter or this quarter failed."
+>
+> Ever sit down on Sunday night with a list of rocks you committed to this quarter, and realize you cannot remember the last time you touched half of them?
+
+**Why it works:** the callout block is visually set apart (lime border, smaller text) so it reads as scaffolding, not a derail. The felt-question still lands with full force on the next paragraph because now every reader knows what a rock is. The EOS link is a respect move toward the source AND a credibility move ("we know this framework has an author").
+
+### Other examples of the same rule
+
+- First time you write **L10**: "the weekly leadership meeting from [EOS](https://www.eosworldwide.com/) — a 90-minute standing agenda."
+- First time you write **Jidoka**: "a [Toyota Production System](https://www.toyota-global.com/company/vision_philosophy/toyota_production_system/) principle — automation that surfaces a problem instead of hiding it."
+- First time you write **JTBD**: "Jobs-to-be-Done — [Clayton Christensen's](https://hbr.org/2016/09/know-your-customers-jobs-to-be-done) framing for what a customer is hiring a product to do for them."
+
+### Tone for the definition callout
+
+Conversational, one sentence, plain. Do not explain the entire framework — explain the term enough that the next paragraph reads cleanly. Link is mandatory, even when the reader probably knows the term, because the rule has to be applied consistently or it stops being a rule.

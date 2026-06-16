@@ -89,6 +89,29 @@ Every prompt block in a long-form post follows the v3 Holtom structure. No excep
 
 **Generic-template rule (already locked):** ROLE / GROUNDING / INPUTS / OUTPUT use descriptive placeholders. Grounding asks the reader for THEIR specifics. Bad/good examples in BEHAVIOR CONTRACT can keep Dru-named as illustrative. OUTPUT field labels are always generic.
 
+### Borrowed jargon must be defined on first use, with a link to the source
+
+Any framework, system, or piece of in-group vocabulary that did not originate with Dru must be (a) defined in plain English on its first appearance in the body and (b) hyperlinked to its canonical source. This is non-negotiable. The reader is not always inside your operating-system world. Assume they are not.
+
+**Triggered terms include but are not limited to:**
+- **EOS / Rocks / L10 / IDS / Scorecard / Issues List / VTO / Level 10 Meeting / Traction** → link to [EOS Worldwide](https://www.eosworldwide.com/) (or [the Traction book](https://www.eosworldwide.com/traction-book) when citing the book itself)
+- **OKRs / Objectives and Key Results** → link to Andy Grove / Doerr / the canonical OKR source
+- **Jidoka / Andon Cord / Lean / Kaizen / TPS** → link to Toyota / Lean source
+- **Jobs-to-be-Done / JTBD** → link to Christensen
+- **Working Backwards / PR/FAQ** → link to Amazon source
+- Any acronym specific to a methodology (NPS, ICP, MRR/ARR-as-defined-internally, etc.) gets a one-line plain definition on first use
+- Any non-English term (in-shop slang, anh/em/chị if used in a Western-facing post, Vietnamese hospitality terms) gets a plain-English gloss
+
+**Format on first use:**
+
+> [The borrowed term] is [link to source](URL) shorthand for [one-sentence plain definition]. [Optional: how the reader should think about it if their team uses a different framework.]
+
+**Reference implementation:** the Rocks post uses a lime-bordered "Quick context" callout right under the §01 heading to define "rock" with an EOS link before the felt-question fires. The EOS-at-Skylight post links *Traction* and *EOS* on their first body mentions. Both patterns are acceptable — pick whichever fits the post's pacing.
+
+**Why this matters:** the reader who has never run EOS will hit the word "rock" in the felt-question and feel locked out by paragraph two. We lose them before the story even starts. One sentence of definition + one link buys their attention back. This is also a credibility move — it signals we know these systems have authors and don't pretend we invented them.
+
+This rule extends [[attribution-rule]] (which covered framework attribution) to also cover **definition** — credit alone isn't enough if the reader still doesn't know what the word means.
+
 ### Prompts included in posts must be generic copy-paste templates
 When a post includes a prompt the reader is meant to copy and paste into Claude / ChatGPT / Gemini, the prompt itself is a **generic template** that works for any reader's situation.
 
