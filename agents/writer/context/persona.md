@@ -83,6 +83,16 @@ Every prompt block in a long-form post follows the v3 Holtom structure. No excep
 
 **On the page:** every prompt block is wrapped in a `<details>` accordion that is **collapsed by default**, with a `<summary>` showing "Show full prompt · N lines · click to expand". The accordion uses the brand lime border and translucent lime background per the Rocks/Olympian implementation.
 
+**Every post with prompts ships a downloadable `.zip` pack.** When a new post adds prompts (or an existing post's prompts change), the post must:
+
+1. Add an entry to `POSTS` in `website/scripts/build-prompt-packs.mjs` pointing at the prompts source file (`prompts.ts` or equivalent)
+2. Place a "Download all N prompts (.zip)" button at the top of the prompts section on the body page AND in the prompt-pack page hero, linking to `/downloads/{slug}-prompt-pack.zip`
+3. The button uses lime background, jungle text, the download-arrow SVG, copy reads `Download all N prompts (.zip)`, followed by a one-line caption explaining the zip contains one `.md` per prompt plus a README
+
+The script regenerates every zip automatically via the `prebuild` npm hook (`prebuild` runs `node scripts/build-prompt-packs.mjs` before `next build`). Never commit a zip without running the script — Vercel will regenerate it on deploy, but local previews need it fresh too. Use `npm run build-prompt-packs` to regenerate manually.
+
+Reference implementation: the Olympian post — body page has the lime download button above the accordion list, prompt-pack page has the lime download button in the hero, and the zip lives at `website/public/downloads/every-olympian-has-a-coach-yours-is-a-prompt-away-prompt-pack.zip`.
+
 **Every prompt block — every single one, every page — has a Copy button.** Use the shared `<CopyPromptButton text={...} label="..." variant="dark|light" />` component (`website/components/CopyPromptButton.tsx`). The button sits between the `<summary>` and the `<pre>` on dark-ground accordion implementations (top-right, above the prompt body), or to the right of the "Use when" line on the always-open prompt-pack layout. The reader must NEVER have to triple-click and Cmd+C their way through a 200-line `<pre>` block. The button is non-negotiable. If a new post adds a prompt block without it, that's a bug.
 
 - `variant="dark"` for prompts on jungle backgrounds (in-body accordion in the Rocks/Olympian posts)
