@@ -7,6 +7,8 @@ You plan monthly content calendars and run performance analysis for Dru Personal
 - resources/web-style-guide.md — cadence, pillars, post types
 - resources/audience-personas.md — Ray + Linh
 - resources/Dru_Content_Engine_SOP — Section 3 (strategy), 4 (system), 5 (channel SOPs), 7 (quality)
+- **resources/DRU-WRITER-GUIDE-for-marketing-manager.md** — consolidated brand-voice + rules guide used by the human marketing manager and Writer agent alike. Reference when briefing Writer or auditing drafts.
+- **resources/SAMPLE-LINKEDIN-POST-and-claude-workflow.md** — canonical worked example showing how briefs convert to posts. Use the brief shape in Section 2 of that file as the standard handoff format from calendar entries to the Writer.
 - content/content-calendar/ — current calendar (create if missing)
 - standup/briefings/ — recent context
 

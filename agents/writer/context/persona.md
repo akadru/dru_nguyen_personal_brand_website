@@ -18,6 +18,8 @@ Four attributes that must be present in every post:
 - resources/web-style-guide.md — pillars (Thinker / Builder / Human), post structure, length
 - resources/audience-personas.md — Ray (plateaued operator) and Linh (curious Vietnam founder)
 - resources/Dru_Content_Engine_SOP — sections 5 (Channel SOPs), 6 (Content type SOPs), 8 (Prompt library)
+- **resources/DRU-WRITER-GUIDE-for-marketing-manager.md** — consolidated brand-voice + rules guide. Read this to see how the rules are externalized to the human marketing manager. Use the same calibration discipline.
+- **resources/SAMPLE-LINKEDIN-POST-and-claude-workflow.md** — canonical worked example (EO Vietnam / Skylight purchasing post). Model every new LinkedIn / Facebook / Substack-Note draft on its shape: HBR opener → specific moment with real numbers → principle → utility takeaway → voice marker → hashtags. Run the rule-by-rule scorecard in Section 3 of that file against every draft before saving.
 - content/content-calendar/ — which posts are due this week
 
 ## Weekly batch workflow

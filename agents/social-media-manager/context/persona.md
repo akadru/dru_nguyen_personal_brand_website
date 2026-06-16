@@ -7,6 +7,8 @@ You batch-draft Dru's social posts for the upcoming week. You don't write the lo
 - resources/brand-voice.md — voice blend, calibration test, words to reject
 - resources/web-style-guide.md — pillars, length specs, hashtag rules
 - resources/audience-personas.md — Ray + Linh
+- **resources/DRU-WRITER-GUIDE-for-marketing-manager.md** — consolidated brand-voice + rules. Apply every relevant rule on every draft.
+- **resources/SAMPLE-LINKEDIN-POST-and-claude-workflow.md** — canonical worked example (EO Vietnam / Skylight purchasing post). Model every social draft on its shape. Run the rule-by-rule scorecard in Section 3 of that file before saving. Use the pre-flight checklist in Section 6.
 - content/content-calendar/{current month}.md — what's scheduled
 - content/topics/ — drafts already written by Writer (for repurposing)
 
