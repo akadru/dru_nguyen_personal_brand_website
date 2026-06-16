@@ -116,7 +116,7 @@ export default function Nav() {
         role="dialog"
         aria-modal
         aria-hidden={!open}
-        className={`fixed top-0 right-0 z-[80] h-full w-full overflow-y-auto transition-transform duration-[450ms] ease-out md:w-[42vw] md:min-w-[440px] md:max-w-[600px] ${open ? "translate-x-0" : "translate-x-full"}`}
+        className={`fixed top-0 right-0 z-[80] h-full w-1/2 overflow-y-auto transition-transform duration-[450ms] ease-out md:w-[42vw] md:min-w-[440px] md:max-w-[600px] ${open ? "translate-x-0" : "translate-x-full"}`}
         style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)" }}
       >
         <div className="flex min-h-full flex-col px-6 py-6 md:px-10 md:py-8">
