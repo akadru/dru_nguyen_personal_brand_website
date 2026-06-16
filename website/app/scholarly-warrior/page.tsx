@@ -17,7 +17,7 @@ const frameworks = [
 ];
 
 const stories = [
-  { title: "The DJ Origin", body: "Dad caught me ditching school at 17. His punishment: a DJ setup. I learned community-building by sharing knowledge openly when DJ culture hoarded it." },
+  { title: "The DJ Origin", body: "Dad caught me ditching school at 17. His punishment: a DJ setup. I learned community-building by sharing knowledge openly when DJ culture hoarded it.", img: "/images/stories/dj-origin.jpg" },
   { title: "The Factory", body: "Quit the family steel manufacturing business in Hanoi. Hardest conversation of my life. You can't build your future on someone else's blueprint." },
   { title: "The Fight", body: "Da Nang Muay Thai exhibition. Pissed myself backstage. Won by TKO in round two. Fear doesn't go away. You just stop letting it decide for you.", img: "/images/dru-muay-thai-2019.jpg" },
   { title: "The EOS Transformation", body: "Ran businesses in chaos and blamed the team. Read Traction with my brother TK. Implemented EOS. Nine months before the team fully bought in. Structure is freedom." },
