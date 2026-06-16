@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/build-prompt-packs.mjs",
     "build": "next build",
+    "build-prompt-packs": "node scripts/build-prompt-packs.mjs",
     "start": "next start",
     "lint": "eslint"
   },

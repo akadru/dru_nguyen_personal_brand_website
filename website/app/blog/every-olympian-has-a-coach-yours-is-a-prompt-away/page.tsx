@@ -121,6 +121,30 @@ export default function PostPage() {
           {/* PROMPTS */}
           <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Five Prompts</div>
 
+          <a
+            href="/downloads/every-olympian-has-a-coach-yours-is-a-prompt-away-prompt-pack.zip"
+            download
+            className="mt-2 inline-flex items-center gap-2 px-4 py-2 text-sm font-extrabold uppercase transition-transform hover:-translate-y-0.5"
+            style={{
+              background: "var(--brand-lime)",
+              color: "var(--brand-jungle)",
+              letterSpacing: "0.16em",
+              borderRadius: 6,
+              fontFamily: "'Outfit', system-ui, sans-serif",
+            }}
+            aria-label="Download all 5 prompts as a zip"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download all 5 prompts (.zip)
+          </a>
+          <p className="mt-2 text-xs" style={{ color: "var(--brand-pastel)" }}>
+            One <code>.md</code> per prompt + a README. Save to your LLM workspace and run them on a cadence.
+          </p>
+
           <div className="mt-6 space-y-12">
             {PROMPTS.map((p) => {
               const lineCount = p.body.split("\n").length;
