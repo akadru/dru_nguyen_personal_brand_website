@@ -14,7 +14,8 @@ const PRIMARY = [
   { href: "/ventures/eastwest", label: "East West" },
   { href: "/ventures/nuen", label: "Nuen Moto" },
   { href: "/ventures/eo", label: "Entrepreneurs' Org" },
-  { href: "/blog", label: "News & Stories" },
+  { href: "/press", label: "News & Stories" },
+  { href: "/blog", label: "Blog" },
   { href: "/speaking", label: "Speaking" },
 ];
 
