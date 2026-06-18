@@ -378,7 +378,53 @@ For each scheduled slot:
 
 ---
 
-## 16. The brand's hard limits
+## 16. Visual / design — non-negotiable color rules
+
+The brand palette is locked. **Most important rule for anyone designing assets:**
+
+### Lime-background contrast rule (locked 2026-06-18)
+
+When the lime green color `#ADFB49` is used as a **background** — full surfaces, cards, CTAs, pills, buttons — **every text element on it must be jungle `#0A1B24`.** Never white. Never pastel.
+
+White-on-lime fails accessibility contrast (3.7:1 — required is 4.5:1) and reads as washed-out. The brand's lime moments are high-impact display surfaces; they must be high-impact, not strained.
+
+**Approved color combinations:**
+
+| Background | Body text | Display headlines | Buttons |
+|---|---|---|---|
+| **Jungle** `#0A1B24` (dark) | White or pastel grey | White (with lime accent words OK) | Lime bg + jungle text |
+| **Lime** `#ADFB49` | **Jungle** | **Jungle** or **Myrtle italic** (display type only) | **Jungle bg + lime text (inverse)** |
+| **White** `#F2F2F2` | Jungle | Jungle (with myrtle italic accent) | Jungle bg + white text |
+| **Tea** `#D3EDC5` (soft) | Jungle | Jungle | Jungle bg + lime/white text |
+
+**Forbidden:**
+- White text on lime ground
+- Pastel text on lime ground
+- Lime text on white ground (insufficient contrast)
+- Myrtle body text on jungle ground (insufficient contrast)
+
+### Calibration question before shipping any visual
+
+> "If I squint at this from arm's length, is the text instantly readable?"
+
+If no, fail and rewrite the color choice.
+
+### Full palette reference
+
+| Token | Hex | Use |
+|---|---|---|
+| Jungle | `#0A1B24` | Primary dark ground. Default text on light grounds. |
+| Lime | `#ADFB49` | Accent + highlight on dark grounds. Background ONLY when text is jungle. |
+| Myrtle | `#347474` | Secondary depth. Display-type italic accent. |
+| Tea | `#D3EDC5` | Soft fill. |
+| Pastel grey | `#B0BEC5` | Neutral body text on dark grounds. |
+| White | `#F2F2F2` | Light. Body text on jungle. NEVER on lime. |
+
+This applies to: social cards, OG images, LinkedIn carousels, Substack header images, PDF downloads, any Canva asset, any phone-shot or stock-image overlay.
+
+---
+
+## 17. The brand's hard limits
 
 - Never publish anything on Dru's behalf without his explicit approval
 - Never schedule on platforms
