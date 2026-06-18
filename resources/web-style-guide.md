@@ -1,5 +1,37 @@
 # Web Style Guide — Dru Personal Brand
 
+## Brand palette + contrast rules (locked 2026-06-16)
+
+| Token | Hex | Use |
+|---|---|---|
+| `--brand-jungle` | `#0A1B24` | Primary dark ground. Default text on light grounds. |
+| `--brand-lime` | `#ADFB49` | Accent + highlight on dark grounds. Used as a background only when text is JUNGLE. |
+| `--brand-myrtle` | `#347474` | Secondary depth. Display-type italic accent. |
+| `--brand-tea` | `#D3EDC5` | Soft fill. |
+| `--brand-pastel` | `#B0BEC5` | Neutral body text on dark grounds. |
+| `--brand-white` | `#F2F2F2` | Light. Body text on jungle. NEVER on lime. |
+
+### Non-negotiable contrast rule
+
+**On lime backgrounds, text is always jungle.** Never white. Never pastel. Never any color with luminance > 0.4.
+
+White-on-lime fails WCAG contrast (~3.7:1 vs. required 4.5:1) and reads as washed-out. The brand's lime moments are high-impact display surfaces — they must be high-impact, not strained.
+
+**Approved combinations:**
+
+| Section background | Body text | Display headlines | Buttons |
+|---|---|---|---|
+| Jungle | White / Pastel | White (with lime accent words) | Lime bg + Jungle text |
+| Lime | **Jungle** | **Jungle** (default) or **Myrtle italic** | Jungle bg + Lime text (inverse) |
+| White | Jungle | Jungle (with myrtle italic accent) | Jungle bg + White text |
+| Tea | Jungle | Jungle | Jungle bg + Lime/White text |
+
+**Forbidden on lime grounds:** white text, pastel text, light-myrtle text. **Forbidden on white grounds:** lime text (insufficient contrast). **Forbidden on jungle grounds:** myrtle body text (insufficient contrast).
+
+**Reference implementation:** `website/app/scholarly-warrior/page.tsx` hero (after 2026-06-16 fix) — every text element on the lime section explicitly sets `color: var(--brand-jungle)`. Use as the model for any new lime-grounded section.
+
+---
+
 ## Content pillars (every post fits one — if it doesn't, it doesn't ship)
 
 | Pillar | Mix | Purpose |

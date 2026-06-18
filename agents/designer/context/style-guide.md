@@ -58,6 +58,30 @@ Use plain English color names in prompts (jungle, lime, myrtle, tea green, paste
 - One dominant lime moment per image. Never lime everywhere.
 - Lime never appears on white grounds. Dark only.
 
+### Lime-background contrast rule (NON-NEGOTIABLE — locked 2026-06-16)
+
+When lime is used as a **background** (a full section fill, a card fill, a CTA fill, a pill, a button), **every piece of text inside it must be jungle `#0A1B24`.** Never white. Never pastel. Never myrtle-on-lime body text (myrtle headlines on lime can work for display type only — body text always jungle).
+
+**Why:** white on lime fails WCAG contrast (3.7:1 vs. required 4.5:1) and reads as washed-out in real lighting. The brand's high-impact moments must be *high-impact*, not strained.
+
+**Approved text colors on lime grounds:**
+| Element | Color |
+|---|---|
+| Body text, captions, paragraphs | **Jungle `#0A1B24`** |
+| Headlines, display type | **Jungle** (default) or **Myrtle `#347474`** (italic accent only, large sizes only) |
+| Buttons sitting on a lime section | Jungle background + lime text (inverse), OR jungle outline + jungle text |
+| Borders, dividers | Jungle |
+| Icons | Jungle |
+
+**Forbidden on lime backgrounds:**
+- White text (`#F2F2F2` / `var(--brand-white)`)
+- Pastel text (`#B0BEC5` / `var(--brand-pastel)`)
+- Any color with luminance > 0.4
+
+**Reference implementation:** scholarly-warrior hero (after 2026-06-16 fix) — every text element explicitly sets `color: var(--brand-jungle)`. Use this as the model.
+
+This rule extends to every surface — Next.js pages, designer assets (Banksy stencils on lime are fine since the stencil is THE text and is rendered in solid jungle/dark), social cards, OG images, prompt-pack PDFs.
+
 ---
 
 ## Visual references
