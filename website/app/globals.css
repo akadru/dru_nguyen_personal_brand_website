@@ -67,6 +67,15 @@ html, body {
 /* ---- Selection color ---- */
 ::selection { background: var(--brand-lime); color: var(--brand-jungle); }
 
+/* ---- Lime-background contrast rule (locked 2026-06-16) ----
+ * Non-negotiable: when --brand-lime is used as a background (full section,
+ * card, CTA, pill, button), every text descendant must explicitly set
+ * color: var(--brand-jungle). Never white. Never pastel. White-on-lime
+ * fails WCAG contrast (3.7:1 vs. required 4.5:1).
+ * Enforcement is at the React component level — see resources/web-style-guide.md
+ * "Brand palette + contrast rules" and agents/designer/context/style-guide.md
+ * "Lime-background contrast rule". */
+
 /* ---- Lime-on-hover utility for any link / button that opts in ---- */
 a.lime-on-hover, button.lime-on-hover { transition: color 0.2s ease; }
 a.lime-on-hover:hover, button.lime-on-hover:hover { color: var(--brand-lime); }

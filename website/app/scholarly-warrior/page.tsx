@@ -33,19 +33,19 @@ export default function ScholarlyWarriorPage() {
         <div className="relative z-10 mx-auto grid max-w-[1300px] gap-10 px-5 pb-20 pt-28 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:px-10 md:pb-28 md:pt-36">
           <div>
             <Reveal>
-              <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-white)", letterSpacing: "0.22em" }}>
+              <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.22em" }}>
                 Identity Layer · 02
               </div>
             </Reveal>
             <Reveal delay={1}>
-              <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(48px, 9vw, 128px)", lineHeight: 0.92, letterSpacing: "-0.035em" }}>
+              <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(48px, 9vw, 128px)", lineHeight: 0.92, letterSpacing: "-0.035em", color: "var(--brand-jungle)" }}>
                 Scholarly
                 <br />
                 <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Warrior.</em>
               </h1>
             </Reveal>
             <Reveal delay={2}>
-              <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-white)" }}>
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-jungle)" }}>
                 <strong>Care. Discipline. Grit.</strong> The operating identity. Discipline plus learning as an
                 integrated philosophy. The POV, the frameworks, and the operator essays.
               </p>
@@ -62,7 +62,7 @@ export default function ScholarlyWarriorPage() {
                 <Link
                   href="/blog"
                   className="inline-flex items-center justify-center rounded-full border-2 px-7 py-4 text-sm font-bold uppercase tracking-wider"
-                  style={{ borderColor: "rgba(176,190,197,0.25)", color: "var(--brand-white)", letterSpacing: "0.05em" }}
+                  style={{ borderColor: "var(--brand-jungle)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
                 >
                   Read the essays
                 </Link>
