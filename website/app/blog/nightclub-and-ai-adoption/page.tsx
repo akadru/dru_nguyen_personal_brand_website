@@ -4,12 +4,12 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export const metadata: Metadata = {
-  title: "What a Paradise Garage DJ taught me about AI adoption | Dru Nguyen",
+  title: "What running a nightclub taught me about AI adoption | Dru Nguyen",
   description:
     "Every AI rollout has the same room: 70% locked in, 20% pretending, 10% gone. The mistake operators make is trying to convert the 20%. Find your front row instead.",
   alternates: { canonical: "/blog/nightclub-and-ai-adoption" },
   openGraph: {
-    title: "What a Paradise Garage DJ taught me about AI adoption",
+    title: "What running a nightclub taught me about AI adoption",
     description:
       "70% locked in, 20% pretending, 10% gone. Stop selling to the skeptics. Find your front row.",
     type: "article",
@@ -41,7 +41,7 @@ export default function PostPage() {
           </Reveal>
           <Reveal delay={2}>
             <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 84px)", lineHeight: 0.98, letterSpacing: "-0.03em" }}>
-              What a Paradise Garage DJ taught me{" "}
+              What running a nightclub taught me{" "}
               <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>about AI adoption.</em>
             </h1>
           </Reveal>
@@ -68,9 +68,8 @@ export default function PostPage() {
             <p>
               1979. Saturday night at{" "}
               <a href="https://en.wikipedia.org/wiki/Paradise_Garage" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Paradise Garage</a>{" "}
-              in Manhattan. Twelve hundred people on a converted parking garage floor.{" "}
-              <a href="https://en.wikipedia.org/wiki/Larry_Levan" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Larry Levan</a>{" "}
-              is in the DJ booth.
+              in Manhattan. Twelve hundred people on a converted parking garage floor. Lawrence Philpot, known in the booth as{" "}
+              <a href="https://en.wikipedia.org/wiki/Larry_Levan" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Larry Levan</a>, is on the decks. The dancers there called him &ldquo;Larry,&rdquo; and what he did on a Saturday night the rest of the world later called the modern DJ set.
             </p>
             <p>
               By midnight Larry can tell you who in that room is dancing because the music caught them, and who is dancing because they came with someone who is. He plays to the first group. He has said this openly in interviews. He picks the front row, the dancers locked in by 1am, and serves them for the rest of the night.
@@ -135,38 +134,41 @@ export default function PostPage() {
               We lost the 20% who had already mentally checked out. The 70% who had been waiting locked in harder. Best second set we did that quarter.
             </p>
             <p>
-              When I rolled Claude into Skylight ops last year, I ran the same play. I did not push a license to every manager. I sat with my F&amp;B controller, Anh, for one Tuesday afternoon. She had been hand-reconciling bank exports against the POS for six hours a month. By 5pm we had Claude doing the variance check in eight minutes. She closed her month three days early.
+              When I rolled Claude into Skylight ops last year, I ran the same play. I did not push a license to every manager. I sat with my F&amp;B controller, Anh, for one Tuesday afternoon. The workflow she had been wrestling with for a year was the one I had been wrestling with for longer: setting our weekly purchasing par levels. Order too much, cash sits on the shelf and produce dies in the walk-in. Order too little, the floor calls me at service and we 86 a dish at 9pm.
             </p>
             <p>
-              The next week three of her teammates asked her how she did it. Two months in, Claude was in five workflows across the venue, and I had not held a single training session. The 70% pulled the 20% in.{" "}
+              Three policy rewrites. Still not landing. By 5pm that Tuesday, Claude had broken our par levels into category-level rules, mapped the cash-versus-stockout trade-off across high-velocity and low-velocity SKUs, and surfaced two ordering patterns Anh and I had not tested. The next week she ran the revised par sheet for the first time. Two weeks in, she ran it without me.
+            </p>
+            <p>
+              Then three of her teammates asked her how she did it. Two months in, Claude was in five workflows across the venue, and I had not held a single training session. The 70% pulled the 20% in.{" "}
               <strong style={{ color: "var(--brand-white)" }}>Anh got the credit. Claude was a tool, not a brand.</strong>
             </p>
           </div>
 
-          {/* §07 — THE HANDOFF (3-question test, tactical utility) */}
+          {/* §07 — THE HANDOFF (The Front Row Test, tactical utility) */}
           <h2 className="mt-16 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
-            The 3 questions I run <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>before any rollout.</em>
+            The Front Row Test <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>for any AI rollout.</em>
           </h2>
           <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
-              Before I roll a tool into any of my companies or any of my advisory portfolio, I sit down on a Sunday and answer these three questions. No tool gets purchased until I can answer all three.
+              Before I roll a tool into any of my companies or any of my advisory portfolio, I sit down on a Sunday and run the Front Row Test. Three questions. No tool gets purchased until I can answer all three in writing.
             </p>
             <ol className="mt-6 space-y-5 pl-5 list-decimal">
               <li>
-                <strong style={{ color: "var(--brand-white)" }}>Who on my team is already hacking around this problem?</strong>{" "}
-                Not who would benefit. Who is already running a Google Sheet, a Zapier, a personal ChatGPT tab, a manual workaround. They are my 70%. They have done half the work already. Find them first.
+                <strong style={{ color: "var(--brand-white)" }}>Who is in my front row right now?</strong>{" "}
+                Name them. The Front Row is the 70% who are already hacking around the problem. They are running a Google Sheet at midnight, a personal ChatGPT tab, a manual workaround. They are not a job title. They are a name. If I cannot name three, I do not have a front row yet, and I am not ready to roll out.
               </li>
               <li>
-                <strong style={{ color: "var(--brand-white)" }}>What is the one task I can give them on Monday that ships by Friday?</strong>{" "}
-                Not a license. Not a training. A specific deliverable: close the month, draft the SOP, reconcile the export, write the QBR. Ship something visible inside one week.
+                <strong style={{ color: "var(--brand-white)" }}>What can my Front Row ship by Friday?</strong>{" "}
+                Not a license. Not a training. A specific deliverable they can show another person on Friday. The revised par sheet. The closed month. The drafted SOP. The reconciled export. If I cannot name a Friday artifact, the rollout is not concrete enough yet.
               </li>
               <li>
-                <strong style={{ color: "var(--brand-white)" }}>Who does my 70% report to, and what do they need to see to clear the runway?</strong>{" "}
-                Anh&apos;s manager needed to see the closed month three days early. That was enough. Identify the unblocker for the 70% in advance. Make the win visible to them, not to the skeptics.
+                <strong style={{ color: "var(--brand-white)" }}>Who needs to see the win, and what does it look like to them?</strong>{" "}
+                Identify the unblocker in advance. Anh&apos;s GM needed to see the par sheet running cleanly for two weeks. That was the unlock. Make the win visible to the unblocker, not to the loudest skeptic. The skeptic is downstream of the unblocker, always.
               </li>
             </ol>
             <p className="mt-8">
-              If you can answer all three questions cleanly, you have a rollout. If you cannot, you have a vendor pitch. Buy nothing until you have a rollout.
+              If you can answer all three cleanly, you have a rollout. If you cannot, you have a vendor pitch. Buy nothing until you have a rollout.
             </p>
           </div>
 
