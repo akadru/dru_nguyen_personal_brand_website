@@ -508,6 +508,56 @@ export default function Page() {
               <a href="https://www.eosworldwide.com/" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>EOS</a>{" "}
               (Entrepreneurial Operating System) shorthand for a top-3 priority for the quarter. Owner named, deadline set, binary done or not done. Ninety-day chunks. If your team runs OKRs, sub in &ldquo;key result.&rdquo; If you run no framework yet, read it as &ldquo;the 3 things that have to be true by end of quarter or this quarter failed.&rdquo;
             </p>
+
+            <figure style={{ margin: "2.5rem 0" }}>
+              <svg
+                viewBox="0 0 760 380"
+                role="img"
+                aria-labelledby="rock-anatomy-title rock-anatomy-desc"
+                style={{ width: "100%", height: "auto", display: "block", fontFamily: "'Outfit', system-ui, sans-serif" }}
+              >
+                <title id="rock-anatomy-title">Anatomy of a rock</title>
+                <desc id="rock-anatomy-desc">
+                  One quarterly rock has four traits: one owner, one deadline at day 90, a binary done-or-not outcome, and a hard limit of three per quarter.
+                </desc>
+
+                <rect x="1" y="1" width="758" height="378" rx="16" fill="rgba(255,255,255,0.02)" stroke="var(--brand-myrtle)" strokeWidth="1" />
+                <text x="28" y="34" fill="var(--brand-pastel)" fontSize="12.5" letterSpacing="1.5">ANATOMY OF A ROCK</text>
+
+                <line x1="234" y1="104" x2="270" y2="156" stroke="var(--brand-myrtle)" strokeWidth="1.5" strokeDasharray="4 4" />
+                <line x1="526" y1="104" x2="490" y2="156" stroke="var(--brand-myrtle)" strokeWidth="1.5" strokeDasharray="4 4" />
+                <line x1="234" y1="276" x2="270" y2="224" stroke="var(--brand-myrtle)" strokeWidth="1.5" strokeDasharray="4 4" />
+                <line x1="526" y1="276" x2="490" y2="224" stroke="var(--brand-myrtle)" strokeWidth="1.5" strokeDasharray="4 4" />
+
+                <rect x="270" y="156" width="220" height="68" rx="12" fill="rgba(173,251,73,0.08)" stroke="var(--brand-lime)" strokeWidth="2" />
+                <text x="380" y="188" fill="var(--brand-lime)" fontSize="16" fontWeight="600" textAnchor="middle">Ship Claude-prep agent</text>
+                <text x="380" y="209" fill="var(--brand-pastel)" fontSize="11.5" textAnchor="middle">Xood rock · this quarter</text>
+
+                <rect x="24" y="46" width="210" height="74" rx="10" fill="rgba(255,255,255,0.03)" stroke="var(--brand-myrtle)" strokeWidth="1" />
+                <text x="40" y="72" fill="var(--brand-lime)" fontSize="13.5" fontWeight="600">01 · one owner</text>
+                <text x="40" y="93" fill="var(--brand-white)" fontSize="12.5">anh Linh owns it.</text>
+                <text x="40" y="110" fill="var(--brand-pastel)" fontSize="12.5">A name, not a team.</text>
+
+                <rect x="526" y="46" width="210" height="74" rx="10" fill="rgba(255,255,255,0.03)" stroke="var(--brand-myrtle)" strokeWidth="1" />
+                <text x="542" y="72" fill="var(--brand-lime)" fontSize="13.5" fontWeight="600">02 · one deadline</text>
+                <text x="542" y="93" fill="var(--brand-white)" fontSize="12.5">By 28 June.</text>
+                <text x="542" y="110" fill="var(--brand-pastel)" fontSize="12.5">End of the quarter.</text>
+
+                <rect x="24" y="260" width="210" height="74" rx="10" fill="rgba(255,255,255,0.03)" stroke="var(--brand-myrtle)" strokeWidth="1" />
+                <text x="40" y="286" fill="var(--brand-lime)" fontSize="13.5" fontWeight="600">03 · binary</text>
+                <text x="40" y="307" fill="var(--brand-white)" fontSize="12.5">5 of 5 customers.</text>
+                <text x="40" y="324" fill="var(--brand-pastel)" fontSize="12.5">No 80%, no &ldquo;almost.&rdquo;</text>
+
+                <rect x="526" y="260" width="210" height="74" rx="10" fill="rgba(255,255,255,0.03)" stroke="var(--brand-myrtle)" strokeWidth="1" />
+                <text x="542" y="286" fill="var(--brand-lime)" fontSize="13.5" fontWeight="600">04 · short list</text>
+                <text x="542" y="307" fill="var(--brand-white)" fontSize="12.5">One of Xood&apos;s three.</text>
+                <text x="542" y="324" fill="var(--brand-pastel)" fontSize="12.5">Everything else waits.</text>
+              </svg>
+              <figcaption style={{ marginTop: "0.75rem", fontSize: "0.85em", color: "var(--brand-pastel)", textAlign: "center" }}>
+                Four traits, or it is not a rock. Miss one and you have a wish.
+              </figcaption>
+            </figure>
+
             <p>
               Ever sit down on Sunday night with a list of rocks you committed to this quarter, and realize you cannot remember the last time you touched half of them?
             </p>
