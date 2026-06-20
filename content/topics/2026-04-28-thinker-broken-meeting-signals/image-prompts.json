@@ -1,0 +1,23 @@
+{
+  "topic": "Three signals a team is wasting its AI advantage in meetings, with concrete fixes for each.",
+  "week_of": "2026-04-27",
+  "phrases": [
+    "DO THE WORK.",
+    "CIRCLE BACK ENDS.",
+    "Coordination is the messier layer to fix."
+  ],
+  "images": [
+    {
+      "file": "blog.md",
+      "slug": "three-signals-meetings-wasting-ai-advantage",
+      "image_class": "TEXT",
+      "style": "STREET_ART",
+      "sub_mode": "stencil",
+      "concept": "Banksy-style stencil mural on a worn Saigon brick wall reading 'DO THE WORK.' in lime spray paint. The phrase ties to the post's call to fix coordination, not just production. Late afternoon side-light, motorbikes blurred behind. Hand-painted, imperfect edges.",
+      "text": "DO THE WORK.",
+      "aspect_ratio": "16:9",
+      "dimensions": "1200x630",
+      "prompt": "A 16:9 image, 1200x630. Subject: A worn brick wall in a Saigon back-alley with a Banksy-style stencil mural sprayed across it. The phrase 'DO THE WORK.' rendered in lime green spray paint, sharp letterforms, the period included. Rough, fresh, slightly dripping. Late afternoon side-light. Motorbikes blurred in the background, paper-lantern warmth from a shophouse to the side. Style: hand-painted street art in the style of Banksy stencil work, fused with Saigon-Tokyo-Kyoto urban fabric. Visible brushwork, imperfect edges, hand-made feel. Mood is bold, energetic, coaching, confident, hand-painted. Stencil sub-mode: high-contrast monochrome with single lime accent, sharp edges. Visual references: Banksy stencil work, Saigon District 2 mural walls. Mood: bold, observant, tactical. Colors: dominant jungle and weathered brick, with lime used as a thick stencil border framing the composition. Composition: 16:9 horizontal. The stencil fills the central two-thirds of the frame. Lime is the dominant accent in the spray-paint text. Side-light from the right creating texture on the brick. Saigon street energy in the background blur. Render the word 'DO THE WORK.' stenciled in lime green spray paint, sharp letterforms, Banksy stencil style. Spell every letter correctly. Include the period at the end. Avoid: people, faces, AI iconography, robots, glowing circuits, neon, cyberpunk, Blade Runner palette, purple, orange, red dominant, neural-net brain visuals, clip-art, clean vector style, vector-perfect AI street art look (must look hand-painted with imperfect edges). No watermarks, no Western corporate stock aesthetic, no glowing circuits or robot imagery anywhere in the image."
+    }
+  ]
+}

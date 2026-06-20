@@ -18,8 +18,10 @@ Identity: **The Scholarly Warrior.** Care. Discipline. Grit.
 ## Brand quick reference
 - Palette: `#0A1B24` (jungle, primary), `#ADFB49` (lime, accent — dark bg only), `#347474` (myrtle), `#D3EDC5` (tea), `#B0BEC5` (pastel), `#F2F2F2` (white).
 - Web font: **Outfit**. Blog post body (print-card template): Plus Jakarta Sans.
-- Voice blend: 70% Jeff Su / 15% Tony Robbins / 10% Daniel Priestley / 5% Gary Vee.
+- Voice blend: 50% Jeff Su / 20% Alex Hormozi / 15% Dan Martell / 15% Tony Robbins.
+- Focus: thought leadership on **leadership**, **AI education**, and **AI/operator trends**.
 - Pillars: Thinker (40%) · Builder (35%) · Human (25%).
+- Weekly cadence (algorithm-aware): 1 long-form blog (Wed) · 1 Substack essay (Tue) · 3 LinkedIn shorts (Mon/Fri/Sat) · 3 Substack Notes (paired) · 1–2 Facebook VN (optional).
 - Anchor hashtag: `#DoingGoodWithData`. Standing brand hashtag (blog/site): `#FutureOfWork`.
 - Timezone: `Asia/Ho_Chi_Minh` (UTC+7).
 

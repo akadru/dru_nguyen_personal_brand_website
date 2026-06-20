@@ -81,10 +81,15 @@ The signature brand look. Banksy stencil + Sam Flores painterly character + Uppe
   - **Background must change for every image.** Never reuse the same scene twice. Rotation pool: Saigon back-alley with motorbikes; Saigon rooftop wall morning; Saigon pho shop wall; Saigon construction-site hoarding; Tokyo Golden Gai alley wall; Tokyo back-alley vending machine; Kyoto temple side wall; Kyoto warehouse district. Default to Saigon. Track previously-used backgrounds in `working_files/banksy-backgrounds-used.md` (one line per slug + background description).
   - **People in background only**: distant silhouette or back view. Never face the camera. Never as focal subject.
   - **Photographic depth of field**: f/4 aperture means subject wall is sharp, background is in soft focus.
+  - **No written language in the background.** The stencil text is the only language in frame. NO kanji, NO Vietnamese, NO English, NO Chinese, NO Korean — no readable words anywhere in the image except the stencil itself. This rules out bar signs, shop names, street signs, vending-machine product labels, license plates, posters, menus.
+  - **Visual-only elements ARE welcome.** Paper lanterns (plain, no text on them), vending machines (anonymous face, no logos or labels), murals, geometric icons, pictogram-only signs, art on walls, plain shutters, motorbikes, bicycles, lights. These add atmosphere without breaking the no-language rule.
+  - When prompting a scene that naturally includes signage (Saigon shophouses, Tokyo Golden Gai bars), explicitly strip it: "paper lanterns are plain red, no kanji," "vending machine face is anonymous, no product labels," "shop windows blank or shuttered."
+  - If readable text appears in the generated image, regenerate.
 
 - **Painted character** (Sam Flores mode): soft brushwork, dreamlike figure, warm tones with lime highlights.
 - **Gallery streetwear** (Upper Playground mode): confident character composition, painterly, suitable for a gallery print.
 - **Mural** (Saigon street): a wall in District 2 with a painted scene, tagged with lime, motorbike or scooter passing.
+- **Pop Grid (Banksy × Warhol, EXCEPTION sub-mode, locked 2026-05-11):** A 2x2 grid of the same stencil silhouette sprayed in four pop colors (lime + 3 secondary brights: hot pink, electric cyan, warm gold) on a hyper-realistic Saigon wall. **Deliberately breaks the lime-only canon for special posts.** Use case: manifestos, brand-identity anchor pieces, launch announcements, anniversary or celebration moments. **Maximum 1 per quarter.** Subject must be a clean stencil silhouette (phin coffee dripper, boxing glove, laptop, scholarly warrior icon — never text). Reference example: `agents/designer/context/banksy-warhol-experiment.png`. Always: no readable language in frame, distant background figure silhouette only, hyper-realistic photo execution. Never default to this; use only when the post is special enough to earn the canon break.
 
 ### 3. PLACE / SCENE
 Real streets, rooftops, and interiors of Saigon, Tokyo, or Kyoto. No characters as focal subject (figures may appear distant or as silhouettes).
