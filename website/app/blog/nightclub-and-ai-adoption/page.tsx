@@ -8,12 +8,12 @@ import { PROMPTS } from "./prompts";
 export const metadata: Metadata = {
   title: "What running a nightclub taught me about AI adoption | Dru Nguyen",
   description:
-    "Every AI rollout has the same room: 70% locked in, 20% pretending, 10% gone. The mistake operators make is trying to convert the 20%. Find your front row instead.",
+    "Every AI rollout has the same room: 70% locked in, 20% pretending, 10% gone. Stop selling to the skeptics. Find the front row.",
   alternates: { canonical: "/blog/nightclub-and-ai-adoption" },
   openGraph: {
     title: "What running a nightclub taught me about AI adoption",
     description:
-      "70% locked in, 20% pretending, 10% gone. Stop selling to the skeptics. Find your front row.",
+      "70% locked in, 20% pretending, 10% gone. Stop selling to the skeptics. Find the front row.",
     type: "article",
     url: "/blog/nightclub-and-ai-adoption",
     images: [{ url: "/images/blog/nightclub-and-ai-adoption.webp", width: 1200, height: 630 }],
@@ -37,7 +37,7 @@ export default function PostPage() {
             <div className="mt-8 flex flex-wrap items-center gap-3 text-xs font-bold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
               <span>The Builder</span><span style={{ color: "var(--brand-pastel)" }}>·</span>
               <span>Hospitality · AI Adoption</span><span style={{ color: "var(--brand-pastel)" }}>·</span>
-              <span style={{ color: "var(--brand-pastel)" }}>6 MIN READ</span><span style={{ color: "var(--brand-pastel)" }}>·</span>
+              <span style={{ color: "var(--brand-pastel)" }}>4 MIN READ</span><span style={{ color: "var(--brand-pastel)" }}>·</span>
               <span style={{ color: "var(--brand-pastel)" }}>13 MAY 2026</span>
             </div>
           </Reveal>
@@ -60,127 +60,130 @@ export default function PostPage() {
       <section className="py-16 md:py-24">
         <div className="mx-auto max-w-[760px] px-5 md:px-10" style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
 
-          {/* §01 — FELT QUESTION (HBR-style provocation) */}
+          {/* §01 — Felt question */}
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
-            Name one team rollout you launched in the last twelve months. Now name the three people you actually spent your energy on. If most of them were the ones complaining the loudest, you and I are reading the same post.
+            Think about the last tool you rolled out at work. Now picture the three people you fought hardest to convince. If they were the loudest skeptics instead of the people already asking for the tool, you ran the rollout backward.
           </p>
 
-          {/* §02 — THE STORY (Larry Levan / Paradise Garage) */}
+          {/* §02 — Black Coffee at Hï Ibiza */}
           <div className="mt-10 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
-              1979. Saturday night at{" "}
-              <a href="https://en.wikipedia.org/wiki/Paradise_Garage" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Paradise Garage</a>{" "}
-              in Manhattan. Twelve hundred people on a converted parking garage floor. Lawrence Philpot, known in the booth as{" "}
-              <a href="https://en.wikipedia.org/wiki/Larry_Levan" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Larry Levan</a>, is on the decks. The dancers there called him &ldquo;Larry,&rdquo; and what he did on a Saturday night the rest of the world later called the modern DJ set.
+              In 2018,{" "}
+              <a href="https://en.wikipedia.org/wiki/Black_Coffee_(DJ)" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Black Coffee</a>{" "}
+              opened his Saturday residency at{" "}
+              <a href="https://hiibiza.com/" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Hï Ibiza</a>{" "}
+              and the room he walked into every night split the same way. <strong style={{ color: "var(--brand-white)" }}>70%</strong> of the crowd was already locked in, ready for the next track. <strong style={{ color: "var(--brand-white)" }}>20%</strong> was wandering through with their phones up, half-watching. <strong style={{ color: "var(--brand-white)" }}>10%</strong> was leaving before he had even played a record.
             </p>
             <p>
-              By midnight Larry can tell you who in that room is dancing because the music caught them, and who is dancing because they came with someone who is. He plays to the first group. He has said this openly in interviews. He picks the front row, the dancers locked in by 1am, and serves them for the rest of the night.
+              He played for the 70% all night. His sets ran six to seven hours and he built them slowly. The 20% either converted by hour two or wandered out for a louder room. The 10% were never coming back. By 4am, the floor he was left with was the floor he had picked at midnight, just deeper and more committed.
             </p>
             <p>
-              The back half catches up or leaves. Either result is fine. He does not turn the music up to convince them. He does not change the genre to flatter them. He picks one cut, drops the energy on purpose, and pulls his believers deeper. The believers pull the curious. The curious pull the back row, or they go home.
-            </p>
-            <p>
-              By 4am the back half is either gone or fully converted. The room he ends with is the room he picked at midnight, just bigger.
+              Six years later, Hï was voted the number-one club in the world three years running. Black Coffee never changed the rule.
             </p>
           </div>
 
-          {/* §03 — THE PRINCIPLE */}
+          {/* §03 — Principle */}
           <div className="mt-10 rounded-2xl p-8 md:p-10" style={{ background: "rgba(173,251,73,0.06)", border: "1px solid rgba(173,251,73,0.25)" }}>
             <p className="text-lg italic md:text-xl" style={{ color: "var(--brand-white)", fontFamily: "'Plus Jakarta Sans', serif" }}>
               The crowd does not change because you turn the music up. It changes because{" "}
-              <span style={{ color: "var(--brand-lime)" }}>the people in the front row are dancing.</span>
+              <span style={{ color: "var(--brand-lime)" }}>the front row is dancing.</span>
             </p>
           </div>
 
-          {/* §04 — TAKEAWAY THIS WEEK */}
+          {/* §04 — Apply to reader */}
           <h2 className="mt-16 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
-            Takeaway <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>this week.</em>
+            The same split shows up <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>at work.</em>
           </h2>
-
-          {/* §05 — APPLY TO THE READER */}
-          <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
+          <div className="mt-6 space-y-5 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
-              If you are rolling out{" "}
-              <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Claude</a>, ChatGPT, or any other AI tool at your company, you have the same room as Larry. It splits the same way every time.
+              I have watched the same percentages play out on every AI rollout I have run across my own companies and inside the businesses I advise.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-white)" }}>70% are already locked in.</strong> Ops people who feel the work is broken and are looking for a way to fix it. Finance people tired of reconciling exports by hand. Account managers tired of writing the same email seventeen times. They are not waiting for permission. They are waiting for a tool that does not feel like a toy.
+              <strong style={{ color: "var(--brand-white)" }}>The 70% are the people on your team who are already running workarounds.</strong> They have a Google Sheet open at midnight. They keep a personal ChatGPT tab next to their work tabs. They are not waiting for a license or a training. They want the tool yesterday.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-white)" }}>20% are pretending.</strong> They nod in the all-hands. They go to the training. They do not actually open the tool on Monday. Their objections sound technical but they are emotional. They will not convert until the 70% have already shipped something they wish they had shipped first.
+              <strong style={{ color: "var(--brand-white)" }}>The 20% are the people who nod through the all-hands and never open the tool on Monday.</strong> Their objections will sound technical, but the resistance is usually emotional. They will not convert until the 70% has already shipped something they wish they had shipped first.
             </p>
             <p>
-              <strong style={{ color: "var(--brand-white)" }}>10% are gone.</strong> They will leave the company over this or quietly opt out for the rest of their tenure. Not your problem. Not your job to change. Your job is to make sure they do not slow the 70%.
+              <strong style={{ color: "var(--brand-white)" }}>The 10% have already decided this is not for them.</strong> Some will leave the company over it. Most will quietly opt out for the rest of their tenure. They are not yours to convert.
             </p>
             <p>
-              The mistake almost every operator makes is spending the rollout energy on the 20%. You will not convert them in week one. The energy you spend on them is energy you are stealing from the 70%.
+              The mistake almost every operator makes is the same. They burn the rollout arguing with the 20%. The 70% gets ignored, loses momentum, and a few of them start looking for a job somewhere that already has the tool you are failing to deliver.
             </p>
             <p>
-              Find the 70% on Monday. Serve them harder. Let the rest catch up.
+              Black Coffee never made that mistake. He served the believers harder every hour and let the rest catch up or leave. Run your rollout the same way. Find your 70% on Monday morning and build the workflow with them.
             </p>
           </div>
 
-          {/* §06 — DRU'S APPLICATION */}
+          {/* §05 — Dru's application */}
           <h2 className="mt-16 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
-            How I run this <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>at Skylight.</em>
+            How I ran this <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>at Skylight.</em>
           </h2>
-          <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
+          <div className="mt-6 space-y-5 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
             <p>
-              I learned the room split before I learned it applied to software. October 2023. Friday at Skylight, our rooftop venue in Nha Trang. The DJ before our headliner had cleared the floor, the wrong way. Crowd was milling toward the exit. Our headliner was in the wings refusing to come on until the room reset.
+              The workflow that kept breaking at Skylight was setting our weekly purchasing par levels. If I ordered too much, cash sat in inventory and produce died in the walk-in. If I ordered too little, the kitchen ran out at service. I had rewritten the policy three times in twelve months, and none of the rewrites held.
             </p>
             <p>
-              The floor manager wanted to call last-track on the warm-up DJ and cross-fade into the headliner. I told him to do the opposite.{" "}
-              <strong style={{ color: "var(--brand-white)" }}>Cut the music for 90 seconds. Drop the lights. Let the headliner walk out into silence and start cold.</strong>
+              One Tuesday afternoon, I gave{" "}
+              <a href="https://www.anthropic.com/claude" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Claude</a>{" "}
+              the current par sheet and the last three months of stockout data. By 5pm, we had a new sheet built as category-level rules, plus two ordering patterns I had not tested.
             </p>
             <p>
-              We lost the 20% who had already mentally checked out. The 70% who had been waiting locked in harder. Best second set we did that quarter.
-            </p>
-            <p>
-              When I rolled Claude into Skylight ops last year, I ran the same play. I did not push a license to every manager. I sat with my F&amp;B controller, Anh, for one Tuesday afternoon. The workflow she had been wrestling with for a year was the one I had been wrestling with for longer: setting our weekly purchasing par levels. Order too much, cash sits on the shelf and produce dies in the walk-in. Order too little, the floor calls me at service and we 86 a dish at 9pm.
-            </p>
-            <p>
-              Three policy rewrites. Still not landing. By 5pm that Tuesday, Claude had broken our par levels into category-level rules, mapped the cash-versus-stockout trade-off across high-velocity and low-velocity SKUs, and surfaced two ordering patterns Anh and I had not tested. The next week she ran the revised par sheet for the first time. Two weeks in, she ran it without me.
-            </p>
-            <p>
-              Then three of her teammates asked her how she did it. Two months in, Claude was in five workflows across the venue, and I had not held a single training session. The 70% pulled the 20% in.{" "}
-              <strong style={{ color: "var(--brand-white)" }}>Anh got the credit. Claude was a tool, not a brand.</strong>
+              Two weeks later, the team was running the new par sheet on their own. Two months later, Claude was in five workflows across the venue. I never held a training session. <strong style={{ color: "var(--brand-white)" }}>The team owned the work. Claude was the tool.</strong>
             </p>
           </div>
 
-          {/* §07 — THE HANDOFF (The Front Row Test, tactical utility) */}
+          {/* §06 — The Front Row Test */}
           <h2 className="mt-16 text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
-            The Front Row Test <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>for any AI rollout.</em>
-          </h2>
-          <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
-            <p>
-              Before I roll a tool into any of my companies or any of my advisory portfolio, I sit down on a Sunday and run the Front Row Test. Three questions. No tool gets purchased until I can answer all three in writing.
-            </p>
-            <ol className="mt-6 space-y-5 pl-5 list-decimal">
-              <li>
-                <strong style={{ color: "var(--brand-white)" }}>Who is in my front row right now?</strong>{" "}
-                Name them. The Front Row is the 70% who are already hacking around the problem. They are running a Google Sheet at midnight, a personal ChatGPT tab, a manual workaround. They are not a job title. They are a name. If I cannot name three, I do not have a front row yet, and I am not ready to roll out.
-              </li>
-              <li>
-                <strong style={{ color: "var(--brand-white)" }}>What can my Front Row ship by Friday?</strong>{" "}
-                Not a license. Not a training. A specific deliverable they can show another person on Friday. The revised par sheet. The closed month. The drafted SOP. The reconciled export. If I cannot name a Friday artifact, the rollout is not concrete enough yet.
-              </li>
-              <li>
-                <strong style={{ color: "var(--brand-white)" }}>Who needs to see the win, and what does it look like to them?</strong>{" "}
-                Identify the unblocker in advance. Anh&apos;s GM needed to see the par sheet running cleanly for two weeks. That was the unlock. Make the win visible to the unblocker, not to the loudest skeptic. The skeptic is downstream of the unblocker, always.
-              </li>
-            </ol>
-            <p className="mt-8">
-              If you can answer all three cleanly, you have a rollout. If you cannot, you have a vendor pitch. Buy nothing until you have a rollout.
-            </p>
-          </div>
-
-          {/* THE PROMPT — v3 Holtom, accordion + copy button + download zip */}
-          <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Prompt</div>
-          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
-            Run the Front Row Test <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>in Claude.</em>
+            The Front Row Test.
           </h2>
           <p className="mt-4 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
-            Paste the prompt below into <a href="https://claude.ai" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Claude</a>, ChatGPT, or Gemini. Answer the grounding questions one at a time. By the end you will have a Front Row Brief, a scorecard, and a clean decision on whether to roll out or hold.
+            Before any AI tool is purchased at my companies, the rollout has to clear three checks. I write the answers in a Google Doc and I do not approve the budget until all three are filled in clearly.
+          </p>
+
+          <div className="mt-8 space-y-6">
+            <div className="rounded-xl p-6 md:p-7" style={{ background: "rgba(173,251,73,0.06)", border: "1px solid rgba(173,251,73,0.25)" }}>
+              <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>Check 1 · The front row</div>
+              <p className="mt-3 text-lg leading-[1.7]" style={{ color: "var(--brand-white)" }}>
+                Write down three real people on the team who are already running a workaround for this problem.
+              </p>
+              <p className="mt-2 text-base leading-[1.7]" style={{ color: "var(--brand-pastel)" }}>
+                A Google Sheet at midnight. A personal ChatGPT tab. A handwritten log. If three names do not come to mind in five minutes, the front row does not exist yet, and the rollout is not ready.
+              </p>
+            </div>
+
+            <div className="rounded-xl p-6 md:p-7" style={{ background: "rgba(173,251,73,0.06)", border: "1px solid rgba(173,251,73,0.25)" }}>
+              <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>Check 2 · The Friday artifact</div>
+              <p className="mt-3 text-lg leading-[1.7]" style={{ color: "var(--brand-white)" }}>
+                Write down the specific deliverable each of those three people will ship by the end of the first week.
+              </p>
+              <p className="mt-2 text-base leading-[1.7]" style={{ color: "var(--brand-pastel)" }}>
+                A revised SOP. A closed report. A draft email that gets sent. The artifact has to be visible to someone outside the team. If the artifact only lives in the team&apos;s notes app, it does not count.
+              </p>
+            </div>
+
+            <div className="rounded-xl p-6 md:p-7" style={{ background: "rgba(173,251,73,0.06)", border: "1px solid rgba(173,251,73,0.25)" }}>
+              <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>Check 3 · The unblocker</div>
+              <p className="mt-3 text-lg leading-[1.7]" style={{ color: "var(--brand-white)" }}>
+                Write down the name of the person whose approval moves the budget forward, and the specific number they need to see to clear the runway.
+              </p>
+              <p className="mt-2 text-base leading-[1.7]" style={{ color: "var(--brand-pastel)" }}>
+                The unblocker is never the loudest skeptic. The unblocker is usually the person closest to the cost of the broken workflow. Design the Friday artifact to be visible to them.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-8 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
+            All three checks filled in clearly means you have a real rollout. Any one check missing means you have a vendor pitch in disguise. Do not buy the tool yet.
+          </p>
+
+          {/* THE PROMPT */}
+          <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Prompt</div>
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
+            Run the test <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>in Claude.</em>
+          </h2>
+          <p className="mt-4 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
+            Paste the prompt below into <a href="https://claude.ai" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Claude</a>, ChatGPT, or Gemini. Out the other end: a Front Row Brief, a scorecard, a go/no-go.
           </p>
 
           <a
@@ -204,7 +207,7 @@ export default function PostPage() {
             Download the prompt (.zip)
           </a>
           <p className="mt-2 text-xs" style={{ color: "var(--brand-pastel)" }}>
-            One <code>.md</code> file + a README. Save to your LLM workspace and run it before every rollout.
+            One <code>.md</code> file + a README.
           </p>
 
           <div className="mt-6 space-y-12">
@@ -248,29 +251,23 @@ export default function PostPage() {
             })}
           </div>
 
-          {/* §08 — THREE THINGS THAT DID NOT WORK */}
+          {/* §07 — What did not work */}
           <div className="mt-16 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>What did not work</div>
           <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
-            Three approaches I tried <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>that flopped.</em>
+            Three rollouts that <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>flopped.</em>
           </h2>
-          <div className="mt-6 space-y-6 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
-            <p>
-              <strong style={{ color: "var(--brand-white)" }}>1. The all-hands launch.</strong> First time I introduced AI tools across a portfolio company, I did the full top-down rollout. Vendor demo. License for everyone. Mandatory training Thursday. Three months later, usage was at 12%. The 70% had been invisible to me because I never asked who was already trying.
-            </p>
-            <p>
-              <strong style={{ color: "var(--brand-white)" }}>2. Trying to debate the 20%.</strong> I spent six weeks at one company hosting weekly office hours to convert the loud skeptics. Every meeting was a fresh objection. None of them adopted the tool. The 70% I had ignored for six weeks lost momentum. By the time I came back to them, two of them had already left for a competitor that had the tool I was failing to roll out.
-            </p>
-            <p>
-              <strong style={{ color: "var(--brand-white)" }}>3. Letting the loudest skeptic block the budget.</strong> One operator on my advisory portfolio talked the CFO out of a $4,800/year tool license that would have saved the ops team eight hours a week. The skeptic was not the budget owner. The ops team was. I should have routed the request through them, not through the all-hands.
-            </p>
+          <div className="mt-6 space-y-5 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
+            <p><strong style={{ color: "var(--brand-white)" }}>1. Top-down launch.</strong> Vendor demo, licenses for everyone, mandatory training. Usage at 12% by month three.</p>
+            <p><strong style={{ color: "var(--brand-white)" }}>2. Office hours for skeptics.</strong> Six weeks debating the 20%. None adopted. Lost two of the 70% to a competitor who already had the tool.</p>
+            <p><strong style={{ color: "var(--brand-white)" }}>3. Routing through the CFO.</strong> Loud skeptic talked him out of a $4,800/year license that would have saved the ops team eight hours a week. Should have routed through the ops team.</p>
           </div>
 
-          {/* CTA — one real question (Builder pillar close) */}
-          <p className="mt-16 text-xl italic" style={{ color: "var(--brand-white)" }}>
-            Who is the Anh in your team right now, hand-reconciling something they should not have to?
+          {/* CTA */}
+          <p className="mt-12 text-xl italic" style={{ color: "var(--brand-white)" }}>
+            Who on your team is already running the workaround?
           </p>
-          <p className="mt-4 text-base" style={{ color: "var(--brand-pastel)" }}>
-            Find them on Monday. That is the rollout.
+          <p className="mt-2 text-base" style={{ color: "var(--brand-pastel)" }}>
+            Find them Monday. That is the rollout.
           </p>
 
           {/* Voice marker */}
@@ -285,7 +282,7 @@ export default function PostPage() {
             ))}
           </div>
 
-          {/* DRU. SIGNATURE: official end-of-post logo */}
+          {/* DRU. signature */}
           <div className="mt-20 flex justify-end">
             <div
               className="px-5 py-2 text-xl font-extrabold"
