@@ -28,6 +28,12 @@ const POSTS = [
     source: "app/blog/every-olympian-has-a-coach-yours-is-a-prompt-away/prompts.ts",
     blogUrl: "https://drunguyen.me/blog/every-olympian-has-a-coach-yours-is-a-prompt-away",
   },
+  {
+    slug: "nightclub-and-ai-adoption",
+    title: "The Front Row Test — v3 Holtom prompt for any AI rollout",
+    source: "app/blog/nightclub-and-ai-adoption/prompts.ts",
+    blogUrl: "https://drunguyen.me/blog/nightclub-and-ai-adoption",
+  },
 ];
 
 function parsePrompts(filePath) {

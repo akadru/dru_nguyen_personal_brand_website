@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import CopyPromptButton from "@/components/CopyPromptButton";
+import { PROMPTS } from "./prompts";
 
 export const metadata: Metadata = {
   title: "What running a nightclub taught me about AI adoption | Dru Nguyen",
@@ -170,6 +172,80 @@ export default function PostPage() {
             <p className="mt-8">
               If you can answer all three cleanly, you have a rollout. If you cannot, you have a vendor pitch. Buy nothing until you have a rollout.
             </p>
+          </div>
+
+          {/* THE PROMPT — v3 Holtom, accordion + copy button + download zip */}
+          <div className="mt-14 mb-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>The Prompt</div>
+          <h2 className="text-3xl font-extrabold tracking-tight md:text-4xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
+            Run the Front Row Test <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>in Claude.</em>
+          </h2>
+          <p className="mt-4 text-lg leading-[1.8]" style={{ color: "var(--brand-pastel)" }}>
+            Paste the prompt below into <a href="https://claude.ai" target="_blank" rel="noopener" style={{ color: "var(--brand-lime)", borderBottom: "1px dashed var(--brand-lime)" }}>Claude</a>, ChatGPT, or Gemini. Answer the grounding questions one at a time. By the end you will have a Front Row Brief, a scorecard, and a clean decision on whether to roll out or hold.
+          </p>
+
+          <a
+            href="/downloads/nightclub-and-ai-adoption-prompt-pack.zip"
+            download
+            className="mt-6 inline-flex items-center gap-2 px-4 py-2 text-sm font-extrabold uppercase transition-transform hover:-translate-y-0.5"
+            style={{
+              background: "var(--brand-lime)",
+              color: "var(--brand-jungle)",
+              letterSpacing: "0.16em",
+              borderRadius: 6,
+              fontFamily: "'Outfit', system-ui, sans-serif",
+            }}
+            aria-label="Download the prompt as a zip"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download the prompt (.zip)
+          </a>
+          <p className="mt-2 text-xs" style={{ color: "var(--brand-pastel)" }}>
+            One <code>.md</code> file + a README. Save to your LLM workspace and run it before every rollout.
+          </p>
+
+          <div className="mt-6 space-y-12">
+            {PROMPTS.map((p) => {
+              const lineCount = p.body.split("\n").length;
+              return (
+                <div key={p.title}>
+                  <h3 className="text-2xl font-extrabold tracking-tight md:text-3xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}>
+                    {p.title}
+                  </h3>
+                  <p className="mt-3 text-base leading-relaxed" style={{ color: "var(--brand-lime)" }}>
+                    <strong>Use when:</strong> <span style={{ color: "var(--brand-pastel)" }}>{p.useWhen}</span>
+                  </p>
+                  <details
+                    className="mt-4 group"
+                    style={{ background: "rgba(173,251,73,0.06)", border: "1px solid rgba(173,251,73,0.2)", borderRadius: 12, padding: 0 }}
+                  >
+                    <summary
+                      className="cursor-pointer select-none flex items-center justify-between px-6 py-4 list-none"
+                      style={{ color: "var(--brand-white)", fontWeight: 700 }}
+                    >
+                      <span className="text-sm font-bold uppercase" style={{ letterSpacing: "0.12em", color: "var(--brand-lime)" }}>
+                        Show full prompt
+                      </span>
+                      <span className="text-xs" style={{ color: "var(--brand-pastel)" }}>
+                        {lineCount} lines · click to expand
+                      </span>
+                    </summary>
+                    <div className="flex justify-end px-4 pt-3" style={{ borderTop: "1px solid rgba(173,251,73,0.2)" }}>
+                      <CopyPromptButton text={p.body} label={`Copy ${p.title}`} variant="dark" />
+                    </div>
+                    <pre
+                      className="mt-0 overflow-x-auto p-6 pt-3 text-sm leading-relaxed whitespace-pre-wrap"
+                      style={{ color: "var(--brand-white)", fontFamily: "ui-monospace, SFMono-Regular, Menlo, monospace" }}
+                    >
+                      <code>{p.body}</code>
+                    </pre>
+                  </details>
+                </div>
+              );
+            })}
           </div>
 
           {/* §08 — THREE THINGS THAT DID NOT WORK */}
