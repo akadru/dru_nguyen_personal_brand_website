@@ -7,6 +7,13 @@ communications between Dru, Joy (Brand Architect), and Chi (Producer).
 
 Identity: **The Scholarly Warrior.** Care. Discipline. Grit.
 
+## Live URL & infrastructure (canonical — do not re-ask)
+- **Live site:** https://www.drunguyen.me/ — this is THE production domain for this project. Always use it; never guess a `*.vercel.app` URL.
+- **Hosting:** Vercel project `dru-nguyen-personal-brand-website` (deploys from `main` via `git push`).
+- **Git remote:** github.com/akadru/dru_nguyen_personal_brand_website
+- **Database/auth:** Supabase project `crwqvfgdtnmghevzqail` (`https://crwqvfgdtnmghevzqail.supabase.co`). Keys live in `.env.local`.
+- **Other services:** Gemini (images), Resend (email), Lark bot (team comms).
+
 ## Key paths
 - Website: `website/` (Next.js 16 App Router + TypeScript + Tailwind 4 + Outfit, deployed to Vercel)
 - Agents: `.claude/agents/` (definitions) + `agents/` (context + skills)
