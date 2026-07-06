@@ -5,6 +5,7 @@ import VenturesGrid from "@/components/VenturesGrid";
 import StoriesGrid from "@/components/StoriesGrid";
 import NewsGrid from "@/components/NewsGrid";
 import NewsletterShowcase from "@/components/NewsletterShowcase";
+import LogoMarquee from "@/components/LogoMarquee";
 
 export default function Home() {
   return (
@@ -109,6 +110,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 2b. LOGO MARQUEE, monochrome brand strip */}
+      <LogoMarquee />
 
       {/* 3. VENTURES, Bartlett 4-up flush grid */}
       <section id="ventures" className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>

@@ -8,6 +8,10 @@ export type Venture = {
   href: string;        // external site or anchor
   external: boolean;   // open in new tab if true
   wide?: boolean;      // span full row in VenturesGrid (used for EO at the bottom)
+  logo?: string;       // /images/logos/{slug}.png — replaces typed name in titles
+  logoW?: number;      // intrinsic px of the logo file (for next/image)
+  logoH?: number;
+  logoClass?: string;  // "logo-whiten" (dark/color art -> white) | "logo-invert" (b&w art -> w&b)
 };
 
 // Order specified by Dru: Xood → Skylight → GAM → Tictag → East West → Nuen → EO
@@ -18,6 +22,10 @@ export const VENTURES: Venture[] = [
     tagline: "Adopting AI into business and personal life",
     role: "Co-Founder & MD, Commercial & Community",
     context: "AI data services · Vietnam",
+    logo: "/images/logos/xood.png",
+    logoW: 559,
+    logoH: 240,
+    logoClass: "logo-whiten",
     image: "/images/ventures/xood.jpg",
     href: "/ventures/xood",
     external: false,
@@ -28,6 +36,9 @@ export const VENTURES: Venture[] = [
     tagline: "Nha Trang's rooftop flagship",
     role: "Founder",
     context: "Rooftop hospitality · Nha Trang · 10+ years",
+    logo: "/images/logos/skylight.png",
+    logoW: 614,
+    logoH: 240,
     image: "/images/ventures/skylight.jpg",
     href: "/ventures/skylight",
     external: false,
@@ -38,6 +49,9 @@ export const VENTURES: Venture[] = [
     tagline: "Vietnam's #1 Esports Organization",
     role: "Investor / Advisor",
     context: "Esports · Entertainment",
+    logo: "/images/logos/gam.png",
+    logoW: 240,
+    logoH: 240,
     image: "/images/ventures/gam.jpg",
     href: "/ventures/gam",
     external: false,
@@ -48,6 +62,10 @@ export const VENTURES: Venture[] = [
     tagline: "Data & AI Solutions",
     role: "Advisor",
     context: "AI data services · Singapore",
+    logo: "/images/logos/tictag.png",
+    logoW: 153,
+    logoH: 55,
+    logoClass: "logo-whiten",
     image: "/images/ventures/tictag.jpg",
     href: "/ventures/tictag",
     external: false,
@@ -58,6 +76,10 @@ export const VENTURES: Venture[] = [
     tagline: "Craft Beer, Made in Vietnam 🇻🇳",
     role: "Investor / Advisor",
     context: "F&B · Vietnam",
+    logo: "/images/logos/eastwest.png",
+    logoW: 233,
+    logoH: 134,
+    logoClass: "logo-invert",
     image: "/images/ventures/eastwest.jpg",
     href: "/ventures/eastwest",
     external: false,
@@ -68,6 +90,9 @@ export const VENTURES: Venture[] = [
     tagline: "Vietnam's first premium electric moto",
     role: "Investor / Advisor",
     context: "Electric motorbikes · Vietnam",
+    logo: "/images/logos/nuen.png",
+    logoW: 798,
+    logoH: 240,
     image: "/images/ventures/nuen.jpg",
     href: "/ventures/nuen",
     external: false,

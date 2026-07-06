@@ -169,6 +169,10 @@ html { scroll-behavior: smooth; }
 }
 .scroll-cue-arrow { animation: scroll-cue-bounce 1.8s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
 
+/* ---- Logo treatments: render any brand mark mono-white on dark ---- */
+.logo-whiten { filter: brightness(0) invert(1); }  /* dark/color art -> solid white */
+.logo-invert { filter: invert(1); }                /* black&white art -> white&black */
+
 /* ---- Duotone imagery (Bartlett-style B&W -> color on hover) ---- */
 .img-duotone { filter: grayscale(1) contrast(1.05); transition: filter 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
 .group:hover .img-duotone, a:hover .img-duotone { filter: grayscale(0) contrast(1); }
