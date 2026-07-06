@@ -34,7 +34,7 @@ const cols = [
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+    <footer style={{ background: "var(--brand-jungle)", color: "var(--brand-white)", borderTop: "4px solid var(--brand-lime)" }}>
       <div className="mx-auto max-w-[1300px] px-5 py-20 md:px-10">
         <div className="grid gap-12 md:grid-cols-[1.4fr_repeat(3,1fr)]">
           <div>
