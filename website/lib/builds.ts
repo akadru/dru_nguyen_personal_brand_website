@@ -27,6 +27,7 @@ export const BUILDS: Build[] = [
     urlLabel: "demo.drunguyen.me",
     image: "/images/built/eos-platform.jpg",
     stack: "Built with Claude · Live demo, sample data",
+    caseStudyHref: "/built-with-ai/eos-platform",
   },
   {
     slug: "team-skylight",
@@ -39,6 +40,7 @@ export const BUILDS: Build[] = [
     urlLabel: "teamskylight.com",
     image: "/images/built/team-skylight.jpg",
     stack: "Built with Claude · Next.js",
+    caseStudyHref: "/built-with-ai/team-skylight",
   },
   {
     slug: "drunguyen-site",

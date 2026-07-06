@@ -15,7 +15,8 @@ Identity: **The Scholarly Warrior.** Care. Discipline. Grit.
 - **Other services:** Gemini (images), Resend (email), Lark bot (team comms).
 
 ## Key paths
-- Website: `website/` (Next.js 16 App Router + TypeScript + Tailwind 4, deployed to Vercel). Layout: **GaryVee-style, locked 2026-07-06** — fixed left sidebar nav on desktop (quarter-width lime drawer on mobile), Bebas Neue display headings with lime marker-highlights, three-pillar homepage (Dru Nguyen / The AI Operator / Scholarly Warrior), What's New filter feed, sitewide newsletter-band + social-wall footer. See `resources/design-system.md`.
+- Website: `website/` (Next.js 16 App Router + TypeScript + Tailwind 4, deployed to Vercel). Layout: **GaryVee-style, locked 2026-07-06** — fixed left sidebar nav on desktop (quarter-width lime drawer on mobile), Bebas Neue display headings with lime marker-highlights, three-pillar homepage (Dru Nguyen / Built with AI / Scholarly Warrior), Built-with-AI builds strip on the white surface, social-wall footer. See `resources/design-system.md`.
+- **No newsletter.** Dru does not run one (retired 2026-07-06). Never add newsletter CTAs, signup forms, or copy; `/newsletter` redirects to `/blog`.
 - Agents: `.claude/agents/` (definitions) + `agents/` (context + skills)
 - Content: `content/topics/` (one folder per blog post)
 - Resources: `resources/` (brand-voice, design-system, web-style-guide, audience-personas, plus Web/Report/Memo style-guide source docs)

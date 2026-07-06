@@ -53,18 +53,18 @@ export default function ScholarlyWarriorPage() {
             <Reveal delay={3}>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href="/newsletter"
+                  href="/blog"
                   className="inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-bold uppercase tracking-wider"
                   style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.05em" }}
                 >
-                  Subscribe to the newsletter
+                  Read the essays
                 </Link>
                 <Link
-                  href="/blog"
+                  href="/built-with-ai"
                   className="inline-flex items-center justify-center rounded-full border-2 px-7 py-4 text-sm font-bold uppercase tracking-wider"
                   style={{ borderColor: "var(--brand-jungle)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
                 >
-                  Read the essays
+                  See the builds
                 </Link>
               </div>
             </Reveal>
@@ -190,11 +190,11 @@ export default function ScholarlyWarriorPage() {
             Knowledge with application <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>is wisdom.</em>
           </p>
           <Link
-            href="/newsletter"
+            href="/blog"
             className="mt-10 inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-bold uppercase tracking-wider"
             style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
           >
-            Subscribe to the newsletter
+            Read the essays
           </Link>
         </div>
       </section>

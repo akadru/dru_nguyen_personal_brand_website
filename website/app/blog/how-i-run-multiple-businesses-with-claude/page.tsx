@@ -181,14 +181,14 @@ If signal is weak, say so.
           {/* CTA */}
           <div className="mt-12 rounded-2xl border-2 p-8 text-center md:p-10" style={{ borderColor: "rgba(176,190,197,0.25)" }}>
             <p className="text-2xl font-extrabold leading-snug md:text-3xl" style={{ color: "var(--brand-white)", letterSpacing: "-0.01em" }}>
-              Get one operator essay every Tuesday at 8am Vietnam time.
+              More operator essays, teardowns, and real workflows on the blog.
             </p>
             <Link
-              href="/newsletter"
+              href="/blog"
               className="mt-6 inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-bold uppercase tracking-wider"
               style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.05em" }}
             >
-              Subscribe to the newsletter
+              Read more essays
             </Link>
           </div>
 

@@ -215,11 +215,11 @@ export default function PostPage() {
               Knowledge with application is wisdom.
             </p>
             <Link
-              href="/newsletter"
+              href="/blog"
               className="mt-6 inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-bold uppercase tracking-wider"
               style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)", letterSpacing: "0.05em" }}
             >
-              Get the Tuesday Brief
+              Read more essays
             </Link>
           </div>
 

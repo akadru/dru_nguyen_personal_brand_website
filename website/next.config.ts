@@ -8,6 +8,12 @@ const nextConfig: NextConfig = {
         destination: "/blog/how-i-run-multiple-businesses-with-claude",
         permanent: true,
       },
+      {
+        // Newsletter retired 2026-07-06 — Dru does not run one.
+        source: "/newsletter",
+        destination: "/blog",
+        permanent: true,
+      },
     ];
   },
 };

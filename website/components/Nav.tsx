@@ -22,7 +22,6 @@ const GROUPS = [
     items: [
       { href: "/built-with-ai", label: "Built with AI" },
       { href: "/blog", label: "Blog" },
-      { href: "/newsletter", label: "Newsletter" },
     ],
   },
   {

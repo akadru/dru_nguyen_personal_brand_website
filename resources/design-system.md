@@ -9,7 +9,7 @@ The Scholarly Warrior visual system. Three contexts, one palette.
 | **Word docs / memos** | `Dru-Nguyen-Word-Memo-Style-Guide.docx` | Outfit |
 | **Reports (.docx)** | `Dru-Nguyen-Report-Style-Guide.docx` | Outfit |
 
-The website framework (this Next.js app) uses the **GaryVee-style layout (locked 2026-07-06)**: fixed left sidebar nav on desktop, giant condensed all-caps display headings, lime marker-highlight swipes on key words, and a sitewide newsletter-band + social-wall footer. Display headings are Bebas Neue; everything else is Outfit. Individual blog post pages keep the print-card template with Plus Jakarta Sans body.
+The website framework (this Next.js app) uses the **GaryVee-style layout (locked 2026-07-06)**: fixed left sidebar nav on desktop, giant condensed all-caps display headings, lime marker-highlight swipes on key words, and a sitewide social-wall footer. Display headings are Bebas Neue; everything else is Outfit. Individual blog post pages keep the print-card template with Plus Jakarta Sans body. **No newsletter anywhere** — Dru does not run one; never add signup CTAs (`/newsletter` permanently redirects to `/blog`).
 
 ---
 
