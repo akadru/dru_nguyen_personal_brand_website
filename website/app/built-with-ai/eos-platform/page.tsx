@@ -42,10 +42,25 @@ const SHOTS = [
 export default function EosPlatformCaseStudy() {
   return (
     <>
-      {/* HERO */}
-      <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
-        <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto max-w-[1400px] px-5 pt-28 pb-16 md:px-10 md:pt-40 md:pb-24">
+      {/* HERO — faded product screenshot behind the title */}
+      <section className="relative overflow-hidden" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+        <div className="absolute inset-0" aria-hidden>
+          <Image
+            src="/images/built/eos-platform.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-top"
+            style={{ filter: "grayscale(1) contrast(1.05)", opacity: 0.35 }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(180deg, rgba(10,27,36,0.82) 0%, rgba(10,27,36,0.68) 50%, rgba(10,27,36,0.96) 100%)" }}
+          />
+        </div>
+        <div className="absolute inset-x-0 top-0 z-10 h-1" style={{ background: "var(--brand-lime)" }} />
+        <div className="relative mx-auto max-w-[1400px] px-5 pt-28 pb-16 md:px-10 md:pt-40 md:pb-24">
           <Reveal>
             <div
               className="text-[10px] font-extrabold uppercase"
