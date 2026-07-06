@@ -79,14 +79,30 @@ export default async function VentureDetailPage({
           <Reveal delay={1}>
             {card.logo ? (
               <h1 className="mt-8" style={{ lineHeight: 0 }}>
-                <Image
-                  src={card.logo}
-                  alt={detail.name}
-                  width={card.logoW}
-                  height={card.logoH}
-                  priority
-                  className={`h-20 w-auto object-contain md:h-32 ${card.logoClass ?? ""}`}
-                />
+                {card.logoChip ? (
+                  <span
+                    className="inline-flex max-w-full items-center rounded-2xl px-8 py-5"
+                    style={{ background: "var(--brand-white)" }}
+                  >
+                    <Image
+                      src={card.logo}
+                      alt={detail.name}
+                      width={card.logoW}
+                      height={card.logoH}
+                      priority
+                      className="h-14 w-auto max-w-full object-contain md:h-24"
+                    />
+                  </span>
+                ) : (
+                  <Image
+                    src={card.logo}
+                    alt={detail.name}
+                    width={card.logoW}
+                    height={card.logoH}
+                    priority
+                    className={`h-20 w-auto object-contain md:h-32 ${card.logoClass ?? ""}`}
+                  />
+                )}
                 <span className="sr-only">{detail.name}</span>
               </h1>
             ) : (

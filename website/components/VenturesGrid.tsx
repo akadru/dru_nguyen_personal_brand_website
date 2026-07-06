@@ -52,13 +52,28 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
               </div>
               {v.logo ? (
                 <h3 className="mt-4" style={{ lineHeight: 0 }}>
-                  <Image
-                    src={v.logo}
-                    alt={v.name}
-                    width={v.logoW}
-                    height={v.logoH}
-                    className={`max-w-full w-auto object-contain object-left ${v.logoClass ?? ""} ${isWide ? "h-12 md:h-16" : "h-8 md:h-10"}`}
-                  />
+                  {v.logoChip ? (
+                    <span
+                      className="inline-flex max-w-full items-center rounded-lg px-4 py-2.5"
+                      style={{ background: "var(--brand-white)" }}
+                    >
+                      <Image
+                        src={v.logo}
+                        alt={v.name}
+                        width={v.logoW}
+                        height={v.logoH}
+                        className={`max-w-full w-auto object-contain object-left ${isWide ? "h-10 md:h-12" : "h-6 md:h-8"}`}
+                      />
+                    </span>
+                  ) : (
+                    <Image
+                      src={v.logo}
+                      alt={v.name}
+                      width={v.logoW}
+                      height={v.logoH}
+                      className={`max-w-full w-auto object-contain object-left ${v.logoClass ?? ""} ${isWide ? "h-12 md:h-16" : "h-8 md:h-10"}`}
+                    />
+                  )}
                   <span className="sr-only">{v.name}</span>
                 </h3>
               ) : (

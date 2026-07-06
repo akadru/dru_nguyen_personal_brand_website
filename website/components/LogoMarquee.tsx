@@ -10,7 +10,21 @@ function Items({ suffix }: { suffix: string }) {
   return (
     <>
       {VENTURES.map((v) =>
-        v.logo ? (
+        v.logo && v.logoChip ? (
+          <span
+            key={`${v.slug}${suffix}`}
+            className="inline-flex items-center rounded-lg px-4 py-2"
+            style={{ background: "var(--brand-white)" }}
+          >
+            <Image
+              src={v.logo}
+              alt={v.name}
+              width={v.logoW}
+              height={v.logoH}
+              className="h-6 w-auto object-contain md:h-7"
+            />
+          </span>
+        ) : v.logo ? (
           <Image
             key={`${v.slug}${suffix}`}
             src={v.logo}
