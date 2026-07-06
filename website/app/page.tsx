@@ -95,8 +95,8 @@ export default function Home() {
             <Reveal delay={1}>
               <div className="group relative aspect-[4/5] w-full overflow-hidden">
                 <Image
-                  src="/images/dru-portrait-laughing.jpg"
-                  alt="Dru Nguyen portrait"
+                  src="/images/dru-speaking-zero-project-2026.jpg"
+                  alt="Dru Nguyen speaking on stage at Zero Project Conference 2026"
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="img-duotone object-cover"
