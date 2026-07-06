@@ -40,7 +40,7 @@ export default function LogoMarquee() {
       className="overflow-hidden py-10 md:py-12"
       style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}
     >
-      <div className="marquee-track flex w-max items-center gap-16 pr-16 opacity-60 md:gap-24 md:pr-24">
+      <div className="marquee-track flex w-max items-center gap-16 pr-16 md:gap-24 md:pr-24">
         <Items suffix="" />
         {/* duplicate for seamless loop, hidden from screen readers */}
         <div aria-hidden className="contents">

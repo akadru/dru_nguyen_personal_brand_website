@@ -64,7 +64,6 @@ export const VENTURES: Venture[] = [
     logo: "/images/logos/tictag.png",
     logoW: 153,
     logoH: 55,
-    logoClass: "logo-whiten",
     image: "/images/ventures/tictag.jpg",
     href: "/ventures/tictag",
     external: false,
