@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
 import { BUILDS } from "@/lib/builds";
 
@@ -216,7 +217,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. STAT STRIP — the operating record, continues the white surface */}
+      {/* 4. WHAT'S NEW — the blog feed, right under the builds */}
+      <section id="news" className="py-24 md:py-32" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <Reveal>
+            <div className="section-label">Read This</div>
+          </Reveal>
+          <Reveal delay={1}>
+            <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <h2
+                className="display-heading"
+                style={{ fontSize: "clamp(52px, 7vw, 110px)", color: "var(--brand-jungle)" }}
+              >
+                What&apos;s New
+              </h2>
+              <Link
+                href="/blog"
+                className="editorial-link self-start text-sm font-bold uppercase tracking-wider md:self-end"
+                style={{ color: "var(--brand-myrtle)", letterSpacing: "0.12em" }}
+              >
+                Read the blog →
+              </Link>
+            </div>
+          </Reveal>
+          <Reveal delay={2}>
+            <div className="mt-12">
+              <ContentFeed />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 5. STAT STRIP — the operating record, continues the white surface */}
       <section className="py-20 md:py-28" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
