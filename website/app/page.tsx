@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
+import { BUILDS } from "@/lib/builds";
 
 // Drop Dru's YouTube intro/sizzle video ID here when it's ready —
 // the "Play Video" button appears automatically.
@@ -18,11 +18,11 @@ const PILLARS = [
     alt: "Dru Nguyen speaking on stage at Zero Project Conference 2026",
   },
   {
-    name: "The AI Operator",
-    verb: "runs 6 businesses with Claude",
-    href: "/blog",
-    image: "/images/blog/six-businesses-claude-quarterly-rocks.webp",
-    alt: "How Dru runs six businesses with Claude",
+    name: "Built with AI",
+    verb: "the tools my teams run on",
+    href: "/built-with-ai",
+    image: "/images/built/eos-platform.jpg",
+    alt: "The EOS Operating System platform Dru built with Claude",
   },
   {
     name: "Scholarly Warrior",
@@ -139,11 +139,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. WHAT'S NEW — white content surface, filter pills + feed */}
-      <section id="news" className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+      {/* 3. BUILT WITH AI — white content surface, live builds strip */}
+      <section id="builds" className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
-            <div className="section-label">Read This</div>
+            <div className="section-label">Live in Production</div>
           </Reveal>
           <Reveal delay={1}>
             <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -151,20 +151,66 @@ export default function Home() {
                 className="display-heading"
                 style={{ fontSize: "clamp(52px, 7vw, 110px)", color: "var(--brand-jungle)" }}
               >
-                What&apos;s New
+                Built with AI
               </h2>
               <Link
-                href="/blog"
+                href="/built-with-ai"
                 className="editorial-link self-start text-sm font-bold uppercase tracking-wider md:self-end"
                 style={{ color: "var(--brand-myrtle)", letterSpacing: "0.12em" }}
               >
-                Read the blog →
+                See all builds →
               </Link>
             </div>
           </Reveal>
           <Reveal delay={2}>
-            <div className="mt-12">
-              <ContentFeed />
+            <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+              {BUILDS.map((b) => (
+                <a
+                  key={b.slug}
+                  href={b.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex flex-col"
+                >
+                  <div className="relative aspect-[16/10] w-full overflow-hidden border" style={{ borderColor: "rgba(10,27,36,0.12)" }}>
+                    <Image
+                      src={b.image}
+                      alt={`Screenshot of ${b.name}`}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 30vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                    />
+                    <div
+                      className="absolute right-3 top-3 rounded-full px-3 py-1 text-[10px] font-extrabold uppercase"
+                      style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.18em" }}
+                    >
+                      Live
+                    </div>
+                  </div>
+                  <div
+                    className="mt-5 text-[10px] font-extrabold uppercase"
+                    style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}
+                  >
+                    {b.context}
+                  </div>
+                  <h3
+                    className="display-heading mt-3 transition-colors group-hover:text-[var(--brand-myrtle)]"
+                    style={{ fontSize: "clamp(24px, 2.2vw, 32px)", color: "var(--brand-jungle)" }}
+                  >
+                    {b.name}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--brand-body)" }}>
+                    {b.tagline}
+                  </p>
+                  <div
+                    className="mt-3 inline-flex items-center gap-2 text-[10px] font-bold uppercase"
+                    style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}
+                  >
+                    Visit {b.urlLabel}
+                    <span className="transition-transform group-hover:translate-x-1" aria-hidden>↗</span>
+                  </div>
+                </a>
+              ))}
             </div>
           </Reveal>
         </div>

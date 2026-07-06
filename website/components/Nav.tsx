@@ -20,6 +20,7 @@ const GROUPS = [
     label: "The AI Operator",
     verb: "runs 6 businesses with Claude",
     items: [
+      { href: "/built-with-ai", label: "Built with AI" },
       { href: "/blog", label: "Blog" },
       { href: "/newsletter", label: "Newsletter" },
     ],
