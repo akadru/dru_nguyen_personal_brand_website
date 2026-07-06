@@ -77,7 +77,7 @@ export default function PostPage() {
       <section className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
         <div
           className="mx-auto max-w-[760px] px-5 md:px-10"
-          style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
+          style={{ fontFamily: "var(--font-prose)" }}
         >
           {/* HOOK */}
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-jungle)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>

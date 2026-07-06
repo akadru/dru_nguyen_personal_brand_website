@@ -25,7 +25,7 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
             className={`group card-hover-accent relative block overflow-hidden ${
               isWide
                 ? `aspect-[16/10] md:col-span-2 md:aspect-[21/9] ${columns === 3 ? "lg:col-span-3" : ""}`
-                : "aspect-[16/10] md:aspect-[4/5]"
+                : "aspect-[16/10]"
             }`}
           >
             <Image

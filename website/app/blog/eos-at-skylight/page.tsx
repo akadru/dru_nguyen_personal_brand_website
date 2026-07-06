@@ -56,7 +56,7 @@ export default function PostPage() {
       </header>
 
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-[760px] px-5 md:px-10" style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
+        <div className="mx-auto max-w-[760px] px-5 md:px-10" style={{ fontFamily: "var(--font-prose)" }}>
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
             September 2020. Skylight is six years old, four floors of rooftop hospitality in Nha Trang, doing real numbers. I&apos;m sitting in the office at 11pm reviewing the third version of a Friday-night schedule the floor manager has rewritten because every senior person&apos;s quit. Again.
           </p>
@@ -89,7 +89,7 @@ export default function PostPage() {
             <p className="mt-5 text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
               We implemented EOS in the office before we implemented it on the floor. Three months wasted. The day we put a Skylight scorecard on the wall behind the bar, sales target, last week&apos;s actual, today&apos;s pace, was the day staff started owning the number. Not because we asked them to. Because the number was visible.
             </p>
-            <p className="mt-5 text-lg italic" style={{ color: "var(--brand-white)", fontFamily: "'Plus Jakarta Sans', serif", fontSize: "clamp(20px, 2.4vw, 28px)" }}>
+            <p className="mt-5 text-lg italic" style={{ color: "var(--brand-white)", fontFamily: "var(--font-prose)", fontSize: "clamp(20px, 2.4vw, 28px)" }}>
               Structure is freedom. But only when the structure is <span style={{ color: "var(--brand-lime)" }}>visible</span> to the people doing the work.
             </p>
           </div>

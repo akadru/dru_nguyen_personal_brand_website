@@ -478,7 +478,7 @@ export default function Page() {
 
       {/* BODY */}
       <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
-        <div className="mx-auto max-w-[760px] px-5 md:px-10" style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
+        <div className="mx-auto max-w-[760px] px-5 md:px-10" style={{ fontFamily: "var(--font-prose)" }}>
 
           {/* OPENING — leading blockquote with lime border */}
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
@@ -765,7 +765,7 @@ export default function Page() {
                 border: "2px solid var(--brand-lime)",
                 letterSpacing: "0.28em",
                 transform: "rotate(-2deg)",
-                fontFamily: "'Outfit', system-ui, sans-serif",
+                fontFamily: "var(--font-sans)",
                 textShadow: "0 8px 14px rgba(173,251,73,0.18)",
               }}
             >
@@ -801,7 +801,7 @@ function StencilDivider({ label }: { label: string }) {
         style={{
           color: "var(--brand-lime)",
           letterSpacing: "0.32em",
-          fontFamily: "'Outfit', system-ui, sans-serif",
+          fontFamily: "var(--font-sans)",
         }}
       >
         {label}

@@ -46,8 +46,8 @@ export default function PressPage() {
             <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>Press</div>
           </Reveal>
           <Reveal delay={1}>
-            <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 96px)", lineHeight: 0.95, letterSpacing: "-0.03em" }}>
-              On stage. <span style={{ color: "var(--brand-lime)" }}>On the record.</span>
+            <h1 className="mt-6 display-heading" style={{ fontSize: "clamp(40px, 7vw, 96px)" }}>
+              On stage. <span className="marker-highlight">On the record.</span>
             </h1>
           </Reveal>
           <Reveal delay={2}>
@@ -104,8 +104,8 @@ export default function PressPage() {
             <div className="section-label">Recent features</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
-              Interviews &amp; <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>appearances.</em>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--brand-white)" }}>
+              Interviews &amp; <span style={{ color: "var(--brand-myrtle)" }}>appearances.</span>
             </h2>
           </Reveal>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
@@ -139,8 +139,8 @@ export default function PressPage() {
             <div className="section-label">Quick Facts</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
-              For journalists &amp; <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>bookers.</em>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--brand-white)" }}>
+              For journalists &amp; <span style={{ color: "var(--brand-myrtle)" }}>bookers.</span>
             </h2>
           </Reveal>
           <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border md:grid-cols-2" style={{ borderColor: "var(--brand-pastel)", background: "var(--brand-pastel)" }}>

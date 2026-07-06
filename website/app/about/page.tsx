@@ -47,10 +47,10 @@ export default function AboutPage() {
               </div>
             </Reveal>
             <Reveal delay={1}>
-              <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 96px)", lineHeight: 0.95, letterSpacing: "-0.03em" }}>
+              <h1 className="mt-6 display-heading" style={{ fontSize: "clamp(40px, 7vw, 96px)" }}>
                 Operator first.
                 <br />
-                <span style={{ color: "var(--brand-lime)" }}>Experimenter second.</span>
+                <span className="marker-highlight">Experimenter second.</span>
               </h1>
             </Reveal>
             <Reveal delay={2}>
@@ -83,8 +83,8 @@ export default function AboutPage() {
             <div className="section-label">The Bio</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.1, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
-              Operator first. <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Experimenter second.</em>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4vw, 48px)", color: "var(--brand-white)" }}>
+              Operator first. <span style={{ color: "var(--brand-myrtle)" }}>Experimenter second.</span>
             </h2>
           </Reveal>
           <Reveal delay={2}>
@@ -115,8 +115,8 @@ export default function AboutPage() {
             <div className="section-label">Five Stories</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4vw, 48px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
-              The lived material <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>behind the work.</em>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4vw, 48px)", color: "var(--brand-white)" }}>
+              The lived material <span style={{ color: "var(--brand-myrtle)" }}>behind the work.</span>
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-5">

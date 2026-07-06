@@ -53,7 +53,7 @@ export default function PromptPackPage() {
               color: "var(--brand-jungle)",
               letterSpacing: "0.16em",
               borderRadius: 6,
-              fontFamily: "'Outfit', system-ui, sans-serif",
+              fontFamily: "var(--font-sans)",
             }}
             aria-label="Download all 5 prompts as a zip"
           >
@@ -72,7 +72,7 @@ export default function PromptPackPage() {
 
       {/* PROMPTS */}
       <section className="py-16 md:py-20" style={{ background: "var(--brand-white)" }}>
-        <div className="mx-auto max-w-[860px] px-5 md:px-10" style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
+        <div className="mx-auto max-w-[860px] px-5 md:px-10" style={{ fontFamily: "var(--font-prose)" }}>
           <div className="space-y-12">
             {PROMPTS.map((p) => (
               <div key={p.title}>

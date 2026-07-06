@@ -47,10 +47,10 @@ export default function NewsletterPage() {
           <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>The Newsletter</div>
         </Reveal>
         <Reveal delay={1}>
-          <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em" }}>
+          <h1 className="mt-6 display-heading" style={{ fontSize: "clamp(40px, 7vw, 80px)" }}>
             One operator essay.
             <br />
-            <span style={{ color: "var(--brand-lime)" }}>Every Tuesday.</span>
+            <span className="marker-highlight">Every Tuesday.</span>
           </h1>
         </Reveal>
         <Reveal delay={2}>

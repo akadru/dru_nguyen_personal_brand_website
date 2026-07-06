@@ -77,7 +77,7 @@ export default function PostPage() {
       <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div
           className="mx-auto max-w-[760px] px-5 md:px-10"
-          style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}
+          style={{ fontFamily: "var(--font-prose)" }}
         >
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
             It&apos;s 7:14 AM in my kitchen, coffee still dripping.
@@ -173,7 +173,7 @@ If signal is weak, say so.
             <p className="mt-5 text-lg leading-relaxed md:text-xl" style={{ color: "rgba(242,242,242,0.92)" }}>
               If the output is 70% there, you&apos;ve found a workflow. If it&apos;s at 40%, your input or your spec is wrong, not the model.
             </p>
-            <p className="mt-8 italic" style={{ fontFamily: "'Plus Jakarta Sans', serif", fontSize: "clamp(24px, 3vw, 32px)", color: "var(--brand-lime)", lineHeight: 1.2 }}>
+            <p className="mt-8 italic" style={{ fontFamily: "var(--font-prose)", fontSize: "clamp(24px, 3vw, 32px)", color: "var(--brand-lime)", lineHeight: 1.2 }}>
               &ldquo;Knowledge with application is wisdom.&rdquo;
             </p>
           </div>

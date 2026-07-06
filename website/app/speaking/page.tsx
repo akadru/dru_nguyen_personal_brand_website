@@ -82,17 +82,15 @@ export default function SpeakingPage() {
                 Speaking Engagements
               </div>
               <h1
-                className="mt-6 font-extrabold tracking-tight"
+                className="mt-6 display-heading"
                 style={{
                   fontSize: "clamp(48px, 7vw, 96px)",
-                  lineHeight: 0.95,
-                  letterSpacing: "-0.035em",
                   color: "var(--brand-white)",
                 }}
               >
                 Bring Dru to
                 <br />
-                <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>your team.</em>
+                <span className="marker-highlight">your team</span>
               </h1>
               <p
                 className="mt-8 max-w-xl text-lg leading-relaxed md:text-xl"
@@ -153,10 +151,10 @@ export default function SpeakingPage() {
           </Reveal>
           <Reveal delay={1}>
             <h2
-              className="mt-3 font-extrabold tracking-tight"
-              style={{ fontSize: "clamp(36px, 5vw, 72px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-white)" }}
+              className="mt-3 display-heading"
+              style={{ fontSize: "clamp(36px, 5vw, 72px)", color: "var(--brand-white)" }}
             >
-              Four <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>signature talks.</em>
+              Four <span style={{ color: "var(--brand-myrtle)" }}>signature talks.</span>
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-x-8 gap-y-12 md:grid-cols-2">
@@ -189,8 +187,8 @@ export default function SpeakingPage() {
             <div className="section-label">Formats</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.03em", color: "var(--brand-white)" }}>
-              Pick the format <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>that fits.</em>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--brand-white)" }}>
+              Pick the format <span className="marker-highlight">that fits.</span>
             </h2>
           </Reveal>
           <Reveal delay={2}>
@@ -270,7 +268,7 @@ export default function SpeakingPage() {
               <Reveal key={t.name}>
                 <blockquote
                   className="border-l-4 pl-6 italic"
-                  style={{ borderColor: "var(--brand-lime)", fontFamily: "'Plus Jakarta Sans', serif" }}
+                  style={{ borderColor: "var(--brand-lime)", fontFamily: "var(--font-prose)" }}
                 >
                   <p
                     className="leading-relaxed"

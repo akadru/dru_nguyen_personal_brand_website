@@ -12,7 +12,7 @@ export type Venture = {
   logoW?: number;      // intrinsic px of the logo file (for next/image)
   logoH?: number;
   logoClass?: string;  // "logo-whiten" (dark/color art -> white) | "logo-invert" (b&w art -> w&b)
-  logoChip?: boolean;  // full-color logo with dark lettering: render on a light chip
+  logoChip?: boolean;  // full-color logo with dark lettering: render on a light chip (never for Xood)
 };
 
 // Order specified by Dru: Xood → Skylight → GAM → Tictag → East West → Nuen → EO
@@ -23,10 +23,11 @@ export const VENTURES: Venture[] = [
     tagline: "Adopting AI into business and personal life",
     role: "Co-Founder & MD, Commercial & Community",
     context: "AI data services · Vietnam",
+    // Locked (2026-07-06): xood-full.png is the white-lettering dark-bg version
+    // (blue X, white "ood", orange dot). Never render Xood on a white chip.
     logo: "/images/logos/xood-full.png",
     logoW: 559,
     logoH: 240,
-    logoChip: true,
     image: "/images/ventures/xood.jpg",
     href: "/ventures/xood",
     external: false,

@@ -1,5 +1,24 @@
 import type { Metadata } from "next";
+import { Bebas_Neue, Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
+
+// Self-hosted via next/font — no runtime requests to Google.
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-outfit",
+});
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+  variable: "--font-jakarta",
+});
+const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bebas",
+});
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SearchModal from "@/components/SearchModal";
@@ -24,11 +43,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className={`${outfit.variable} ${jakarta.variable} ${bebas.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        {/* Content is offset right of the fixed sidebar nav on desktop */}
+        <div className="flex min-h-full flex-1 flex-col lg:pl-[230px]">
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
         <SearchModal />
       </body>
     </html>

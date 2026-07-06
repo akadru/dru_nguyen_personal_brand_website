@@ -23,12 +23,12 @@ export default function VenturesPage() {
           </Reveal>
           <Reveal delay={1}>
             <h1
-              className="mt-6 font-extrabold tracking-tight"
-              style={{ fontSize: "clamp(48px, 8vw, 112px)", lineHeight: 0.95, letterSpacing: "-0.035em" }}
+              className="mt-6 display-heading"
+              style={{ fontSize: "clamp(48px, 8vw, 112px)" }}
             >
               Six businesses.
               <br />
-              <span style={{ color: "var(--brand-lime)" }}>Three industries.</span>
+              <span className="marker-highlight">Three industries.</span>
             </h1>
           </Reveal>
           <Reveal delay={2}>

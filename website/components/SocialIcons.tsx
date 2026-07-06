@@ -35,10 +35,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 type Props = {
   variant?: "footer" | "topbar" | "grid";
+  /* jungle tone for lime backgrounds (locked contrast rule) */
+  tone?: "pastel" | "jungle";
   className?: string;
 };
 
-export default function SocialIcons({ variant = "footer", className = "" }: Props) {
+export default function SocialIcons({ variant = "footer", tone = "pastel", className = "" }: Props) {
   const base = {
     footer: "h-9 w-9",
     topbar: "h-4 w-4",
@@ -51,6 +53,9 @@ export default function SocialIcons({ variant = "footer", className = "" }: Prop
     grid:   "grid grid-cols-3 gap-3",
   }[variant];
 
+  const color = tone === "jungle" ? "var(--brand-jungle)" : "var(--brand-pastel)";
+  const hover = tone === "jungle" ? "" : "group-hover:text-[var(--brand-lime)]";
+
   return (
     <ul className={`${wrapper} ${className}`}>
       {SOCIAL_LINKS.map((s) => (
@@ -61,10 +66,10 @@ export default function SocialIcons({ variant = "footer", className = "" }: Prop
             rel="noopener noreferrer"
             aria-label={s.label}
             className="group inline-flex items-center justify-center transition-colors"
-            style={{ color: "var(--brand-pastel)" }}
+            style={{ color }}
           >
             <span
-              className={`${base} transition-colors group-hover:text-[var(--brand-lime)]`}
+              className={`${base} transition-colors ${hover}`}
               aria-hidden
             >
               {s.svg}

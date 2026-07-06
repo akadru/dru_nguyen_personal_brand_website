@@ -38,7 +38,7 @@ export default function ScholarlyWarriorPage() {
               </div>
             </Reveal>
             <Reveal delay={1}>
-              <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(48px, 9vw, 128px)", lineHeight: 0.92, letterSpacing: "-0.035em", color: "var(--brand-jungle)" }}>
+              <h1 className="mt-6 display-heading" style={{ fontSize: "clamp(48px, 9vw, 128px)", color: "var(--brand-jungle)" }}>
                 Scholarly
                 <br />
                 <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>Warrior.</em>
@@ -123,8 +123,8 @@ export default function ScholarlyWarriorPage() {
             <div className="section-label" style={{ color: "var(--brand-lime)" }}>The Frameworks</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
-              Playbooks <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>I actually use.</em>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(36px, 5vw, 64px)" }}>
+              Playbooks <span className="marker-highlight">I actually use.</span>
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
@@ -149,8 +149,8 @@ export default function ScholarlyWarriorPage() {
             <div className="section-label">Signature Stories</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
-              Five lived <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>moments.</em>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(36px, 5vw, 64px)", color: "var(--brand-white)" }}>
+              Five lived <span style={{ color: "var(--brand-myrtle)" }}>moments.</span>
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-5">

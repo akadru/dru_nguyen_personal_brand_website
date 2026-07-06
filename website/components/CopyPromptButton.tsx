@@ -62,7 +62,7 @@ export default function CopyPromptButton({
         ...(variant === "light" ? lightStyle : darkStyle),
         letterSpacing: "0.14em",
         borderRadius: 6,
-        fontFamily: "'Outfit', system-ui, sans-serif",
+        fontFamily: "var(--font-sans)",
         cursor: "pointer",
       }}
     >

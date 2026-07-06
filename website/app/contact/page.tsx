@@ -50,8 +50,8 @@ export default function ContactPage() {
             </div>
           </Reveal>
           <Reveal delay={1}>
-            <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em" }}>
-              Start a <span style={{ color: "var(--brand-lime)" }}>conversation.</span>
+            <h1 className="mt-6 display-heading" style={{ fontSize: "clamp(40px, 7vw, 80px)" }}>
+              Start a <span className="marker-highlight">conversation.</span>
             </h1>
           </Reveal>
           <Reveal delay={2}>

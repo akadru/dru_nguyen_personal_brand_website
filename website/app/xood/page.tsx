@@ -33,7 +33,7 @@ export default function XoodPage() {
             </div>
           </Reveal>
           <Reveal delay={1}>
-            <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(56px, 11vw, 168px)", lineHeight: 0.9, letterSpacing: "-0.04em" }}>
+            <h1 className="mt-6 display-heading" style={{ fontSize: "clamp(56px, 11vw, 168px)" }}>
               Xood.
             </h1>
           </Reveal>
@@ -80,7 +80,7 @@ export default function XoodPage() {
             <p
               className="mt-8 italic"
               style={{
-                fontFamily: "'Plus Jakarta Sans', serif",
+                fontFamily: "var(--font-prose)",
                 fontSize: "clamp(36px, 6vw, 80px)",
                 lineHeight: 1.05,
                 letterSpacing: "-0.02em",
@@ -129,8 +129,8 @@ export default function XoodPage() {
             <div className="section-label">Offerings</div>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="mt-3 font-extrabold tracking-tight" style={{ fontSize: "clamp(36px, 5vw, 64px)", lineHeight: 1.05, letterSpacing: "-0.02em", color: "var(--brand-white)" }}>
-              How Xood <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>shows up.</em>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(36px, 5vw, 64px)", color: "var(--brand-white)" }}>
+              How Xood <span style={{ color: "var(--brand-myrtle)" }}>shows up.</span>
             </h2>
           </Reveal>
           <div className="mt-12 grid gap-5 md:grid-cols-3">

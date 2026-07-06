@@ -25,10 +25,10 @@ export default function ContentHub() {
             </div>
           </Reveal>
           <Reveal delay={1}>
-            <h1 className="mt-6 font-extrabold tracking-tight" style={{ fontSize: "clamp(40px, 7vw, 80px)", lineHeight: 1.0, letterSpacing: "-0.03em" }}>
+            <h1 className="mt-6 display-heading" style={{ fontSize: "clamp(40px, 7vw, 80px)" }}>
               One voice.
               <br />
-              <span style={{ color: "var(--brand-lime)" }}>Three channels.</span>
+              <span className="marker-highlight">Three channels.</span>
             </h1>
           </Reveal>
         </div>

@@ -58,7 +58,7 @@ export default function PostPage() {
       </header>
 
       <section className="py-16 md:py-24">
-        <div className="mx-auto max-w-[760px] px-5 md:px-10" style={{ fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
+        <div className="mx-auto max-w-[760px] px-5 md:px-10" style={{ fontFamily: "var(--font-prose)" }}>
 
           {/* §01 — Felt question */}
           <p className="text-xl leading-relaxed md:text-2xl" style={{ color: "var(--brand-white)", borderLeft: "4px solid var(--brand-lime)", paddingLeft: "20px" }}>
@@ -84,7 +84,7 @@ export default function PostPage() {
 
           {/* §03 — Principle */}
           <div className="mt-10 rounded-2xl p-8 md:p-10" style={{ background: "rgba(173,251,73,0.06)", border: "1px solid rgba(173,251,73,0.25)" }}>
-            <p className="text-lg italic md:text-xl" style={{ color: "var(--brand-white)", fontFamily: "'Plus Jakarta Sans', serif" }}>
+            <p className="text-lg italic md:text-xl" style={{ color: "var(--brand-white)", fontFamily: "var(--font-prose)" }}>
               The crowd does not change because you turn the music up. It changes because{" "}
               <span style={{ color: "var(--brand-lime)" }}>the front row is dancing.</span>
             </p>
@@ -195,7 +195,7 @@ export default function PostPage() {
               color: "var(--brand-jungle)",
               letterSpacing: "0.16em",
               borderRadius: 6,
-              fontFamily: "'Outfit', system-ui, sans-serif",
+              fontFamily: "var(--font-sans)",
             }}
             aria-label="Download the prompt as a zip"
           >
@@ -292,7 +292,7 @@ export default function PostPage() {
                 border: "2px solid var(--brand-lime)",
                 letterSpacing: "0.28em",
                 transform: "rotate(-2deg)",
-                fontFamily: "'Outfit', system-ui, sans-serif",
+                fontFamily: "var(--font-sans)",
                 textShadow: "0 8px 14px rgba(173,251,73,0.18)",
               }}
             >

@@ -107,8 +107,8 @@ export default async function VentureDetailPage({
               </h1>
             ) : (
               <h1
-                className="mt-6 font-extrabold tracking-tight max-w-5xl"
-                style={{ fontSize: "clamp(48px, 9vw, 128px)", lineHeight: 0.92, letterSpacing: "-0.035em", textShadow: "0 2px 30px rgba(10,27,36,0.6)" }}
+                className="mt-6 display-heading max-w-5xl"
+                style={{ fontSize: "clamp(48px, 9vw, 128px)", textShadow: "0 2px 30px rgba(10,27,36,0.6)" }}
               >
                 {detail.name}
               </h1>
@@ -130,7 +130,7 @@ export default async function VentureDetailPage({
               Dru&apos;s POV
             </div>
           </Reveal>
-          <div className="mt-8 space-y-7 text-lg leading-[1.8] md:text-xl" style={{ color: "var(--brand-pastel)", fontFamily: "'Plus Jakarta Sans', system-ui, sans-serif" }}>
+          <div className="mt-8 space-y-7 text-lg leading-[1.8] md:text-xl" style={{ color: "var(--brand-pastel)", fontFamily: "var(--font-prose)" }}>
             {detail.story.map((p, i) => (
               <Reveal key={i} delay={(i % 3) as 0 | 1 | 2}>
                 <p>{p}</p>
