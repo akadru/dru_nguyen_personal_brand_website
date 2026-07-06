@@ -57,7 +57,7 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
                     alt={v.name}
                     width={v.logoW}
                     height={v.logoH}
-                    className={`w-auto object-contain ${v.logoClass ?? ""} ${isWide ? "h-14 md:h-20" : "h-10 md:h-12"}`}
+                    className={`max-w-full w-auto object-contain object-left ${v.logoClass ?? ""} ${isWide ? "h-12 md:h-16" : "h-8 md:h-10"}`}
                   />
                   <span className="sr-only">{v.name}</span>
                 </h3>
