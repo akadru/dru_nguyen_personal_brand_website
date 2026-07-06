@@ -22,7 +22,7 @@ export const VENTURES: Venture[] = [
     tagline: "Adopting AI into business and personal life",
     role: "Co-Founder & MD, Commercial & Community",
     context: "AI data services · Vietnam",
-    logo: "/images/logos/xood-white.png",
+    logo: "/images/logos/xood-brand.png",
     logoW: 559,
     logoH: 240,
     image: "/images/ventures/xood.jpg",
