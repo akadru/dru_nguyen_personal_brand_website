@@ -4,12 +4,12 @@ The Scholarly Warrior visual system. Three contexts, one palette.
 
 | Context | Source guide | Font |
 |---------|-------------|------|
-| **Website + landing pages** | `Dru-Nguyen-Web-Style-Guide.docx` | **Outfit** |
+| **Website + landing pages** | `Dru-Nguyen-Web-Style-Guide.docx` | **Bebas Neue** (display headings) + **Outfit** (UI/body) |
 | **Blog post body (within site)** | `Dru_BlogPost_StyleGuide.md` | Plus Jakarta Sans |
 | **Word docs / memos** | `Dru-Nguyen-Word-Memo-Style-Guide.docx` | Outfit |
 | **Reports (.docx)** | `Dru-Nguyen-Report-Style-Guide.docx` | Outfit |
 
-The website framework (this Next.js app) defaults to **Outfit + Web Style Guide**. Individual blog post pages may opt into Plus Jakarta Sans for the article body when matching the print-style HTML template.
+The website framework (this Next.js app) uses the **GaryVee-style layout (locked 2026-07-06)**: fixed left sidebar nav on desktop, giant condensed all-caps display headings, lime marker-highlight swipes on key words, and a sitewide newsletter-band + social-wall footer. Display headings are Bebas Neue; everything else is Outfit. Individual blog post pages keep the print-card template with Plus Jakarta Sans body.
 
 ---
 
@@ -44,28 +44,24 @@ The website framework (this Next.js app) defaults to **Outfit + Web Style Guide*
 
 ---
 
-## Typography (Web — Outfit)
+## Typography (Web — Bebas Neue display + Outfit)
 
-```html
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
-```
+Fonts are **self-hosted via `next/font` in `website/app/layout.tsx`** (no Google Fonts requests): Bebas Neue → `--font-bebas`, Outfit → `--font-outfit`, Plus Jakarta Sans → `--font-jakarta`. Never reintroduce a Google Fonts `<link>`/`@import`, and never hard-code family names in components; use `var(--font-display)` / `var(--font-sans)` / `var(--font-prose)`.
 
-| Style | Size / Weight | Notes |
-|-------|---------------|-------|
-| H1 (hero title) | 60px / 700 | Page hero — primary message only |
-| H2 | 44px / 700 | Section headers |
-| H3 | 36px / 700 | Subsection headings |
-| H4 | 28px / 700 | Card titles, module headers |
-| H5 | 22px / 700 | Small section heads |
-| H6 | 16px / 700 | Label headings, category tags |
-| Paragraph 1 | 22px / 400 | Hero supporting, large body |
-| Paragraph 2 | 17px / 400 | Standard body |
-| Paragraph 3 | 14px / 400 | Card body, captions |
-| Button | 12px / 700 / UPPERCASE | LS 0.05em |
-| Section label | 10px / 700 / UPPERCASE | LS 0.12em, Myrtle Green |
+| Style | Face / Treatment | Notes |
+|-------|------------------|-------|
+| H1 (hero/display) | Bebas Neue 400, `.display-heading`, clamp up to ~150px | Inherently all-caps, line-height 0.92 |
+| H2 (large section headers) | Bebas Neue 400, `.display-heading`, clamp min ≥ 32px | Marker-highlight or myrtle span for emphasis |
+| H3–H6, card titles, sub-heads | Outfit 700 | Normal caps |
+| Paragraph 1 | Outfit 22px / 400 | Hero supporting, large body |
+| Paragraph 2 | Outfit 17px / 400 | Standard body |
+| Paragraph 3 | Outfit 14px / 400 | Card body, captions |
+| Button | Outfit 12px / 700 / UPPERCASE | LS 0.05em |
+| Section label | Outfit 10px / 700 / UPPERCASE | LS 0.12em, Myrtle Green |
 
-- **Outfit is the sole typeface** for web. No serif, no system fonts.
-- **Normal caps on all headings.** Never all-caps for headlines.
+- **Bebas Neue is for display headings only** (`.display-heading` utility). Bebas has no italics — never fake an oblique; use color spans or `.marker-highlight` for emphasis.
+- **Marker highlight** (`.marker-highlight`): the lime swipe behind key headline words. Text inside is ALWAYS Dark Jungle Green (locked lime-contrast rule).
+- **Outfit for everything that is not a display heading.** No serif, no system fonts.
 
 ### Typography (Blog post body — Plus Jakarta Sans)
 For blog posts using the print-card HTML template (760px max-width, two-card layout). See `Dru_BlogPost_StyleGuide.md` for the full type scale.
@@ -106,7 +102,8 @@ Sections may be omitted, but **order is fixed**.
 
 ## Components
 
-- **Nav bar:** sticky, top:0, bg `rgba(10,27,36,0.94)` + backdrop-blur, height 56px, 1px Pastel Blue bottom border. Logo left (Outfit Bold 16px Anti-Flash White). CTA right (hidden mobile).
+- **Nav (desktop ≥1024px):** fixed left sidebar, 230px wide, Dark Jungle Green bg, 1px pastel right border. DRU. wordmark + search top; links in Bebas Neue grouped under the three pillars (Dru Nguyen / The AI Operator / Scholarly Warrior); "Book Dru to Speak" lime CTA + social icons bottom. Content offset right via `lg:pl-[230px]`.
+- **Nav (mobile/tablet <1024px):** sticky top bar (wordmark, socials, search, hamburger) + right slide-in lime drawer at 25% page width (min 280px), jungle text only.
 - **Hero:** label (Myrtle Green) above H1 (Anti-Flash White on Dark Jungle Green). Supporting paragraph in Pastel Blue. Two CTAs — Primary (French Lime bg / Dark Jungle Green text), Secondary (transparent + Pastel Blue border).
 - **Section labels:** uppercase, Outfit Bold 10px, LS 0.12em, Myrtle Green. Always above the section heading. "THE PROBLEM", "THE SOLUTION", "HOW IT WORKS".
 - **CTA block:** full-width Dark Jungle Green. Headline 28px / 700 / Anti-Flash White. Supporting 15px / 400 / 60% white opacity. Primary button French Lime. Secondary transparent.
@@ -145,7 +142,8 @@ Sections may be omitted, but **order is fixed**.
 ---
 
 ## Hard rules
-- **Outfit only** on web. Plus Jakarta Sans **only** in the print-card blog template.
+- **Bebas Neue for display headings, Outfit for everything else** on web. Plus Jakarta Sans **only** in the print-card blog template.
+- **Xood logo:** only the white-lettering dark-bg mark (blue X, white "ood", orange dot). Never on a white chip; never run it through whiten/invert filters.
 - French Lime never on white/light backgrounds.
 - Never exceed the palette.
 - Never break section order on landing pages.
