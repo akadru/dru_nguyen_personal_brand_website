@@ -77,12 +77,26 @@ export default async function VentureDetailPage({
             </div>
           </Reveal>
           <Reveal delay={1}>
-            <h1
-              className="mt-6 font-extrabold tracking-tight max-w-5xl"
-              style={{ fontSize: "clamp(48px, 9vw, 128px)", lineHeight: 0.92, letterSpacing: "-0.035em", textShadow: "0 2px 30px rgba(10,27,36,0.6)" }}
-            >
-              {detail.name}
-            </h1>
+            {card.logo ? (
+              <h1 className="mt-8" style={{ lineHeight: 0 }}>
+                <Image
+                  src={card.logo}
+                  alt={detail.name}
+                  width={card.logoW}
+                  height={card.logoH}
+                  priority
+                  className={`h-20 w-auto object-contain md:h-32 ${card.logoClass ?? ""}`}
+                />
+                <span className="sr-only">{detail.name}</span>
+              </h1>
+            ) : (
+              <h1
+                className="mt-6 font-extrabold tracking-tight max-w-5xl"
+                style={{ fontSize: "clamp(48px, 9vw, 128px)", lineHeight: 0.92, letterSpacing: "-0.035em", textShadow: "0 2px 30px rgba(10,27,36,0.6)" }}
+              >
+                {detail.name}
+              </h1>
+            )}
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-8 max-w-3xl text-lg leading-relaxed md:text-2xl" style={{ color: "var(--brand-pastel)" }}>
