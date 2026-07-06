@@ -3,82 +3,47 @@ import Link from "next/link";
 import { VENTURES } from "@/lib/ventures";
 
 /**
- * Bartlett-style flush grid · dark theme.
- * Borderless cards · image-top · light text · lime hover accents.
- * `wide: true` entries span the full row with horizontal layout (image left, copy right).
+ * Bartlett-style venture wall · full-bleed duotone image tiles.
+ * Name + context overlaid on a bottom gradient · B&W by default, color on hover.
+ * `wide: true` entries span the full row with a cinematic 21:9 crop.
  */
 export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
   const grid = columns === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
   return (
-    <div className={`grid grid-cols-1 gap-x-8 gap-y-14 ${grid}`}>
+    <div className={`grid grid-cols-1 gap-4 ${grid}`}>
       {VENTURES.map((v) => {
         const linkProps = v.external
           ? { target: "_blank", rel: "noopener noreferrer" }
           : {};
         const isWide = !!v.wide;
 
-        // ── Full-width variant ─────────────────────────────────────────────
-        if (isWide) {
-          return (
-            <Link
-              key={v.slug}
-              href={v.href}
-              {...linkProps}
-              className={`group card-hover-accent flex flex-col pt-2 md:col-span-2 ${columns === 3 ? "lg:col-span-3" : ""}`}
-            >
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.6fr_1fr] md:items-center md:gap-12">
-                <div className="relative aspect-[32/12] w-full overflow-hidden md:aspect-[21/9]">
-                  <Image
-                    src={v.image}
-                    alt={`${v.name}, ${v.tagline}`}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 66vw"
-                    className="object-cover transition-[transform,filter] duration-500 group-hover:scale-[1.02] group-hover:grayscale"
-                  />
-                </div>
-                <div>
-                  <div
-                    className="text-[10px] font-extrabold uppercase"
-                    style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}
-                  >
-                    {v.context}
-                  </div>
-                  <h3
-                    className="mt-2 text-3xl font-extrabold leading-tight md:text-4xl transition-colors group-hover:text-[var(--brand-lime)]"
-                    style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
-                  >
-                    {v.name}
-                  </h3>
-                  <p
-                    className="mt-2 text-base italic md:text-lg"
-                    style={{ color: "var(--brand-pastel)" }}
-                  >
-                    {v.tagline}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          );
-        }
-
-        // ── Standard card ──────────────────────────────────────────────────
         return (
           <Link
             key={v.slug}
             href={v.href}
             {...linkProps}
-            className="group card-hover-accent flex flex-col pt-2"
+            className={`group card-hover-accent relative block overflow-hidden ${
+              isWide
+                ? `aspect-[16/10] md:col-span-2 md:aspect-[21/9] ${columns === 3 ? "lg:col-span-3" : ""}`
+                : "aspect-[16/10] md:aspect-[4/5]"
+            }`}
           >
-            <div className="relative aspect-[16/10] w-full overflow-hidden">
-              <Image
-                src={v.image}
-                alt={`${v.name}, ${v.tagline}`}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                className="object-cover transition-[transform,filter] duration-500 group-hover:scale-[1.03] group-hover:grayscale"
-              />
-            </div>
-            <div className="mt-6">
+            <Image
+              src={v.image}
+              alt={`${v.name}, ${v.tagline}`}
+              fill
+              sizes={
+                isWide
+                  ? "(max-width: 768px) 100vw, 100vw"
+                  : "(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+              }
+              className="img-duotone object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: "linear-gradient(180deg, rgba(10,27,36,0.1) 30%, rgba(10,27,36,0.55) 70%, rgba(10,27,36,0.92) 100%)" }}
+            />
+            <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
               <div
                 className="text-[10px] font-extrabold uppercase"
                 style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}
@@ -86,15 +51,16 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
                 {v.context}
               </div>
               <h3
-                className="mt-2 text-2xl font-extrabold leading-tight md:text-3xl transition-colors group-hover:text-[var(--brand-lime)]"
-                style={{ color: "var(--brand-white)", letterSpacing: "-0.02em" }}
+                className="mt-2 font-extrabold uppercase leading-none transition-colors group-hover:text-[var(--brand-lime)]"
+                style={{
+                  fontSize: isWide ? "clamp(32px, 4.5vw, 64px)" : "clamp(28px, 3vw, 40px)",
+                  letterSpacing: "-0.02em",
+                  color: "var(--brand-white)",
+                }}
               >
-                {v.name}
+                {v.name.replace(/\.$/, "")}
               </h3>
-              <p
-                className="mt-2 text-base italic"
-                style={{ color: "var(--brand-pastel)" }}
-              >
+              <p className="mt-2 text-sm italic md:text-base" style={{ color: "var(--brand-pastel)" }}>
                 {v.tagline}
               </p>
             </div>

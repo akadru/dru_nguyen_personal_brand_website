@@ -149,6 +149,30 @@ html { scroll-behavior: smooth; }
 }
 .card-hover-accent:hover::before { transform: scaleX(1); }
 
+/* ---- Hero display type (Bartlett-style giant wordmark) ----
+ * Treated as a graphic brandmark, not a text headline — heading rules
+ * (sentence case, 60px cap) don't apply to the wordmark itself. */
+.hero-display {
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 0.82;
+  letter-spacing: -0.05em;
+  font-size: clamp(120px, 26vw, 460px);
+  color: var(--brand-lime);
+  user-select: none;
+}
+
+/* ---- Scroll cue (bouncing arrow under "SCROLL") ---- */
+@keyframes scroll-cue-bounce {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.6; }
+}
+.scroll-cue-arrow { animation: scroll-cue-bounce 1.8s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+
+/* ---- Duotone imagery (Bartlett-style B&W -> color on hover) ---- */
+.img-duotone { filter: grayscale(1) contrast(1.05); transition: filter 0.5s cubic-bezier(0.22, 1, 0.36, 1); }
+.group:hover .img-duotone, a:hover .img-duotone { filter: grayscale(0) contrast(1); }
+
 /* ---- Menu-item underline that draws from left on hover ---- */
 .menu-item-line { position: relative; display: inline-block; }
 .menu-item-line::after {
