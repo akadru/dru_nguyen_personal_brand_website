@@ -14,7 +14,7 @@ const HERO_VIDEO_ID: string = "";
 // Three-pillar identity architecture (Name + verb), GaryVee-style.
 const PILLARS = [
   {
-    name: "Dru Nguyen",
+    name: "Operator",
     verb: "builds businesses",
     href: "/ventures",
     image: "/images/dru-speaking-zero-project-2026.jpg",
