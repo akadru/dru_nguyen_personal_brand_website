@@ -52,7 +52,7 @@ export default function Home() {
             fill
             priority
             sizes="100vw"
-            className="object-contain object-top md:object-right md:translate-x-[13%]"
+            className="object-contain object-top md:object-right md:translate-x-[8%]"
             style={{ opacity: 0.4 }}
           />
           {/* Desktop: left-heavy gradient — solid dark under the headline, clear on the right so the portrait shows */}
