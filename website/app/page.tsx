@@ -42,20 +42,31 @@ export default function Home() {
         className="relative flex min-h-[100svh] flex-col overflow-hidden"
         style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}
       >
-        {/* Faded speaking photo behind the wordmark */}
+        {/* Portrait, right-anchored, faded onto the jungle (white studio bg knocked out) */}
         <div className="absolute inset-0" aria-hidden>
           <Image
-            src="/images/dru-speaking-zero-project-2026.jpg"
+            src="/images/dru-portrait-cutout.png"
             alt=""
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
-            style={{ filter: "grayscale(1) contrast(1.05)", opacity: 0.28 }}
+            className="object-contain object-top md:object-right-bottom"
+            style={{ opacity: 0.5 }}
           />
+          {/* Desktop: left-heavy gradient — solid dark under the headline, clear on the right so the portrait shows */}
           <div
-            className="absolute inset-0"
-            style={{ background: "linear-gradient(180deg, rgba(10,27,36,0.86) 0%, rgba(10,27,36,0.7) 45%, rgba(10,27,36,0.96) 100%)" }}
+            className="absolute inset-0 hidden md:block"
+            style={{ background: "linear-gradient(90deg, rgba(10,27,36,0.97) 0%, rgba(10,27,36,0.92) 30%, rgba(10,27,36,0.55) 50%, rgba(10,27,36,0) 70%)" }}
+          />
+          {/* Mobile: portrait sits up top (face clear); text below stacks over the dark shirt, gentle fade toward the legs */}
+          <div
+            className="absolute inset-0 md:hidden"
+            style={{ background: "linear-gradient(180deg, rgba(10,27,36,0) 42%, rgba(10,27,36,0.35) 68%, rgba(10,27,36,0.78) 100%)" }}
+          />
+          {/* Soft bottom fade for polish (desktop) */}
+          <div
+            className="absolute inset-0 hidden md:block"
+            style={{ background: "linear-gradient(180deg, rgba(10,27,36,0) 65%, rgba(10,27,36,0.6) 100%)" }}
           />
         </div>
         <div className="relative mx-auto flex w-full max-w-[1200px] flex-1 flex-col items-start justify-center px-5 py-24 md:px-10">

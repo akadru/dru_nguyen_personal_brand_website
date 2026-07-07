@@ -19,7 +19,9 @@ own palette:
 
 ## Homepage sections (`app/page.tsx`)
 
-1. **Hero** — OPERATOR / BUILDER / EXPERIMENTER over a faded Zero Project speaking photo, with
+1. **Hero** — OPERATOR / BUILDER / EXPERIMENTER over a right-anchored, full-color portrait of Dru
+   (`dru-portrait-cutout.png`, white studio bg knocked out to transparent; right on desktop, top on
+   mobile, ~0.9 opacity with a left-heavy gradient so the headline stays legible), with
    the quote "Knowledge with Application is Wisdom." (A `HERO_VIDEO_ID` const lights up a "Play
    Video" lightbox when a YouTube id is set.)
 2. **Three pillar tiles** — *Dru Nguyen · builds businesses* → `/ventures`; *Built with AI · the

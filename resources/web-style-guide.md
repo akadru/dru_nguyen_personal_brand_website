@@ -48,7 +48,7 @@ The website chrome, inspired by garyvaynerchuk.com and rendered in the palette a
 - **Marker-highlight** (`.marker-highlight`). The signature move: a lime swipe behind key words in
   a display headline. Text inside is always jungle. This is the brand's answer to GaryVee's yellow
   highlighter, in lime.
-- **Homepage order.** Hero (OPERATOR / BUILDER / EXPERIMENTER over a faded speaking photo + the
+- **Homepage order.** Hero (OPERATOR / BUILDER / EXPERIMENTER over a right-anchored full-color portrait of Dru + the
   quote "Knowledge with Application is Wisdom") → three pillar tiles → **Built with AI** builds strip
   → **What's New** blog feed (topic filter pills) → operating-record stat strip → speaking closer.
 - **Three pillars (Name + verb, the site's spine).** *Dru Nguyen · builds businesses* → `/ventures` ·
