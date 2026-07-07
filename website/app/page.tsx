@@ -178,7 +178,7 @@ export default function Home() {
       <section id="builds" className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
-            <div className="section-label" data-reveal>Live in Production</div>
+            <div className="section-label">Live in Production</div>
           </Reveal>
           <Reveal delay={1}>
             <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -254,7 +254,7 @@ export default function Home() {
       <section id="news" className="py-16 md:py-24" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
-            <div className="section-label" data-reveal>Read This</div>
+            <div className="section-label">Read This</div>
           </Reveal>
           <Reveal delay={1}>
             <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
@@ -286,7 +286,7 @@ export default function Home() {
       <section className="py-14 md:py-20" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
-            <div className="section-label" data-reveal>The Operating Record</div>
+            <div className="section-label">The Operating Record</div>
           </Reveal>
           <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3">
             {[
@@ -334,7 +334,7 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-[1100px] px-5 text-center md:px-10">
           <Reveal>
-            <div className="section-label" style={{ color: "var(--brand-lime)" }} data-reveal>Speaking Engagements</div>
+            <div className="section-label" style={{ color: "var(--brand-lime)" }}>Speaking Engagements</div>
           </Reveal>
           <Reveal delay={1}>
             <h2

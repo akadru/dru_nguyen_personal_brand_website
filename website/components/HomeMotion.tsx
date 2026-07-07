@@ -45,49 +45,46 @@ export default function HomeMotion() {
 
       ctx = gsap.context(() => {
         // Headline reveals — split into lines, each rises out from behind a mask.
-        // Bigger travel + longer decel so the rise reads clearly.
         gsap.utils.toArray<HTMLElement>("[data-reveal-text]").forEach((el) => {
           const split = new SplitText(el, { type: "lines", mask: "lines" });
           gsap.from(split.lines, {
-            yPercent: 130,
-            duration: 1.15,
-            ease: "expo.out",
-            stagger: 0.16,
-            scrollTrigger: { trigger: el, start: "top 82%" },
+            yPercent: 115,
+            duration: 0.9,
+            ease: "power4.out",
+            stagger: 0.1,
+            scrollTrigger: { trigger: el, start: "top 88%" },
           });
         });
 
-        // Media reveals — clip-wipe up while rising and settling from a zoom.
-        // Batched so a row staggers. More travel + a longer settle = premium.
+        // Media reveals — clip-wipe up + settle from a slight zoom. Batched so a row staggers.
         ScrollTrigger.batch("[data-reveal-media]", {
-          start: "top 82%",
+          start: "top 88%",
           onEnter: (els) =>
             gsap.from(els, {
               clipPath: "inset(0% 0% 100% 0%)",
-              scale: 1.14,
-              yPercent: 8,
-              duration: 1.3,
-              ease: "expo.out",
-              stagger: 0.18,
+              scale: 1.06,
+              duration: 1.0,
+              ease: "power3.out",
+              stagger: 0.12,
               overwrite: true,
             }),
         });
 
-        // Generic block reveals — a clearly visible rise + fade, batched for row stagger.
+        // Generic block reveals — rise + fade, batched for row stagger.
         ScrollTrigger.batch("[data-reveal]", {
-          start: "top 86%",
+          start: "top 90%",
           onEnter: (els) =>
             gsap.from(els, {
-              y: 64,
+              y: 34,
               autoAlpha: 0,
-              duration: 1.0,
-              ease: "expo.out",
-              stagger: 0.14,
+              duration: 0.7,
+              ease: "power3.out",
+              stagger: 0.1,
               overwrite: true,
             }),
         });
 
-        // Parallax — stronger scrub drift for visible depth.
+        // Parallax — gentle scrub drift.
         gsap.utils.toArray<HTMLElement>("[data-parallax]").forEach((el) => {
           const amt = parseFloat(el.dataset.parallax || "10");
           gsap.fromTo(
@@ -100,7 +97,7 @@ export default function HomeMotion() {
                 trigger: el.closest("section") ?? el,
                 start: "top bottom",
                 end: "bottom top",
-                scrub: 1,
+                scrub: true,
               },
             }
           );
@@ -114,9 +111,9 @@ export default function HomeMotion() {
           const proxy = { v: 0 };
           gsap.to(proxy, {
             v: target,
-            duration: 1.9,
+            duration: 1.5,
             ease: "power2.out",
-            scrollTrigger: { trigger: el, start: "top 86%" },
+            scrollTrigger: { trigger: el, start: "top 88%" },
             onUpdate: () => {
               el.textContent = Math.round(proxy.v) + suffix;
             },
