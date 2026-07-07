@@ -4,7 +4,7 @@ import Reveal from "@/components/Reveal";
 import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
 import SwipeRow from "@/components/SwipeRow";
-import ScrollSnap from "@/components/ScrollSnap";
+import HomeMotion from "@/components/HomeMotion";
 import { BUILDS } from "@/lib/builds";
 import { FEATURED_SLUGS } from "@/lib/posts";
 
@@ -40,10 +40,10 @@ const PILLARS = [
 export default function Home() {
   return (
     <>
-      <ScrollSnap />
+      <HomeMotion />
       {/* 1. HERO — credential stack + (future) video lightbox + signature quote */}
       <section
-        className="snap-section relative flex min-h-[100svh] flex-col overflow-hidden"
+        className="relative flex min-h-[100svh] flex-col overflow-hidden"
         style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}
       >
         {/* Portrait (original studio shot, white bg kept), right-anchored, faded onto the hero */}
@@ -56,6 +56,7 @@ export default function Home() {
             sizes="100vw"
             className="object-contain object-top md:object-right md:translate-x-[7%]"
             style={{ opacity: 0.4 }}
+            data-parallax="5"
           />
           {/* Desktop: left-heavy gradient — solid dark under the headline, clear on the right so the portrait shows */}
           <div
@@ -78,6 +79,7 @@ export default function Home() {
             <h1
               className="display-heading"
               style={{ fontSize: "clamp(64px, 10vw, 150px)", color: "var(--brand-white)" }}
+              data-reveal-text
             >
               Operator
               <br />
@@ -99,6 +101,7 @@ export default function Home() {
             <p
               className="display-heading mt-16 md:mt-24"
               style={{ fontSize: "clamp(30px, 3.6vw, 54px)", color: "var(--brand-pastel)" }}
+              data-reveal
             >
               &ldquo;Knowledge with Application
               <br />
@@ -132,11 +135,11 @@ export default function Home() {
       </section>
 
       {/* 2. THREE PILLARS — Name + verb identity tiles */}
-      <section id="pillars" className="snap-section py-6 md:py-0" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+      <section id="pillars" className="py-6 md:py-0" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <SwipeRow surface="dark" desktopGrid="md:grid-cols-3" desktopGap="md:gap-0" mobileGap="gap-4" mobilePad="px-5" basis="basis-[86%]">
           {PILLARS.map((p, i) => (
             <Reveal key={p.name} delay={i as 0 | 1 | 2}>
-              <Link href={p.href} className="group relative block aspect-[4/5] overflow-hidden md:aspect-[3/4]">
+              <Link href={p.href} className="group relative block aspect-[4/5] overflow-hidden md:aspect-[3/4]" data-reveal-media>
                 <Image
                   src={p.image}
                   alt={p.alt}
@@ -172,7 +175,7 @@ export default function Home() {
       </section>
 
       {/* 3. BUILT WITH AI — white content surface, live builds strip */}
-      <section id="builds" className="snap-section py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
+      <section id="builds" className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Live in Production</div>
@@ -182,6 +185,7 @@ export default function Home() {
               <h2
                 className="display-heading"
                 style={{ fontSize: "clamp(52px, 7vw, 110px)", color: "var(--brand-jungle)" }}
+                data-reveal-text
               >
                 Built with AI
               </h2>
@@ -202,7 +206,7 @@ export default function Home() {
                   href={b.caseStudyHref ?? b.url}
                   className="group flex h-full flex-col"
                 >
-                  <div className="relative aspect-[16/10] w-full overflow-hidden border" style={{ borderColor: "rgba(10,27,36,0.12)" }}>
+                  <div className="relative aspect-[16/10] w-full overflow-hidden border" style={{ borderColor: "rgba(10,27,36,0.12)" }} data-reveal-media>
                     <Image
                       src={b.image}
                       alt={`Screenshot of ${b.name}`}
@@ -247,7 +251,7 @@ export default function Home() {
       </section>
 
       {/* 4. WHAT'S NEW — the blog feed, right under the builds */}
-      <section id="news" className="snap-section py-16 md:py-24" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
+      <section id="news" className="py-16 md:py-24" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Read This</div>
@@ -257,6 +261,7 @@ export default function Home() {
               <h2
                 className="display-heading"
                 style={{ fontSize: "clamp(52px, 7vw, 110px)", color: "var(--brand-jungle)" }}
+                data-reveal-text
               >
                 What&apos;s New
               </h2>
@@ -278,7 +283,7 @@ export default function Home() {
       </section>
 
       {/* 5. STAT STRIP — the operating record, continues the white surface */}
-      <section className="snap-section py-14 md:py-20" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
+      <section className="py-14 md:py-20" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">The Operating Record</div>
@@ -290,10 +295,11 @@ export default function Home() {
               { n: "10+", label: "Years operating in Vietnam" },
             ].map((s, i) => (
               <Reveal key={s.label} delay={(i + 1) as 1 | 2 | 3}>
-                <div className="border-t-2 pt-6" style={{ borderColor: "var(--brand-myrtle)" }}>
+                <div className="border-t-2 pt-6" style={{ borderColor: "var(--brand-myrtle)" }} data-reveal>
                   <div
                     className="display-heading"
                     style={{ fontSize: "clamp(64px, 8vw, 110px)", color: "var(--brand-jungle)" }}
+                    data-count
                   >
                     {s.n}
                   </div>
@@ -308,16 +314,18 @@ export default function Home() {
       </section>
 
       {/* 5. SPEAKING — full-bleed closer, the standing commercial CTA */}
-      <section id="speaking" className="snap-section relative overflow-hidden py-20 md:py-32" style={{ background: "var(--brand-jungle)" }}>
+      <section id="speaking" className="relative overflow-hidden py-20 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="absolute inset-0">
-          <Image
-            src="/images/dru-hero.jpg"
-            alt="Dru Nguyen speaking at Zero Project Conference 2026"
-            fill
-            sizes="100vw"
-            className="object-cover object-center"
-            style={{ filter: "grayscale(1) contrast(1.05)" }}
-          />
+          <div className="absolute" style={{ inset: "-8%" }} data-parallax="8">
+            <Image
+              src="/images/dru-hero.jpg"
+              alt="Dru Nguyen speaking at Zero Project Conference 2026"
+              fill
+              sizes="100vw"
+              className="object-cover object-center"
+              style={{ filter: "grayscale(1) contrast(1.05)" }}
+            />
+          </div>
           <div
             className="absolute inset-0"
             style={{ background: "linear-gradient(180deg, rgba(10,27,36,0.92) 0%, rgba(10,27,36,0.62) 50%, rgba(10,27,36,0.92) 100%)" }}
@@ -332,12 +340,13 @@ export default function Home() {
             <h2
               className="display-heading mt-4"
               style={{ fontSize: "clamp(52px, 8vw, 130px)", color: "var(--brand-white)" }}
+              data-reveal-text
             >
               Bring Dru to <span className="marker-highlight">your team</span>
             </h2>
           </Reveal>
           <Reveal delay={2}>
-            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
+            <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }} data-reveal>
               EO forum sessions, founder offsites, AI workshops, EOS implementation coaching.
               Ten years of real operations across three industries. Operator-to-operator only, no
               theory, no hype.

@@ -52,16 +52,15 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .reveal { opacity: 1; transform: none; transition: none; }
   html { scroll-behavior: auto; }
-  html.snap-y { scroll-snap-type: none; }
 }
 
-/* ---- Homepage scroll-snap (gentle proximity; each section's top locks to the
- * viewport as you settle near it). Scoped to <html.snap-y>, toggled by the
- * ScrollSnap component so it never affects other routes. scroll-padding-top
- * clears the 64px mobile top bar; desktop has a left sidebar, no top offset. ---- */
-html.snap-y { scroll-snap-type: y mandatory; scroll-padding-top: 64px; }
-@media (min-width: 1024px) { html.snap-y { scroll-padding-top: 0; } }
-html.snap-y .snap-section { scroll-snap-align: start; scroll-snap-stop: normal; }
+/* ---- Homepage motion (Lenis smooth scroll + GSAP ScrollTrigger, via HomeMotion).
+ * On the homepage the GSAP system owns entrance motion, so neutralize the
+ * IntersectionObserver .reveal there to avoid double-hiding; GSAP sets its own
+ * initial states. Lenis manages scrolling, so drop native smooth-scroll to avoid
+ * fighting it. ---- */
+html.home-motion { scroll-behavior: auto; }
+html.home-motion .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
 
 /* ---- Display headings (condensed all-caps, GaryVee-style scale contrast) ----
  * Bebas Neue is single-weight (400) and inherently all-caps. Use for H1/H2
