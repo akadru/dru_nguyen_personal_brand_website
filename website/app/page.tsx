@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
 import SwipeRow from "@/components/SwipeRow";
+import ScrollSnap from "@/components/ScrollSnap";
 import { BUILDS } from "@/lib/builds";
 import { FEATURED_SLUGS } from "@/lib/posts";
 
@@ -39,9 +40,10 @@ const PILLARS = [
 export default function Home() {
   return (
     <>
+      <ScrollSnap />
       {/* 1. HERO — credential stack + (future) video lightbox + signature quote */}
       <section
-        className="relative flex min-h-[100svh] flex-col overflow-hidden"
+        className="snap-section relative flex min-h-[100svh] flex-col overflow-hidden"
         style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}
       >
         {/* Portrait (original studio shot, white bg kept), right-anchored, faded onto the hero */}
@@ -130,7 +132,7 @@ export default function Home() {
       </section>
 
       {/* 2. THREE PILLARS — Name + verb identity tiles */}
-      <section id="pillars" className="py-6 md:py-0" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+      <section id="pillars" className="snap-section py-6 md:py-0" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <SwipeRow surface="dark" desktopGrid="md:grid-cols-3" desktopGap="md:gap-0" mobileGap="gap-4" mobilePad="px-5" basis="basis-[86%]">
           {PILLARS.map((p, i) => (
             <Reveal key={p.name} delay={i as 0 | 1 | 2}>
@@ -170,7 +172,7 @@ export default function Home() {
       </section>
 
       {/* 3. BUILT WITH AI — white content surface, live builds strip */}
-      <section id="builds" className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
+      <section id="builds" className="snap-section py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Live in Production</div>
@@ -245,7 +247,7 @@ export default function Home() {
       </section>
 
       {/* 4. WHAT'S NEW — the blog feed, right under the builds */}
-      <section id="news" className="py-16 md:py-24" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
+      <section id="news" className="snap-section py-16 md:py-24" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Read This</div>
@@ -276,7 +278,7 @@ export default function Home() {
       </section>
 
       {/* 5. STAT STRIP — the operating record, continues the white surface */}
-      <section className="py-14 md:py-20" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
+      <section className="snap-section py-14 md:py-20" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">The Operating Record</div>
@@ -306,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* 5. SPEAKING — full-bleed closer, the standing commercial CTA */}
-      <section id="speaking" className="relative overflow-hidden py-20 md:py-32" style={{ background: "var(--brand-jungle)" }}>
+      <section id="speaking" className="snap-section relative overflow-hidden py-20 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="absolute inset-0">
           <Image
             src="/images/dru-hero.jpg"
