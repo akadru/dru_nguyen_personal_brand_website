@@ -19,9 +19,9 @@ export type Post = {
 export const POSTS: Post[] = [
   {
     slug: "six-businesses-claude-quarterly-rocks",
-    title: "How I run 6 businesses with Claude to achieve our quarterly rocks",
+    title: "How I run 3 companies and 2 boards with Claude to achieve our quarterly rocks",
     excerpt:
-      "Six businesses. Eighteen rocks. Ninety days. The operating loop I built around Claude to actually move EOS rocks, with the two prompts I run every Sunday and every morning.",
+      "Three companies, two boards. Eighteen rocks. Ninety days. The operating loop I built around Claude to actually move EOS rocks, with the two prompts I run every Sunday and every morning.",
     channel: "LinkedIn",
     pillar: "Thinker",
     topic: "AI Operator",
@@ -95,6 +95,14 @@ export const POSTS: Post[] = [
     updated: "2026-04-26",
     image: "/images/blog/how-i-run-multiple-businesses-with-claude.webp",
   },
+];
+
+// Homepage "What's New" feature — exactly these 3 slugs, in this order.
+// Curated by hand; edit this list to change what the homepage features.
+export const FEATURED_SLUGS: string[] = [
+  "six-businesses-claude-quarterly-rocks",
+  "nightclub-and-ai-adoption",
+  "every-olympian-has-a-coach-yours-is-a-prompt-away",
 ];
 
 export const FILTERS = [

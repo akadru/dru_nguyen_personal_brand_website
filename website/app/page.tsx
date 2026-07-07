@@ -5,6 +5,7 @@ import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
 import SwipeRow from "@/components/SwipeRow";
 import { BUILDS } from "@/lib/builds";
+import { FEATURED_SLUGS } from "@/lib/posts";
 
 // Drop Dru's YouTube intro/sizzle video ID here when it's ready —
 // the "Play Video" button appears automatically.
@@ -268,7 +269,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={2}>
             <div className="mt-12">
-              <ContentFeed carousel limit={3} sortByUpdated showFilters={false} />
+              <ContentFeed carousel showFilters={false} featuredSlugs={FEATURED_SLUGS} />
             </div>
           </Reveal>
         </div>

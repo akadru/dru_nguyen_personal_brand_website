@@ -62,6 +62,9 @@ The website chrome, inspired by garyvaynerchuk.com and rendered in the palette a
   Built with AI, and the What's New blog feed — become horizontal swipe carousels (peek of the next
   card + dot indicators) via `components/SwipeRow.tsx`. Desktop is unchanged (the same CSS grid).
   `/blog` keeps its full vertical grid (ContentFeed's `carousel` prop is off there).
+- **Homepage "What's New" is a hand-curated 3.** It shows exactly the posts (in order) listed in
+  `FEATURED_SLUGS` in `website/lib/posts.ts`, with no filter pills. Edit that array to change the
+  featured set. `/blog` still lists every post with the filter bar.
 - **Footer.** Sitewide: social wall + one-line copyright. **No newsletter band.**
 - **No newsletter anywhere.** Dru does not run one; never add signup CTAs or "subscribe" copy.
   `/newsletter` permanently redirects to `/blog`. Content CTAs point to `/blog`, `/built-with-ai`, or `/contact`.

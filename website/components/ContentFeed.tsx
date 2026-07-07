@@ -18,11 +18,13 @@ export default function ContentFeed({
   carousel = false,
   showFilters = true,
   sortByUpdated = false,
+  featuredSlugs,
 }: {
   limit?: number;
   carousel?: boolean;
   showFilters?: boolean;
   sortByUpdated?: boolean;
+  featuredSlugs?: string[]; // when set: show exactly these slugs, in order (ignores filters/sort/limit)
 }) {
   const [active, setActive] = useState("All");
 
@@ -36,10 +38,15 @@ export default function ContentFeed({
     p.updated ?? (p.date ? new Date(p.date).toISOString().slice(0, 10) : "");
 
   const items = useMemo(() => {
+    if (featuredSlugs && featuredSlugs.length) {
+      return featuredSlugs
+        .map((slug) => POSTS.find((p) => p.slug === slug))
+        .filter((p): p is (typeof POSTS)[number] => Boolean(p));
+    }
     let list = active === "All" ? [...POSTS] : POSTS.filter((p) => p.topic === active);
     if (sortByUpdated) list = [...list].sort((a, b) => updatedKey(b).localeCompare(updatedKey(a)));
     return typeof limit === "number" ? list.slice(0, limit) : list;
-  }, [active, limit, sortByUpdated]);
+  }, [active, limit, sortByUpdated, featuredSlugs]);
 
   return (
     <div>
