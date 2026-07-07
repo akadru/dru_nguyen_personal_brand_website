@@ -42,16 +42,16 @@ export default function Home() {
         className="relative flex min-h-[100svh] flex-col overflow-hidden"
         style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}
       >
-        {/* Portrait, right-anchored, faded onto the jungle (white studio bg knocked out) */}
+        {/* Portrait (original studio shot, white bg kept), right-anchored, faded onto the hero */}
         <div className="absolute inset-0" aria-hidden>
           <Image
-            src="/images/dru-portrait-cutout.png"
+            src="/images/dru-portrait.jpg"
             alt=""
             fill
             priority
             sizes="100vw"
-            className="object-contain object-top md:object-right-bottom"
-            style={{ opacity: 0.5 }}
+            className="object-contain object-top md:object-right"
+            style={{ opacity: 0.4 }}
           />
           {/* Desktop: left-heavy gradient — solid dark under the headline, clear on the right so the portrait shows */}
           <div
