@@ -170,7 +170,7 @@ export default function Home() {
       </section>
 
       {/* 3. BUILT WITH AI — white content surface, live builds strip */}
-      <section id="builds" className="py-24 md:py-32" style={{ background: "var(--brand-white)" }}>
+      <section id="builds" className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Live in Production</div>
@@ -193,7 +193,7 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={2}>
-            <SwipeRow className="mt-12" surface="light" desktopGrid="md:grid-cols-2 lg:grid-cols-3" desktopGap="md:gap-x-8 md:gap-y-14" basis="basis-[82%]">
+            <SwipeRow className="mt-8 md:mt-10" surface="light" desktopGrid="md:grid-cols-2 lg:grid-cols-3" desktopGap="md:gap-x-8 md:gap-y-14" basis="basis-[82%]">
               {BUILDS.map((b) => (
                 <Link
                   key={b.slug}
@@ -245,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* 4. WHAT'S NEW — the blog feed, right under the builds */}
-      <section id="news" className="py-24 md:py-32" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
+      <section id="news" className="py-16 md:py-24" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Read This</div>
@@ -268,7 +268,7 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={2}>
-            <div className="mt-12">
+            <div className="mt-8 md:mt-10">
               <ContentFeed carousel showFilters={false} featuredSlugs={FEATURED_SLUGS} />
             </div>
           </Reveal>
@@ -276,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* 5. STAT STRIP — the operating record, continues the white surface */}
-      <section className="py-20 md:py-28" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
+      <section className="py-14 md:py-20" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">The Operating Record</div>
@@ -306,7 +306,7 @@ export default function Home() {
       </section>
 
       {/* 5. SPEAKING — full-bleed closer, the standing commercial CTA */}
-      <section id="speaking" className="relative overflow-hidden py-32 md:py-48" style={{ background: "var(--brand-jungle)" }}>
+      <section id="speaking" className="relative overflow-hidden py-20 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="absolute inset-0">
           <Image
             src="/images/dru-hero.jpg"
