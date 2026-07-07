@@ -23,7 +23,7 @@ content/topics/{slug}/blog.md → website/app/blog/{slug}/page.tsx
 - Add `"use client"` only for interactive components
 - Tailwind 4 for styling — no inline styles, no CSS Modules
 - Use brand CSS variables (`var(--brand-jungle)`, `var(--brand-lime)`, etc.) defined in `app/globals.css`
-- Web font: Outfit (set in globals.css)
+- Fonts (self-hosted via next/font in `app/layout.tsx`): **Bebas Neue** for display headings (`.display-heading`), **Outfit** for UI/body. Blog post bodies use **Plus Jakarta Sans** in the print-card template.
 
 ## Every blog post must include
 1. `export const metadata` with title (≤60 chars), description (≤160 chars), openGraph block, canonical URL
@@ -37,7 +37,7 @@ content/topics/{slug}/blog.md → website/app/blog/{slug}/page.tsx
 2. Read style guides (design-system.md, web-style-guide.md)
 3. Copy hero image: `content/topics/{slug}/{slug}.webp` → `website/public/images/blog/{slug}.webp`
 4. Generate `website/app/blog/{slug}/page.tsx`
-5. Add post card to top of `website/app/blog/page.tsx` (insert into the POSTS_GRID_START / POSTS_GRID_END markers)
+5. Register the post at the top of the `POSTS` array in `website/lib/posts.ts` (slug, title, excerpt, channel, pillar, topic, read, date, image). The `/blog` listing and the homepage "What's New" feed both render from this array via `ContentFeed`; add the topic to `FILTERS` if it's new.
 6. Stage files by name → output: "Run git push origin main to go live"
 7. Append to context/publish-log.md
 8. Update calendar entry status from `image-done` → `published`

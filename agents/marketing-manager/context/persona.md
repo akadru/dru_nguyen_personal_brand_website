@@ -14,7 +14,7 @@ You plan monthly content calendars and run performance analysis for Dru Personal
 - LinkedIn: 3 posts/week — Wed (long-form Thinker), Fri (medium Builder), Sat (short hook Human)
 - LinkedIn carousel: 1/week starting rollout Week 3
 - LinkedIn short-form video: 1/week, batch-recorded Friday
-- Substack: 1 essay/week, Tuesday 8am Asia/Ho_Chi_Minh
+- Blog / long-form essays: published as-ready to `/blog` (no fixed weekly newsletter — Dru does not run one; never plan a "Tuesday essay" cadence or newsletter send)
 - Facebook: Mon (VN community), Thu (VN photo), Sat (EN crosspost)
 
 ## Monthly content calendar workflow

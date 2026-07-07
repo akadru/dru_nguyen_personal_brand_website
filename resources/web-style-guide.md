@@ -21,14 +21,46 @@ White-on-lime fails WCAG contrast (~3.7:1 vs. required 4.5:1) and reads as washe
 
 | Section background | Body text | Display headlines | Buttons |
 |---|---|---|---|
-| Jungle | White / Pastel | White (with lime accent words) | Lime bg + Jungle text |
-| Lime | **Jungle** | **Jungle** (default) or **Myrtle italic** | Jungle bg + Lime text (inverse) |
+| Jungle | White / Pastel | White (with lime marker-highlight words) | Lime bg + Jungle text |
+| Lime | **Jungle** | **Jungle** (default) or **Myrtle** | Jungle bg + Lime text (inverse) |
 | White | Jungle | Jungle (with myrtle italic accent) | Jungle bg + White text |
 | Tea | Jungle | Jungle | Jungle bg + Lime/White text |
 
 **Forbidden on lime grounds:** white text, pastel text, light-myrtle text. **Forbidden on white grounds:** lime text (insufficient contrast). **Forbidden on jungle grounds:** myrtle body text (insufficient contrast).
 
 **Reference implementation:** `website/app/scholarly-warrior/page.tsx` hero (after 2026-06-16 fix) — every text element on the lime section explicitly sets `color: var(--brand-jungle)`. Use as the model for any new lime-grounded section.
+
+---
+
+## Site layout & typography (GaryVee-style, locked 2026-07-06)
+
+The website chrome, inspired by garyvaynerchuk.com and rendered in the palette above.
+
+- **Navigation.** Desktop: a **fixed left sidebar** (230px, jungle) — DRU. wordmark + search,
+  links grouped under the three pillars, a lime "Book Dru to Speak" CTA, social icons. Content is
+  offset `lg:pl-[230px]`. Mobile/tablet (<1024px): a sticky top bar + a right slide-in drawer at
+  25% width (min 280px), all jungle-on-lime.
+- **Typography.** Display headlines use condensed all-caps **Bebas Neue** (`.display-heading`
+  utility — line-height 0.92, inherently uppercase, **no italics**; never fake an oblique). Everything
+  else — UI, body, nav, buttons — is **Outfit**. Blog post bodies keep **Plus Jakarta Sans** in the
+  print-card template. All three fonts are self-hosted via `next/font` in `app/layout.tsx`
+  (`--font-bebas` / `--font-outfit` / `--font-jakarta`); never add a Google Fonts `<link>`/`@import`.
+- **Marker-highlight** (`.marker-highlight`). The signature move: a lime swipe behind key words in
+  a display headline. Text inside is always jungle. This is the brand's answer to GaryVee's yellow
+  highlighter, in lime.
+- **Homepage order.** Hero (OPERATOR / BUILDER / EXPERIMENTER over a faded speaking photo + the
+  quote "Knowledge with Application is Wisdom") → three pillar tiles → **Built with AI** builds strip
+  → **What's New** blog feed (topic filter pills) → operating-record stat strip → speaking closer.
+- **Three pillars (Name + verb, the site's spine).** *Dru Nguyen · builds businesses* → `/ventures` ·
+  *Built with AI · the tools my teams run on* → `/built-with-ai` · *Scholarly Warrior · lives Care ·
+  Discipline · Grit* → `/scholarly-warrior`.
+- **Built with AI.** `/built-with-ai` showcases real tools built with Claude (EOS Operating System,
+  Team Skylight, this site), each with a live link and a case-study page. Data in `website/lib/builds.ts`.
+- **Footer.** Sitewide: social wall + one-line copyright. **No newsletter band.**
+- **No newsletter anywhere.** Dru does not run one; never add signup CTAs or "subscribe" copy.
+  `/newsletter` permanently redirects to `/blog`. Content CTAs point to `/blog`, `/built-with-ai`, or `/contact`.
+- **Xood logo.** Only the white-lettering dark-bg mark (blue X, white "ood", orange dot). Never on a
+  white chip; never run through whiten/invert filters.
 
 ---
 

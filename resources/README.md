@@ -53,8 +53,8 @@ These are short, focused documents the AI agents (writer, social-media-manager, 
 |---|---|---|
 | **[`brand-voice.md`](brand-voice.md)** | 64 | Voice blend (70/15/10/5), four attributes, voice markers, words to avoid, CTA style, calibration tests, hard rules. Short and high-signal. |
 | **[`audience-personas.md`](audience-personas.md)** | 93 | Ray (plateaued operator) and Linh (curious Vietnam builder). Demographics, goals, pains, what they want from Dru, channel preferences, voice cues. |
-| **[`web-style-guide.md`](web-style-guide.md)** | 137 | Pillars (Thinker/Builder/Human), post types and lengths, S.I.F.P framework, blog post HTML structure, palette + contrast rules. |
-| **[`design-system.md`](design-system.md)** | 157 | Scholarly Warrior visual system. Three contexts, one palette. Typography, spacing, components. |
+| **[`web-style-guide.md`](web-style-guide.md)** | 160 | Palette + lime-contrast rule, **site layout & typography (GaryVee-style)**, content pillars (Thinker/Builder/Human), post types and lengths, S.I.F.P framework, blog post HTML structure. |
+| **[`design-system.md`](design-system.md)** | 158 | Scholarly Warrior visual system. GaryVee-style layout, Bebas Neue + Outfit typography, sidebar nav, marker-highlight, one palette, no-newsletter + Xood-logo rules. |
 
 ### 3. Format-specific style guides (Word / Report / Memo)
 
@@ -144,6 +144,7 @@ These are scattered across multiple files but they are the ones that matter most
 
 ## Changelog — when the source of truth was updated
 
+- **2026-07-06** — **Site redesigned to a GaryVee-style layout** (fixed left sidebar nav, Bebas Neue display headings + Outfit, lime marker-highlight, three-pillar homepage). The middle pillar became **Built with AI** (`/built-with-ai`) with case studies for the EOS platform, Team Skylight, and this site; hero is OPERATOR / BUILDER / EXPERIMENTER + "Knowledge with Application is Wisdom." **Newsletter retired entirely** (`/newsletter` → `/blog`, footer band removed). **Xood logo** locked to the white-lettering dark-bg mark, never on a white chip. Synced across `CLAUDE.md`, `resources/web-style-guide.md`, `resources/design-system.md`, and `website/README.md`.
 - **2026-06-18** — Lime-background contrast rule locked across `web-style-guide.md`, `DRU-WRITER-GUIDE-for-marketing-manager.md`, `agents/designer/context/style-guide.md`, and `website/app/globals.css`. Bug fixed on `/scholarly-warrior` hero (white text on lime → jungle). Memory entry added: `lime_contrast_rule.md`.
 - **2026-06-17** — `SITE-IMPROVEMENT-BRIEF.md` added — strategic brief with 14 prioritized moves to reach the bar of top thought leaders.
 - **2026-06-16** — `DRU-WRITER-GUIDE-for-marketing-manager.md` (441 lines) created as the consolidated source of truth for the human marketing manager. `SAMPLE-LINKEDIN-POST-and-claude-workflow.md` (243 lines) added as the worked example with Claude prompt.
