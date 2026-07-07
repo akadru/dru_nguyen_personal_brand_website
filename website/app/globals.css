@@ -59,7 +59,7 @@ html, body {
  * viewport as you settle near it). Scoped to <html.snap-y>, toggled by the
  * ScrollSnap component so it never affects other routes. scroll-padding-top
  * clears the 64px mobile top bar; desktop has a left sidebar, no top offset. ---- */
-html.snap-y { scroll-snap-type: y proximity; scroll-padding-top: 64px; }
+html.snap-y { scroll-snap-type: y mandatory; scroll-padding-top: 64px; }
 @media (min-width: 1024px) { html.snap-y { scroll-padding-top: 0; } }
 html.snap-y .snap-section { scroll-snap-align: start; scroll-snap-stop: normal; }
 
