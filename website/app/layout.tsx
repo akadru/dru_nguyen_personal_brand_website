@@ -38,6 +38,21 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.drunguyen.me",
     siteName: "Dru Nguyen",
+    images: [
+      {
+        url: "/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dru Nguyen — Operator, Builder, Experimenter",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dru Nguyen, Operator. AI Experimenter.",
+    description:
+      "Operator. Co-founder. Investor. AI-using operator becoming an educator. Care. Discipline. Grit.",
+    images: ["/og-home.jpg"],
   },
 };
 
