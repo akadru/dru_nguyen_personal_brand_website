@@ -268,7 +268,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={2}>
             <div className="mt-12">
-              <ContentFeed carousel />
+              <ContentFeed carousel limit={3} sortByUpdated showFilters={false} />
             </div>
           </Reveal>
         </div>

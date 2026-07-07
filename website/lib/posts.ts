@@ -10,7 +10,9 @@ export type Post = {
   pillar: "Thinker" | "Builder" | "Human";
   topic: string;
   read: string;          // e.g. "4 MIN"
-  date?: string;         // e.g. "26 APR 2026"
+  date?: string;         // e.g. "26 APR 2026" — published date (display)
+  updated?: string;      // ISO "YYYY-MM-DD" — bump when the post is revised;
+                         // the homepage "What's New" features the 3 newest by this
   image?: string;        // /images/blog/{slug}.webp
 };
 
@@ -25,6 +27,7 @@ export const POSTS: Post[] = [
     topic: "AI Operator",
     read: "6 MIN",
     date: "18 MAY 2026",
+    updated: "2026-05-18",
     image: "/images/blog/six-businesses-claude-quarterly-rocks.webp",
   },
   {
@@ -37,6 +40,7 @@ export const POSTS: Post[] = [
     topic: "Hospitality",
     read: "4 MIN",
     date: "13 MAY 2026",
+    updated: "2026-05-13",
     image: "/images/blog/nightclub-and-ai-adoption.webp",
   },
   {
@@ -49,6 +53,7 @@ export const POSTS: Post[] = [
     topic: "EOS",
     read: "5 MIN",
     date: "13 MAY 2026",
+    updated: "2026-05-13",
     image: "/images/blog/eos-at-skylight.webp",
   },
   {
@@ -61,6 +66,7 @@ export const POSTS: Post[] = [
     topic: "Coaching",
     read: "7 MIN",
     date: "30 APR 2026",
+    updated: "2026-04-30",
     image: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp",
   },
   {
@@ -73,6 +79,7 @@ export const POSTS: Post[] = [
     topic: "AI Operator",
     read: "5 MIN",
     date: "29 APR 2026",
+    updated: "2026-04-29",
     image: "/images/blog/never-enter-a-meeting-blind-claude-design-prep.webp",
   },
   {
@@ -85,6 +92,7 @@ export const POSTS: Post[] = [
     topic: "AI Operator",
     read: "4 MIN",
     date: "26 APR 2026",
+    updated: "2026-04-26",
     image: "/images/blog/how-i-run-multiple-businesses-with-claude.webp",
   },
 ];

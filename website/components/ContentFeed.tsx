@@ -13,7 +13,17 @@ import SwipeRow from "@/components/SwipeRow";
  * `carousel` makes the cards a horizontal swipe row on mobile (homepage);
  * the /blog page leaves it off and keeps the full vertical grid.
  */
-export default function ContentFeed({ limit, carousel = false }: { limit?: number; carousel?: boolean }) {
+export default function ContentFeed({
+  limit,
+  carousel = false,
+  showFilters = true,
+  sortByUpdated = false,
+}: {
+  limit?: number;
+  carousel?: boolean;
+  showFilters?: boolean;
+  sortByUpdated?: boolean;
+}) {
   const [active, setActive] = useState("All");
 
   const topics = useMemo(() => {
@@ -21,14 +31,20 @@ export default function ContentFeed({ limit, carousel = false }: { limit?: numbe
     return ["All", ...t];
   }, []);
 
+  // Sort key for "most recently updated": ISO `updated`, else parsed `date`.
+  const updatedKey = (p: (typeof POSTS)[number]) =>
+    p.updated ?? (p.date ? new Date(p.date).toISOString().slice(0, 10) : "");
+
   const items = useMemo(() => {
-    const filtered = active === "All" ? POSTS : POSTS.filter((p) => p.topic === active);
-    return typeof limit === "number" ? filtered.slice(0, limit) : filtered;
-  }, [active, limit]);
+    let list = active === "All" ? [...POSTS] : POSTS.filter((p) => p.topic === active);
+    if (sortByUpdated) list = [...list].sort((a, b) => updatedKey(b).localeCompare(updatedKey(a)));
+    return typeof limit === "number" ? list.slice(0, limit) : list;
+  }, [active, limit, sortByUpdated]);
 
   return (
     <div>
       {/* Filter pills */}
+      {showFilters && (
       <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Filter posts by topic">
         <span
           className="mr-2 text-[10px] font-extrabold uppercase"
@@ -56,6 +72,7 @@ export default function ContentFeed({ limit, carousel = false }: { limit?: numbe
           );
         })}
       </div>
+      )}
 
       {/* Card grid (mobile carousel on the homepage; full grid on /blog) */}
       {(() => {
