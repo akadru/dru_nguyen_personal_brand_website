@@ -56,6 +56,8 @@ The website chrome, inspired by garyvaynerchuk.com and rendered in the palette a
   Discipline · Grit* → `/scholarly-warrior`.
 - **Built with AI.** `/built-with-ai` showcases real tools built with Claude (EOS Operating System,
   Team Skylight, this site), each with a live link and a case-study page. Data in `website/lib/builds.ts`.
+  On the **homepage**, build cards link to the build's **case study** ("Read the case study →"); the
+  showcase-page cards link to the live product. Live links are always reachable from the case study.
 - **Footer.** Sitewide: social wall + one-line copyright. **No newsletter band.**
 - **No newsletter anywhere.** Dru does not run one; never add signup CTAs or "subscribe" copy.
   `/newsletter` permanently redirects to `/blog`. Content CTAs point to `/blog`, `/built-with-ai`, or `/contact`.

@@ -25,7 +25,7 @@ own palette:
 2. **Three pillar tiles** — *Dru Nguyen · builds businesses* → `/ventures`; *Built with AI · the
    tools my teams run on* → `/built-with-ai`; *Scholarly Warrior · lives Care · Discipline · Grit*
    → `/scholarly-warrior`.
-3. **Built with AI** — the three live builds (see below).
+3. **Built with AI** — the three live builds (see below). On the homepage each card links to that build's **case study** (`caseStudyHref`); the live external link lives on the case-study page and on the `/built-with-ai` showcase cards.
 4. **What's New** — blog feed with topic filter pills.
 5. **Operating record** — stat strip.
 6. **Speaking** — full-bleed closer + "Book Dru to Speak".

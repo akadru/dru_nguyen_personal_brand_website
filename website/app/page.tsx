@@ -182,11 +182,9 @@ export default function Home() {
           <Reveal delay={2}>
             <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
               {BUILDS.map((b) => (
-                <a
+                <Link
                   key={b.slug}
-                  href={b.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={b.caseStudyHref ?? b.url}
                   className="group flex flex-col"
                 >
                   <div className="relative aspect-[16/10] w-full overflow-hidden border" style={{ borderColor: "rgba(10,27,36,0.12)" }}>
@@ -223,10 +221,10 @@ export default function Home() {
                     className="mt-3 inline-flex items-center gap-2 text-[10px] font-bold uppercase"
                     style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}
                   >
-                    Visit {b.urlLabel}
-                    <span className="transition-transform group-hover:translate-x-1" aria-hidden>↗</span>
+                    Read the case study
+                    <span className="transition-transform group-hover:translate-x-1" aria-hidden>→</span>
                   </div>
-                </a>
+                </Link>
               ))}
             </div>
           </Reveal>

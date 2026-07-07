@@ -12,7 +12,9 @@ export type Build = {
   urlLabel: string;      // how the domain reads on the card
   image: string;         // /images/built/{slug}.jpg (1600×1000 screenshot)
   stack: string;         // "Claude · Next.js · ..." one-liner
-  caseStudyHref?: string; // internal case-study page, when one exists
+  caseStudyHref?: string; // internal case-study page. Homepage build cards link here
+                          // (fall back to `url` if absent); the /built-with-ai showcase
+                          // cards link to the live `url` and offer this as a separate link.
 };
 
 export const BUILDS: Build[] = [
