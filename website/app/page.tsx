@@ -42,7 +42,23 @@ export default function Home() {
         className="relative flex min-h-[100svh] flex-col overflow-hidden"
         style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}
       >
-        <div className="mx-auto flex w-full max-w-[1200px] flex-1 flex-col items-start justify-center px-5 py-24 md:px-10">
+        {/* Faded speaking photo behind the wordmark */}
+        <div className="absolute inset-0" aria-hidden>
+          <Image
+            src="/images/dru-speaking-zero-project-2026.jpg"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+            style={{ filter: "grayscale(1) contrast(1.05)", opacity: 0.28 }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: "linear-gradient(180deg, rgba(10,27,36,0.86) 0%, rgba(10,27,36,0.7) 45%, rgba(10,27,36,0.96) 100%)" }}
+          />
+        </div>
+        <div className="relative mx-auto flex w-full max-w-[1200px] flex-1 flex-col items-start justify-center px-5 py-24 md:px-10">
           <Reveal>
             <h1
               className="display-heading"
