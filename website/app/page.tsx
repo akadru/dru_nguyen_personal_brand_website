@@ -3,6 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
+import SwipeRow from "@/components/SwipeRow";
 import { BUILDS } from "@/lib/builds";
 
 // Drop Dru's YouTube intro/sizzle video ID here when it's ready —
@@ -128,8 +129,8 @@ export default function Home() {
       </section>
 
       {/* 2. THREE PILLARS — Name + verb identity tiles */}
-      <section id="pillars" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
-        <div className="grid grid-cols-1 md:grid-cols-3">
+      <section id="pillars" className="py-6 md:py-0" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+        <SwipeRow surface="dark" desktopGrid="md:grid-cols-3" desktopGap="md:gap-0" mobileGap="gap-4" mobilePad="px-5" basis="basis-[86%]">
           {PILLARS.map((p, i) => (
             <Reveal key={p.name} delay={i as 0 | 1 | 2}>
               <Link href={p.href} className="group relative block aspect-[4/5] overflow-hidden md:aspect-[3/4]">
@@ -164,7 +165,7 @@ export default function Home() {
               </Link>
             </Reveal>
           ))}
-        </div>
+        </SwipeRow>
       </section>
 
       {/* 3. BUILT WITH AI — white content surface, live builds strip */}
@@ -191,12 +192,12 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={2}>
-            <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+            <SwipeRow className="mt-12" surface="light" desktopGrid="md:grid-cols-2 lg:grid-cols-3" desktopGap="md:gap-x-8 md:gap-y-14" basis="basis-[82%]">
               {BUILDS.map((b) => (
                 <Link
                   key={b.slug}
                   href={b.caseStudyHref ?? b.url}
-                  className="group flex flex-col"
+                  className="group flex h-full flex-col"
                 >
                   <div className="relative aspect-[16/10] w-full overflow-hidden border" style={{ borderColor: "rgba(10,27,36,0.12)" }}>
                     <Image
@@ -237,7 +238,7 @@ export default function Home() {
                   </div>
                 </Link>
               ))}
-            </div>
+            </SwipeRow>
           </Reveal>
         </div>
       </section>
@@ -267,7 +268,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={2}>
             <div className="mt-12">
-              <ContentFeed />
+              <ContentFeed carousel />
             </div>
           </Reveal>
         </div>

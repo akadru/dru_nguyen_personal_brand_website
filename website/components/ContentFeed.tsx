@@ -3,13 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { POSTS, postHref } from "@/lib/posts";
+import SwipeRow from "@/components/SwipeRow";
 
 /**
  * "What's New" feed — GaryVee-style category filter pills over a card grid,
  * on a white content surface. Pills use jungle/myrtle only (never lime text
  * on white — locked contrast rule).
+ *
+ * `carousel` makes the cards a horizontal swipe row on mobile (homepage);
+ * the /blog page leaves it off and keeps the full vertical grid.
  */
-export default function ContentFeed({ limit }: { limit?: number }) {
+export default function ContentFeed({ limit, carousel = false }: { limit?: number; carousel?: boolean }) {
   const [active, setActive] = useState("All");
 
   const topics = useMemo(() => {
@@ -53,10 +57,10 @@ export default function ContentFeed({ limit }: { limit?: number }) {
         })}
       </div>
 
-      {/* Card grid */}
-      <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-        {items.map((p) => (
-          <Link key={p.slug} href={postHref(p)} className="group flex flex-col">
+      {/* Card grid (mobile carousel on the homepage; full grid on /blog) */}
+      {(() => {
+        const cards = items.map((p) => (
+          <Link key={p.slug} href={postHref(p)} className="group flex h-full flex-col">
             <div className="relative aspect-[16/10] w-full overflow-hidden" style={{ background: "rgba(10,27,36,0.06)" }}>
               {p.image && (
                 <Image
@@ -87,8 +91,23 @@ export default function ContentFeed({ limit }: { limit?: number }) {
               By Dru Nguyen{p.date && <> · {p.date}</>}
             </div>
           </Link>
-        ))}
-      </div>
+        ));
+        return carousel ? (
+          <SwipeRow
+            className="mt-12"
+            surface="light"
+            desktopGrid="md:grid-cols-2 lg:grid-cols-3"
+            desktopGap="md:gap-x-8 md:gap-y-14"
+            basis="basis-[82%]"
+          >
+            {cards}
+          </SwipeRow>
+        ) : (
+          <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
+            {cards}
+          </div>
+        );
+      })()}
 
       {items.length === 0 && (
         <p className="mt-12 text-base" style={{ color: "var(--brand-body)" }}>

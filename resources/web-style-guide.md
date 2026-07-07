@@ -58,6 +58,10 @@ The website chrome, inspired by garyvaynerchuk.com and rendered in the palette a
   Team Skylight, this site), each with a live link and a case-study page. Data in `website/lib/builds.ts`.
   On the **homepage**, build cards link to the build's **case study** ("Read the case study →"); the
   showcase-page cards link to the live product. Live links are always reachable from the case study.
+- **Mobile swipe rows.** On mobile only, the homepage's three card sections — the identity pillars,
+  Built with AI, and the What's New blog feed — become horizontal swipe carousels (peek of the next
+  card + dot indicators) via `components/SwipeRow.tsx`. Desktop is unchanged (the same CSS grid).
+  `/blog` keeps its full vertical grid (ContentFeed's `carousel` prop is off there).
 - **Footer.** Sitewide: social wall + one-line copyright. **No newsletter band.**
 - **No newsletter anywhere.** Dru does not run one; never add signup CTAs or "subscribe" copy.
   `/newsletter` permanently redirects to `/blog`. Content CTAs point to `/blog`, `/built-with-ai`, or `/contact`.
