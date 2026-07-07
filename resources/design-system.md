@@ -103,7 +103,7 @@ Sections may be omitted, but **order is fixed**.
 ## Components
 
 - **Nav (desktop ≥1024px):** fixed left sidebar, 230px wide, Dark Jungle Green bg, 1px pastel right border. DRU. wordmark + search top; links in Bebas Neue grouped under the three pillars (Dru Nguyen / The AI Operator / Scholarly Warrior); "Book Dru to Speak" lime CTA + social icons bottom. Content offset right via `lg:pl-[230px]`.
-- **Nav (mobile/tablet <1024px):** sticky top bar (wordmark, socials, search, hamburger) + right slide-in lime drawer at 25% page width (min 280px), jungle text only.
+- **Nav (mobile/tablet <1024px):** sticky top bar (wordmark, socials, search, hamburger) + a **floating rounded lime menu card** that slides in from the right and hugs its content (vertically centered over the dimmed page), jungle text only.
 - **Hero:** label (Myrtle Green) above H1 (Anti-Flash White on Dark Jungle Green). Supporting paragraph in Pastel Blue. Two CTAs — Primary (French Lime bg / Dark Jungle Green text), Secondary (transparent + Pastel Blue border).
 - **Section labels:** uppercase, Outfit Bold 10px, LS 0.12em, Myrtle Green. Always above the section heading. "THE PROBLEM", "THE SOLUTION", "HOW IT WORKS".
 - **CTA block:** full-width Dark Jungle Green. Headline 28px / 700 / Anti-Flash White. Supporting 15px / 400 / 60% white opacity. Primary button French Lime. Secondary transparent.

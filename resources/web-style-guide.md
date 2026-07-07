@@ -38,8 +38,8 @@ The website chrome, inspired by garyvaynerchuk.com and rendered in the palette a
 
 - **Navigation.** Desktop: a **fixed left sidebar** (230px, jungle) — DRU. wordmark + search,
   links grouped under the three pillars, a lime "Book Dru to Speak" CTA, social icons. Content is
-  offset `lg:pl-[230px]`. Mobile/tablet (<1024px): a sticky top bar + a right slide-in drawer at
-  25% width (min 280px), all jungle-on-lime.
+  offset `lg:pl-[230px]`. Mobile/tablet (<1024px): a sticky top bar + a floating rounded lime menu
+  card that slides in from the right and hugs its content, all jungle-on-lime.
 - **Typography.** Display headlines use condensed all-caps **Bebas Neue** (`.display-heading`
   utility — line-height 0.92, inherently uppercase, **no italics**; never fake an oblique). Everything
   else — UI, body, nav, buttons — is **Outfit**. Blog post bodies keep **Plus Jakarta Sans** in the

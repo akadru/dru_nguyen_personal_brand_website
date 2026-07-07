@@ -180,14 +180,17 @@ export default function Nav() {
         style={{ background: "rgba(10,27,36,0.55)", backdropFilter: open ? "blur(2px)" : "none" }}
         aria-hidden
       />
-      <aside
-        role="dialog"
-        aria-modal
-        aria-hidden={!open}
-        className={`fixed top-0 right-0 z-[80] h-full w-1/4 min-w-[280px] max-w-full overflow-y-auto transition-transform duration-[450ms] ease-out lg:hidden ${open ? "translate-x-0" : "translate-x-full"}`}
-        style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)" }}
+      {/* Floating lime card, vertically centered on the right, hugging its content */}
+      <div
+        className={`fixed inset-0 z-[80] flex items-center justify-end p-4 lg:hidden ${open ? "" : "pointer-events-none"}`}
       >
-        <div className="flex min-h-full flex-col px-6 py-6 md:px-10 md:py-8">
+        <aside
+          role="dialog"
+          aria-modal
+          aria-hidden={!open}
+          className={`max-h-[86dvh] w-full max-w-[340px] overflow-y-auto rounded-3xl px-7 py-8 shadow-2xl transition-all duration-[400ms] ease-out ${open ? "translate-x-0 opacity-100" : "translate-x-[115%] opacity-0"}`}
+          style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)" }}
+        >
           <div className="flex items-center justify-between">
             <Wordmark dark onClick={() => setOpen(false)} />
             <button
@@ -202,7 +205,7 @@ export default function Nav() {
             </button>
           </div>
 
-          <nav className="mt-10 flex flex-1 flex-col justify-center gap-8 md:mt-14">
+          <nav className="mt-8 flex flex-col gap-7">
             {GROUPS.map((g) => (
               <div key={g.label}>
                 <div className="section-label" style={{ color: "var(--brand-jungle)", opacity: 0.7 }}>
@@ -226,7 +229,7 @@ export default function Nav() {
             ))}
           </nav>
 
-          <div className="mt-10 flex items-center justify-between border-t pt-6" style={{ borderColor: "rgba(10,27,36,0.4)" }}>
+          <div className="mt-8 flex items-center justify-between border-t pt-6" style={{ borderColor: "rgba(10,27,36,0.4)" }}>
             <div className="text-[10px] font-bold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.18em" }}>
               © Dru Nguyen
             </div>
@@ -234,8 +237,8 @@ export default function Nav() {
               <SocialIcons variant="topbar" tone="jungle" />
             </div>
           </div>
-        </div>
-      </aside>
+        </aside>
+      </div>
     </>
   );
 }

@@ -10,7 +10,7 @@ own palette:
 
 - **Fixed left sidebar nav** on desktop (230px, jungle bg): DRU. wordmark + search, links
   grouped under the three pillars, "Book Dru to Speak" lime CTA, social icons. On mobile it
-  collapses to a sticky top bar + a quarter-width lime slide-in drawer.
+  collapses to a sticky top bar + a floating rounded lime menu card (slides in from the right, hugs its content).
 - **Display typography:** condensed all-caps **Bebas Neue** for headlines (`.display-heading`),
   **Outfit** for UI and body. Both self-hosted via `next/font` — no Google Fonts request.
 - **Marker-highlight** (`.marker-highlight`): a lime swipe behind key headline words; text inside
