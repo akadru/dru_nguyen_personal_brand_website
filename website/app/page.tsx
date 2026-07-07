@@ -47,7 +47,7 @@ export default function Home() {
         {/* Portrait (original studio shot, white bg kept), right-anchored, faded onto the hero */}
         <div className="absolute inset-0" aria-hidden>
           <Image
-            src="/images/dru-portrait.jpg"
+            src="/images/dru-portrait-hero.jpg"
             alt=""
             fill
             priority
