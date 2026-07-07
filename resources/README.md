@@ -28,9 +28,6 @@
 **"What is the brand voice?"**
 → [`brand-voice.md`](brand-voice.md) (the short reference) or [`DRU-WRITER-GUIDE-for-marketing-manager.md`](DRU-WRITER-GUIDE-for-marketing-manager.md) Section 2 (the expanded version).
 
-**"What does the website need to improve to reach the bar of top thought leaders?"**
-→ [`SITE-IMPROVEMENT-BRIEF.md`](SITE-IMPROVEMENT-BRIEF.md). Strategic brief with 14 prioritized moves.
-
 ---
 
 ## File index — what each file is
@@ -43,7 +40,6 @@ These are the documents Dru hands to his marketing manager, designer, or any new
 |---|---|---|
 | **[`DRU-WRITER-GUIDE-for-marketing-manager.md`](DRU-WRITER-GUIDE-for-marketing-manager.md)** | 441 | The single consolidated brand-voice + rules document. Voice blend, personas, channel rules, hashtag rules, attribution rule, 7-Beat Story Arc, palette + lime-contrast rule, four-question calibration test, five-point clarity gate, weekly batch workflow. The one file every collaborator needs. |
 | **[`SAMPLE-LINKEDIN-POST-and-claude-workflow.md`](SAMPLE-LINKEDIN-POST-and-claude-workflow.md)** | 243 | A worked LinkedIn post (the EO Vietnam / Skylight purchasing post) with a rule-by-rule scorecard, the brief shape that produced it, and the verbatim Claude prompt for drafting future posts. Pair with the Writer Guide. |
-| **[`SITE-IMPROVEMENT-BRIEF.md`](SITE-IMPROVEMENT-BRIEF.md)** | 145 | Strategic brief on drunguyen.me — current state, gap analysis vs. top thought leaders (Ferriss, Naval, Hormozi, Su, Priestley, Grant), 14 prioritized moves across three tiers, single highest-leverage move identified. |
 
 ### 2. Brand foundations (focused atomic files referenced by agents)
 
@@ -90,8 +86,6 @@ Used when Dru writes a Word memo or a formal report. Each pair is `.txt` source 
     │ SAMPLE-LINKEDIN  │         │                        │       │                  │
     │   POST           │         │                        │       │ web-style-source │
     │                  │         │                        │       │ + .docx          │
-    │ SITE-IMPROVEMENT │         │                        │       │                  │
-    │   BRIEF          │         │                        │       │                  │
     └──────────────────┘         └────────────────────────┘       └──────────────────┘
               │                               │
               └───────────────┬───────────────┘
@@ -146,7 +140,6 @@ These are scattered across multiple files but they are the ones that matter most
 
 - **2026-07-06** — **Site redesigned to a GaryVee-style layout** (fixed left sidebar nav, Bebas Neue display headings + Outfit, lime marker-highlight, three-pillar homepage). The middle pillar became **Built with AI** (`/built-with-ai`) with case studies for the EOS platform, Team Skylight, and this site; hero is OPERATOR / BUILDER / EXPERIMENTER + "Knowledge with Application is Wisdom." **Newsletter retired entirely** (`/newsletter` → `/blog`, footer band removed). **Xood logo** locked to the white-lettering dark-bg mark, never on a white chip. Synced across `CLAUDE.md`, `resources/web-style-guide.md`, `resources/design-system.md`, and `website/README.md`.
 - **2026-06-18** — Lime-background contrast rule locked across `web-style-guide.md`, `DRU-WRITER-GUIDE-for-marketing-manager.md`, `agents/designer/context/style-guide.md`, and `website/app/globals.css`. Bug fixed on `/scholarly-warrior` hero (white text on lime → jungle). Memory entry added: `lime_contrast_rule.md`.
-- **2026-06-17** — `SITE-IMPROVEMENT-BRIEF.md` added — strategic brief with 14 prioritized moves to reach the bar of top thought leaders.
 - **2026-06-16** — `DRU-WRITER-GUIDE-for-marketing-manager.md` (441 lines) created as the consolidated source of truth for the human marketing manager. `SAMPLE-LINKEDIN-POST-and-claude-workflow.md` (243 lines) added as the worked example with Claude prompt.
 - **2026-06-16** — Credit + define rules locked. Every framework, person, book, term referenced in a post must be hyperlinked to canonical source on first mention.
 - **2026-06-15** — Voice blend + four attributes + HBR-style opening + EO protected-ground rules locked across agent files.
