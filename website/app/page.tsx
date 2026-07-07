@@ -27,7 +27,7 @@ const PILLARS = [
   },
   {
     name: "Scholarly Warrior",
-    verb: "lives Care · Discipline · Grit",
+    verb: "Care · Discipline · Grit",
     href: "/scholarly-warrior",
     image: "/images/dru-muay-thai-2019.jpg",
     alt: "Dru Nguyen training Muay Thai",
