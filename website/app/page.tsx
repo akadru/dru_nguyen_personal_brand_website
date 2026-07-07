@@ -22,8 +22,8 @@ const PILLARS = [
     name: "Built with AI",
     verb: "the tools my teams run on",
     href: "/built-with-ai",
-    image: "/images/built/eos-platform.jpg",
-    alt: "The EOS Operating System platform Dru built with Claude",
+    image: "/images/built/ai-workshop.jpg",
+    alt: "Dru's team building with AI at a workshop in Vietnam",
   },
   {
     name: "Scholarly Warrior",
