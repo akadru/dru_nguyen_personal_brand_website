@@ -4,7 +4,6 @@ import Reveal from "@/components/Reveal";
 import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
 import SwipeRow from "@/components/SwipeRow";
-import HomeMotion from "@/components/HomeMotion";
 import { BUILDS } from "@/lib/builds";
 import { FEATURED_SLUGS } from "@/lib/posts";
 
@@ -40,7 +39,6 @@ const PILLARS = [
 export default function Home() {
   return (
     <>
-      <HomeMotion />
       {/* 1. HERO — credential stack + (future) video lightbox + signature quote */}
       <section
         className="relative flex min-h-[100svh] flex-col overflow-hidden"

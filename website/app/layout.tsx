@@ -22,6 +22,7 @@ const bebas = Bebas_Neue({
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SearchModal from "@/components/SearchModal";
+import SiteMotion from "@/components/SiteMotion";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.drunguyen.me"),
@@ -60,6 +61,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en" className={`${outfit.variable} ${jakarta.variable} ${bebas.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
+        <SiteMotion />
         <Nav />
         {/* Content is offset right of the fixed sidebar nav on desktop */}
         <div className="flex min-h-full flex-1 flex-col lg:pl-[230px]">

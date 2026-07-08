@@ -54,13 +54,14 @@ html, body {
   html { scroll-behavior: auto; }
 }
 
-/* ---- Homepage motion (Lenis smooth scroll + GSAP ScrollTrigger, via HomeMotion).
- * On the homepage the GSAP system owns entrance motion, so neutralize the
- * IntersectionObserver .reveal there to avoid double-hiding; GSAP sets its own
- * initial states. Lenis manages scrolling, so drop native smooth-scroll to avoid
- * fighting it. ---- */
-html.home-motion { scroll-behavior: auto; }
-html.home-motion .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+/* ---- Site-wide motion (Lenis smooth scroll + GSAP reveals, via SiteMotion in
+ * the layout). Lenis's recommended base styles; it toggles these classes on
+ * <html>. .lenis-smooth disables native smooth-scroll so it doesn't fight Lenis. ---- */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
 
 /* ---- Display headings (condensed all-caps, GaryVee-style scale contrast) ----
  * Bebas Neue is single-weight (400) and inherently all-caps. Use for H1/H2
