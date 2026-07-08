@@ -56,7 +56,7 @@ export default function SwipeRow({
       <div
         ref={trackRef}
         onScroll={onScroll}
-        data-lenis-prevent
+        data-lenis-prevent-touch
         className={`flex ${mobileGap} ${mobilePad} snap-x snap-mandatory overflow-x-auto overscroll-x-contain pb-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:grid ${desktopGrid} ${desktopGap} md:overflow-visible md:px-0`}
       >
         {items.map((child, i) => (

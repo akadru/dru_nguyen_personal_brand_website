@@ -62,7 +62,7 @@ html.lenis, html.lenis body { height: auto; }
  * .lenis-smooth class, so the native smooth-scroll override must not depend on it,
  * or native scroll-behavior fights Lenis and scrolling stutters (esp. on reverse). */
 html.lenis { scroll-behavior: auto !important; }
-html.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+html.lenis [data-lenis-prevent], html.lenis [data-lenis-prevent-touch] { overscroll-behavior: contain; }
 html.lenis-stopped { overflow: hidden; }
 html.lenis iframe { pointer-events: none; }
 
