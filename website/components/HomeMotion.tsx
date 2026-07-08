@@ -36,7 +36,9 @@ export default function HomeMotion() {
       gsap.registerPlugin(ScrollTrigger, SplitText);
 
       // 1. Smooth momentum scrolling, driven off GSAP's ticker so ScrollTrigger stays in sync.
-      lenis = new Lenis({ duration: 1.05, smoothWheel: true }) as unknown as typeof lenis;
+      // syncTouch smooths touch scrolling too, so mobile gets the same momentum
+      // feel as desktop; horizontal carousels opt out via data-lenis-prevent.
+      lenis = new Lenis({ duration: 1.05, smoothWheel: true, syncTouch: true }) as unknown as typeof lenis;
       lenis!.on("scroll", ScrollTrigger.update);
       onTick = (time: number) => lenis!.raf(time * 1000);
       gsap.ticker.add(onTick);
