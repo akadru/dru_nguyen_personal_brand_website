@@ -60,7 +60,7 @@ export default function SpeakingPage() {
       {/* HERO, 2-col Bartlett style: image left, copy right */}
       <section style={{ background: "var(--brand-jungle)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto grid max-w-[1400px] gap-12 px-5 pt-28 pb-20 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-20 md:px-10 md:pt-40 md:pb-28">
+        <div className="mx-auto grid max-w-[1400px] gap-12 px-5 pt-20 pb-16 md:grid-cols-[1.1fr_1fr] md:items-center md:gap-20 md:px-10 md:pt-28 md:pb-20">
           <Reveal>
             <div className="relative aspect-[4/5] w-full overflow-hidden">
               <Image
@@ -144,7 +144,7 @@ export default function SpeakingPage() {
       </section>
 
       {/* TOPICS, 2-col grid, image-led if you have venue shots later */}
-      <section className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-20 md:py-28" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Topics</div>
@@ -157,7 +157,7 @@ export default function SpeakingPage() {
               Four <span style={{ color: "var(--brand-myrtle)" }}>signature talks.</span>
             </h2>
           </Reveal>
-          <div className="mt-16 grid gap-x-8 gap-y-12 md:grid-cols-2">
+          <div className="mt-10 md:mt-12 grid gap-x-8 gap-y-12 md:grid-cols-2">
             {topics.map((t, i) => (
               <Reveal key={t.label} delay={(i % 2) as 0 | 1}>
                 <article className="flex flex-col border-t pt-8" style={{ borderColor: "rgba(176,190,197,0.25)" }}>
@@ -181,7 +181,7 @@ export default function SpeakingPage() {
       </section>
 
       {/* FORMATS, booker self-qualification table */}
-      <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+      <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Formats</div>
@@ -192,7 +192,7 @@ export default function SpeakingPage() {
             </h2>
           </Reveal>
           <Reveal delay={2}>
-            <div className="mt-12 overflow-hidden rounded-2xl border" style={{ borderColor: "rgba(176,190,197,0.2)" }}>
+            <div className="mt-8 md:mt-10 overflow-hidden rounded-2xl border" style={{ borderColor: "rgba(176,190,197,0.2)" }}>
               <div className="hidden grid-cols-[1.2fr_1fr_1fr_2fr] gap-px text-[10px] font-extrabold uppercase md:grid" style={{ background: "rgba(176,190,197,0.15)" }}>
                 <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Format</div>
                 <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Audience</div>
@@ -234,7 +234,7 @@ export default function SpeakingPage() {
       </section>
 
       {/* QUICK FACTS, for organizers */}
-      <section className="py-20 md:py-24" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+      <section className="py-14 md:py-20" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">For organisers</div>
@@ -258,12 +258,12 @@ export default function SpeakingPage() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-28 md:py-40" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-20 md:py-28" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">What past audiences say</div>
           </Reveal>
-          <div className="mt-12 grid gap-10 md:grid-cols-2">
+          <div className="mt-8 md:mt-10 grid gap-10 md:grid-cols-2">
             {testimonials.map((t) => (
               <Reveal key={t.name}>
                 <blockquote
@@ -290,7 +290,7 @@ export default function SpeakingPage() {
       </section>
 
       {/* CTA STRIP */}
-      <section className="py-24 md:py-28" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+      <section className="py-16 md:py-20" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="mx-auto flex max-w-[1100px] flex-col items-start gap-8 px-5 md:px-10 md:flex-row md:items-end md:justify-between">
           <h2
             className="font-extrabold tracking-tight"

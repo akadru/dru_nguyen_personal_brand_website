@@ -41,7 +41,7 @@ export default function PressPage() {
     <>
       <section className="relative overflow-hidden" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 z-10 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="relative z-10 mx-auto max-w-[1300px] px-5 pb-16 pt-28 md:px-10 md:pb-20 md:pt-36">
+        <div className="relative z-10 mx-auto max-w-[1300px] px-5 pb-16 pt-20 md:px-10 md:pb-20 md:pt-28">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>Press</div>
           </Reveal>
@@ -98,7 +98,7 @@ export default function PressPage() {
         </div>
       </section>
 
-      <section className="py-20" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-14" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Recent features</div>
@@ -133,7 +133,7 @@ export default function PressPage() {
       </section>
 
       {/* QUICK FACTS, for journalists */}
-      <section className="py-20" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-14" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Quick Facts</div>

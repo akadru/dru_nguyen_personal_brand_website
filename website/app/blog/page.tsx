@@ -14,7 +14,7 @@ export default function BlogPage() {
       {/* HERO */}
       <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto max-w-[1400px] px-5 pt-28 pb-16 md:px-10 md:pt-40 md:pb-24">
+        <div className="mx-auto max-w-[1400px] px-5 pt-20 pb-16 md:px-10 md:pt-28 md:pb-20">
           <Reveal>
             <div
               className="text-[10px] font-extrabold uppercase"
@@ -39,7 +39,7 @@ export default function BlogPage() {
       </section>
 
       {/* FEED — white content surface, filter pills + all posts */}
-      <section className="py-20 md:py-28" style={{ background: "var(--brand-white)" }}>
+      <section className="py-14 md:py-20" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
             <ContentFeed />

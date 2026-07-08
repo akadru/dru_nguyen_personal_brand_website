@@ -43,7 +43,7 @@ export default function ContactPage() {
     <>
       <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto max-w-[900px] px-5 pt-32 pb-16 md:px-8 md:pt-40 md:pb-20">
+        <div className="mx-auto max-w-[900px] px-5 pt-24 pb-16 md:px-8 md:pt-28 md:pb-20">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
               Contact
@@ -63,7 +63,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <section className="py-20" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-14" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[760px] px-5 md:px-8">
           <Reveal>
             <form onSubmit={onSubmit} className="grid gap-5">

@@ -15,7 +15,7 @@ export default function VenturesPage() {
       {/* HERO, dark, clean, no decorative bar */}
       <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto max-w-[1400px] px-5 pt-28 pb-20 md:px-10 md:pt-40 md:pb-28">
+        <div className="mx-auto max-w-[1400px] px-5 pt-20 pb-16 md:px-10 md:pt-28 md:pb-20">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
               The Ventures
@@ -41,14 +41,14 @@ export default function VenturesPage() {
       </section>
 
       {/* BARTLETT-STYLE FLUSH GRID */}
-      <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <VenturesGrid />
         </div>
       </section>
 
       {/* CTA STRIP */}
-      <section className="py-20 md:py-24" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-14 md:py-20" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto flex max-w-[1100px] flex-col items-start gap-6 px-5 md:px-10 md:flex-row md:items-end md:justify-between">
           <h2
             className="font-extrabold tracking-tight"

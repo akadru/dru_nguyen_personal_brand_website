@@ -39,7 +39,7 @@ export default function AboutPage() {
     <>
       <section className="relative overflow-hidden" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 z-10 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="relative z-10 mx-auto grid max-w-[1300px] gap-12 px-5 pb-20 pt-32 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:px-10 md:pb-28 md:pt-40">
+        <div className="relative z-10 mx-auto grid max-w-[1300px] gap-12 px-5 pb-16 pt-24 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:px-10 md:pb-20 md:pt-28">
           <div>
             <Reveal>
               <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
@@ -77,7 +77,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-16" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[900px] px-5 md:px-8">
           <Reveal>
             <div className="section-label">The Bio</div>
@@ -109,7 +109,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-16" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[900px] px-5 md:px-8">
           <Reveal>
             <div className="section-label">Five Stories</div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
               The lived material <span style={{ color: "var(--brand-myrtle)" }}>behind the work.</span>
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-5">
+          <div className="mt-8 md:mt-10 grid gap-5">
             {stories.map((s, i) => (
               <Reveal key={s.title} delay={(i % 3) as 0 | 1 | 2}>
                 <article
@@ -155,7 +155,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-24" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+      <section className="py-16" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[900px] px-5 md:px-8 text-center">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)" }}>Three Words</div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
           <Reveal delay={2}>
             <Link
               href="/contact"
-              className="mt-12 inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-bold uppercase tracking-wider"
+              className="mt-8 inline-flex items-center justify-center rounded-full px-7 py-4 text-sm font-bold uppercase tracking-wider"
               style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
             >
               Get in touch

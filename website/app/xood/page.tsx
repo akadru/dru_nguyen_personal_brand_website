@@ -26,7 +26,7 @@ export default function XoodPage() {
       {/* HERO */}
       <section className="relative overflow-hidden" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 z-10 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="relative z-10 mx-auto max-w-[1300px] px-5 pb-20 pt-28 md:px-10 md:pb-28 md:pt-36">
+        <div className="relative z-10 mx-auto max-w-[1300px] px-5 pb-16 pt-20 md:px-10 md:pb-20 md:pt-28">
           <Reveal>
             <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
               Identity Layer · 03, The IP
@@ -71,7 +71,7 @@ export default function XoodPage() {
       </section>
 
       {/* MANIFESTO */}
-      <section id="manifesto" className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
+      <section id="manifesto" className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[900px] px-5 text-center md:px-10">
           <Reveal>
             <div className="section-label">The Manifesto</div>
@@ -103,7 +103,7 @@ export default function XoodPage() {
       </section>
 
       {/* THREE BELIEFS */}
-      <section className="py-24 md:py-28" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-16 md:py-20" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">What We Believe</div>
@@ -123,7 +123,7 @@ export default function XoodPage() {
       </section>
 
       {/* OFFERINGS */}
-      <section id="offerings" className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
+      <section id="offerings" className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Offerings</div>
@@ -133,7 +133,7 @@ export default function XoodPage() {
               How Xood <span style={{ color: "var(--brand-myrtle)" }}>shows up.</span>
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 md:mt-10 grid gap-5 md:grid-cols-3">
             {offerings.map((o, i) => (
               <Reveal key={o.title} delay={(i % 3) as 0 | 1 | 2}>
                 <article className="h-full rounded-2xl p-8" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)", borderTop: "3px solid var(--brand-lime)" }}>
@@ -148,7 +148,7 @@ export default function XoodPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-center" style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)" }}>
+      <section className="py-14 text-center" style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[800px] px-5 md:px-10">
           <p className="font-extrabold tracking-tight" style={{ fontSize: "clamp(28px, 4vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
             Got data, want AI to <em style={{ color: "var(--brand-myrtle)", fontStyle: "italic" }}>actually work?</em>

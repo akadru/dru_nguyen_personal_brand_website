@@ -30,7 +30,7 @@ export default function ScholarlyWarriorPage() {
       {/* HERO */}
       <section className="relative overflow-hidden" style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)" }}>
         <div className="absolute inset-x-0 top-0 z-10 h-1" style={{ background: "var(--brand-jungle)" }} />
-        <div className="relative z-10 mx-auto grid max-w-[1300px] gap-10 px-5 pb-20 pt-28 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:px-10 md:pb-28 md:pt-36">
+        <div className="relative z-10 mx-auto grid max-w-[1300px] gap-10 px-5 pb-16 pt-20 md:grid-cols-[1.2fr_1fr] md:items-center md:gap-16 md:px-10 md:pb-20 md:pt-28">
           <div>
             <Reveal>
               <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.22em" }}>
@@ -88,7 +88,7 @@ export default function ScholarlyWarriorPage() {
       </section>
 
       {/* THREE WORDS */}
-      <section className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 text-center md:px-10">
           <Reveal>
             <div className="section-label">The Three Words</div>
@@ -98,7 +98,7 @@ export default function ScholarlyWarriorPage() {
               Care. <span style={{ color: "var(--brand-lime)" }}>Discipline.</span> Grit.
             </p>
           </Reveal>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
             {[
               { word: "Care", body: "For the work. For the team. For the ones I lead. Without care the rest is performance." },
               { word: "Discipline", body: "The system holds the standard. EOS. S.I.F.P. The Four-Layer Review. Structure is freedom." },
@@ -117,7 +117,7 @@ export default function ScholarlyWarriorPage() {
       </section>
 
       {/* FRAMEWORKS */}
-      <section id="frameworks" className="py-24 md:py-32" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+      <section id="frameworks" className="py-16 md:py-24" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)" }}>The Frameworks</div>
@@ -127,7 +127,7 @@ export default function ScholarlyWarriorPage() {
               Playbooks <span className="marker-highlight">I actually use.</span>
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-8 md:mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
             {frameworks.map((f, i) => (
               <Reveal key={f.title} delay={(i % 3) as 0 | 1 | 2}>
                 <article className="flex h-full flex-col rounded-xl p-6" style={{ background: "rgba(242,242,242,0.04)", border: "1px solid rgba(176,190,197,0.2)" }}>
@@ -143,7 +143,7 @@ export default function ScholarlyWarriorPage() {
       </section>
 
       {/* SIGNATURE STORIES */}
-      <section id="stories" className="py-24 md:py-32" style={{ background: "var(--brand-jungle)" }}>
+      <section id="stories" className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
             <div className="section-label">Signature Stories</div>
@@ -153,7 +153,7 @@ export default function ScholarlyWarriorPage() {
               Five lived <span style={{ color: "var(--brand-myrtle)" }}>moments.</span>
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-5">
+          <div className="mt-8 md:mt-10 grid gap-5">
             {stories.map((s, i) => (
               <Reveal key={s.title} delay={(i % 3) as 0 | 1 | 2}>
                 <article
@@ -184,7 +184,7 @@ export default function ScholarlyWarriorPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 text-center" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
+      <section className="py-14 text-center" style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[800px] px-5 md:px-10">
           <p className="font-extrabold tracking-tight" style={{ fontSize: "clamp(28px, 4vw, 56px)", lineHeight: 1.05, letterSpacing: "-0.02em" }}>
             Knowledge with application <em style={{ color: "var(--brand-lime)", fontStyle: "italic" }}>is wisdom.</em>

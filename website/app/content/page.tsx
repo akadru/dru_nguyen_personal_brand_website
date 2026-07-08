@@ -18,7 +18,7 @@ export default function ContentHub() {
     <>
       <section style={{ background: "var(--brand-jungle)", color: "var(--brand-white)" }}>
         <div className="absolute inset-x-0 top-0 h-1" style={{ background: "var(--brand-lime)" }} />
-        <div className="mx-auto max-w-[1200px] px-5 pt-32 pb-16 md:px-8 md:pt-40 md:pb-20">
+        <div className="mx-auto max-w-[1200px] px-5 pt-24 pb-16 md:px-8 md:pt-28 md:pb-20">
           <Reveal>
             <div className="section-label" style={{ color: "var(--brand-lime)", letterSpacing: "0.22em" }}>
               The Content Hub
@@ -33,7 +33,7 @@ export default function ContentHub() {
           </Reveal>
         </div>
       </section>
-      <section className="py-20" style={{ background: "var(--brand-jungle)" }}>
+      <section className="py-14" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1200px] px-5 md:px-8 grid gap-6 md:grid-cols-3">
           {channels.map((c, i) => (
             <Reveal key={c.label} delay={(i % 3) as 0 | 1 | 2}>
