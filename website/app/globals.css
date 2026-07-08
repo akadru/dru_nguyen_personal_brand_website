@@ -58,10 +58,13 @@ html, body {
  * the layout). Lenis's recommended base styles; it toggles these classes on
  * <html>. .lenis-smooth disables native smooth-scroll so it doesn't fight Lenis. ---- */
 html.lenis, html.lenis body { height: auto; }
-.lenis.lenis-smooth { scroll-behavior: auto !important; }
-.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
-.lenis.lenis-stopped { overflow: hidden; }
-.lenis.lenis-smooth iframe { pointer-events: none; }
+/* Key off .lenis (always present when active) — this Lenis build does not add a
+ * .lenis-smooth class, so the native smooth-scroll override must not depend on it,
+ * or native scroll-behavior fights Lenis and scrolling stutters (esp. on reverse). */
+html.lenis { scroll-behavior: auto !important; }
+html.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+html.lenis-stopped { overflow: hidden; }
+html.lenis iframe { pointer-events: none; }
 
 /* ---- Display headings (condensed all-caps, GaryVee-style scale contrast) ----
  * Bebas Neue is single-weight (400) and inherently all-caps. Use for H1/H2

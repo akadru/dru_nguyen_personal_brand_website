@@ -132,7 +132,7 @@ export default function SiteMotion() {
             {
               yPercent: amt,
               ease: "none",
-              scrollTrigger: { trigger: el.closest("section") ?? el, start: "top bottom", end: "bottom top", scrub: true },
+              scrollTrigger: { trigger: el.closest("section") ?? el, start: "top bottom", end: "bottom top", scrub: 0.5 },
             }
           );
         });
