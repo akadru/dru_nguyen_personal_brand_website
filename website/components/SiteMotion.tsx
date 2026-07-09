@@ -42,7 +42,11 @@ export default function SiteMotion() {
       gsap.registerPlugin(ScrollTrigger);
       gsapRef = gsap;
 
-      const lenis = new Lenis({ duration: 1.05, smoothWheel: true, syncTouch: true });
+      // lerp (exponential smoothing) instead of duration: time-based easing has a
+      // long ease-out tail that must decay before a direction change takes hold —
+      // that read as "stuck / laggy" when scrolling back up. Lerp responds to
+      // reversals instantly while staying just as smooth.
+      const lenis = new Lenis({ lerp: 0.1, smoothWheel: true, syncTouch: true });
       lenisRef.current = lenis as unknown as typeof lenisRef.current;
       lenis.on("scroll", ScrollTrigger.update);
       onTick = (t: number) => lenis.raf(t * 1000);
@@ -123,7 +127,10 @@ export default function SiteMotion() {
             }),
         });
 
-        // Parallax — gentle scrub drift.
+        // Parallax — gentle scrub drift. Direct scrub (true, not a lag value):
+        // Lenis already smooths the scroll itself, and stacking a second
+        // smoothing layer made the images visibly trail on direction changes.
+        // force3D keeps each drifting image on its own GPU layer (no repaints).
         gsap.utils.toArray<HTMLElement>("[data-parallax]").forEach((el) => {
           const amt = parseFloat(el.dataset.parallax || "10");
           gsap.fromTo(
@@ -132,7 +139,8 @@ export default function SiteMotion() {
             {
               yPercent: amt,
               ease: "none",
-              scrollTrigger: { trigger: el.closest("section") ?? el, start: "top bottom", end: "bottom top", scrub: 0.5 },
+              force3D: true,
+              scrollTrigger: { trigger: el.closest("section") ?? el, start: "top bottom", end: "bottom top", scrub: true },
             }
           );
         });

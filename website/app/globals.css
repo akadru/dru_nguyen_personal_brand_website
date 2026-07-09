@@ -63,6 +63,8 @@ html.lenis, html.lenis body { height: auto; }
  * or native scroll-behavior fights Lenis and scrolling stutters (esp. on reverse). */
 html.lenis { scroll-behavior: auto !important; }
 html.lenis [data-lenis-prevent], html.lenis [data-lenis-prevent-touch] { overscroll-behavior: contain; }
+/* Parallax layers stay composited between frames — no per-frame repaint. */
+[data-parallax] { will-change: transform; }
 html.lenis-stopped { overflow: hidden; }
 html.lenis iframe { pointer-events: none; }
 
