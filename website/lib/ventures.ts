@@ -8,8 +8,6 @@ export type Venture = {
   href: string;        // external site or anchor
   external: boolean;   // open in new tab if true
   wide?: boolean;      // span full row in VenturesGrid (cinematic 21:9 duotone tile)
-  banner?: boolean;    // span full row as a clean edge-to-edge cover image (no duotone/gradient/overlay)
-  bannerRatio?: string; // aspect-ratio for the banner, e.g. "1128 / 191"
   logo?: string;       // /images/logos/{slug}.png — replaces typed name in titles
   logoW?: number;      // intrinsic px of the logo file (for next/image)
   logoH?: number;
@@ -25,16 +23,14 @@ export const VENTURES: Venture[] = [
     tagline: "Adopting AI into business and personal life",
     role: "Co-Founder & MD, Commercial & Community",
     context: "AI Workflow Marketplace · Vietnam",
-    // Full-width cover banner at its natural aspect, shown in color, with the
-    // standard tile overlay (eyebrow + logo + tagline) so it matches the others.
+    // Locked (2026-07-06): xood-full.png is the white-lettering dark-bg version
+    // (blue X, white "ood", orange dot). Never render Xood on a white chip.
     logo: "/images/logos/xood-full.png",
     logoW: 559,
     logoH: 240,
-    image: "/images/ventures/xood-cover.jpg",
+    image: "/images/ventures/xood.jpg",
     href: "/ventures/xood",
     external: false,
-    banner: true,
-    bannerRatio: "1128 / 260",
   },
   {
     slug: "skylight",
@@ -116,6 +112,7 @@ export const VENTURES: Venture[] = [
     image: "/images/ventures/eo.jpg",
     href: "/ventures/eo",
     external: false,
+    wide: true,
   },
 ];
 
