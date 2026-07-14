@@ -104,10 +104,14 @@ export const VENTURES: Venture[] = [
     tagline: "EO Vietnam · Member",
     role: "Member, EO Vietnam chapter",
     context: "Global peer network · EO Vietnam",
+    // Full-color EO mark with dark navy lettering → render on a light chip.
+    logo: "/images/logos/eo.png",
+    logoW: 1200,
+    logoH: 389,
+    logoChip: true,
     image: "/images/ventures/eo.jpg",
     href: "/ventures/eo",
     external: false,
-    wide: true,
   },
 ];
 
