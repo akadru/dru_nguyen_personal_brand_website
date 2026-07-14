@@ -7,7 +7,9 @@ export type Venture = {
   image: string;       // /images/ventures/{slug}.jpg
   href: string;        // external site or anchor
   external: boolean;   // open in new tab if true
-  wide?: boolean;      // span full row in VenturesGrid (used for EO at the bottom)
+  wide?: boolean;      // span full row in VenturesGrid (cinematic 21:9 duotone tile)
+  banner?: boolean;    // span full row as a clean edge-to-edge cover image (no duotone/gradient/overlay)
+  bannerRatio?: string; // aspect-ratio for the banner, e.g. "1128 / 191"
   logo?: string;       // /images/logos/{slug}.png — replaces typed name in titles
   logoW?: number;      // intrinsic px of the logo file (for next/image)
   logoH?: number;
@@ -22,15 +24,17 @@ export const VENTURES: Venture[] = [
     name: "Xood.",
     tagline: "Adopting AI into business and personal life",
     role: "Co-Founder & MD, Commercial & Community",
-    context: "AI data services · Vietnam",
-    // Locked (2026-07-06): xood-full.png is the white-lettering dark-bg version
-    // (blue X, white "ood", orange dot). Never render Xood on a white chip.
+    context: "AI Workflow Marketplace · Vietnam",
+    // Full-width cover banner at its natural aspect, shown in color, with the
+    // standard tile overlay (eyebrow + logo + tagline) so it matches the others.
     logo: "/images/logos/xood-full.png",
     logoW: 559,
     logoH: 240,
-    image: "/images/ventures/xood.jpg",
+    image: "/images/ventures/xood-cover.jpg",
     href: "/ventures/xood",
     external: false,
+    banner: true,
+    bannerRatio: "1128 / 260",
   },
   {
     slug: "skylight",
@@ -104,11 +108,11 @@ export const VENTURES: Venture[] = [
     tagline: "EO Vietnam · Member",
     role: "Member, EO Vietnam chapter",
     context: "Global peer network · EO Vietnam",
-    // Full-color EO mark with dark navy lettering → render on a light chip.
+    // Full-color EO mark, transparent (no chip); soft shadow keeps it legible on the photo.
     logo: "/images/logos/eo.png",
     logoW: 1200,
     logoH: 389,
-    logoChip: true,
+    logoClass: "logo-shadow",
     image: "/images/ventures/eo.jpg",
     href: "/ventures/eo",
     external: false,

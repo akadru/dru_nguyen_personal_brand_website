@@ -101,6 +101,9 @@ html.lenis iframe { pointer-events: none; }
   line-height: 1.25;
 }
 
+/* Transparent full-color logo on a photo tile — soft shadow for legibility (EO). */
+.logo-shadow { filter: drop-shadow(0 2px 10px rgba(0,0,0,0.75)); }
+
 /* ---- Section label utility ---- */
 .section-label {
   font-size: 10px;

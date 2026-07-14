@@ -17,6 +17,41 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
           : {};
         const isWide = !!v.wide;
 
+        // Full-width cover banner shown in COLOR at its natural aspect, with the
+        // standard tile overlay (eyebrow + logo + tagline) so it matches the others.
+        if (v.banner) {
+          return (
+            <Link
+              key={v.slug}
+              href={v.href}
+              {...linkProps}
+              className={`group card-hover-accent relative block overflow-hidden md:col-span-2 ${columns === 3 ? "lg:col-span-3" : ""}`}
+              aria-label={v.name}
+            >
+              <div className="relative w-full" style={{ aspectRatio: v.bannerRatio ?? "1128 / 260" }}>
+                <Image
+                  src={v.image}
+                  alt={v.name}
+                  fill
+                  priority
+                  sizes="100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+              </div>
+              <div
+                className="absolute inset-0"
+                style={{ background: "linear-gradient(180deg, rgba(10,27,36,0) 35%, rgba(10,27,36,0.35) 72%, rgba(10,27,36,0.88) 100%)" }}
+              />
+              <div className="absolute inset-x-0 bottom-0 p-6 md:p-8">
+                <div className="text-[10px] font-extrabold uppercase" style={{ color: "var(--brand-lime)", letterSpacing: "0.18em" }}>
+                  {v.context}
+                </div>
+                <span className="sr-only">{v.name} — {v.tagline}</span>
+              </div>
+            </Link>
+          );
+        }
+
         return (
           <Link
             key={v.slug}
