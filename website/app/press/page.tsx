@@ -33,7 +33,7 @@ const brandFilm = {
 const quickFacts = [
   { label: "Full name", value: "Dru Nguyen" },
   { label: "Roles", value: "Co-Founder & MD of Xood · Founder of Skylight · Advisor: Tictag, EWB, Nuen, GAM" },
-  { label: "Industries", value: "Hospitality · AI Data Services · Entertainment" },
+  { label: "Industries", value: "Hospitality · Applied AI · Entertainment" },
   { label: "Based in", value: "Ho Chi Minh City, Vietnam (UTC+7)" },
   { label: "Tagline", value: "Operator. AI Experimenter. Care. Discipline. Grit." },
   { label: "Speaking topics", value: "AI for Operators · EOS in Practice · Building in Vietnam" },

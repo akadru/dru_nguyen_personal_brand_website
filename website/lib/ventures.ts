@@ -20,7 +20,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "xood",
     name: "Xood.",
-    tagline: "Adopting AI into business and personal life",
+    tagline: "Turn AI into real results",
     role: "Co-Founder & MD, Commercial & Community",
     context: "AI Workflow Marketplace · Vietnam",
     // Locked (2026-07-06): xood-full.png is the white-lettering dark-bg version
@@ -132,17 +132,20 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
   xood: {
     slug: "xood",
     name: "Xood.",
-    intro: "Building accurate, unbiased training data for the long-tail problems most AI labs ignore.",
+    intro: "The platform helping people and businesses in Vietnam turn AI into real results. Doing good with AI.",
     story: [
-      "Xood is what happens when an operator and a data scientist start a company together. Michael is the CEO; I run commercial and community out of Vietnam. We took the playbook Tictag sharpened in Singapore and adapted it for the markets and use cases the big labs don't bother with.",
-      "Most companies don't lack AI. They lack the labelled, structured, real-world data to make AI useful in their context. That's the gap Xood works in, and that's where I spend most of my AI-using-operator energy.",
+      "Most people and businesses in Vietnam want to use AI, but it feels distant and complicated: too many scattered tools, enterprise AI priced out of reach, and a quiet worry about falling behind or wasting money. I don't think AI should be a privilege of Big Tech.",
+      "Xood closes that gap. It brings AI knowledge, tools, and ready-to-run workflows into one trusted place, so you can pick a workflow, get a real result, then share what works with a community of builders who rate and improve it. Not 'AI for everything', not another prompt library: practical AI adoption, built for Vietnam first.",
+      "I co-founded Xood and run commercial and community. I use this stuff every day across my own businesses, so the bar is simple: can an office worker or an SME owner sit down and get real value fast? If not, we're not done. That's what doing good with AI means to me.",
     ],
     facts: [
       { label: "Role", value: "Co-Founder · Managing Director, Commercial & Community" },
-      { label: "Stage", value: "Live · Vietnam" },
-      { label: "Industry", value: "AI data services" },
-      { label: "Founded with", value: "Michael (CEO)" },
+      { label: "Category", value: "Practical AI adoption · Vietnam-first" },
+      { label: "What it is", value: "AI knowledge, tools & ready-to-run workflows, plus a builder community" },
+      { label: "The promise", value: "Real results, not theory or hype" },
     ],
+    externalUrl: "https://xood.io",
+    externalLabel: "xood.io",
     heroImage: "/images/ventures/xood.jpg",
   },
   skylight: {

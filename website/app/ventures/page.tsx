@@ -6,7 +6,7 @@ import VenturesGrid from "@/components/VenturesGrid";
 export const metadata: Metadata = {
   title: "Ventures | Dru Nguyen",
   description:
-    "Six ventures across hospitality, AI data services, and entertainment. Xood, Skylight, Tictag, GAM Entertainment, East West Brewing, Nuen Motor.",
+    "Six ventures across hospitality, applied AI, and entertainment. Xood, Skylight, Tictag, GAM Entertainment, East West Brewing, Nuen Motor.",
 };
 
 export default function VenturesPage() {
@@ -33,7 +33,7 @@ export default function VenturesPage() {
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
-              Operating, founding, and advising across hospitality, AI data services, and entertainment.
+              Operating, founding, and advising across hospitality, applied AI, and entertainment.
               Ten years of real ops, the lived material the content engine runs on.
             </p>
           </Reveal>
