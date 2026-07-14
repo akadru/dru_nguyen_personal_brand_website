@@ -1,31 +1,34 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import VideoFacade from "@/components/VideoFacade";
 
 export const metadata: Metadata = {
   title: "Press | Dru Nguyen",
   description: "Speaking appearances, interviews, media features, and a downloadable press kit for Dru Nguyen.",
 };
 
-const features = [
+const talks = [
   {
-    outlet: "Zero Project Conference",
-    year: "2026",
-    title: "On stage on inclusive AI and the future of data work in Southeast Asia.",
-    img: "/images/dru-hero.jpg",
-    href: "#",
+    id: "GoMieoEj8kM",
+    poster: "/images/press/gradion-1.jpg",
+    kicker: "Scaling Business Summit 2026 · Keynote",
+    title: "AI Community Engine: Data Built for People, by People",
   },
   {
-    outlet: "Tictag · Singapore",
-    year: "2026",
-    title: "\"Everyone can benefit from working with data\", keynote excerpt.",
-    img: "/images/dru-hero.jpg",
-    href: "#",
+    id: "0L46PkFoGBk",
+    poster: "/images/press/gradion-2.jpg",
+    kicker: "Scaling Business Summit 2026 · Panel",
+    title: "Asia's Future of IoT",
   },
 ];
 
-const logos = ["Bloomberg", "TechCrunch", "Forbes Vietnam", "Tech in Asia", "VnExpress", "EO Vietnam"];
+const brandFilm = {
+  id: "arYMAFfdGKs",
+  poster: "/images/press/story-film.jpg",
+  kicker: "Brand Film",
+  title: "In his own words",
+};
 
 const quickFacts = [
   { label: "Full name", value: "Dru Nguyen" },
@@ -78,57 +81,48 @@ export default function PressPage() {
         </div>
       </section>
 
-      {/* AS SEEN IN, outlet logo strip (Gary Vee press cred pattern) */}
-      <section className="border-y py-10" style={{ background: "var(--brand-jungle)", borderColor: "var(--brand-pastel)" }}>
+      {/* ON STAGE — real Gradion / Scaling Business Summit talk footage */}
+      <section className="py-14" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
-          <div className="text-center">
-            <div className="section-label">As featured in</div>
-          </div>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-            {logos.map((l) => (
-              <span
-                key={l}
-                className="text-base font-extrabold uppercase tracking-tight md:text-xl"
-                style={{ color: "var(--brand-myrtle)", letterSpacing: "0.04em", opacity: 0.85 }}
-              >
-                {l}
-              </span>
+          <Reveal>
+            <div className="section-label">On Stage</div>
+          </Reveal>
+          <Reveal delay={1}>
+            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--brand-white)" }}>
+              Watch Dru <span style={{ color: "var(--brand-myrtle)" }}>present.</span>
+            </h2>
+          </Reveal>
+          <Reveal delay={2}>
+            <p className="mt-4 max-w-2xl text-base leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
+              Keynote and panel from the Scaling Business Summit 2026 (powered by Gradion), Ho Chi Minh City.
+            </p>
+          </Reveal>
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {talks.map((t, i) => (
+              <Reveal key={t.id} delay={(i % 2) as 0 | 1}>
+                <VideoFacade id={t.id} poster={t.poster} kicker={t.kicker} title={t.title} />
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-14" style={{ background: "var(--brand-jungle)" }}>
+      {/* MEDIA — personal brand film */}
+      <section className="border-t py-14" style={{ background: "var(--brand-jungle)", borderColor: "rgba(176,190,197,0.2)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <Reveal>
-            <div className="section-label">Recent features</div>
+            <div className="section-label">Media</div>
           </Reveal>
           <Reveal delay={1}>
             <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--brand-white)" }}>
-              Interviews &amp; <span style={{ color: "var(--brand-myrtle)" }}>appearances.</span>
+              The <span style={{ color: "var(--brand-myrtle)" }}>story.</span>
             </h2>
           </Reveal>
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {features.map((p, i) => (
-              <Reveal key={p.title} delay={(i % 2) as 0 | 1}>
-                <Link href={p.href} className="block overflow-hidden rounded-2xl border transition-shadow hover:shadow-xl" style={{ borderColor: "var(--brand-pastel)", background: "#fff" }}>
-                  <div className="relative aspect-[16/9]">
-                    <Image src={p.img} alt={p.outlet} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
-                  </div>
-                  <div className="p-7">
-                    <div className="flex items-center gap-3 text-xs font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}>
-                      <span>{p.outlet}</span>
-                      <span>·</span>
-                      <span>{p.year}</span>
-                    </div>
-                    <p className="mt-3 text-xl font-extrabold leading-snug" style={{ color: "var(--brand-white)", letterSpacing: "-0.01em" }}>
-                      {p.title}
-                    </p>
-                  </div>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
+          <Reveal delay={2}>
+            <div className="mx-auto mt-10 max-w-[900px]">
+              <VideoFacade id={brandFilm.id} poster={brandFilm.poster} kicker={brandFilm.kicker} title={brandFilm.title} />
+            </div>
+          </Reveal>
         </div>
       </section>
 
