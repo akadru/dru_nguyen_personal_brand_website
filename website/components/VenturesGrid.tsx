@@ -35,7 +35,7 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
                   fill
                   priority
                   sizes="100vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  className="img-duotone object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />
               </div>
               <div
