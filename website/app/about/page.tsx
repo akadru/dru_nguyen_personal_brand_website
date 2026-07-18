@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 const stories = [
   {
     title: "The DJ Origin",
-    body: "At 17 in San Diego, dad caught me ditching school. First time I ever saw him cry. His punishment? He bought me a DJ setup, and DJing became my first real passion. I learned community-building by sharing knowledge openly when DJ culture hoarded it.",
+    body: "At 17 in San Diego, DJing became my first real passion. I ditched a lot of school for it. It taught me community-building early: I shared knowledge openly at a time when DJ culture hoarded it.",
     img: "/images/stories/dj-origin.jpg",
     imgAlt: "Dru behind the DJ decks, headphones around his neck, white shirt with suspenders",
   },
   {
     title: "The Factory",
-    body: "Quit the family steel manufacturing business in Hanoi after months of struggling. The hardest conversation of my life with my dad. You can't build your future on someone else's blueprint.",
+    body: "Quit the family steel manufacturing business in Hanoi after months of struggling. One of the hardest calls I've ever made. You can't build your future on someone else's blueprint.",
   },
   {
     title: "The Fight",
@@ -30,7 +30,7 @@ const stories = [
   },
   {
     title: "The Move to Vietnam",
-    body: "At 27, left SF/LA for Nha Trang with no Vietnamese, no friends outside my brother. Built Skylight. Reconnected with my dad after 22 years apart. The most uncertain chapters often become the most important ones.",
+    body: "At 27, left SF/LA for Nha Trang with no Vietnamese, no friends outside my brother. Built Skylight from zero. The most uncertain chapters often become the most important ones.",
   },
 ];
 
