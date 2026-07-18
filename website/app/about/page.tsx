@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 const stories = [
   {
     title: "The DJ Origin",
-    body: "At 17, dad caught me ditching school. First time I ever saw him cry. His punishment? He bought me a DJ setup. I learned community-building by sharing knowledge openly when DJ culture hoarded it.",
+    body: "At 17 in San Diego, dad caught me ditching school. First time I ever saw him cry. His punishment? He bought me a DJ setup, and DJing became my first real passion. I learned community-building by sharing knowledge openly when DJ culture hoarded it.",
     img: "/images/stories/dj-origin.jpg",
-    imgAlt: "Dru behind the DJ decks, headphones around his neck, white shirt with suspenders, Saigon nightclub, 2007",
+    imgAlt: "Dru behind the DJ decks, headphones around his neck, white shirt with suspenders",
   },
   {
     title: "The Factory",
@@ -90,19 +90,29 @@ export default function AboutPage() {
           <Reveal delay={2}>
             <div className="mt-6 space-y-5 text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }}>
               <p>
-                I&apos;m Dru Nguyen, co-founder of <strong>Xood</strong> (practical AI adoption in Vietnam), founder of{" "}
-                <strong>Skylight</strong> (rooftop hospitality, Nha Trang, 10+ years), and advisor to{" "}
-                <strong>Tictag Singapore</strong>. I invest in and advise <strong>East West Brewery</strong>,{" "}
-                <strong>Nuen Motor</strong>, and <strong>GAM Entertainment</strong>.
+                I&apos;m Dru Nguyen, an operator based in Ho Chi Minh City. I co-founded{" "}
+                <strong>Xood</strong>, an AI workflow marketplace for Vietnam, and founded{" "}
+                <strong>Skylight</strong>, a rooftop flagship in Nha Trang I&apos;ve run for over ten years.
+                I invest in and advise companies I believe in: <strong>Tictag</strong> (Singapore),{" "}
+                <strong>East West Brewing</strong>, <strong>Nuen Motor</strong>, and <strong>GAM Esports</strong>.
+                I&apos;m also a member of <strong>EO Vietnam</strong>.
               </p>
               <p>
-                Most AI creators have never run operations. I have. The content here comes from real work, real
-                decisions, and real outcomes across three industries. My benchmarks are Jeff Su (bite-size AI utility)
-                and AIO (education depth).
+                I didn&apos;t start with a plan. My first passion was music: I started DJing in San Diego at 17.
+                Years later, at 27, I left California for Nha Trang with no Vietnamese and no network, and built
+                Skylight from zero. Ten years of running real businesses taught me the lesson under everything I do:{" "}
+                <strong>structure is freedom.</strong> That&apos;s when EOS clicked, and it&apos;s how I run my companies today.
               </p>
               <p>
-                I write for the plateaued operator who&apos;s 2–7 years in and stuck at scale, and for the curious
-                Vietnam-based founder watching how the next tier moves.
+                These days I&apos;m an operator learning to use AI in the open. I run three companies and sit on two
+                boards with Claude in the loop, and I share what actually works, not theory, not hype. Most people
+                teaching AI have never had to make payroll or move a quarterly rock. I have. If it hasn&apos;t survived
+                contact with a real team and a real P&amp;L, I won&apos;t put my name on it.
+              </p>
+              <p>
+                The way I try to live has a name, <strong>the Scholarly Warrior</strong>: care, discipline, and grit.{" "}
+                <em style={{ fontStyle: "italic" }}>Knowledge with application is wisdom.</em> I share the operator&apos;s
+                journey honestly, so the next person a few steps behind has a clearer path.
               </p>
             </div>
           </Reveal>
