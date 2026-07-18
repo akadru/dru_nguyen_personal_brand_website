@@ -20,7 +20,7 @@ export const VENTURES: Venture[] = [
   {
     slug: "xood",
     name: "Xood.",
-    tagline: "Turn AI into real results",
+    tagline: "Ready-to-run AI for your job",
     role: "Co-Founder & MD, Commercial & Community",
     context: "AI Workflow Marketplace · Vietnam",
     // Locked (2026-07-06): xood-full.png is the white-lettering dark-bg version
@@ -132,17 +132,17 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
   xood: {
     slug: "xood",
     name: "Xood.",
-    intro: "The platform helping people and businesses in Vietnam turn AI into real results. Doing good with AI.",
+    intro: "An AI workflow marketplace for Vietnam. Ready-to-run workflows, built by experts, for your exact job.",
     story: [
-      "Most people and businesses in Vietnam want to use AI, but it feels distant and complicated: too many scattered tools, enterprise AI priced out of reach, and a quiet worry about falling behind or wasting money. I don't think AI should be a privilege of Big Tech.",
-      "Xood closes that gap. It brings AI knowledge, tools, and ready-to-run workflows into one trusted place, so you can pick a workflow, get a real result, then share what works with a community of builders who rate and improve it. Not 'AI for everything', not another prompt library: practical AI adoption, built for Vietnam first.",
-      "I co-founded Xood and run commercial and community. I use this stuff every day across my own businesses, so the bar is simple: can an office worker or an SME owner sit down and get real value fast? If not, we're not done. That's what doing good with AI means to me.",
+      "The era of figuring out AI is over. Most people aren't short on AI. They're short on the bridge from 'I have AI' to 'AI finished my actual work.' That gap is the whole problem, and it's what Xood exists to close.",
+      "Xood is an AI workflow marketplace: ready-to-run workflows built by real experts and rated by real users, for the exact jobs office workers and SMEs in Vietnam do every day. You browse one, follow the guided steps, and get a real result. Not 'AI for everything,' not a prompt library. One platform instead of five scattered subscriptions, with fifteen minutes to value as the bar.",
+      "I co-founded Xood and run commercial and community. I use it across my own businesses, so the test stays simple: can someone with no AI background sit down and finish real work? And for the experts who build these workflows, Xood is where their skill finally gets seen, used, and paid.",
     ],
     facts: [
       { label: "Role", value: "Co-Founder · Managing Director, Commercial & Community" },
-      { label: "Category", value: "Practical AI adoption · Vietnam-first" },
-      { label: "What it is", value: "AI knowledge, tools & ready-to-run workflows, plus a builder community" },
-      { label: "The promise", value: "Real results, not theory or hype" },
+      { label: "Category", value: "AI Workflow Marketplace · Vietnam" },
+      { label: "What it is", value: "Ready-to-run workflows, expert-built, community-rated" },
+      { label: "The bar", value: "15 minutes to value, real outcomes not theory" },
     ],
     externalUrl: "https://xood.io",
     externalLabel: "xood.io",
