@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
 };
 
-const HASHTAGS = ["#AIOperator", "#FutureOfWork", "#BuildingInVietnam"];
+const HASHTAGS = ["#AIOperator", "#ScholarlyWarrior", "#BuildingInVietnam"];
 
 export default function PostPage() {
   return (

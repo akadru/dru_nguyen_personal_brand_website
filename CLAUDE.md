@@ -30,7 +30,7 @@ Identity: **The Scholarly Warrior.** Care. Discipline. Grit.
 - Xood logo: only the white-lettering dark-bg mark (blue X, white "ood", orange dot). Never on a white chip.
 - Voice blend: 70% Jeff Su / 15% Tony Robbins / 10% Daniel Priestley / 5% Gary Vee.
 - Pillars: Thinker (40%) · Builder (35%) · Human (25%).
-- Anchor hashtag: `#DoingGoodWithData`. Standing brand hashtag (blog/site): `#FutureOfWork`.
+- Anchor hashtag: `#DoingGoodWithData`. Standing brand hashtag (blog/site): `#ScholarlyWarrior`.
 - Timezone: `Asia/Ho_Chi_Minh` (UTC+7).
 
 ## Publishing workflow
