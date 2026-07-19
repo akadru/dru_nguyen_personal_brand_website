@@ -92,7 +92,7 @@ export default function AboutPage() {
               <p>
                 I&apos;m Dru Nguyen, an operator based in Ho Chi Minh City. I co-founded{" "}
                 <strong>Xood</strong>, an AI workflow marketplace for Vietnam, and founded{" "}
-                <strong>Skylight</strong>, a rooftop flagship in Nha Trang I&apos;ve run for over ten years.
+                <strong>Skylight Nha Trang</strong>, a rooftop flagship I&apos;ve run for over a decade.
                 I invest in and advise companies I believe in: <strong>Tictag</strong> (Singapore),{" "}
                 <strong>East West Brewing</strong>, <strong>Nuen Motor</strong>, and <strong>GAM Esports</strong>.
                 I&apos;m also a member of <strong>EO Vietnam</strong>.
@@ -105,9 +105,7 @@ export default function AboutPage() {
               </p>
               <p>
                 These days I&apos;m an operator learning to use AI in the open. I run three companies and sit on two
-                boards with Claude in the loop, and I share what actually works, not theory, not hype. Most people
-                teaching AI have never had to make payroll or move a quarterly rock. I have. If it hasn&apos;t survived
-                contact with a real team and a real P&amp;L, I won&apos;t put my name on it.
+                boards with AI LLMs and other tools in the loop, and I share what actually works, not theory, not hype.
               </p>
               <p>
                 The way I try to live has a name, <strong>the Scholarly Warrior</strong>: care, discipline, and grit.{" "}
