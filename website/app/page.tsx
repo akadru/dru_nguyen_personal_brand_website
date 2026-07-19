@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
 import SwipeRow from "@/components/SwipeRow";
+import VenturesGrid from "@/components/VenturesGrid";
 import { BUILDS } from "@/lib/builds";
 import { FEATURED_SLUGS } from "@/lib/posts";
 
@@ -172,7 +173,33 @@ export default function Home() {
         </SwipeRow>
       </section>
 
-      {/* 3. BUILT WITH AI — white content surface, live builds strip */}
+      {/* 3. VENTURES — the portfolio wall (same grid as /ventures) */}
+      <section id="ventures" className="py-16 md:py-24" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <Reveal>
+            <div className="section-label">The Portfolio</div>
+          </Reveal>
+          <Reveal delay={1}>
+            <div className="mt-3 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <h2 className="display-heading" style={{ fontSize: "clamp(52px, 7vw, 110px)", color: "var(--brand-white)" }}>
+                Ventures
+              </h2>
+              <Link
+                href="/ventures"
+                className="editorial-link self-start text-sm font-bold uppercase tracking-wider md:self-end"
+                style={{ color: "var(--brand-lime)", letterSpacing: "0.12em" }}
+              >
+                See all ventures →
+              </Link>
+            </div>
+          </Reveal>
+          <div className="mt-8 md:mt-10">
+            <VenturesGrid exclude={["eo"]} />
+          </div>
+        </div>
+      </section>
+
+      {/* 4. BUILT WITH AI — white content surface, live builds strip */}
       <section id="builds" className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>

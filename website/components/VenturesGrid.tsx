@@ -7,11 +7,18 @@ import { VENTURES } from "@/lib/ventures";
  * Name + context overlaid on a bottom gradient · B&W by default, color on hover.
  * `wide: true` entries span the full row with a cinematic 21:9 crop.
  */
-export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
+export default function VenturesGrid({
+  columns = 3,
+  exclude = [],
+}: {
+  columns?: 2 | 3;
+  exclude?: string[];
+}) {
   const grid = columns === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
+  const ventures = VENTURES.filter((v) => !exclude.includes(v.slug));
   return (
     <div className={`grid grid-cols-1 gap-4 ${grid}`}>
-      {VENTURES.map((v) => {
+      {ventures.map((v) => {
         const linkProps = v.external
           ? { target: "_blank", rel: "noopener noreferrer" }
           : {};
@@ -24,7 +31,7 @@ export default function VenturesGrid({ columns = 3 }: { columns?: 2 | 3 }) {
             {...linkProps}
             className={`group card-hover-accent relative block overflow-hidden ${
               isWide
-                ? `aspect-[16/10] md:col-span-2 md:aspect-[21/9] ${columns === 3 ? "lg:col-span-3" : ""}`
+                ? `aspect-[16/10] md:col-span-2 md:aspect-[32/9] ${columns === 3 ? "lg:col-span-3" : ""}`
                 : "aspect-[16/10]"
             }`}
           >
