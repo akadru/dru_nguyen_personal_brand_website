@@ -38,13 +38,6 @@ const testimonials = [
   },
 ];
 
-const formats = [
-  { label: "Keynote", audience: "200 – 1,000+", length: "30 – 60 min", best: "Conferences, summits, founder events" },
-  { label: "Founder Offsite", audience: "20 – 60", length: "60 – 120 min", best: "Leadership cohorts, exec teams" },
-  { label: "EO / YPO Forum", audience: "8 – 12", length: "60 – 90 min", best: "Confidential peer rooms" },
-  { label: "AI Workshop", audience: "10 – 30", length: "Half-day or full-day", best: "Ops teams, hands-on training" },
-];
-
 const quickFacts = [
   { label: "Languages", value: "English · Vietnamese" },
   { label: "Based in", value: "Ho Chi Minh City, Vietnam" },
@@ -177,59 +170,6 @@ export default function SpeakingPage() {
               </Reveal>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* FORMATS, booker self-qualification table */}
-      <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
-        <div className="mx-auto max-w-[1300px] px-5 md:px-10">
-          <Reveal>
-            <div className="section-label">Formats</div>
-          </Reveal>
-          <Reveal delay={1}>
-            <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--brand-white)" }}>
-              Pick the format <span className="marker-highlight">that fits.</span>
-            </h2>
-          </Reveal>
-          <Reveal delay={2}>
-            <div className="mt-8 md:mt-10 overflow-hidden rounded-2xl border" style={{ borderColor: "rgba(176,190,197,0.2)" }}>
-              <div className="hidden grid-cols-[1.2fr_1fr_1fr_2fr] gap-px text-[10px] font-extrabold uppercase md:grid" style={{ background: "rgba(176,190,197,0.15)" }}>
-                <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Format</div>
-                <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Audience</div>
-                <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Length</div>
-                <div className="px-6 py-4" style={{ background: "var(--brand-jungle)", color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>Best for</div>
-              </div>
-              <div className="grid gap-px md:hidden" style={{ background: "rgba(176,190,197,0.15)" }}>
-                {formats.map((f) => (
-                  <div key={f.label} className="p-6" style={{ background: "var(--brand-jungle)" }}>
-                    <div className="text-base font-extrabold" style={{ color: "var(--brand-white)" }}>{f.label}</div>
-                    <div className="mt-2 text-sm" style={{ color: "var(--brand-pastel)" }}>
-                      <span style={{ color: "var(--brand-lime)" }}>{f.audience}</span> · {f.length}
-                    </div>
-                    <div className="mt-1 text-sm" style={{ color: "var(--brand-pastel)" }}>{f.best}</div>
-                  </div>
-                ))}
-              </div>
-              <div className="hidden md:block" style={{ background: "rgba(176,190,197,0.15)" }}>
-                {formats.map((f) => (
-                  <div key={f.label} className="grid grid-cols-[1.2fr_1fr_1fr_2fr] gap-px">
-                    <div className="px-6 py-5" style={{ background: "var(--brand-jungle)" }}>
-                      <span className="text-lg font-extrabold" style={{ color: "var(--brand-white)" }}>{f.label}</span>
-                    </div>
-                    <div className="px-6 py-5" style={{ background: "var(--brand-jungle)", color: "var(--brand-lime)" }}>
-                      {f.audience}
-                    </div>
-                    <div className="px-6 py-5" style={{ background: "var(--brand-jungle)", color: "var(--brand-pastel)" }}>
-                      {f.length}
-                    </div>
-                    <div className="px-6 py-5" style={{ background: "var(--brand-jungle)", color: "var(--brand-pastel)" }}>
-                      {f.best}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </Reveal>
         </div>
       </section>
 
