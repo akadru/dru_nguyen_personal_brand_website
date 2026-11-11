@@ -5,6 +5,7 @@ import ContentFeed from "@/components/ContentFeed";
 import VideoLightbox from "@/components/VideoLightbox";
 import SwipeRow from "@/components/SwipeRow";
 import VenturesGrid from "@/components/VenturesGrid";
+import HeroFx from "@/components/HeroFx";
 import { BUILDS } from "@/lib/builds";
 import { FEATURED_SLUGS } from "@/lib/posts";
 
@@ -73,6 +74,7 @@ export default function Home() {
             style={{ background: "linear-gradient(180deg, rgba(10,27,36,0) 65%, rgba(10,27,36,0.6) 100%)" }}
           />
         </div>
+        <HeroFx />
         <div className="relative mx-auto flex w-full max-w-[1200px] flex-1 flex-col items-start justify-center px-5 py-24 md:px-10">
           <Reveal>
             <h1
@@ -80,11 +82,11 @@ export default function Home() {
               style={{ fontSize: "clamp(64px, 10vw, 150px)", color: "var(--brand-white)" }}
               data-reveal-text
             >
-              Operator
+              <span className="hero-word" data-hero-word>Operator</span>
               <br />
-              Builder
+              <span className="hero-word" data-hero-word>Builder</span>
               <br />
-              <span className="marker-highlight">Experimenter</span>
+              <span className="hero-word is-active" data-hero-word>Experimenter</span>
             </h1>
           </Reveal>
 
@@ -112,6 +114,7 @@ export default function Home() {
         <Reveal delay={3}>
           <a
             href="#pillars"
+            data-magnetic
             className="mb-10 flex flex-col items-center gap-2 self-center text-[10px] font-extrabold uppercase"
             style={{ color: "var(--brand-white)", letterSpacing: "0.3em" }}
           >
@@ -194,7 +197,7 @@ export default function Home() {
             </div>
           </Reveal>
           <div className="mt-8 md:mt-10">
-            <VenturesGrid exclude={["eo"]} />
+            <VenturesGrid exclude={["tictag"]} flat />
           </div>
         </div>
       </section>
@@ -380,6 +383,7 @@ export default function Home() {
           <Reveal delay={3}>
             <Link
               href="/contact?intent=speaking"
+              data-magnetic
               className="mt-12 inline-flex items-center justify-center rounded-full px-9 py-4 text-sm font-bold uppercase tracking-wider transition-transform hover:scale-[1.02]"
               style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.05em" }}
             >

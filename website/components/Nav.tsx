@@ -62,6 +62,7 @@ function BookCta({ onClick, className = "" }: { onClick?: () => void; className?
     <Link
       href="/contact?intent=speaking"
       onClick={onClick}
+      data-magnetic
       className={`inline-flex items-center justify-center rounded-full px-6 py-3 text-xs font-bold uppercase tracking-wider transition-transform hover:scale-[1.03] ${className}`}
       style={{ background: "var(--brand-lime)", color: "var(--brand-jungle)", letterSpacing: "0.08em" }}
     >

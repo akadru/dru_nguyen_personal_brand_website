@@ -62,7 +62,46 @@ export default function SiteMotion() {
     };
   }, []);
 
-  // 2. Build the scroll-linked reveals for the current route (rebuilt on nav).
+  // 2. Magnetic buttons — [data-magnetic] elements lean toward the cursor while
+  //    it's over them and spring back on leave. One delegated listener for the
+  //    whole site; mouse/trackpad only. Uses the `translate` property so it
+  //    composes with Tailwind's hover `scale` instead of overwriting it.
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!window.matchMedia("(pointer: fine)").matches) return;
+    const STRENGTH_X = 0.3;
+    const STRENGTH_Y = 0.4;
+    let active: HTMLElement | null = null;
+
+    const release = (el: HTMLElement | null) => {
+      if (el) el.style.translate = "";
+    };
+    const onMove = (e: PointerEvent) => {
+      const el = e.target instanceof Element ? e.target.closest<HTMLElement>("[data-magnetic]") : null;
+      if (el !== active) {
+        release(active);
+        active = el;
+      }
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const dx = (e.clientX - (r.left + r.width / 2)) * STRENGTH_X;
+      const dy = (e.clientY - (r.top + r.height / 2)) * STRENGTH_Y;
+      el.style.translate = `${dx.toFixed(1)}px ${dy.toFixed(1)}px`;
+    };
+    const onLeaveDoc = () => {
+      release(active);
+      active = null;
+    };
+    document.addEventListener("pointermove", onMove, { passive: true });
+    document.documentElement.addEventListener("pointerleave", onLeaveDoc);
+    return () => {
+      document.removeEventListener("pointermove", onMove);
+      document.documentElement.removeEventListener("pointerleave", onLeaveDoc);
+      release(active);
+    };
+  }, []);
+
+  // 3. Build the scroll-linked reveals for the current route (rebuilt on nav).
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     let ctx: { revert: () => void } | undefined;

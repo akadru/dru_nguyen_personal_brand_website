@@ -10,9 +10,12 @@ import { VENTURES } from "@/lib/ventures";
 export default function VenturesGrid({
   columns = 3,
   exclude = [],
+  flat = false,
 }: {
   columns?: 2 | 3;
   exclude?: string[];
+  /** Render every tile at the standard size (ignore `wide` entries). */
+  flat?: boolean;
 }) {
   const grid = columns === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
   const ventures = VENTURES.filter((v) => !exclude.includes(v.slug));
@@ -22,7 +25,7 @@ export default function VenturesGrid({
         const linkProps = v.external
           ? { target: "_blank", rel: "noopener noreferrer" }
           : {};
-        const isWide = !!v.wide;
+        const isWide = !flat && !!v.wide;
 
         return (
           <Link
