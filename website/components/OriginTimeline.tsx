@@ -30,17 +30,17 @@ const CHAPTERS: {
     pos: "center 30%",
   },
   {
-    when: "2014 · Hanoi",
-    title: "The Factory",
-    body: "Walked away from the family steel business. One of the hardest calls I've made. You can't build your future on someone else's blueprint.",
-    quote: "Not someone else's blueprint.",
-  },
-  {
     when: "Age 27 · Nha Trang",
     title: "The Move",
     body: "Left California with no Vietnamese and no network. Built Skylight from zero, and I've run it for over a decade.",
     img: "/images/ventures/skylight.jpg",
     alt: "Skylight Nha Trang rooftop",
+  },
+  {
+    when: "2018 · Nha Trang",
+    title: "EOS",
+    body: "Years of chaos, blaming the team. Then EOS. Nine months before everyone bought in. Structure is freedom.",
+    quote: "Structure is freedom.",
   },
   {
     when: "2019 · Da Nang",
@@ -51,10 +51,10 @@ const CHAPTERS: {
     pos: "center 25%",
   },
   {
-    when: "2021 · Nha Trang",
-    title: "EOS",
-    body: "Years of chaos, blaming the team. Then EOS. Nine months before everyone bought in. Structure is freedom.",
-    quote: "Structure is freedom.",
+    when: "2024 · Hanoi",
+    title: "The Factory",
+    body: "Walked away from the family steel business. One of the hardest calls I've made. You can't build your future on someone else's blueprint.",
+    quote: "Not someone else's blueprint.",
   },
   {
     when: "Now · Ho Chi Minh City",

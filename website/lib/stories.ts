@@ -18,7 +18,7 @@ export const STORIES: Story[] = [
   },
   {
     slug: "factory",
-    year: "2014 · Hanoi",
+    year: "2024 · Hanoi",
     title: "The Factory",
     hook: "Quit the family steel manufacturing business. The hardest conversation of my life with my dad.",
     lesson: "You can't build your future on someone else's blueprint.",
@@ -34,7 +34,7 @@ export const STORIES: Story[] = [
   },
   {
     slug: "eos",
-    year: "2021 · Nha Trang",
+    year: "2018 · Nha Trang",
     title: "The EOS Transformation",
     hook: "Ran businesses in chaos and blamed the team. Read Traction with my brother TK. Implemented EOS.",
     lesson: "Structure is freedom. When the system holds the standard, the people lead.",
