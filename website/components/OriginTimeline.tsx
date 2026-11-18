@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+import StoryRail from "./StoryRail";
 
 /**
  * Homepage origin story — six chapters on one horizontal track.
  *
- * Desktop (md+): SiteMotion pins the section and scrubs the track sideways as
- * you scroll down ([data-hscroll] / [data-hscroll-track] / [data-hscroll-bar]).
- * Mobile: a native swipe row with scroll-snap. With JS off or reduced motion,
- * the track simply scrolls horizontally, so nothing is ever hidden.
+ * The rail scrolls sideways on its own (trackpad side-swipe, touch swipe,
+ * arrow buttons, keyboard). Vertical page scroll is never hijacked: Dru found
+ * the old pinned scroll-jack annoying (removed 2026-11-18).
  *
  * Copy is drawn only from the About / Scholarly Warrior stories (no new claims).
  */
@@ -37,18 +37,18 @@ const CHAPTERS: {
     alt: "Skylight Nha Trang rooftop",
   },
   {
-    when: "2018 · Nha Trang",
-    title: "EOS",
-    body: "Years of chaos, blaming the team. Then EOS. Nine months before everyone bought in. Structure is freedom.",
-    quote: "Structure is freedom.",
-  },
-  {
     when: "2019 · Da Nang",
     title: "The Fight",
     body: "A Muay Thai exhibition fight. Terrified backstage. Won by TKO in round two. Fear doesn't go away. You stop letting it decide.",
     img: "/images/dru-muay-thai-2019.jpg",
     alt: "Dru wins by TKO at the Da Nang Muay Thai exhibition fight, 2019",
     pos: "center 25%",
+  },
+  {
+    when: "2018 · Nha Trang",
+    title: "EOS",
+    body: "Years of chaos, blaming the team. Then EOS. Nine months before everyone bought in. Structure is freedom.",
+    quote: "Structure is freedom.",
   },
   {
     when: "2024 · Hanoi",
@@ -66,16 +66,10 @@ const CHAPTERS: {
 ];
 
 export default function OriginTimeline() {
-  // The outer div is what React mounts/unmounts. GSAP's pin wraps the
-  // <section> in a pin-spacer at runtime; without this wrapper React would try
-  // to remove the section from a parent it no longer has (removeChild crash on
-  // client-side navigation).
   return (
-    <div>
     <section
       id="story"
-      data-hscroll
-      className="relative overflow-hidden py-16 md:flex md:h-[100svh] md:flex-col md:justify-center md:py-0"
+      className="relative overflow-hidden py-16 md:py-24"
       style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}
     >
       <div className="mx-auto w-full max-w-[1400px] px-5 md:px-10">
@@ -94,16 +88,9 @@ export default function OriginTimeline() {
         </div>
       </div>
 
-      {/* Track viewport: clips the track on desktop; native swipe on mobile */}
-      <div
-        data-hscroll-viewport
-        data-lenis-prevent-touch
-        className="mt-8 snap-x snap-mandatory scroll-px-5 overflow-x-auto overscroll-x-contain [scrollbar-width:none] md:mt-12 md:snap-none md:scroll-px-0 md:overflow-hidden [&::-webkit-scrollbar]:hidden"
-      >
+      <StoryRail label="How I got here: six chapters">
         <ol
-          data-hscroll-track
           className="flex w-max gap-4 px-5 md:gap-6 md:px-10 min-[1400px]:pl-[max(2.5rem,calc((100%-1400px)/2+2.5rem))]"
-          style={{ willChange: "transform" }}
         >
           {CHAPTERS.map((c, i) => (
             <li
@@ -153,15 +140,7 @@ export default function OriginTimeline() {
             </li>
           ))}
         </ol>
-      </div>
-
-      {/* Scroll progress (desktop, driven by the pin scrub) */}
-      <div className="mx-auto mt-10 hidden w-full max-w-[1400px] px-10 md:block" aria-hidden>
-        <div className="h-[2px] w-full overflow-hidden" style={{ background: "rgba(176,190,197,0.18)" }}>
-          <div data-hscroll-bar className="h-full w-full origin-left" style={{ background: "var(--brand-lime)", transform: "scaleX(0)" }} />
-        </div>
-      </div>
+      </StoryRail>
     </section>
-    </div>
   );
 }

@@ -10,7 +10,7 @@ export type Story = {
 export const STORIES: Story[] = [
   {
     slug: "dj-origin",
-    year: "2007 · Saigon",
+    year: "Age 17 · San Diego",
     title: "The DJ Origin",
     hook: "Dad caught me ditching school at 17. First time I ever saw him cry. His punishment? He bought me a DJ setup.",
     lesson: "You don't need everyone. You need believers and standards. Share first.",
