@@ -44,7 +44,7 @@ const PILLARS = [
 const RECORD = [
   { n: "6", label: "Businesses in the portfolio" },
   { n: "3", label: "Industries: hospitality, AI, entertainment" },
-  { n: "10+", label: "Years operating in Vietnam" },
+  { n: "12+", label: "Years operating in Vietnam" },
 ];
 
 // Same keynote as the Press page (Scaling Business Summit 2026, Gradion).
