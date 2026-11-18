@@ -84,7 +84,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={1}>
             <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4vw, 48px)", color: "var(--brand-white)" }}>
-              Operator first. <span style={{ color: "var(--brand-myrtle)" }}>Experimenter second.</span>
+              In my <span style={{ color: "var(--brand-myrtle)" }}>own words.</span>
             </h2>
           </Reveal>
           <Reveal delay={2}>

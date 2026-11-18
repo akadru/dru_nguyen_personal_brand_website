@@ -34,7 +34,7 @@ export default function ScholarlyWarriorPage() {
           <div>
             <Reveal>
               <div className="text-xs font-extrabold uppercase" style={{ color: "var(--brand-jungle)", letterSpacing: "0.22em" }}>
-                Identity Layer · 02
+                The Philosophy
               </div>
             </Reveal>
             <Reveal delay={1}>

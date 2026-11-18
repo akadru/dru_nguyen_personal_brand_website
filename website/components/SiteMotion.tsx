@@ -17,6 +17,9 @@ import { usePathname } from "next/navigation";
  *   data-reveal-media  images/cards — clip-wipe + slight zoom
  *   data-parallax="N"  scrub parallax drift
  *   data-count         number rolls up from 0 (keeps any non-digit suffix)
+ *   data-hscroll       section whose [data-hscroll-track] scrubs sideways while
+ *                      pinned (desktop); [data-hscroll-bar] shows progress
+ *   .marker-highlight  lime marker draws itself in on scroll (automatic)
  */
 export default function SiteMotion() {
   const pathname = usePathname();
@@ -105,6 +108,7 @@ export default function SiteMotion() {
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     let ctx: { revert: () => void } | undefined;
+    let mm: { revert: () => void } | undefined;
     let disposed = false;
 
     lenisRef.current?.scrollTo(0, { immediate: true });
@@ -133,6 +137,34 @@ export default function SiteMotion() {
             scrollTrigger: { trigger: el, start: "top 88%" },
           });
         });
+
+        // Marker sweep — every lime .marker-highlight draws itself in, left to
+        // right, when it scrolls into view. Queried AFTER the headline split
+        // (SplitText rewrites those nodes). The ink is painted as clipped layers
+        // that grow with the marker (same trick as the hero words), so text is
+        // never jungle-on-dark before the lime arrives. Uncovered ink copies
+        // the surrounding text colour so light and dark surfaces both read.
+        const clipText =
+          CSS.supports("background-clip", "text") || CSS.supports("-webkit-background-clip", "text");
+        if (clipText) {
+          gsap.utils.toArray<HTMLElement>(".marker-highlight").forEach((el) => {
+            if (el.closest("[data-hero-word]")) return;
+            const base = el.parentElement ? getComputedStyle(el.parentElement).color : "";
+            if (base) el.style.setProperty("--mk-base", base);
+            el.setAttribute("data-mk", "");
+            gsap.fromTo(
+              el,
+              { "--mk": "0%" },
+              {
+                "--mk": "100%",
+                duration: 0.75,
+                delay: el.closest("[data-reveal-text]") ? 0.45 : 0.15,
+                ease: "power3.inOut",
+                scrollTrigger: { trigger: el, start: "top 88%" },
+              }
+            );
+          });
+        }
 
         // Media reveals — clip-wipe up + settle from a slight zoom (row stagger).
         ScrollTrigger.batch("[data-reveal-media]", {
@@ -202,13 +234,42 @@ export default function SiteMotion() {
         });
       });
 
+      // Horizontal story track — desktop only: pin the section and scrub the
+      // track sideways for exactly its overflow. Mobile keeps native swipe.
+      const media = gsap.matchMedia();
+      mm = media;
+      media.add("(min-width: 768px)", () => {
+        gsap.utils.toArray<HTMLElement>("[data-hscroll]").forEach((sec) => {
+          const track = sec.querySelector<HTMLElement>("[data-hscroll-track]");
+          const viewport = sec.querySelector<HTMLElement>("[data-hscroll-viewport]");
+          const bar = sec.querySelector<HTMLElement>("[data-hscroll-bar]");
+          if (!track || !viewport) return;
+          const dist = () => Math.max(0, track.scrollWidth - viewport.clientWidth);
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: sec,
+              start: "top top",
+              end: () => "+=" + dist(),
+              pin: true,
+              scrub: true,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+            },
+          });
+          tl.to(track, { x: () => -dist(), ease: "none" }, 0);
+          if (bar) tl.fromTo(bar, { scaleX: 0 }, { scaleX: 1, ease: "none" }, 0);
+        });
+      });
+
       // Recalc positions once images/fonts have settled.
       ScrollTrigger.refresh();
     })();
 
     return () => {
       disposed = true;
+      mm?.revert();
       ctx?.revert();
+      document.querySelectorAll("[data-mk]").forEach((el) => el.removeAttribute("data-mk"));
     };
   }, [pathname]);
 

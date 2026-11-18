@@ -34,7 +34,7 @@ export default function VenturesPage() {
           <Reveal delay={2}>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
               Operating, founding, and advising across hospitality, applied AI, and entertainment.
-              Ten years of real ops, the lived material the content engine runs on.
+              Ten years of real ops. Every lesson I share comes from these companies.
             </p>
           </Reveal>
         </div>

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { VENTURES } from "@/lib/ventures";
+import SwipeRow from "@/components/SwipeRow";
 
 /**
  * Bartlett-style venture wall · full-bleed duotone image tiles.
@@ -11,17 +12,18 @@ export default function VenturesGrid({
   columns = 3,
   exclude = [],
   flat = false,
+  swipe = false,
 }: {
   columns?: 2 | 3;
   exclude?: string[];
   /** Render every tile at the standard size (ignore `wide` entries). */
   flat?: boolean;
+  /** Mobile: swipeable row instead of a tall stack (desktop grid unchanged). */
+  swipe?: boolean;
 }) {
   const grid = columns === 2 ? "md:grid-cols-2" : "md:grid-cols-2 lg:grid-cols-3";
   const ventures = VENTURES.filter((v) => !exclude.includes(v.slug));
-  return (
-    <div className={`grid grid-cols-1 gap-4 ${grid}`}>
-      {ventures.map((v) => {
+  const tiles = ventures.map((v) => {
         const linkProps = v.external
           ? { target: "_blank", rel: "noopener noreferrer" }
           : {};
@@ -104,7 +106,14 @@ export default function VenturesGrid({
             </div>
           </Link>
         );
-      })}
-    </div>
-  );
+      });
+
+  if (swipe) {
+    return (
+      <SwipeRow surface="dark" desktopGrid={grid} desktopGap="md:gap-4" basis="basis-[84%]">
+        {tiles}
+      </SwipeRow>
+    );
+  }
+  return <div className={`grid grid-cols-1 gap-4 ${grid}`}>{tiles}</div>;
 }

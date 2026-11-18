@@ -6,6 +6,8 @@ import VideoLightbox from "@/components/VideoLightbox";
 import SwipeRow from "@/components/SwipeRow";
 import VenturesGrid from "@/components/VenturesGrid";
 import HeroFx from "@/components/HeroFx";
+import OriginTimeline from "@/components/OriginTimeline";
+import VideoFacade from "@/components/VideoFacade";
 import { BUILDS } from "@/lib/builds";
 import { FEATURED_SLUGS } from "@/lib/posts";
 
@@ -38,6 +40,21 @@ const PILLARS = [
   },
 ];
 
+// The operating record, shown right after the pillars (proof before story).
+const RECORD = [
+  { n: "6", label: "Businesses in the portfolio" },
+  { n: "3", label: "Industries: hospitality, AI, entertainment" },
+  { n: "10+", label: "Years operating in Vietnam" },
+];
+
+// Same keynote as the Press page (Scaling Business Summit 2026, Gradion).
+const KEYNOTE = {
+  id: "GoMieoEj8kM",
+  poster: "/images/press/gradion-1.jpg",
+  kicker: "Scaling Business Summit 2026 · Keynote",
+  title: "AI Community Engine: Data Built for People, by People",
+};
+
 export default function Home() {
   return (
     <>
@@ -54,7 +71,7 @@ export default function Home() {
             fill
             priority
             sizes="100vw"
-            className="object-contain object-top md:object-right md:translate-x-[7%]"
+            className="hero-portrait object-contain object-top md:object-right md:translate-x-[7%]"
             style={{ opacity: 0.4 }}
             data-parallax="5"
           />
@@ -75,7 +92,7 @@ export default function Home() {
           />
         </div>
         <HeroFx />
-        <div className="relative mx-auto flex w-full max-w-[1200px] flex-1 flex-col items-start justify-center px-5 py-24 md:px-10">
+        <div className="relative mx-auto flex w-full max-w-[1200px] flex-1 flex-col items-start justify-end px-5 pb-16 pt-24 md:justify-center md:px-10 md:py-24">
           <Reveal>
             <h1
               className="display-heading"
@@ -100,7 +117,7 @@ export default function Home() {
 
           <Reveal delay={2}>
             <p
-              className="display-heading mt-16 md:mt-24"
+              className="display-heading mt-10 md:mt-24"
               style={{ fontSize: "clamp(30px, 3.6vw, 54px)", color: "var(--brand-pastel)" }}
               data-reveal
             >
@@ -176,7 +193,33 @@ export default function Home() {
         </SwipeRow>
       </section>
 
-      {/* 3. VENTURES — the portfolio wall (same grid as /ventures) */}
+      {/* 3. THE RECORD — proof up front: giant lime count-ups on dark */}
+      <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
+        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
+          <div className="section-label" data-reveal>The Operating Record</div>
+          <div className="mt-8 grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8 md:mt-12">
+            {RECORD.map((s) => (
+              <div key={s.label} className="border-t pt-6" style={{ borderColor: "rgba(173,251,73,0.35)" }} data-reveal>
+                <div
+                  className="display-heading"
+                  style={{ fontSize: "clamp(110px, 14vw, 220px)", lineHeight: 0.85, color: "var(--brand-lime)" }}
+                  data-count
+                >
+                  {s.n}
+                </div>
+                <p className="mt-4 max-w-[22ch] text-base leading-snug md:text-lg" style={{ color: "var(--brand-pastel)" }}>
+                  {s.label}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. THE STORY — six chapters, pinned horizontal scroll on desktop */}
+      <OriginTimeline />
+
+      {/* 5. VENTURES — the portfolio wall (same grid as /ventures) */}
       <section id="ventures" className="py-16 md:py-24" style={{ background: "var(--brand-jungle)", borderTop: "1px solid rgba(176,190,197,0.15)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
@@ -197,12 +240,12 @@ export default function Home() {
             </div>
           </Reveal>
           <div className="mt-8 md:mt-10">
-            <VenturesGrid exclude={["tictag"]} flat />
+            <VenturesGrid exclude={["tictag"]} flat swipe />
           </div>
         </div>
       </section>
 
-      {/* 4. BUILT WITH AI — white content surface, live builds strip */}
+      {/* 6. BUILT WITH AI — white content surface, live builds strip */}
       <section id="builds" className="py-16 md:py-24" style={{ background: "var(--brand-white)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
@@ -278,7 +321,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. WHAT'S NEW — the blog feed, right under the builds */}
+      {/* 7. WHAT'S NEW — the blog feed, right under the builds */}
       <section id="news" className="py-16 md:py-24" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
         <div className="mx-auto max-w-[1400px] px-5 md:px-10">
           <Reveal>
@@ -310,38 +353,32 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. STAT STRIP — the operating record, continues the white surface */}
-      <section className="py-14 md:py-20" style={{ background: "var(--brand-white)", borderTop: "1px solid rgba(10,27,36,0.1)" }}>
-        <div className="mx-auto max-w-[1400px] px-5 md:px-10">
-          <Reveal>
-            <div className="section-label">The Operating Record</div>
-          </Reveal>
-          <div className="mt-10 grid grid-cols-1 gap-10 sm:grid-cols-3">
-            {[
-              { n: "6", label: "Businesses in the portfolio" },
-              { n: "3", label: "Industries: hospitality, AI, entertainment" },
-              { n: "10+", label: "Years operating in Vietnam" },
-            ].map((s, i) => (
-              <Reveal key={s.label} delay={(i + 1) as 1 | 2 | 3}>
-                <div className="border-t-2 pt-6" style={{ borderColor: "var(--brand-myrtle)" }} data-reveal>
-                  <div
-                    className="display-heading"
-                    style={{ fontSize: "clamp(64px, 8vw, 110px)", color: "var(--brand-jungle)" }}
-                    data-count
-                  >
-                    {s.n}
-                  </div>
-                  <p className="mt-3 text-base" style={{ color: "var(--brand-body)" }}>
-                    {s.label}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+      {/* 8. ON STAGE — the keynote, one click from the homepage */}
+      <section className="py-16 md:py-24" style={{ background: "var(--brand-jungle)" }}>
+        <div className="mx-auto grid max-w-[1400px] gap-10 px-5 md:grid-cols-[1fr_1.5fr] md:items-center md:gap-16 md:px-10">
+          <div>
+            <div className="section-label" style={{ color: "var(--brand-lime)" }} data-reveal>On Stage</div>
+            <h2 className="display-heading mt-3" style={{ fontSize: "clamp(48px, 6vw, 96px)", color: "var(--brand-white)" }} data-reveal-text>
+              Watch the <span className="marker-highlight">keynote</span>
+            </h2>
+            <p className="mt-6 max-w-md text-lg leading-relaxed" style={{ color: "var(--brand-pastel)" }} data-reveal>
+              Operator-to-operator, on stage. What actually worked in real companies. No theory, no hype.
+            </p>
+            <Link
+              href="/press"
+              className="editorial-link mt-8 inline-block text-sm font-bold uppercase tracking-wider"
+              style={{ color: "var(--brand-lime)", letterSpacing: "0.12em" }}
+            >
+              More talks →
+            </Link>
+          </div>
+          <div data-reveal>
+            <VideoFacade id={KEYNOTE.id} poster={KEYNOTE.poster} kicker={KEYNOTE.kicker} title={KEYNOTE.title} />
           </div>
         </div>
       </section>
 
-      {/* 5. SPEAKING — full-bleed closer, the standing commercial CTA */}
+      {/* 9. SPEAKING — full-bleed closer, the standing commercial CTA */}
       <section id="speaking" className="relative overflow-hidden py-20 md:py-32" style={{ background: "var(--brand-jungle)" }}>
         <div className="absolute inset-0">
           <div className="absolute" style={{ inset: "-8%" }} data-parallax="8">

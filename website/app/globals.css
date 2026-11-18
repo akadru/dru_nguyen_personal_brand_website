@@ -91,6 +91,23 @@ html.lenis iframe { pointer-events: none; }
   -webkit-box-decoration-break: clone;
 }
 
+/* Scroll sweep (SiteMotion adds [data-mk] and tweens --mk 0% → 100%).
+   Layers (top first): jungle ink · surrounding ink · lime marker; the jungle
+   ink and the marker grow together, so the ink flips at the marker's edge.
+   Without JS the plain rule above applies and the marker is simply there. */
+.marker-highlight[data-mk] {
+  background-image:
+    linear-gradient(var(--brand-jungle), var(--brand-jungle)),
+    linear-gradient(var(--mk-base, var(--brand-white)), var(--mk-base, var(--brand-white))),
+    linear-gradient(100deg, transparent 0.5%, var(--brand-lime) 3%, var(--brand-lime) 97.5%, transparent 99.5%);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: var(--mk, 100%) 100%, 100% 100%, var(--mk, 100%) 100%;
+  -webkit-background-clip: text, text, padding-box;
+  background-clip: text, text, padding-box;
+  -webkit-text-fill-color: transparent;
+}
+
 /* ---- Homepage hero interactivity (driven by components/HeroFx.tsx) ---- */
 /* Marker sweep: grows left→right onto the active word, retracts to the right
    when it moves on. Every word carries the same padding so nothing shifts. */
@@ -127,6 +144,16 @@ html.lenis iframe { pointer-events: none; }
   }
   .hero-word.is-active {
     background-size: 100% 100%, 100% 100%, 100% 100%;
+  }
+}
+
+/* Mobile hero portrait: the photo is width-limited (top-aligned, ~94.5vw tall),
+   so its bottom edge used to show as a hard line. Fade the image itself out
+   (a mask moves with the parallax drift; a fixed overlay wouldn't). */
+@media (max-width: 767px) {
+  .hero-portrait {
+    -webkit-mask-image: linear-gradient(180deg, #000 0, #000 calc(94.5vw - 150px), transparent calc(94.5vw - 8px));
+    mask-image: linear-gradient(180deg, #000 0, #000 calc(94.5vw - 150px), transparent calc(94.5vw - 8px));
   }
 }
 

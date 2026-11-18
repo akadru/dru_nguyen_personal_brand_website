@@ -12,31 +12,14 @@ export const metadata: Metadata = {
 const topics = [
   { label: "AI for Operators", body: "How to use AI as a workflow, not a tool. Real prompts, real templates, real outcomes from Xood." },
   { label: "EOS in Practice", body: "What it actually takes to implement EOS, including pre-revenue startups. The 9-month buy-in story." },
-  { label: "Building in Vietnam", body: "Cross-industry pattern recognition from operating across F&B, AI services, and entertainment." },
+  { label: "Building in Vietnam", body: "Cross-industry pattern recognition from operating across F&B, applied AI, and entertainment." },
   { label: "Care · Discipline · Grit", body: "The Scholarly Warrior identity, discipline plus learning as an integrated philosophy. For founder offsites and leadership cohorts." },
 ];
 
-const venues = [
-  "Zero Project Conference",
-  "EO Vietnam",
-  "Tictag Summit",
-  "Startup Grind HCMC",
-  "Vietnam Tech Forum",
-  "Founders Live SEA",
-];
-
-const testimonials = [
-  {
-    quote:
-      "Dru speaks like he's already done what he's teaching, because he has. Our EO forum walked away with a workflow, not a buzzword.",
-    name: "EO Vietnam · Forum lead",
-  },
-  {
-    quote:
-      "Cut through the AI hype faster than anyone we've hosted. The team was running his prompt template the next morning.",
-    name: "Founder offsite · Saigon",
-  },
-];
+// Verified stages only (each backed by footage or photos on this site).
+// Add a venue here only once it's real. Testimonials were removed until
+// there are real, named quotes to show.
+const venues = ["Zero Project Conference", "Scaling Business Summit", "EO Vietnam"];
 
 const quickFacts = [
   { label: "Languages", value: "English · Vietnamese" },
@@ -89,7 +72,7 @@ export default function SpeakingPage() {
                 className="mt-8 max-w-xl text-lg leading-relaxed md:text-xl"
                 style={{ color: "var(--brand-pastel)" }}
               >
-                Operator-to-operator only. Ten years of real ops across hospitality, AI data services, and
+                Operator-to-operator only. Ten years of real ops across hospitality, applied AI, and
                 entertainment. No theory, no hype, no &ldquo;leverage your synergies.&rdquo;
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">
@@ -105,7 +88,7 @@ export default function SpeakingPage() {
                   className="inline-flex items-center justify-center rounded-full border-2 px-8 py-4 text-sm font-bold uppercase tracking-wider transition-colors hover:bg-[var(--brand-lime)] hover:text-[var(--brand-jungle)] hover:border-[var(--brand-lime)]"
                   style={{ borderColor: "rgba(176,190,197,0.4)", color: "var(--brand-white)", letterSpacing: "0.05em" }}
                 >
-                  Press kit
+                  Watch me speak
                 </Link>
               </div>
               <p className="mt-6 text-xs font-bold uppercase" style={{ color: "var(--brand-pastel)", letterSpacing: "0.18em" }}>
@@ -120,7 +103,7 @@ export default function SpeakingPage() {
       <section className="border-y py-12" style={{ background: "var(--brand-jungle)", borderColor: "rgba(176,190,197,0.4)" }}>
         <div className="mx-auto max-w-[1300px] px-5 md:px-10">
           <div className="text-center">
-            <div className="section-label">As featured at</div>
+            <div className="section-label">Spoken at</div>
           </div>
           <div className="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-4">
             {venues.map((v) => (
@@ -191,38 +174,6 @@ export default function SpeakingPage() {
                   <div className="text-[10px] font-bold uppercase" style={{ color: "var(--brand-myrtle)", letterSpacing: "0.22em" }}>{f.label}</div>
                   <div className="mt-2 text-base font-semibold" style={{ color: "var(--brand-white)" }}>{f.value}</div>
                 </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="py-20 md:py-28" style={{ background: "var(--brand-jungle)" }}>
-        <div className="mx-auto max-w-[1300px] px-5 md:px-10">
-          <Reveal>
-            <div className="section-label">What past audiences say</div>
-          </Reveal>
-          <div className="mt-8 md:mt-10 grid gap-10 md:grid-cols-2">
-            {testimonials.map((t) => (
-              <Reveal key={t.name}>
-                <blockquote
-                  className="border-l-4 pl-6 italic"
-                  style={{ borderColor: "var(--brand-lime)", fontFamily: "var(--font-prose)" }}
-                >
-                  <p
-                    className="leading-relaxed"
-                    style={{ fontSize: "clamp(20px, 2.2vw, 28px)", color: "var(--brand-white)" }}
-                  >
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <footer
-                    className="mt-6 not-italic text-xs font-bold uppercase"
-                    style={{ color: "var(--brand-myrtle)", letterSpacing: "0.18em" }}
-                  >
-                   , {t.name}
-                  </footer>
-                </blockquote>
               </Reveal>
             ))}
           </div>

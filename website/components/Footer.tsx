@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { SOCIAL_LINKS } from "./SocialIcons";
+import FooterCta from "./FooterCta";
 
 /**
  * GaryVee-style footer stack, sitewide:
+ * 0. "Let's build." sign-off (hidden on /contact)
  * 1. Social logo wall
  * 2. Minimal one-line copyright — wayfinding lives in the sidebar nav.
  */
@@ -10,6 +12,8 @@ export default function Footer() {
   const year = new Date().getFullYear();
   return (
     <footer>
+      <FooterCta />
+
       {/* 1. SOCIAL WALL */}
       <section className="py-16 md:py-20" style={{ background: "var(--brand-jungle)", borderTop: "4px solid var(--brand-lime)" }}>
         <div className="mx-auto max-w-[1100px] px-5 md:px-10">
