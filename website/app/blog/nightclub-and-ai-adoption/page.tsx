@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "70% locked in, 20% pretending, 10% gone. Stop selling to the skeptics. Find the front row.",
     type: "article",
     url: "/blog/nightclub-and-ai-adoption",
-    images: [{ url: "/images/blog/nightclub-and-ai-adoption.webp", width: 1200, height: 630 }],
+    images: [{ url: "/images/blog/nightclub-and-ai-adoption.webp", width: 3840, height: 2016 }],
   },
 };
 

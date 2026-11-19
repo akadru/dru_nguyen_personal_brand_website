@@ -47,8 +47,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-home.jpg",
-        width: 1200,
-        height: 630,
+        width: 3840,
+        height: 2016,
         alt: "Dru Nguyen — Operator, Builder, Experimenter",
       },
     ],

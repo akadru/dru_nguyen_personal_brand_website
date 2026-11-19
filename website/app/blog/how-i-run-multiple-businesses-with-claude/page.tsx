@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "A real morning batch, four steps, and the prompt I copy-paste. Three hours of commercial work in 30 minutes.",
     type: "article",
     url: "/blog/how-i-run-multiple-businesses-with-claude",
-    images: [{ url: "/images/blog/how-i-run-multiple-businesses-with-claude.webp", width: 1200, height: 630 }],
+    images: [{ url: "/images/blog/how-i-run-multiple-businesses-with-claude.webp", width: 3840, height: 2016 }],
   },
 };
 

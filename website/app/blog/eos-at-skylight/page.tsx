@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "Nine months to buy-in. Six numbers on a wall. What I kept, what I'd cut, and the tweak that made EOS click in hospitality.",
     type: "article",
     url: "/blog/eos-at-skylight",
-    images: [{ url: "/images/blog/eos-at-skylight.webp", width: 1200, height: 630 }],
+    images: [{ url: "/images/blog/eos-at-skylight.webp", width: 3840, height: 2016 }],
   },
 };
 

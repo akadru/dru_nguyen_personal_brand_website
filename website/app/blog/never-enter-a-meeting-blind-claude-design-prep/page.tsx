@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "Anthropic shipped Claude Design on April 17. Here is the 30-minute prep I now run before every team meeting at Skylight and across my businesses.",
     type: "article",
     url: "/blog/never-enter-a-meeting-blind-claude-design-prep",
-    images: [{ url: "/images/blog/never-enter-a-meeting-blind-claude-design-prep.webp", width: 1200, height: 630 }],
+    images: [{ url: "/images/blog/never-enter-a-meeting-blind-claude-design-prep.webp", width: 3840, height: 2016 }],
   },
 };
 

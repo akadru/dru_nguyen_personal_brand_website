@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Why elite performers always have a coach, and how five coaching-engine prompts give operators most of the same advantage in 20 minutes a week.",
     type: "article",
     url: "/blog/every-olympian-has-a-coach-yours-is-a-prompt-away",
-    images: [{ url: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp", width: 1200, height: 630 }],
+    images: [{ url: "/images/blog/every-olympian-has-a-coach-yours-is-a-prompt-away.webp", width: 3840, height: 2016 }],
   },
 };
 
