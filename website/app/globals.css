@@ -340,3 +340,78 @@ html { scroll-behavior: smooth; }
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .menu-item-line:hover::after { transform: scaleX(1); }
+
+/* =====================================================================
+ * Round 3 motion (2026-11-18): page curtain, intro, grain.
+ * All decorative layers are pointer-events:none and off under
+ * prefers-reduced-motion.
+ * ===================================================================== */
+
+/* ---- Page curtain (route-change wipe) ---- */
+.page-curtain {
+  position: fixed; inset: 0; z-index: 9000;
+  background: var(--brand-jungle);
+  border-bottom: 3px solid var(--brand-lime);
+  display: flex; align-items: center; justify-content: center;
+  pointer-events: none;
+  transform: translateY(-101%);
+}
+.page-curtain.is-covering { transform: translateY(0); }
+.page-curtain.is-lifting { animation: curtain-lift 0.75s cubic-bezier(0.76, 0, 0.24, 1) forwards; }
+.page-curtain__mark {
+  font-weight: 800; font-size: 28px; letter-spacing: -0.02em;
+  color: var(--brand-lime);
+}
+@keyframes curtain-lift {
+  0%, 20% { transform: translateY(0); }
+  100% { transform: translateY(-101%); }
+}
+
+/* ---- First-visit intro (once per browser session; set by an inline head script) ---- */
+.intro-overlay { display: none; }
+html[data-intro] .intro-overlay {
+  position: fixed; inset: 0; z-index: 9500;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px;
+  background: var(--brand-jungle);
+  pointer-events: none;
+  animation: intro-lift 0.7s cubic-bezier(0.76, 0, 0.24, 1) 0.9s forwards;
+}
+.intro-overlay__mark {
+  font-weight: 800; font-size: clamp(56px, 9vw, 120px); letter-spacing: -0.03em; line-height: 1;
+  color: var(--brand-white);
+  animation: intro-mark 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.intro-overlay__mark b { color: var(--brand-lime); }
+.intro-overlay__line {
+  width: min(220px, 50vw); height: 2px; background: rgba(176,190,197,0.2); overflow: hidden;
+}
+.intro-overlay__line::after {
+  content: ""; display: block; height: 100%; background: var(--brand-lime);
+  transform-origin: left; animation: intro-line 0.75s cubic-bezier(0.65, 0, 0.35, 1) 0.1s both;
+}
+@keyframes intro-mark { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
+@keyframes intro-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes intro-lift { to { transform: translateY(-101%); } }
+
+/* ---- Film grain (very subtle texture over everything) ---- */
+.film-grain {
+  position: fixed; inset: -50%; z-index: 8000;
+  width: 200%; height: 200%;
+  pointer-events: none; opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 0.9s steps(6) infinite;
+}
+@keyframes grain {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-4%, 3%); }
+  40% { transform: translate(3%, -5%); }
+  60% { transform: translate(-6%, -2%); }
+  80% { transform: translate(5%, 4%); }
+  100% { transform: translate(-2%, 6%); }
+}
+@media (hover: none) { .film-grain { animation: none; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .film-grain, .page-curtain.is-lifting { animation: none; }
+  .page-curtain, .intro-overlay { display: none !important; }
+}

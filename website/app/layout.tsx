@@ -23,6 +23,11 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import SearchModal from "@/components/SearchModal";
 import SiteMotion from "@/components/SiteMotion";
+import PageCurtain from "@/components/PageCurtain";
+
+// First visit per browser session: show the short intro. Runs before first
+// paint so repeat visits never flash it; no-JS visitors never see it.
+const INTRO_SCRIPT = `try{var d=document.documentElement;if(!sessionStorage.getItem("dru-intro")&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.setAttribute("data-intro","");sessionStorage.setItem("dru-intro","1");setTimeout(function(){d.removeAttribute("data-intro")},1700)}}catch(e){}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.drunguyen.me"),
@@ -59,8 +64,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${jakarta.variable} ${bebas.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${outfit.variable} ${jakarta.variable} ${bebas.variable} h-full antialiased`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: INTRO_SCRIPT }} />
+      </head>
       <body className="min-h-full flex flex-col">
+        <div className="intro-overlay" aria-hidden>
+          <span className="intro-overlay__mark">
+            DRU<b>.</b>
+          </span>
+          <span className="intro-overlay__line" />
+        </div>
         <SiteMotion />
         <Nav />
         {/* Content is offset right of the fixed sidebar nav on desktop */}
@@ -69,6 +87,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <Footer />
         </div>
         <SearchModal />
+        <PageCurtain />
+        <div className="film-grain" aria-hidden />
       </body>
     </html>
   );

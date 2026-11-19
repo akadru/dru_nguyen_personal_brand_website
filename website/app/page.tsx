@@ -216,7 +216,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. THE STORY — six chapters, pinned horizontal scroll on desktop */}
+      {/* 4. THE STORY — six chapters on a side-scrolling rail (no scroll-jacking) */}
       <OriginTimeline />
 
       {/* 5. VENTURES — the portfolio wall (same grid as /ventures) */}

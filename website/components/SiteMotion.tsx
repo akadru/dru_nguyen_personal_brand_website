@@ -117,6 +117,12 @@ export default function SiteMotion() {
         import("gsap/SplitText"),
       ]);
       if (disposed) return;
+      // First visit: hold the reveals until the intro overlay starts lifting,
+      // so the hero animates in view instead of under the overlay.
+      if (document.documentElement.hasAttribute("data-intro")) {
+        await new Promise((r) => setTimeout(r, 950));
+        if (disposed) return;
+      }
       const gsap = gsapMod.gsap ?? gsapMod.default;
       const { ScrollTrigger } = stMod;
       const { SplitText } = splitMod;
