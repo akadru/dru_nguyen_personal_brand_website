@@ -1,23 +1,27 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-// Self-hosted via next/font — no runtime requests to Google.
-const outfit = Outfit({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+// Fonts are committed in app/fonts (latin subsets, SIL Open Font License),
+// so builds never depend on reaching Google Fonts. Outfit and Plus Jakarta
+// Sans are variable fonts: one file covers the whole weight range.
+const outfit = localFont({
+  src: [{ path: "./fonts/outfit-latin.woff2", weight: "400 800", style: "normal" }],
   variable: "--font-outfit",
+  display: "swap",
 });
-const jakarta = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  style: ["normal", "italic"],
+const jakarta = localFont({
+  src: [
+    { path: "./fonts/plus-jakarta-sans-latin.woff2", weight: "300 800", style: "normal" },
+    { path: "./fonts/plus-jakarta-sans-italic-latin.woff2", weight: "300 800", style: "italic" },
+  ],
   variable: "--font-jakarta",
+  display: "swap",
 });
-const bebas = Bebas_Neue({
-  subsets: ["latin"],
-  weight: "400",
+const bebas = localFont({
+  src: [{ path: "./fonts/bebas-neue-latin.woff2", weight: "400", style: "normal" }],
   variable: "--font-bebas",
+  display: "swap",
 });
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
