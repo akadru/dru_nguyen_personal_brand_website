@@ -37,7 +37,7 @@ export const VENTURES: Venture[] = [
     name: "Skylight",
     tagline: "Nha Trang's rooftop flagship",
     role: "Founder",
-    context: "Rooftop hospitality · Nha Trang · 10+ years",
+    context: "Rooftop hospitality · Nha Trang · 12+ years",
     logo: "/images/logos/skylight.png",
     logoW: 614,
     logoH: 240,
@@ -151,7 +151,7 @@ export const VENTURE_DETAILS: Record<string, VentureDetail> = {
   skylight: {
     slug: "skylight",
     name: "Skylight",
-    intro: "A four-floor rooftop flagship in Nha Trang. Ten years in. Where I learned that structure is freedom.",
+    intro: "A four-floor rooftop flagship in Nha Trang. 12+ years in. Where I learned that structure is freedom.",
     story: [
       "Skylight is where I learned how to run a business. Built from zero in 2014 after I moved back from SF/LA, it has been a rooftop bar, a wedding venue, a beach club, a kitchen, and a stage for some of the best DJ nights in Vietnam. Ten years of staff turnover, ten years of margin pressure, ten years of late nights in the office reading the next week's schedule.",
       "It is also where EOS finally clicked for me. The day we put a scoreboard on the wall behind the bar, staff started owning the number. That single visible system taught me more about operating than any book.",

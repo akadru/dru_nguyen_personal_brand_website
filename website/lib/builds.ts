@@ -37,7 +37,7 @@ export const BUILDS: Build[] = [
     context: "Culture OS · Skylight Nha Trang",
     tagline: "One source of truth for the whole company",
     summary:
-      "Skylight's culture and onboarding hub: mission, vision, core values, five performance standards, and eleven years of history in one place. Every new hire onboards from it, and the whole team uses it as the single source of information for how we work.",
+      "Skylight's culture and onboarding hub: mission, vision, core values, five performance standards, and twelve years of history in one place. Every new hire onboards from it, and the whole team uses it as the single source of information for how we work.",
     url: "https://teamskylight.com/",
     urlLabel: "teamskylight.com",
     image: "/images/built/team-skylight.jpg",

@@ -63,7 +63,7 @@ export default function SocialIcons({ variant = "footer", tone = "pastel", class
           <Link
             href={s.href}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="me noopener noreferrer"
             aria-label={s.label}
             className="group inline-flex items-center justify-center transition-colors"
             style={{ color }}

@@ -413,7 +413,7 @@ export default function Home() {
           <Reveal delay={2}>
             <p className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }} data-reveal>
               EO forum sessions, founder offsites, AI workshops, EOS implementation coaching.
-              Ten years of real operations across three industries. Operator-to-operator only, no
+              12+ years of real operations across three industries. Operator-to-operator only, no
               theory, no hype.
             </p>
           </Reveal>

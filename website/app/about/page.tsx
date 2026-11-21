@@ -17,8 +17,8 @@ const stories = [
     imgAlt: "Dru behind the DJ decks, headphones around his neck, white shirt with suspenders",
   },
   {
-    title: "The Factory",
-    body: "Quit the family steel manufacturing business in Hanoi after months of struggling. One of the hardest calls I've ever made. You can't build your future on someone else's blueprint.",
+    title: "The Move to Vietnam",
+    body: "At 27, left SF/LA for Nha Trang with no Vietnamese, no friends outside my brother. Built Skylight from zero. The most uncertain chapters often become the most important ones.",
   },
   {
     title: "The Fight",
@@ -29,8 +29,12 @@ const stories = [
     body: "Ran businesses in chaos for years and blamed the team. Read Rocket Fuel and Traction with my brother TK. Implemented EOS. Nine months before the team fully bought in. Structure is freedom.",
   },
   {
-    title: "The Move to Vietnam",
-    body: "At 27, left SF/LA for Nha Trang with no Vietnamese, no friends outside my brother. Built Skylight from zero. The most uncertain chapters often become the most important ones.",
+    title: "The Factory",
+    body: "Quit the family steel manufacturing business in Hanoi after months of struggling. One of the hardest calls I've ever made. You can't build your future on someone else's blueprint.",
+  },
+  {
+    title: "Built with AI",
+    body: "Now in Ho Chi Minh City. Three companies, two boards, AI in the loop. I share what actually works, so the next operator has a clearer path.",
   },
 ];
 
@@ -99,8 +103,8 @@ export default function AboutPage() {
               </p>
               <p>
                 I didn&apos;t start with a plan. My first passion was music: I started DJing in San Diego at 17.
-                Years later, at 27, I left California for Nha Trang with no Vietnamese and no network, and built
-                Skylight from zero. Ten years of running real businesses taught me the lesson under everything I do:{" "}
+                Years later, at 27, I left SF/LA for Nha Trang with no Vietnamese and no network, and built
+                Skylight from zero. 12+ years of running real businesses taught me the lesson under everything I do:{" "}
                 <strong>structure is freedom.</strong> That&apos;s when EOS clicked, and it&apos;s how I run my companies today.
               </p>
               <p>
@@ -120,7 +124,7 @@ export default function AboutPage() {
       <section className="py-16" style={{ background: "var(--brand-jungle)" }}>
         <div className="mx-auto max-w-[900px] px-5 md:px-8">
           <Reveal>
-            <div className="section-label">Five Stories</div>
+            <div className="section-label">Six Chapters</div>
           </Reveal>
           <Reveal delay={1}>
             <h2 className="mt-3 display-heading" style={{ fontSize: "clamp(32px, 4vw, 48px)", color: "var(--brand-white)" }}>

@@ -23,7 +23,7 @@ export default function Footer() {
                 key={s.label}
                 href={s.href}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="me noopener noreferrer"
                 className="group flex flex-col items-center gap-2 border py-5 transition-colors hover:border-[var(--brand-lime)] sm:gap-4 sm:py-10"
                 style={{ borderColor: "rgba(176,190,197,0.2)", color: "var(--brand-white)" }}
               >

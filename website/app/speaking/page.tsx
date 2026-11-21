@@ -72,7 +72,7 @@ export default function SpeakingPage() {
                 className="mt-8 max-w-xl text-lg leading-relaxed md:text-xl"
                 style={{ color: "var(--brand-pastel)" }}
               >
-                Operator-to-operator only. Ten years of real ops across hospitality, applied AI, and
+                Operator-to-operator only. 12+ years of real ops across hospitality, applied AI, and
                 entertainment. No theory, no hype, no &ldquo;leverage your synergies.&rdquo;
               </p>
               <div className="mt-10 flex flex-col gap-3 sm:flex-row">

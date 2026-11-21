@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { SOCIAL_LINKS } from "@/components/SocialIcons";
+
+// One source of truth for profile URLs (components/SocialIcons.tsx).
+const urlFor = (label: string) => SOCIAL_LINKS.find((s) => s.label === label)?.href ?? "#";
 
 export const metadata: Metadata = {
   title: "Content | Dru Nguyen",
@@ -8,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const channels = [
-  { label: "LinkedIn", desc: "International + professional reach. Long-form, carousels, short-form video. 3 posts/week.", href: "https://linkedin.com/in/dru-nguyen" },
-  { label: "Substack", desc: "The deep tier. One operator essay per week, Tuesday 8am Vietnam time.", href: "#" },
-  { label: "Facebook", desc: "Local + human. Vietnamese-primary. Community posts, photo posts, English crosspost.", href: "#" },
+  { label: "LinkedIn", desc: "International + professional reach. Long-form, carousels, short-form video. 3 posts/week.", href: urlFor("LinkedIn") },
+  { label: "Substack", desc: "The deep tier. One operator essay per week, Tuesday 8am Vietnam time.", href: urlFor("Substack") },
+  { label: "Facebook", desc: "Local + human. Vietnamese-primary. Community posts, photo posts, English crosspost.", href: urlFor("Facebook") },
 ];
 
 export default function ContentHub() {
@@ -37,7 +41,7 @@ export default function ContentHub() {
         <div className="mx-auto max-w-[1200px] px-5 md:px-8 grid gap-6 md:grid-cols-3">
           {channels.map((c, i) => (
             <Reveal key={c.label} delay={(i % 3) as 0 | 1 | 2}>
-              <Link href={c.href} className="block h-full rounded-xl p-7 transition-shadow hover:shadow-lg" style={{ background: "var(--brand-jungle)", borderTop: "2px solid var(--brand-myrtle)" }}>
+              <Link href={c.href} target="_blank" rel="me noopener noreferrer" className="block h-full rounded-xl p-7 transition-shadow hover:shadow-lg" style={{ background: "var(--brand-jungle)", borderTop: "2px solid var(--brand-myrtle)" }}>
                 <div className="section-label">Channel</div>
                 <h3 className="mt-3 text-2xl font-extrabold" style={{ color: "var(--brand-white)" }}>{c.label}</h3>
                 <p className="mt-3 text-base leading-relaxed" style={{ color: "var(--brand-pastel)" }}>{c.desc}</p>

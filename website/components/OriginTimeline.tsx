@@ -32,7 +32,7 @@ const CHAPTERS: {
   {
     when: "Age 27 · Nha Trang",
     title: "The Move",
-    body: "Left California with no Vietnamese and no network. Built Skylight from zero, and I've run it for over a decade.",
+    body: "Left SF/LA with no Vietnamese and no network. Built Skylight from zero, and I've run it for over a decade.",
     img: "/images/ventures/skylight.jpg",
     alt: "Skylight Nha Trang rooftop",
   },

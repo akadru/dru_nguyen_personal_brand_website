@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
+import { SOCIAL_LINKS } from "@/components/SocialIcons";
 
 type Status = "idle" | "sending" | "ok" | "err";
 
@@ -94,6 +95,24 @@ export default function ContactPage() {
               Speaking, advisory, media, partnerships, or just to say hello. Tell me what you&apos;re working on.
               I read every message and reply within 48 hours.
             </p>
+          </Reveal>
+          <Reveal delay={2}>
+            <ul className="mt-8 flex flex-wrap gap-3" aria-label="Find me on">
+              {SOCIAL_LINKS.map((s) => (
+                <li key={s.label}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="me noopener noreferrer"
+                    className="group inline-flex items-center gap-2.5 rounded-full border px-5 py-2.5 text-sm font-bold uppercase tracking-wider transition-colors hover:border-[var(--brand-lime)] hover:text-[var(--brand-lime)]"
+                    style={{ borderColor: "rgba(176,190,197,0.3)", color: "var(--brand-white)", letterSpacing: "0.06em" }}
+                  >
+                    <span className="h-4 w-4" aria-hidden>{s.svg}</span>
+                    {s.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </Reveal>
         </div>
       </section>

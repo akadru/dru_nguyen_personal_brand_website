@@ -24,6 +24,19 @@ import Footer from "@/components/Footer";
 import SearchModal from "@/components/SearchModal";
 import SiteMotion from "@/components/SiteMotion";
 import PageCurtain from "@/components/PageCurtain";
+import { SOCIAL_LINKS } from "@/components/SocialIcons";
+
+// Tells Google and AI search that the site and these profiles are one person.
+const PERSON_JSON_LD = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Dru Nguyen",
+  url: "https://www.drunguyen.me",
+  image: "https://www.drunguyen.me/images/dru-portrait-hero.jpg",
+  jobTitle: "Operator, Builder, Experimenter",
+  homeLocation: { "@type": "Place", name: "Ho Chi Minh City, Vietnam" },
+  sameAs: SOCIAL_LINKS.map((s) => s.href),
+});
 
 // First visit per browser session: show the short intro. Runs before first
 // paint so repeat visits never flash it; no-JS visitors never see it.
@@ -71,6 +84,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: INTRO_SCRIPT }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: PERSON_JSON_LD }} />
       </head>
       <body className="min-h-full flex flex-col">
         <div className="intro-overlay" aria-hidden>

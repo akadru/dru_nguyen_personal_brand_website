@@ -6,14 +6,14 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Case Study: Team Skylight, built with Claude | Dru Nguyen",
   description:
-    "How Skylight's culture, standards, and eleven years of history became one public source of truth the whole company onboards from, built with Claude.",
+    "How Skylight's culture, standards, and twelve years of history became one public source of truth the whole company onboards from, built with Claude.",
   alternates: { canonical: "/built-with-ai/team-skylight" },
 };
 
 const BUILD_STEPS = [
   {
     step: "Capture",
-    body: "Eleven years of Skylight lived in people's heads: the mission, the values, what great service actually looks like on a Saturday night. Step one was pulling all of it out and writing it down, in Vietnamese first.",
+    body: "Twelve years of Skylight lived in people's heads: the mission, the values, what great service actually looks like on a Saturday night. Step one was pulling all of it out and writing it down, in Vietnamese first.",
   },
   {
     step: "Structure",
@@ -71,14 +71,14 @@ export default function TeamSkylightCaseStudy() {
           </Reveal>
           <Reveal delay={1}>
             <h1 className="display-heading mt-6" style={{ fontSize: "clamp(52px, 8.5vw, 124px)" }}>
-              Eleven years, finally
+              Twelve years, finally
               <br />
               <span className="marker-highlight">written down</span>
             </h1>
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed md:text-xl" style={{ color: "var(--brand-pastel)" }}>
-              Skylight ran on tribal knowledge for a decade. Team Skylight turns that into one
+              Skylight ran on tribal knowledge for over a decade. Team Skylight turns that into one
               public source of truth: our mission, vision, core values, standards, and history,
               for every role in the company. Built with Claude.
             </p>

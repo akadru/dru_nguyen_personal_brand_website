@@ -18,6 +18,19 @@ export type Post = {
 
 export const POSTS: Post[] = [
   {
+    slug: "a-few-days-living-like-a-mongolian",
+    title: "A Few Days Living Like a Mongolian Changed How I Think About Scale",
+    excerpt:
+      "I spent a few days living like a Mongolian in the time of Genghis Khan, on behalf of EO, hosted by EO Mongolia. Three lessons on hardship, clear roles, and why the empires that last are built on systems, not heroes.",
+    channel: "LinkedIn",
+    pillar: "Human",
+    topic: "Leadership",
+    read: "5 MIN",
+    date: "21 NOV 2026",
+    updated: "2026-11-21",
+    image: "/images/blog/a-few-days-living-like-a-mongolian.webp",
+  },
+  {
     slug: "six-businesses-claude-quarterly-rocks",
     title: "How I run 3 companies and 2 boards with Claude to achieve our quarterly rocks",
     excerpt:
@@ -100,9 +113,9 @@ export const POSTS: Post[] = [
 // Homepage "What's New" feature — exactly these 3 slugs, in this order.
 // Curated by hand; edit this list to change what the homepage features.
 export const FEATURED_SLUGS: string[] = [
+  "a-few-days-living-like-a-mongolian",
   "six-businesses-claude-quarterly-rocks",
   "nightclub-and-ai-adoption",
-  "every-olympian-has-a-coach-yours-is-a-prompt-away",
 ];
 
 export const FILTERS = [
